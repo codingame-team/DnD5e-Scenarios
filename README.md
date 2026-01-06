@@ -1,243 +1,239 @@
 # DnD5e-Test
 
-[![Python](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![dnd-5e-core](https://img.shields.io/badge/dnd--5e--core-0.1.8-success.svg)](https://pypi.org/project/dnd-5e-core/)
 
-**Scripts de démonstration et exemples d'utilisation du package [dnd-5e-core](https://github.com/codingame-team/dnd-5e-core)**
+**Scripts de démonstration du package [dnd-5e-core](https://github.com/codingame-team/dnd-5e-core)**
 
-Ce dépôt contient des exemples pratiques et des scripts de démonstration montrant comment utiliser le package `dnd-5e-core` pour créer des systèmes de combat D&D 5e, générer des personnages aléatoires, et construire des rencontres équilibrées selon les règles officielles.
+Exemples pratiques montrant comment utiliser `dnd-5e-core` pour créer des systèmes de combat D&D 5e, générer des personnages, et construire des rencontres équilibrées.
 
-## ✨ Fonctionnalités
+## 🚀 Installation
 
-- 🎲 **Combat aléatoire** - 4 versions de scripts de combat avec personnages générés aléatoirement
-- ⚔️ **Système de rencontres D&D 5e** - Génération de rencontres selon les tables officielles du DMG
-- 👥 **Création de personnages** - Exemples de génération manuelle et aléatoire
-- 👹 **Gestion de monstres** - Chargement et recherche dans la base de données de monstres
-- 📊 **Challenge Rating** - Système de calcul de difficulté conforme aux règles D&D 5e
+```bash
+# Installer le package dnd-5e-core
+pip install dnd-5e-core
 
-## 📚 Table des Matières
+# Cloner ce dépôt
+git clone https://github.com/codingame-team/DND5e-Test.git
+cd DND5e-Test
 
-- [Scripts de Combat](#-scripts-de-combat)
-- [Scripts de Création](#-scripts-de-création)
-- [Installation](#-installation)
-- [Démarrage Rapide](#-démarrage-rapide)
+# Les scripts sont prêts à l'emploi !
+python demo_quick_combat.py
+```
 
 ## ⚔️ Scripts de Combat
 
-Ce projet contient plusieurs scripts de combat pour D&D 5e, dont **4 versions avec personnages aléatoires**.
-
-### 🚀 Démarrage Rapide - Combat
+### Démarrage Rapide
 
 ```bash
-# Démo rapide (première découverte)
+# 1. Première découverte - Combat rapide et simple
 python demo_quick_combat.py
 
-# Combat automatique complet
-python auto_random_combat.py
+# 2. Combat automatique avec personnages aléatoires
+python auto_random_combat_standalone.py
 
-# Simulation complète avec statistiques détaillées ⭐
+# 3. Simulation avancée avec statistiques détaillées
 python advanced_random_combat.py
 ```
 
-### 📋 Tous les Scripts de Combat
+### Tous les Scripts de Combat
 
-| Script                      | Description                         | Niveau |
-|-----------------------------|-------------------------------------|--------|
-| `demo_quick_combat.py`      | Démo rapide et condensée            | ⭐      |
-| `auto_random_combat.py`     | Combat automatique complet          | ⭐⭐⭐    |
-| `random_party_combat.py`    | Combat avec pause d'analyse         | ⭐⭐⭐    |
-| `advanced_random_combat.py` | Version avancée avec stats          | ⭐⭐⭐⭐   |
-| `party_combat.py`           | 6 personnages (manuels) vs monstres | ⭐⭐     |
-| `combat.py`                 | Combat simple 1v1                   | ⭐      |
+| Script | Description | Complexité |
+|--------|-------------|------------|
+| **`demo_quick_combat.py`** | Combat rapide 1v1 pour découvrir le système | ⭐ Débutant |
+| **`auto_random_combat_standalone.py`** | Combat automatique, personnages aléatoires | ⭐⭐ Intermédiaire |
+| **`random_party_combat.py`** | Groupe de 6 aventuriers vs monstres | ⭐⭐⭐ Avancé |
+| **`advanced_random_combat.py`** | Système complet avec stats détaillées | ⭐⭐⭐⭐ Expert |
+| `party_combat.py` | Combat personnalisé avec groupe fixe | ⭐⭐ |
+| `combat.py` | Combat de base 1v1 simple | ⭐ |
+| `epic_combat.py` | Combat épique avec dragons et boss | ⭐⭐⭐ |
 
-### 📖 Documentation Complète
+### Scripts avec Système de Rencontres Officiel D&D 5e
 
-- **[INDEX_COMBAT.md](INDEX_COMBAT.md)** - Vue d'ensemble et démarrage
-- **[README_COMBAT.md](README_COMBAT.md)** - Guide détaillé
-- **[SUMMARY_RANDOM_COMBAT.md](SUMMARY_RANDOM_COMBAT.md)** - Documentation technique
-- **[MISSION_ACCOMPLIE.md](MISSION_ACCOMPLIE.md)** - Résumé du projet
+| Script | Description |
+|--------|-------------|
+| **`official_encounter_combat.py`** | Utilise les tables DMG pour générer des rencontres équilibrées |
+| **`demo_encounter_systems.py`** | Compare différents systèmes de génération de rencontres |
 
-### ✨ Fonctionnalités des Scripts Aléatoires
+## 👥 Scripts de Création
 
-- ✅ 6 personnages générés aléatoirement avec `generate_random_character()`
-- ✅ Niveaux variables (2-5)
-- ✅ Système tactique: 3 en FRONT (mêlée) + 3 en ARRIÈRE (distance/sorts)
-- ✅ Sélection automatique des monstres par Challenge Rating
-- ✅ 4 niveaux de difficulté: easy, medium, hard, deadly
-- ✅ Affichage progressif (basique → détaillé)
+| Script | Description |
+|--------|-------------|
+| **`create_character.py`** | Création de personnages avec races, classes et équipement |
+| **`create_monster.py`** | Chargement et recherche de monstres dans la base de données |
 
-## 👤 Scripts de Création
+## 📖 Exemples de Code
 
-### Personnages
-
-- **`create_character.py`** - Exemple de création manuelle d'un personnage
-- Montre comment créer un personnage avec race, classe, capacités
-
-### Monstres
-
-- **`create_monster.py`** - Exemple de chargement de monstres
-- Utilise `ExtendedMonsterLoader` pour rechercher et filtrer
-
-## 📦 Installation
-
-### Prérequis
-
-```bash
-# Le package dnd-5e-core doit être installé
-pip install dnd-5e-core
-
-# OU en développement
-cd /Users/display/PycharmProjects/dnd-5e-core
-pip install -e .
-```
-
-### Dépendances
-
-- `dnd-5e-core` (PyPI) - Package principal
-- `DnD-5th-Edition-API` (local) - Pour `generate_random_character()`
-
-## 🚀 Démarrage Rapide
-
-### 1. Lister tous les scripts disponibles
-
-```bash
-python list_combat_scripts.py
-```
-
-### 2. Premier combat
-
-```bash
-# Le plus simple pour commencer
-python demo_quick_combat.py
-```
-
-### 3. Créer un personnage
-
-```bash
-python create_character.py
-```
-
-### 4. Charger des monstres
-
-```bash
-python create_monster.py
-```
-
-## 🎯 Cas d'Usage
-
-### Pour Apprendre
-
-```bash
-# Combat simple 1v1
-python combat.py
-
-# Création de personnage
-python create_character.py
-```
-
-### Pour Tester
-
-```bash
-# Tests automatisés
-python auto_random_combat.py
-```
-
-### Pour Simuler des Combats
-
-```bash
-# Simulation réaliste complète
-python advanced_random_combat.py
-```
-
-## ⚙️ Personnalisation
-
-### Modifier la Difficulté
-
-Éditez le script et changez:
-```python
-difficulty = "hard"  # 'easy', 'medium', 'hard', 'deadly'
-```
-
-### Modifier les Niveaux
+### Créer un Personnage
 
 ```python
-min_level = 5
-max_level = 10
+from dnd_5e_core.data import simple_character_generator
+
+# Générer un personnage aléatoire
+fighter = simple_character_generator(
+    level=5,
+    class_name="fighter",
+    name="Conan"
+)
+
+print(f"{fighter.name} - Level {fighter.level} {fighter.class_type.name}")
+print(f"HP: {fighter.hit_points}/{fighter.max_hit_points}")
 ```
 
-### Modifier le Nombre de Personnages
+### Charger des Monstres
 
 ```python
-size = 4  # Au lieu de 6
+from dnd_5e_core.data import load_monster
+
+# Charger un monstre spécifique
+goblin = load_monster('goblin')
+print(f"{goblin.name} - CR {goblin.challenge_rating}")
+print(f"HP: {goblin.hit_points}, AC: {goblin.armor_class}")
 ```
 
-## 📊 Structure du Projet
+### Générer une Rencontre Équilibrée
+
+```python
+from dnd_5e_core.mechanics import (
+    select_monsters_by_encounter_table,
+    get_encounter_gold
+)
+from dnd_5e_core.data import load_monsters_database
+
+# Charger tous les monstres
+monsters_db = load_monsters_database()
+
+# Générer une rencontre pour un groupe niveau 5
+monsters, encounter_type = select_monsters_by_encounter_table(
+    encounter_level=5,
+    available_monsters=monsters_db,
+    allow_pairs=True
+)
+
+print(f"Encounter: {encounter_type}")
+print(f"Monsters: {[m.name for m in monsters]}")
+print(f"Gold reward: {get_encounter_gold(5)} gp")
+```
+
+### Combat Complet
+
+```python
+from dnd_5e_core.combat import CombatSystem
+from dnd_5e_core.data import simple_character_generator, load_monster
+
+# Créer personnages et monstres
+fighter = simple_character_generator(level=3, class_name="fighter")
+wizard = simple_character_generator(level=3, class_name="wizard")
+orc = load_monster('orc')
+
+# Initialiser le système de combat
+combat = CombatSystem()
+
+# Tour de combat
+combat.character_turn(
+    character=fighter,
+    targets=[orc],
+    action_type='attack'
+)
+
+combat.monster_turn(
+    monster=orc,
+    targets=[fighter, wizard]
+)
+```
+
+## 🎲 Fonctionnalités Démontrées
+
+### Système de Combat D&D 5e
+
+- ✅ Jets d'attaque avec bonus et modificateurs
+- ✅ Calcul des dégâts avec dés multiples
+- ✅ Classe d'armure (AC) et jets de sauvegarde
+- ✅ Actions multiples et attaques spéciales
+- ✅ Gestion des points de vie et des conditions
+
+### Génération de Personnages
+
+- ✅ Création manuelle avec races et classes
+- ✅ Génération aléatoire complète
+- ✅ Équipement et armes
+- ✅ Calcul automatique des bonus
+
+### Système de Rencontres
+
+- ✅ Tables DMG officielles (niveaux 1-20)
+- ✅ Challenge Rating (CR) conforme D&D 5e
+- ✅ Calcul de difficulté (Easy, Medium, Hard, Deadly)
+- ✅ Récompenses en or selon le niveau
+
+### Base de Données
+
+- ✅ 332 monstres avec stats complètes
+- ✅ 319 sorts D&D 5e
+- ✅ Armes, armures et équipement
+- ✅ Recherche et filtres avancés
+
+## 📚 Documentation Complète
+
+Pour plus de détails sur le package `dnd-5e-core` :
+
+- **Documentation:** [GitHub dnd-5e-core](https://github.com/codingame-team/dnd-5e-core)
+- **PyPI:** [pypi.org/project/dnd-5e-core](https://pypi.org/project/dnd-5e-core/)
+- **Guide de Combat:** [README_COMBAT.md](README_COMBAT.md)
+
+## 🎯 Structure du Projet
 
 ```
 DnD5e-Test/
-├── combat.py                      # Combat simple 1v1
-├── party_combat.py                # Groupe de 6 (manuel)
-├── demo_quick_combat.py           # Démo rapide ⭐
-├── auto_random_combat.py          # Auto complet ⭐⭐⭐
-├── random_party_combat.py         # Avec pause ⭐⭐⭐
-├── advanced_random_combat.py      # Version avancée ⭐⭐⭐⭐
-├── create_character.py            # Création personnage
-├── create_monster.py              # Chargement monstres
-├── list_combat_scripts.py         # Utilitaire
-├── README.md                      # Ce fichier
-├── INDEX_COMBAT.md                # Guide combat
-├── README_COMBAT.md               # Doc détaillée
-├── SUMMARY_RANDOM_COMBAT.md       # Doc technique
-└── MISSION_ACCOMPLIE.md           # Résumé projet
+├── README.md                           # Ce fichier
+├── README_COMBAT.md                    # Guide détaillé des scripts de combat
+│
+├── Scripts de Combat (Combat rapide et démonstrations)
+│   ├── demo_quick_combat.py           # ⭐ Démo rapide
+│   ├── auto_random_combat_standalone.py # ⭐⭐ Combat automatique
+│   ├── random_party_combat.py         # ⭐⭐⭐ Groupe vs monstres
+│   ├── advanced_random_combat.py      # ⭐⭐⭐⭐ Version avancée
+│   ├── official_encounter_combat.py   # Tables DMG officielles
+│   ├── demo_encounter_systems.py      # Comparaison de systèmes
+│   ├── party_combat.py                # Combat personnalisé
+│   ├── combat.py                      # Combat simple
+│   └── epic_combat.py                 # Combat épique
+│
+├── Scripts de Création
+│   ├── create_character.py            # Création de personnages
+│   └── create_monster.py              # Chargement de monstres
+│
+├── savegames/                         # Sauvegardes de parties
+│   ├── party.pkl
+│   └── roster/                        # Personnages sauvegardés
+│
+├── tokens/                            # Images de monstres
+└── archive/                           # Documentation archivée
+    ├── docs/                          # Docs techniques internes
+    ├── migration_docs/                # Historique de migration
+    └── backup_scripts/                # Scripts de backup
 ```
 
-## 🔧 Concepts D&D 5e
+## 🤝 Contribution
 
-Les scripts utilisent les concepts officiels de D&D 5e:
+Ce projet est un ensemble d'exemples pour démontrer les capacités de `dnd-5e-core`. 
 
-- **Challenge Rating (CR)** - Difficulté des monstres
-- **XP Thresholds** - Seuils d'XP par niveau
-- **Encounter Multiplier** - Multiplicateur de rencontre
-- **Ability Scores** - STR, DEX, CON, INT, WIS, CHA
-- **Spell Slots** - Emplacements de sorts
-- **Hit Dice** - Dés de vie par classe
+Pour contribuer au package principal : [dnd-5e-core](https://github.com/codingame-team/dnd-5e-core)
 
-## 📝 Notes
+## 📄 License
 
-- Les personnages sans armes utilisent des attaques à mains nues (1-2 dégâts)
-- Les lanceurs de sorts utilisent intelligemment leurs sorts
-- Les combats sont limités à 30 rounds maximum
-- HP calculés: `(hit_die + con_modifier) * level`
+MIT License - voir [LICENSE](LICENSE)
 
-## 🎓 Apprendre D&D 5e
+## 🔗 Liens Utiles
 
-Ces scripts sont parfaits pour:
-
-- ✅ Comprendre le système de combat D&D 5e
-- ✅ Apprendre le Challenge Rating
-- ✅ Tester différentes compositions de groupe
-- ✅ Analyser les stratégies de combat
-- ✅ Expérimenter avec les règles
-
-## 🆘 Support
-
-Pour plus d'informations:
-
-1. Consultez la documentation: `README_COMBAT.md`
-2. Lisez les guides: `INDEX_COMBAT.md`, `SUMMARY_RANDOM_COMBAT.md`
-3. Lancez: `python list_combat_scripts.py`
-
-## 📜 Licence
-
-Voir le fichier LICENSE du projet parent.
-
-## 🙏 Crédits
-
-- Package `dnd-5e-core` - Système de combat et entités
-- API D&D 5e - Données de référence
-- Wizards of the Coast - D&D 5e SRD
+- **Package Principal:** [dnd-5e-core sur PyPI](https://pypi.org/project/dnd-5e-core/)
+- **Code Source:** [GitHub dnd-5e-core](https://github.com/codingame-team/dnd-5e-core)
+- **Application Complète:** [DnD-5th-Edition-API](https://github.com/codingame-team/DnD-5th-Edition-API)
 
 ---
 
-**Bon jeu! ⚔️🎲**
+**Installation rapide:** `pip install dnd-5e-core`  
+**Démarrage rapide:** `python demo_quick_combat.py`  
+**Documentation:** https://github.com/codingame-team/dnd-5e-core
 
