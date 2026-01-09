@@ -1,0 +1,16 @@
+{
+  "scenario": "La Chasse aux Gobelins",
+  "scene_id": "village_choice",
+  "game_state": {
+    "combat_victories": 0,
+    "total_xp": 0,
+    "gold": 0,
+    "gold_spent": 50,
+    "locations_visited": 0,
+    "npcs_met": 0,
+    "quests_completed": 0,
+    "deaths": 0
+  },
+  "timestamp": "2026-01-08T23:48:26.961641",
+  "version": "3.1.0"
+}
