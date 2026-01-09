@@ -51,9 +51,90 @@ class BaseScenario(ABC):
         self.level_manager = LevelUpManager()
         self.village_rest = VillageRestManager()
 
-        # 🆕 Monster factory depuis JSON
-        monsters_data = self.json_loader.load_monsters()
-        self.monster_factory = MonsterFactory(monsters_data)
+        # 🆕 Monster loader depuis dnd_5e_core package
+        from dnd_5e_core.data import load_monster
+        from dnd_5e_core import Monster, Abilities
+        from dnd_5e_core.combat import Action, ActionType, Damage
+        from dnd_5e_core.mechanics import DamageDice
+        from dnd_5e_core.equipment import DamageType
+
+        # Créer un wrapper pour compatibilité avec l'ancienne interface
+        class MonsterFactoryWrapper:
+            def create_monster(self, monster_id: str, name: Optional[str] = None):
+                """Créer un monstre en utilisant dnd_5e_core.data.load_monster"""
+                # Normaliser l'ID (snake_case -> kebab-case pour l'API)
+                # goblin_boss -> goblin-boss
+                normalized_id = monster_id.replace('_', '-')
+
+                # Essayer de charger depuis dnd_5e_core (retourne un dict)
+                monster_data = load_monster(normalized_id)
+                if not monster_data:
+                    # Essayer avec l'ID direct
+                    monster_data = load_monster(monster_id)
+                if not monster_data:
+                    print(f"⚠️ Monstre non trouvé: {monster_id} (normalisé: {normalized_id})")
+                    return None
+
+                # Convertir le dict en objet Monster
+                try:
+                    abilities = Abilities(
+                        str=monster_data.get('strength', 10),
+                        dex=monster_data.get('dexterity', 10),
+                        con=monster_data.get('constitution', 10),
+                        int=monster_data.get('intelligence', 10),
+                        wis=monster_data.get('wisdom', 10),
+                        cha=monster_data.get('charisma', 10)
+                    )
+
+                    # Convertir les actions
+                    actions = []
+                    for action_data in monster_data.get('actions', []):
+                        if 'attack_bonus' in action_data and 'damage' in action_data:
+                            damage_parts = action_data['damage'][0] if action_data['damage'] else {}
+                            damage_type_name = damage_parts.get('damage_type', {}).get('name', 'slashing')
+
+                            damage_type = DamageType(
+                                index=damage_type_name.lower(),
+                                name=damage_type_name,
+                                desc=f"{damage_type_name} damage"
+                            )
+
+                            action = Action(
+                                name=action_data.get('name', 'Attack'),
+                                desc=action_data.get('desc', ''),
+                                type=ActionType.MELEE,
+                                attack_bonus=action_data.get('attack_bonus', 0),
+                                damages=[Damage(
+                                    type=damage_type,
+                                    dd=DamageDice(damage_parts.get('damage_dice', '1d6'))
+                                )],
+                                normal_range=5
+                            )
+                            actions.append(action)
+
+                    monster = Monster(
+                        index=monster_data.get('index', monster_id),
+                        name=name if name else monster_data.get('name', 'Unknown'),
+                        abilities=abilities,
+                        proficiencies=[],
+                        armor_class=monster_data.get('armor_class', 10),
+                        hit_points=monster_data.get('hit_points', 1),
+                        hit_dice=monster_data.get('hit_dice', '1d8'),
+                        xp=monster_data.get('xp', 0),
+                        speed=monster_data.get('speed', {}).get('walk', '30 ft').replace(' ft', '').replace('ft', '').strip() if isinstance(monster_data.get('speed'), dict) else 30,
+                        challenge_rating=monster_data.get('challenge_rating', 0),
+                        actions=actions
+                    )
+
+                    return monster
+
+                except Exception as e:
+                    print(f"⚠️ Erreur lors de la création du monstre {monster_id}: {e}")
+                    import traceback
+                    traceback.print_exc()
+                    return None
+
+        self.monster_factory = MonsterFactoryWrapper()
 
         # Données du scénario
         self.scenario_data: Optional[Dict] = None
