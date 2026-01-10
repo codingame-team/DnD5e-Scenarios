@@ -745,23 +745,56 @@ class BaseScenario(ABC):
             )
             from dnd_5e_core.equipment import HealingPotion, PotionRarity
 
-            # Charger armes
+            # Charger armes - dnd_5e_core.data retourne des dicts, pas des objets
             for name in list_weapons()[:20]:
-                weapon = load_weapon(name)
-                if weapon:
-                    weapons.append(weapon)
+                try:
+                    weapon_data = load_weapon(name)
+                    if weapon_data and isinstance(weapon_data, dict):
+                        # Créer un objet simple pour compatibilité
+                        class SimpleWeapon:
+                            def __init__(self, data):
+                                self.name = data.get('name', 'Unknown')
+                                self.index = data.get('index', name)
+                                self.cost = data.get('cost', {}).get('quantity', 0)
+                                self.damage = data.get('damage', {})
+                                self.weight = data.get('weight', 0)
+
+                        weapons.append(SimpleWeapon(weapon_data))
+                except:
+                    pass
 
             # Charger armures
             for name in list_armors()[:15]:
-                armor = load_armor(name)
-                if armor:
-                    armors.append(armor)
+                try:
+                    armor_data = load_armor(name)
+                    if armor_data and isinstance(armor_data, dict):
+                        class SimpleArmor:
+                            def __init__(self, data):
+                                self.name = data.get('name', 'Unknown')
+                                self.index = data.get('index', name)
+                                self.cost = data.get('cost', {}).get('quantity', 0)
+                                self.armor_class = data.get('armor_class', {}).get('base', 10)
+                                self.weight = data.get('weight', 0)
+
+                        armors.append(SimpleArmor(armor_data))
+                except:
+                    pass
 
             # Charger équipements
             for name in list_equipment()[:20]:
-                equipment = load_equipment(name)
-                if equipment:
-                    equipments.append(equipment)
+                try:
+                    equip_data = load_equipment(name)
+                    if equip_data and isinstance(equip_data, dict):
+                        class SimpleEquipment:
+                            def __init__(self, data):
+                                self.name = data.get('name', 'Unknown')
+                                self.index = data.get('index', name)
+                                self.cost = data.get('cost', {}).get('quantity', 0)
+                                self.weight = data.get('weight', 0)
+
+                        equipments.append(SimpleEquipment(equip_data))
+                except:
+                    pass
 
             # Créer quelques potions de base
             potions = [
