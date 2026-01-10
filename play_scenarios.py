@@ -78,17 +78,21 @@ def main():
             elif choice_num == 4:
                 print("\n👁️ Lancement de 'L'Oeil de Gruumsh'...")
                 from oeil_gruumsh_game import OeilDeGruumshScenario
-                scenario = OeilDeGruumshScenario()
-                party = scenario.build_custom_party()
-                scenario.run(party)
+                scenario = OeilDeGruumshScenario(
+                    pdf_path="scenarios/Oeil-de-Gruumsh.pdf",
+                    use_ncurses=False
+                )
+                scenario.play()
                 break
 
             elif choice_num == 5:
                 print("\n💀 Lancement de 'La Secte du Crâne'...")
                 from secte_du_crane_game import SecteDuCraneScenario
-                scenario = SecteDuCraneScenario()
-                party = scenario.build_custom_party()
-                scenario.run(party)
+                scenario = SecteDuCraneScenario(
+                    pdf_path="scenarios/Secte-du-crane.pdf",
+                    use_ncurses=False
+                )
+                scenario.play()
                 break
 
             else:
