@@ -1,0 +1,238 @@
+{
+  "scenario_id": "defis_a_phlan",
+  "name": "Défis à Phlan",
+  "level": 1,
+  "difficulty": "easy",
+  "duration_hours": "1-2",
+  "recommended_party_size": 3,
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "narrative",
+      "title": "🏰 BIENVENUE À PHLAN",
+      "text": "Phlan, ville frontière récemment reconstruite après avoir été détruite par les monstres.\n\nLe Conseil de la ville cherche des aventuriers pour accomplir diverses missions urgentes. Le salaire est bon, et la gloire aussi!\n\nVous vous présentez au Bureau des Quêtes, où Madrigal, la coordinatrice, vous accueille:\n\n\"Ah, de nouveaux aventuriers! Parfait! Nous avons plusieurs missions disponibles. Laquelle vous tente?\"\n\nChoisissez votre défi!",
+      "next_scene": "quest_board"
+    },
+    {
+      "id": "quest_board",
+      "type": "choice",
+      "title": "📋 TABLEAU DES QUÊTES",
+      "description": "Madrigal vous montre les quêtes disponibles:",
+      "choices": [
+        {
+          "text": "La Taverne Hantée (Investigation)",
+          "next_scene": "haunted_tavern_intro",
+          "effects": {}
+        },
+        {
+          "text": "Les Gobelins des Égouts (Combat)",
+          "next_scene": "sewer_goblins_intro",
+          "effects": {}
+        },
+        {
+          "text": "Le Marchand Disparu (Recherche)",
+          "next_scene": "missing_merchant_intro",
+          "effects": {}
+        },
+        {
+          "text": "Se reposer à l'auberge",
+          "next_scene": "rest_1",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "haunted_tavern_intro",
+      "type": "narrative",
+      "title": "👻 LA TAVERNE HANTÉE",
+      "text": "Mission: \"La Taverne de l'Ours Rieur est hantée! Le propriétaire, Renwick, ne peut plus servir ses clients. Des bruits étranges, des objets qui bougent... Enquêtez!\"\n\nRécompense: 100 pièces d'or\n\nVous vous rendez à la taverne. Renwick vous accueille, terrifié: \"Ça a commencé il y a une semaine! Des gémissements la nuit, des chopes qui volent... Mes clients fuient!\"\n\nIl vous donne la clé de la cave: \"Ça vient de là-dessous...\"",
+      "next_scene": "haunted_cellar"
+    },
+    {
+      "id": "haunted_cellar",
+      "type": "narrative",
+      "title": "🕯️ LA CAVE",
+      "text": "Vous descendez dans la cave sombre.\n\nDes tonneaux de bière, des caisses... et soudain, un gémissement sinistre!\n\nUne forme spectrale apparaît - un fantôme!\n\nMais attendez... ce fantôme semble... triste? Il ne vous attaque pas.",
+      "next_scene": "ghost_choice"
+    },
+    {
+      "id": "ghost_choice",
+      "type": "choice",
+      "title": "👻 LE FANTÔME",
+      "description": "Que faites-vous face au fantôme?",
+      "choices": [
+        {
+          "text": "L'attaquer",
+          "next_scene": "fight_ghost",
+          "effects": {}
+        },
+        {
+          "text": "Lui parler",
+          "next_scene": "talk_ghost",
+          "effects": {}
+        },
+        {
+          "text": "Chercher ce qui le retient",
+          "next_scene": "search_cellar",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "talk_ghost",
+      "type": "narrative",
+      "title": "💬 PARLER AU FANTÔME",
+      "text": "Vous parlez doucement au fantôme.\n\nIl répond d'une voix plaintive: \"Je suis... Bernard... ancien propriétaire... Je cherche... mon médaillon... enterré ici...\"\n\n\"Sans lui... je ne peux... partir...\"\n\nVous comprenez! Il faut trouver le médaillon!",
+      "next_scene": "search_cellar"
+    },
+    {
+      "id": "search_cellar",
+      "type": "narrative",
+      "title": "🔍 FOUILLE DE LA CAVE",
+      "text": "Vous fouillez la cave.\n\nDerrière un vieux tonneau, vous trouvez une pierre descellée. Dessous: un médaillon en argent avec le nom 'Bernard' gravé!\n\nVous le montrez au fantôme. Il sourit (si un fantôme peut sourire) et s'évanouit dans une lumière paisible.\n\n\"Merci...\" murmure sa voix avant de disparaître.",
+      "next_scene": "tavern_resolved"
+    },
+    {
+      "id": "fight_ghost",
+      "type": "combat",
+      "title": "👻 COMBAT CONTRE LE FANTÔME",
+      "description": "Vous attaquez le fantôme! Il se défend!",
+      "monsters": ["shadow"],
+      "on_victory": "tavern_resolved",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "tavern_resolved",
+      "type": "narrative",
+      "title": "✅ TAVERNE LIBÉRÉE",
+      "text": "La taverne n'est plus hantée!\n\nRenwick est aux anges: \"Plus de fantôme! Mes clients reviennent!\"\n\nIl vous paie 100 pièces d'or et vous offre des boissons gratuites à vie!\n\n(+100 or, +200 XP)",
+      "next_scene": "quest_board"
+    },
+    {
+      "id": "sewer_goblins_intro",
+      "type": "narrative",
+      "title": "🐀 LES GOBELINS DES ÉGOUTS",
+      "text": "Mission: \"Des gobelins se cachent dans les égouts et volent les marchandises! Éliminez-les!\"\n\nRécompense: 150 pièces d'or\n\nVous descendez dans les égouts de Phlan. L'odeur est... pestilentielle.\n\nVous entendez des ricanements gobelins au loin...",
+      "next_scene": "sewer_exploration"
+    },
+    {
+      "id": "sewer_exploration",
+      "type": "narrative",
+      "title": "🕳️ ÉGOUTS",
+      "text": "Vous progressez dans les égouts.\n\nSoudain, trois gobelins surgissent, armés de dagues et de frondes!\n\n\"Humains! Tuer humains!\" crient-ils en vous chargeant!",
+      "next_scene": "goblin_fight"
+    },
+    {
+      "id": "goblin_fight",
+      "type": "combat",
+      "title": "⚔️ GOBELINS DES ÉGOUTS",
+      "description": "Trois gobelins vous attaquent dans les égouts!",
+      "monsters": ["goblin", "goblin", "goblin"],
+      "on_victory": "goblin_lair",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "goblin_lair",
+      "type": "narrative",
+      "title": "🏚️ REPAIRE GOBELIN",
+      "text": "Vous suivez les traces jusqu'à leur repaire.\n\nUn tas d'objets volés: nourriture, outils, bijoux... Vous récupérez le tout.\n\nVous trouvez aussi le chef gobelin endormi! Un combat rapide et c'est fini!\n\n(Combat automatique - victoire)\n\nLes gobelins sont éliminés!",
+      "next_scene": "sewers_cleared"
+    },
+    {
+      "id": "sewers_cleared",
+      "type": "narrative",
+      "title": "✅ ÉGOUTS NETTOYÉS",
+      "text": "Vous remontez avec les marchandises volées.\n\nLes marchands sont ravis! Le Conseil vous paie 150 pièces d'or.\n\n\"Les égouts sont à nouveau sûrs!\"\n\n(+150 or, +300 XP)",
+      "next_scene": "quest_board"
+    },
+    {
+      "id": "missing_merchant_intro",
+      "type": "narrative",
+      "title": "🔍 LE MARCHAND DISPARU",
+      "text": "Mission: \"Le marchand Tobias a disparu il y a 3 jours! Sa femme craint le pire. Retrouvez-le!\"\n\nRécompense: 120 pièces d'or\n\nVous interrogez sa femme, Martha: \"Il allait livrer des marchandises à la Porte Nord. Il n'est jamais revenu!\"\n\nVous partez enquêter sur la route du Nord...",
+      "next_scene": "road_investigation"
+    },
+    {
+      "id": "road_investigation",
+      "type": "narrative",
+      "title": "🛤️ ROUTE DU NORD",
+      "text": "Sur la route, vous trouvez des traces de lutte.\n\nUn chariot renversé, des caisses cassées... et des traces de pattes d'ours!\n\nVous suivez les traces dans la forêt...",
+      "next_scene": "forest_search"
+    },
+    {
+      "id": "forest_search",
+      "type": "narrative",
+      "title": "🌲 FORÊT",
+      "text": "Vous progressez prudemment dans la forêt.\n\nSoudain, vous entendez des cris! \"À l'aide!\"\n\nC'est Tobias! Il est coincé dans un arbre, poursuivi par un ours affamé!",
+      "next_scene": "bear_encounter"
+    },
+    {
+      "id": "bear_encounter",
+      "type": "choice",
+      "title": "🐻 L'OURS",
+      "description": "Un ours géant grogne au pied de l'arbre! Que faire?",
+      "choices": [
+        {
+          "text": "Combattre l'ours",
+          "next_scene": "fight_bear",
+          "effects": {}
+        },
+        {
+          "text": "Distraire l'ours avec de la nourriture",
+          "next_scene": "distract_bear",
+          "effects": {}
+        },
+        {
+          "text": "Effrayer l'ours",
+          "next_scene": "scare_bear",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "fight_bear",
+      "type": "combat",
+      "title": "🐻 COMBAT CONTRE L'OURS",
+      "description": "Vous affrontez l'ours géant!",
+      "monsters": ["goblin_boss"],
+      "on_victory": "merchant_saved",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "distract_bear",
+      "type": "narrative",
+      "title": "🍖 DISTRACTION",
+      "text": "Vous jetez de la nourriture à l'ours.\n\nIl renifle, intéressé, et s'éloigne pour manger!\n\nTobias descend rapidement de l'arbre. \"Merci! Je pensais mourir là-haut!\"",
+      "next_scene": "merchant_saved"
+    },
+    {
+      "id": "scare_bear",
+      "type": "narrative",
+      "title": "🔥 INTIMIDATION",
+      "text": "Vous faites du bruit, agitez des torches!\n\nL'ours, surpris, grogne mais recule et s'enfuit dans la forêt.\n\nTobias descend, soulagé: \"Vous m'avez sauvé!\"",
+      "next_scene": "merchant_saved"
+    },
+    {
+      "id": "merchant_saved",
+      "type": "narrative",
+      "title": "✅ MARCHAND SAUVÉ",
+      "text": "Vous raccompagnez Tobias à Phlan.\n\nMartha pleure de joie! \"Mon mari! Vous l'avez retrouvé!\"\n\nTobias vous paie généreusement: \"Voici 120 pièces d'or, et gardez ceci!\" (Il vous donne une amulette porte-bonheur)\n\n(+120 or, +250 XP, Amulette Porte-Bonheur)",
+      "next_scene": "quest_board"
+    },
+    {
+      "id": "rest_1",
+      "type": "rest",
+      "title": "💤 REPOS À L'AUBERGE",
+      "rest_type": "short",
+      "next_scene": "quest_board"
+    },
+    {
+      "id": "game_over",
+      "type": "narrative",
+      "title": "💀 DÉFAITE",
+      "text": "Vous avez été vaincus...\n\nPhlan aura besoin d'autres aventuriers.",
+      "next_scene": null
+    }
+  ]
+}
+

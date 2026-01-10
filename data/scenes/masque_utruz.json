@@ -1,0 +1,234 @@
+{
+  "scenario_id": "masque_utruz",
+  "name": "Le Masque Utruz",
+  "level": 2,
+  "difficulty": "medium",
+  "duration_hours": "2-3",
+  "recommended_party_size": 3,
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "narrative",
+      "title": "🎭 LA CITÉ DE BELPORT",
+      "text": "La cité portuaire de Belport est en effervescence. Dans trois jours se tiendra le Grand Bal Masqué annuel!\n\nMais une rumeur inquiétante circule: le légendaire Masque Utruz, volé il y a des années, serait réapparu. Ce masque maudit transforme celui qui le porte en créature maléfique!\n\nLe Duc Armand vous convoque: \"Le Masque a refait surface chez un collectionneur. Je crains qu'un vol ne soit prévu pendant le bal. Enquêtez discrètement et protégez mes invités!\"\n\nVotre mission: infiltrer le bal, identifier le voleur, et récupérer le Masque avant qu'il ne soit trop tard!",
+      "next_scene": "city_prep"
+    },
+    {
+      "id": "city_prep",
+      "type": "choice",
+      "title": "🏰 PRÉPARATION - 3 JOURS AVANT LE BAL",
+      "description": "Vous avez 3 jours pour enquêter. Que faire en premier?",
+      "choices": [
+        {
+          "text": "Visiter le collectionneur (Lord Vex)",
+          "next_scene": "visit_collector",
+          "effects": {"locations_visited": 1}
+        },
+        {
+          "text": "Interroger les marchands du port",
+          "next_scene": "port_investigation",
+          "effects": {}
+        },
+        {
+          "text": "Acheter des déguisements pour le bal",
+          "next_scene": "merchant_1",
+          "effects": {}
+        },
+        {
+          "text": "Se renseigner à la bibliothèque",
+          "next_scene": "library",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "visit_collector",
+      "type": "narrative",
+      "title": "🏛️ MANOIR DE LORD VEX",
+      "text": "Lord Vex est un vieux noble excentrique, collectionneur d'antiquités.\n\nIl vous montre fièrement sa collection, dont le Masque Utruz - un masque de jade noir aux yeux rouges brillants.\n\n\"Magnifique, n'est-ce pas? Je l'ai acquis récemment. Bien sûr, les légendes disent qu'il est maudit... Balivernes!\"\n\nVous remarquez que sa sécurité est... insuffisante. Un voleur expérimenté pourrait facilement s'introduire.",
+      "next_scene": "city_prep"
+    },
+    {
+      "id": "port_investigation",
+      "type": "narrative",
+      "title": "⚓ LE PORT DE BELPORT",
+      "text": "Au port, vous interrogez les marchands et marins.\n\nUn marin ivre vous murmure: \"J'ai vu la Guilde des Ombres rôder... Ils préparent un gros coup pour le bal!\"\n\nUn marchand ajoute: \"Une mystérieuse femme masquée cherchait des informations sur le Masque Utruz. Elle portait une cape rouge.\"\n\nIndices importants recueillis!",
+      "next_scene": "city_prep"
+    },
+    {
+      "id": "merchant_1",
+      "type": "merchant",
+      "title": "🎭 BOUTIQUE DE COSTUMES",
+      "merchant_id": "village",
+      "next_scene": "city_prep"
+    },
+    {
+      "id": "library",
+      "type": "narrative",
+      "title": "📚 BIBLIOTHÈQUE DE BELPORT",
+      "text": "À la bibliothèque, vous trouvez un vieux grimoire sur le Masque Utruz:\n\n\"Le Masque Utruz fut créé par un sorcier démoniaque. Celui qui le porte trop longtemps devient une créature maléfique et perd son humanité.\"\n\n\"Pour détruire le masque, il faut le plonger dans les flammes sacrées d'un temple béni.\"\n\nVous savez maintenant comment l'éliminer définitivement!",
+      "next_scene": "day_before_ball"
+    },
+    {
+      "id": "day_before_ball",
+      "type": "narrative",
+      "title": "🌙 LA VEILLE DU BAL",
+      "text": "La veille du bal, des nouvelles alarmantes arrivent!\n\nLord Vex a été attaqué dans son manoir! Le Masque a été volé!\n\nVous vous précipitez sur place. Vex est blessé mais vivant: \"Une femme... cape rouge... elle était trop rapide... le Masque... disparu!\"\n\nLa voleuse correspond à la description du port! Elle viendra sûrement au bal demain!",
+      "next_scene": "ball_night"
+    },
+    {
+      "id": "ball_night",
+      "type": "narrative",
+      "title": "🎭 NUIT DU BAL MASQUÉ",
+      "text": "Le soir du bal arrive.\n\nLe palais ducal est magnifiquement décoré. Des centaines d'invités masqués dansent et bavardent.\n\nVous devez trouver la voleuse à la cape rouge avant qu'elle n'utilise le Masque!\n\nVous scrutez la foule...",
+      "next_scene": "ball_investigation"
+    },
+    {
+      "id": "ball_investigation",
+      "type": "choice",
+      "title": "🕵️ RECHERCHE AU BAL",
+      "description": "Comment procédez-vous?",
+      "choices": [
+        {
+          "text": "Surveiller les balcons et sorties",
+          "next_scene": "watch_exits",
+          "effects": {}
+        },
+        {
+          "text": "Interroger les invités",
+          "next_scene": "question_guests",
+          "effects": {}
+        },
+        {
+          "text": "Explorer les couloirs du palais",
+          "next_scene": "explore_palace",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "watch_exits",
+      "type": "narrative",
+      "title": "👀 SURVEILLANCE",
+      "text": "Vous surveillez discrètement les sorties.\n\nSoudain, vous apercevez une silhouette en cape rouge qui se glisse vers les jardins!\n\nC'est elle! Vous la suivez...",
+      "next_scene": "garden_chase"
+    },
+    {
+      "id": "question_guests",
+      "type": "narrative",
+      "title": "💬 INTERROGATOIRES",
+      "text": "Vous interrogez les invités.\n\nUn noble mentionne: \"J'ai vu une femme étrange en cape rouge. Elle semblait chercher quelqu'un... ou quelque chose.\"\n\nUne autre dit: \"Elle est partie vers les jardins il y a peu!\"\n\nVous filez vers les jardins!",
+      "next_scene": "garden_chase"
+    },
+    {
+      "id": "explore_palace",
+      "type": "narrative",
+      "title": "🏰 EXPLORATION",
+      "text": "Vous explorez les couloirs du palais.\n\nDans une salle isolée, vous trouvez des traces de lutte et... un morceau de cape rouge!\n\nElle est passée par ici! Les traces mènent aux jardins...",
+      "next_scene": "garden_chase"
+    },
+    {
+      "id": "garden_chase",
+      "type": "narrative",
+      "title": "🌹 JARDINS DU PALAIS",
+      "text": "Vous poursuivez la femme en cape rouge dans les jardins.\n\nElle se retourne et retire sa cape... c'est la Duchesse Selena, la propre sœur du Duc!\n\n\"Vous êtes trop curieux!\" dit-elle en sortant le Masque Utruz. \"Ce masque me donnera le pouvoir de renverser mon frère!\"\n\nElle lève le masque vers son visage...",
+      "next_scene": "mask_confrontation"
+    },
+    {
+      "id": "mask_confrontation",
+      "type": "choice",
+      "title": "⚠️ CONFRONTATION!",
+      "description": "Selena s'apprête à porter le Masque! Vite!",
+      "choices": [
+        {
+          "text": "L'arrêter physiquement!",
+          "next_scene": "stop_selena",
+          "effects": {}
+        },
+        {
+          "text": "Tenter de la raisonner",
+          "next_scene": "reason_selena",
+          "effects": {}
+        },
+        {
+          "text": "Tirer sur le masque",
+          "next_scene": "shoot_mask",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "stop_selena",
+      "type": "narrative",
+      "title": "⚔️ INTERVENTION",
+      "text": "Vous vous jetez sur Selena!\n\nTrop tard! Elle a déjà mis le Masque!\n\nSes yeux deviennent rouges, sa peau pâlit... Le masque la transforme!\n\n\"Je... sens... le POUVOIR!\" hurle-t-elle d'une voix démoniaque.\n\nElle invoque des gardes morts-vivants! Le combat est inévitable!",
+      "next_scene": "boss_fight"
+    },
+    {
+      "id": "reason_selena",
+      "type": "narrative",
+      "title": "💬 TENTATIVE DE RAISON",
+      "text": "\"Selena! N'utilisez pas ce masque! Il vous corrompra!\"\n\nElle hésite un instant... mais l'ambition l'emporte.\n\n\"Mon frère ne me respecte pas! Avec ce pouvoir, je serai enfin reconnue!\"\n\nElle porte le Masque... et la transformation commence!\n\nSes yeux brillent de rouge, sa voix devient démoniaque!",
+      "next_scene": "boss_fight"
+    },
+    {
+      "id": "shoot_mask",
+      "type": "narrative",
+      "title": "🎯 TIR PRÉCIS",
+      "text": "Vous tirez (ou lancez une arme) sur le Masque!\n\nTouché! Le masque vole de ses mains...\n\nMais trop tard! Elle l'a touché assez longtemps pour être partiellement corrompue!\n\nSelena, à moitié transformée, pousse un cri de rage et invoque ses serviteurs!",
+      "next_scene": "boss_fight_weakened"
+    },
+    {
+      "id": "boss_fight",
+      "type": "combat",
+      "title": "👹 SELENA TRANSFORMÉE",
+      "description": "Selena, complètement transformée par le Masque Utruz, vous attaque avec ses gardes morts-vivants!\n\nSes yeux rouges brillent de malveillance!",
+      "monsters": ["cult_fanatic", "skeleton", "skeleton", "shadow"],
+      "on_victory": "after_boss",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "boss_fight_weakened",
+      "type": "combat",
+      "title": "😈 SELENA PARTIELLEMENT TRANSFORMÉE",
+      "description": "Selena, partiellement corrompue, attaque avec moins de serviteurs!",
+      "monsters": ["cult_fanatic", "skeleton", "skeleton"],
+      "on_victory": "after_boss",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "after_boss",
+      "type": "narrative",
+      "title": "⚰️ APRÈS LE COMBAT",
+      "text": "Selena s'effondre, vaincue. Le Masque Utruz tombe au sol.\n\nLentement, la transformation commence à se dissiper. Selena, affaiblie, murmure: \"Qu'ai-je... fait?\"\n\nVous récupérez le Masque. Il pulse d'une énergie maléfique.\n\nVous devez le détruire!",
+      "next_scene": "destroy_mask"
+    },
+    {
+      "id": "destroy_mask",
+      "type": "narrative",
+      "title": "🔥 DESTRUCTION DU MASQUE",
+      "text": "Vous vous précipitez au Temple de Pelor, dieu de la Lumière.\n\nLe Haut Prêtre invoque les flammes sacrées. Vous jetez le Masque Utruz dans le brasier.\n\nLe masque se consume en hurlant, des esprits démoniaques s'échappant avant de disparaître!\n\nAprès quelques minutes, il ne reste que des cendres. Le Masque Utruz est détruit à jamais!",
+      "next_scene": "victory"
+    },
+    {
+      "id": "victory",
+      "type": "narrative",
+      "title": "🎉 VICTOIRE!",
+      "text": "Le lendemain, le Duc Armand vous reçoit:\n\n\"Vous avez sauvé le bal, ma vie, et même ma sœur égarée. Le Masque Utruz ne menacera plus personne.\"\n\n\"Selena sera jugée, mais grâce à vous, elle a survécu et peut se racheter.\"\n\nIl vous récompense généreusement: \"Vous êtes désormais Chevaliers Protecteurs de Belport! Un titre et des terres vous sont offerts!\"\n\nLe bal reprend, dans la joie cette fois. Vous dansez jusqu'à l'aube, héros de la cité!\n\nLe Masque Utruz n'est plus qu'un mauvais souvenir!",
+      "next_scene": null,
+      "rewards": {
+        "gold": 350,
+        "xp": 700,
+        "items": ["Titre de Chevalier Protecteur", "Terres à Belport", "Costume de Bal Magique"]
+      }
+    },
+    {
+      "id": "game_over",
+      "type": "narrative",
+      "title": "💀 DÉFAITE",
+      "text": "Vous avez été vaincus...\n\nSelena, sous l'emprise du Masque Utruz, renverse le Duc et plonge Belport dans les ténèbres.",
+      "next_scene": null
+    }
+  ]
+}
+

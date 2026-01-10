@@ -1,0 +1,245 @@
+{
+  "scenario_id": "cryptes_de_kelemvor",
+  "name": "Les Cryptes de Kelemvor",
+  "level": 3,
+  "difficulty": "medium",
+  "duration_hours": "2-3",
+  "recommended_party_size": 4,
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "narrative",
+      "title": "⚰️ LE TEMPLE DE KELEMVOR",
+      "text": "Le Temple de Kelemvor, dieu de la Mort, se dresse au sommet d'une colline lugubre.\n\nLe Grand Prêtre Theron vous a convoqués d'urgence: \"Les cryptes sous le temple ont été profanées! Des morts-vivants se réveillent et attaquent les fidèles!\"\n\n\"Il y a des semaines, un nécromancien nommé Valakar a tenté de voler un artefact sacré - le Crâne de Kelemvor. Nous l'avons chassé, mais il est revenu en secret et a animé les morts!\"\n\n\"Descendez dans les cryptes, éliminez les morts-vivants et trouvez Valakar avant qu'il ne s'empare du Crâne!\"\n\nVos pas résonnent alors que vous descendez l'escalier de pierre...",
+      "next_scene": "temple_choice"
+    },
+    {
+      "id": "temple_choice",
+      "type": "choice",
+      "title": "🏛️ HALL DU TEMPLE",
+      "description": "Avant de descendre, que voulez-vous faire?",
+      "choices": [
+        {
+          "text": "Parler au Grand Prêtre Theron",
+          "next_scene": "talk_priest",
+          "effects": {"npcs_met": 1}
+        },
+        {
+          "text": "Prier à l'autel de Kelemvor",
+          "next_scene": "pray_altar",
+          "effects": {}
+        },
+        {
+          "text": "Acheter des équipements",
+          "next_scene": "merchant_1",
+          "effects": {}
+        },
+        {
+          "text": "Descendre dans les cryptes",
+          "next_scene": "crypt_entrance",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "talk_priest",
+      "type": "narrative",
+      "title": "📿 LE GRAND PRÊTRE THERON",
+      "text": "Theron vous donne plus de détails:\n\n\"Valakar était autrefois l'un de nos prêtres. Mais il a étudié la nécromancie interdite et a été banni.\"\n\n\"Le Crâne de Kelemvor est gardé dans la chambre du sanctuaire, au plus profond des cryptes. Il permet de contrôler les morts-vivants!\"\n\n\"Soyez prudents. Les cryptes sont anciennes et pleines de pièges. Et Valakar n'est pas seul - il a des serviteurs squelettiques.\"\n\nIl vous bénit: \"Que Kelemvor guide vos pas!\"",
+      "next_scene": "temple_choice"
+    },
+    {
+      "id": "pray_altar",
+      "type": "narrative",
+      "title": "🙏 BÉNÉDICTION DE KELEMVOR",
+      "text": "Vous priez devant l'autel de Kelemvor.\n\nUne lumière argentée vous enveloppe. Vous sentez une protection divine!\n\n(Bonus: Résistance contre les morts-vivants pour le prochain combat)",
+      "next_scene": "temple_choice"
+    },
+    {
+      "id": "merchant_1",
+      "type": "merchant",
+      "title": "⚗️ FRÈRE ALCHEMISTE",
+      "merchant_id": "village",
+      "next_scene": "temple_choice"
+    },
+    {
+      "id": "crypt_entrance",
+      "type": "narrative",
+      "title": "⚰️ ENTRÉE DES CRYPTES",
+      "text": "Vous descendez un escalier en colimaçon dans l'obscurité.\n\nL'air devient froid et humide. Une odeur de moisi et de mort flotte...\n\nVous arrivez dans une grande salle aux murs tapissés de niches funéraires. Des cercueils de pierre alignés. Des torches éteintes depuis longtemps.\n\nSoudain, un grattement sinistre résonne! Des couvercles de pierre grincent...\n\nDes squelettes se lèvent de leurs tombes!",
+      "next_scene": "skeleton_combat_1"
+    },
+    {
+      "id": "skeleton_combat_1",
+      "type": "combat",
+      "title": "💀 SQUELETTES ANIMÉS",
+      "description": "Trois squelettes vous attaquent, leurs épées rouillées brandies!",
+      "monsters": ["skeleton", "skeleton", "skeleton"],
+      "on_victory": "after_skeletons",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "after_skeletons",
+      "type": "narrative",
+      "title": "🗝️ APRÈS LE COMBAT",
+      "text": "Les squelettes retombent en poussière.\n\nVous trouvez une clé de bronze sur l'un d'eux. Elle porte le symbole de Kelemvor.\n\nTrois passages s'offrent à vous:\n- À gauche: Un couloir sombre avec des torches éteintes\n- Au centre: Une porte de fer verrouillée (vous avez la clé!)\n- À droite: Un escalier descendant plus profond",
+      "next_scene": "crypt_choice"
+    },
+    {
+      "id": "crypt_choice",
+      "type": "choice",
+      "title": "🗝️ TROIS CHEMINS",
+      "description": "Quel chemin choisissez-vous?",
+      "choices": [
+        {
+          "text": "Couloir de gauche (torches éteintes)",
+          "next_scene": "left_corridor",
+          "effects": {}
+        },
+        {
+          "text": "Porte centrale (avec la clé)",
+          "next_scene": "central_door",
+          "effects": {}
+        },
+        {
+          "text": "Escalier de droite (descend)",
+          "next_scene": "right_stairs",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "left_corridor",
+      "type": "narrative",
+      "title": "🕯️ COULOIR OBSCUR",
+      "text": "Vous avancez dans le couloir sombre, torches en main.\n\nSoudain, vous entendez un sifflement... Des ombres se détachent des murs!\n\nCe ne sont pas de simples ombres... ce sont des créatures mort-vivantes!",
+      "next_scene": "shadow_combat"
+    },
+    {
+      "id": "shadow_combat",
+      "type": "combat",
+      "title": "👻 OMBRES MORT-VIVANTES",
+      "description": "Deux ombres spectrales vous attaquent, drainant votre force vitale!",
+      "monsters": ["shadow", "shadow"],
+      "on_victory": "treasure_room",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "treasure_room",
+      "type": "narrative",
+      "title": "💎 SALLE DU TRÉSOR",
+      "text": "Au bout du couloir, vous trouvez une petite salle du trésor!\n\nDes offrandes funéraires: or, bijoux, et... une épée argentée gravée de runes!\n\n(Vous obtenez: 200 or, Épée Argentée +1)\n\nUne autre porte mène plus loin dans les cryptes.",
+      "next_scene": "deep_crypts"
+    },
+    {
+      "id": "central_door",
+      "type": "narrative",
+      "title": "🚪 PORTE DE FER",
+      "text": "Vous utilisez la clé de bronze. La porte s'ouvre avec un grincement.\n\nVous entrez dans une chapelle mortuaire. Des statues de Kelemvor gardent la salle.\n\nSur l'autel, vous trouvez des potions de soin!\n\n(Vous obtenez: 2 Potions de Soin)\n\nUn passage secret derrière l'autel mène plus profond.",
+      "next_scene": "deep_crypts"
+    },
+    {
+      "id": "right_stairs",
+      "type": "narrative",
+      "title": "⬇️ DESCENTE",
+      "text": "Vous descendez l'escalier en pierre.\n\nIl fait de plus en plus froid. Une aura nécromantique émane d'en bas...\n\nVous arrivez directement dans les cryptes profondes.",
+      "next_scene": "deep_crypts"
+    },
+    {
+      "id": "deep_crypts",
+      "type": "narrative",
+      "title": "⚰️ CRYPTES PROFONDES",
+      "text": "Vous êtes maintenant dans les cryptes anciennes, bien plus profond sous terre.\n\nLes murs suintent d'humidité. Des cercueils ornés s'alignent. L'énergie nécromantique est palpable.\n\nVous entendez une voix résonner: \"Ainsi, vous avez réussi à descendre jusqu'ici... Impressionnant!\"\n\nC'est Valakar! Vous le voyez au fond de la salle, près d'une grande porte ornée du symbole de Kelemvor.",
+      "next_scene": "valakar_choice"
+    },
+    {
+      "id": "valakar_choice",
+      "type": "choice",
+      "title": "🧙 CONFRONTATION AVEC VALAKAR",
+      "description": "Valakar vous fait face. Que faites-vous?",
+      "choices": [
+        {
+          "text": "L'attaquer immédiatement",
+          "next_scene": "valakar_fight_early",
+          "effects": {}
+        },
+        {
+          "text": "Tenter de le raisonner",
+          "next_scene": "negotiate_valakar",
+          "effects": {}
+        },
+        {
+          "text": "Chercher un moyen de contourner",
+          "next_scene": "sneak_past",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "negotiate_valakar",
+      "type": "narrative",
+      "title": "💬 NÉGOCIATION",
+      "text": "Vous tentez de raisonner Valakar:\n\n\"Pourquoi profaner ces cryptes? Que cherchez-vous vraiment?\"\n\nValakar sourit amèrement: \"Kelemvor m'a trahi! J'ai servi fidèlement, mais quand ma femme est morte, il ne l'a pas ramenée!\"\n\n\"Avec le Crâne de Kelemvor, je pourrai la ressusciter! Et personne ne m'en empêchera!\"\n\nIl lève son bâton: \"Même pas vous!\"",
+      "next_scene": "valakar_fight"
+    },
+    {
+      "id": "sneak_past",
+      "type": "narrative",
+      "title": "🤫 TENTATIVE DE CONTOURNEMENT",
+      "text": "Vous essayez de trouver un passage pour le contourner...\n\nMais Valakar vous a repérés! \"Vous croyez pouvoir me contourner?\"\n\nIl invoque ses serviteurs morts-vivants! \"Mes gardiens vont s'occuper de vous!\"",
+      "next_scene": "valakar_fight"
+    },
+    {
+      "id": "valakar_fight_early",
+      "type": "combat",
+      "title": "⚔️ VALAKAR SURPRIS",
+      "description": "Vous chargez Valakar! Il n'a le temps d'invoquer qu'un seul serviteur!",
+      "monsters": ["death_priest", "skeleton"],
+      "on_victory": "sanctum_access",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "valakar_fight",
+      "type": "combat",
+      "title": "⚔️ VALAKAR LE NÉCROMANCIEN",
+      "description": "Valakar invoque ses serviteurs morts-vivants! Un nécromancien puissant accompagné de squelettes et d'une ombre!",
+      "monsters": ["death_priest", "skeleton", "skeleton", "shadow"],
+      "on_victory": "sanctum_access",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "sanctum_access",
+      "type": "narrative",
+      "title": "🗝️ LA PORTE DU SANCTUAIRE",
+      "text": "Valakar s'effondre, vaincu. Ses derniers mots: \"Ma bien-aimée... pardon...\"\n\nVous trouvez sur lui la Clé du Sanctuaire.\n\nLa grande porte ornée s'ouvre, révélant le Sanctuaire de Kelemvor.",
+      "next_scene": "sanctum"
+    },
+    {
+      "id": "sanctum",
+      "type": "narrative",
+      "title": "✨ SANCTUAIRE DE KELEMVOR",
+      "text": "Vous entrez dans le sanctuaire sacré.\n\nAu centre, sur un piédestal de marbre noir, repose le Crâne de Kelemvor - un crâne de cristal argenté qui brille d'une lumière douce.\n\nL'artefact est intact! Valakar n'a pas eu le temps de s'en emparer.\n\nVous le prenez délicatement et remontez vers le temple.",
+      "next_scene": "victory"
+    },
+    {
+      "id": "victory",
+      "type": "narrative",
+      "title": "🎉 VICTOIRE!",
+      "text": "De retour au temple, le Grand Prêtre Theron vous accueille avec soulagement:\n\n\"Le Crâne est sauf! Les morts-vivants cessent de se manifester!\"\n\n\"Vous avez sauvé notre temple et empêché une terrible profanation. Kelemvor vous bénit!\"\n\nIl vous récompense généreusement: \"Prenez ceci, et que la paix des morts vous accompagne.\"\n\nLes Cryptes de Kelemvor sont à nouveau en paix. Les fidèles peuvent retourner prier sans crainte.\n\nVotre nom sera gravé dans les annales du temple!",
+      "next_scene": null,
+      "rewards": {
+        "gold": 400,
+        "xp": 900,
+        "items": ["Crâne de Kelemvor (rendu)", "Bénédiction Divine", "Épée Argentée +1"]
+      }
+    },
+    {
+      "id": "game_over",
+      "type": "narrative",
+      "title": "💀 DÉFAITE",
+      "text": "Vous avez été vaincus dans les cryptes...\n\nLes morts-vivants continuent de hanter le temple de Kelemvor.",
+      "next_scene": null
+    }
+  ]
+}
+

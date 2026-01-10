@@ -52,7 +52,7 @@ python yawning_portal_game.py
 
 ---
 
-## 📖 7 Scénarios Prêts à Jouer
+## 📖 10 Scénarios Prêts à Jouer
 
 ### 🏰 La Chasse aux Gobelins
 - **Niveau** : 3
@@ -122,6 +122,36 @@ python collier_de_zark_game.py
 
 ```bash
 python auberge_sanglier_gris_game.py
+```
+
+### ⚰️ Les Cryptes de Kelemvor
+- **Niveau** : 3
+- **Durée** : 2-3 heures
+- **Difficulté** : Moyenne
+- **Synopsis** : Explorez les cryptes hantées sous le Temple de Kelemvor et affrontez le nécromancien Valakar !
+
+```bash
+python cryptes_de_kelemvor_game.py
+```
+
+### 🎭 Le Masque Utruz
+- **Niveau** : 2
+- **Durée** : 2-3 heures
+- **Difficulté** : Moyenne
+- **Synopsis** : Enquête et intrigue lors du Grand Bal Masqué de Belport. Empêchez le masque maudit de tomber entre de mauvaises mains !
+
+```bash
+python masque_utruz_game.py
+```
+
+### 🏰 Défis à Phlan
+- **Niveau** : 1
+- **Durée** : 1-2 heures
+- **Difficulté** : Facile
+- **Synopsis** : Accomplissez plusieurs mini-missions dans la ville frontière de Phlan : taverne hantée, gobelins des égouts, marchand disparu !
+
+```bash
+python defis_a_phlan_game.py
 ```
 
 ---

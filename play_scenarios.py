@@ -41,11 +41,23 @@ def main():
     print("     Niveau 1 | Durée: 1-2h | Difficulté: Facile")
     print("     Une nuit mouvementée dans une auberge sur la route du Nord!")
 
+    print("\n  8. Les Cryptes de Kelemvor")
+    print("     Niveau 3 | Durée: 2-3h | Difficulté: Moyenne")
+    print("     Explorez des cryptes hantées et affrontez un nécromancien!")
+
+    print("\n  9. Le Masque Utruz")
+    print("     Niveau 2 | Durée: 2-3h | Difficulté: Moyenne")
+    print("     Enquête et intrigue autour d'un masque maudit lors d'un bal!")
+
+    print("\n  10. Défis à Phlan")
+    print("     Niveau 1 | Durée: 1-2h | Difficulté: Facile")
+    print("     Plusieurs mini-missions dans la ville frontière de Phlan!")
+
     print("\n" + "=" * 70)
 
     while True:
         try:
-            choice = input("\nChoisissez un scénario (1-7) ou 'q' pour quitter: ").strip()
+            choice = input("\nChoisissez un scénario (1-10) ou 'q' pour quitter: ").strip()
 
             if choice.lower() == 'q':
                 print("\nÀ bientôt, aventurier! 🎲")
@@ -123,8 +135,38 @@ def main():
                 scenario.play()
                 break
 
+            elif choice_num == 8:
+                print("\n⚰️ Lancement de 'Les Cryptes de Kelemvor'...")
+                from cryptes_de_kelemvor_game import CryptesDeKelemvorScenario
+                scenario = CryptesDeKelemvorScenario(
+                    pdf_path="scenarios/Cryptes-de-Kelemvor.pdf",
+                    use_ncurses=False
+                )
+                scenario.play()
+                break
+
+            elif choice_num == 9:
+                print("\n🎭 Lancement de 'Le Masque Utruz'...")
+                from masque_utruz_game import MasqueUtruzScenario
+                scenario = MasqueUtruzScenario(
+                    pdf_path="scenarios/Masque-utruz.pdf",
+                    use_ncurses=False
+                )
+                scenario.play()
+                break
+
+            elif choice_num == 10:
+                print("\n🏰 Lancement de 'Défis à Phlan'...")
+                from defis_a_phlan_game import DefisAPlanScenario
+                scenario = DefisAPlanScenario(
+                    pdf_path="scenarios/Defis-a-Phlan.pdf",
+                    use_ncurses=False
+                )
+                scenario.play()
+                break
+
             else:
-                print("❌ Choix invalide. Veuillez entrer 1, 2, 3, 4, 5, 6, 7, ou 'q'")
+                print("❌ Choix invalide. Veuillez entrer 1-10 ou 'q'")
 
         except ValueError:
             print("❌ Veuillez entrer un nombre valide")
