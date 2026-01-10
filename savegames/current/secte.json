@@ -1,0 +1,16 @@
+{
+  "scenario": "La Secte du Crâne",
+  "scene_id": "town_choice",
+  "game_state": {
+    "combat_victories": 0,
+    "total_xp": 0,
+    "gold": 0,
+    "gold_spent": 120,
+    "locations_visited": 0,
+    "npcs_met": 0,
+    "quests_completed": 0,
+    "deaths": 0
+  },
+  "timestamp": "2026-01-11T00:23:35.728882",
+  "version": "3.1.0"
+}
