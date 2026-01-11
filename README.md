@@ -1,502 +1,312 @@
-# DnD5e-Scenarios
+# 🎲 DnD5e-Scenarios
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![dnd-5e-core](https://img.shields.io/badge/dnd--5e--core-0.1.8-success.svg)](https://pypi.org/project/dnd-5e-core/)
+Collection de scénarios D&D 5e enrichis et prêts à jouer, basés sur les règles du package `dnd-5e-core`.
 
-**Créez et jouez des aventures D&D 5e en utilisant le système de scénarios JSON !**
-
-Système complet de création de scénarios basés sur JSON utilisant le package [dnd-5e-core](https://pypi.org/project/dnd-5e-core/). Créez des aventures narratives interactives avec combats, choix, marchands et plus encore.
+![D&D 5e](https://img.shields.io/badge/D&D-5e-red)
+![Python](https://img.shields.io/badge/Python-3.12+-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 🎯 Qu'est-ce que DnD5e-Scenarios ?
+## 🎯 À Propos
 
-DnD5e-Scenarios est un **moteur de scénarios JSON** pour D&D 5e qui vous permet de :
+Ce projet propose une **collection de 36 scénarios D&D 5e en français**, dont :
+- **2 scénarios enrichis manuellement** (⭐⭐⭐⭐⭐) - Qualité professionnelle, 95% fidèles aux PDFs
+- **9 scénarios originaux** (⭐⭐⭐) - Créés avec soin
+- **25 scénarios prototypes** (⭐⭐) - Enrichis automatiquement
 
-✅ **Créer des aventures** en écrivant du JSON (pas de code Python requis)  
-✅ **Jouer 3 scénarios complets** prêts à l'emploi  
-✅ **Utiliser les règles officielles D&D 5e** via le package `dnd-5e-core`  
-✅ **Personnaliser facilement** les scènes, combats, NPCs et récompenses  
+Les scénarios utilisent le système de jeu du package **[dnd-5e-core](https://pypi.org/project/dnd-5e-core/)** pour gérer les règles D&D 5e.
 
 ---
 
-## 🚀 Démarrage Rapide
+## 📦 Installation Rapide
 
-### Installation
+### 1. Cloner le Projet
 
 ```bash
-# 1. Installer le package dnd-5e-core
-pip install dnd-5e-core
-
-# 2. Cloner ce dépôt
 git clone https://github.com/codingame-team/DnD5e-Scenarios.git
 cd DnD5e-Scenarios
-
-# 3. Jouer un scénario !
-python chasse_gobelins_refactored.py
 ```
 
-### Lancer un scénario
+### 2. Créer un Environnement Virtuel
 
 ```bash
-# La Chasse aux Gobelins (niveau 3)
-python chasse_gobelins_refactored.py
+python3 -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# ou
+.venv\Scripts\activate     # Windows
+```
 
-# La Tombe des Rois Serpents (niveau 2)
-python tombe_rois_serpents_game.py
+### 3. Installer les Dépendances
 
-# Tales from the Yawning Portal - Sunless Citadel (niveau 1)
-python yawning_portal_game.py
+```bash
+pip install dnd-5e-core
 ```
 
 ---
 
-## 📖 10 Scénarios Prêts à Jouer
+## 🚀 Lancement Rapide
 
-### 🏰 La Chasse aux Gobelins
-- **Niveau** : 3
-- **Durée** : 1-2 heures
-- **Difficulté** : Facile
-- **Synopsis** : Sauvez le Village de Brume terrorisé par des gobelins !
+### Méthode 1: Launcher Universel (Recommandé)
+
+Le launcher offre une interface colorée pour choisir parmi tous les scénarios :
 
 ```bash
+python launcher.py
+```
+
+Vous verrez un menu avec :
+- 📖 Scénarios enrichis manuellement (qualité ⭐⭐⭐⭐⭐)
+- 📚 Scénarios originaux (qualité ⭐⭐⭐)
+- 📋 Scénarios prototypes (qualité ⭐⭐)
+
+Entrez le numéro du scénario ou 'q' pour quitter.
+
+### Méthode 2: Lancement Direct
+
+Lancez directement un scénario spécifique :
+
+```bash
+# Scénarios enrichis manuellement (⭐⭐⭐⭐⭐)
+python masque_utruz_enrichi_game.py
+python cryptes_de_kelemvor_manual_game.py
+
+# Scénarios originaux (⭐⭐⭐)
 python chasse_gobelins_refactored.py
-```
-
-### 🏛️ The Sunless Citadel
-- **Niveau** : 1
-- **Durée** : 2-3 heures  
-- **Difficulté** : Moyenne
-- **Synopsis** : Explorez une citadelle engloutie et détruisez l'arbre maudit !
-
-```bash
 python yawning_portal_game.py
-```
-
-### 🔺 La Tombe des Rois Serpents
-- **Niveau** : 2
-- **Durée** : 2 heures
-- **Difficulté** : Moyenne
-- **Synopsis** : Pillez une pyramide ancienne et affrontez le Roi Serpent momifié !
-
-```bash
 python tombe_rois_serpents_game.py
-```
-
-### 👁️ L'Oeil de Gruumsh
-- **Niveau** : 3
-- **Durée** : 2-3 heures
-- **Difficulté** : Moyenne
-- **Synopsis** : Affrontez une tribu d'orques menée par un redoutable Oeil de Gruumsh dans les Montagnes de Fer !
-
-```bash
 python oeil_gruumsh_game.py
-```
-
-### 💀 La Secte du Crâne
-- **Niveau** : 4
-- **Durée** : 2-3 heures
-- **Difficulté** : Difficile
-- **Synopsis** : Infiltrez les catacombes de Ravencrest et arrêtez un culte nécromantique avant qu'il ne soit trop tard !
-
-```bash
 python secte_du_crane_game.py
-```
-
-### 💎 Le Collier de Zark
-- **Niveau** : 2
-- **Durée** : 1-2 heures
-- **Difficulté** : Moyenne
-- **Synopsis** : Enquêtez sur le vol d'un précieux collier d'émeraude et retrouvez le voleur !
-
-```bash
 python collier_de_zark_game.py
-```
-
-### 🍺 L'Auberge du Sanglier Gris
-- **Niveau** : 1
-- **Durée** : 1-2 heures
-- **Difficulté** : Facile
-- **Synopsis** : Une nuit d'orage dans une auberge sur la route du Nord. Mais la nuit sera plus mouvementée que prévu !
-
-```bash
 python auberge_sanglier_gris_game.py
-```
 
-### ⚰️ Les Cryptes de Kelemvor
-- **Niveau** : 3
-- **Durée** : 2-3 heures
-- **Difficulté** : Moyenne
-- **Synopsis** : Explorez les cryptes hantées sous le Temple de Kelemvor et affrontez le nécromancien Valakar !
-
-```bash
+# Nouveaux scénarios (⭐⭐⭐)
 python cryptes_de_kelemvor_game.py
-```
-
-### 🎭 Le Masque Utruz
-- **Niveau** : 2
-- **Durée** : 2-3 heures
-- **Difficulté** : Moyenne
-- **Synopsis** : Enquête et intrigue lors du Grand Bal Masqué de Belport. Empêchez le masque maudit de tomber entre de mauvaises mains !
-
-```bash
 python masque_utruz_game.py
-```
-
-### 🏰 Défis à Phlan
-- **Niveau** : 1
-- **Durée** : 1-2 heures
-- **Difficulté** : Facile
-- **Synopsis** : Accomplissez plusieurs mini-missions dans la ville frontière de Phlan : taverne hantée, gobelins des égouts, marchand disparu !
-
-```bash
 python defis_a_phlan_game.py
 ```
 
----
+### Méthode 3: Menu Play Scenarios
 
-## 🎨 Système de Scénarios JSON
-
-### Créez vos propres aventures !
-
-Le système supporte **5 types de scènes** :
-
-| Type | Description | Exemple |
-|------|-------------|---------|
-| 🎭 **narrative** | Texte narratif immersif | Intro, descriptions de lieux |
-| 🔀 **choice** | Choix multiples avec embranchements | Que faire ? Explorer / Se reposer |
-| ⚔️ **combat** | Combat tactique avec monstres | Affrontement avec gobelins |
-| 🛒 **merchant** | Marchand avec inventaire | Acheter potions et équipement |
-| 💤 **rest** | Repos court ou long | Récupération HP et sorts |
-
-### Exemple de scénario JSON
-
-```json
-{
-  "scenario_id": "mon_aventure",
-  "name": "Mon Aventure Épique",
-  "level": 3,
-  "difficulty": "medium",
-  "scenes": [
-    {
-      "id": "intro",
-      "type": "narrative",
-      "title": "🏰 Le Début",
-      "text": "Vous arrivez dans un village mystérieux...",
-      "next_scene": "choix1"
-    },
-    {
-      "id": "choix1",
-      "type": "choice",
-      "title": "Que faire ?",
-      "description": "Le village est calme. Trop calme.",
-      "choices": [
-        {
-          "text": "Explorer la taverne",
-          "next_scene": "taverne",
-          "effects": {"reputation": 1}
-        },
-        {
-          "text": "Partir vers la forêt",
-          "next_scene": "foret"
-        }
-      ]
-    },
-    {
-      "id": "combat1",
-      "type": "combat",
-      "title": "⚔️ Embuscade !",
-      "description": "Des bandits surgissent !",
-      "monsters": ["bandit", "bandit", "bandit-captain"],
-      "on_victory": "victoire",
-      "on_defeat": "defaite"
-    }
-  ]
-}
+```bash
+python play_scenarios.py
 ```
-
-### Structure d'un scénario
-
-```
-data/scenes/mon_scenario.json
-{
-  "scenario_id": "identifiant_unique",
-  "name": "Titre du Scénario",
-  "level": 3,                    # Niveau recommandé
-  "difficulty": "medium",        # easy, medium, hard
-  "duration_hours": "2-3",
-  "recommended_party_size": 4,
-  "scenes": [
-    // Liste des scènes...
-  ]
-}
-```
-
-📖 **Documentation complète** : [README_SCENARIOS_JSON.md](README_SCENARIOS_JSON.md)
 
 ---
 
-## 🎮 Fonctionnalités
+## 📖 Scénarios Disponibles
 
-### Scènes Narratives
-- ✅ Texte avec animation lettre par lettre
-- ✅ Délai personnalisable
-- ✅ Transitions fluides entre scènes
+### ⭐⭐⭐⭐⭐ Enrichis Manuellement (Qualité Professionnelle)
 
-### Choix Interactifs
-- ✅ Embranchements multiples
-- ✅ Effets sur l'état du jeu (or, réputation, etc.)
-- ✅ Navigation libre dans le scénario
+| Scénario | Niveau | Durée | Scènes | Description |
+|----------|--------|-------|--------|-------------|
+| **🎭 Le Masque Utruz** | 3 | 3-4h | 33 | Cité sur une faille, usurier, Utruz, Dieu-Poisson |
+| **⚰️ Les Cryptes de Kelemvor** | 4 | 3-4h | 27 | Temple profané, 7 sceaux, braseros sacrés, nécrophage |
 
-### Système de Combat
-- ✅ Règles D&D 5e officielles
-- ✅ Jets d'attaque et de dégâts
-- ✅ Actions spéciales des monstres
-- ✅ Gestion de l'initiative
+### ⭐⭐⭐ Scénarios Originaux (Bonne Qualité)
 
-### Marchands
-- ✅ Achat/vente d'équipement
-- ✅ Armes, armures, potions
-- ✅ Gestion automatique de l'inventaire
+| Scénario | Niveau | Durée | Description |
+|----------|--------|-------|-------------|
+| 🏰 La Chasse aux Gobelins | 3 | 1-2h | Sauvez le Village de Brume |
+| 🏛️ The Sunless Citadel | 1 | 2-3h | Explorez une citadelle engloutie |
+| 🔺 La Tombe des Rois Serpents | 2 | 2h | Pillez une pyramide ancienne |
+| 👁️ L'Oeil de Gruumsh | 3 | 2-3h | Affrontez une tribu d'orques |
+| 💀 La Secte du Crâne | 4 | 2-3h | Infiltrez les catacombes |
+| 💎 Le Collier de Zark | 2 | 1-2h | Enquête sur un vol de collier |
+| 🍺 L'Auberge du Sanglier Gris | 1 | 1-2h | Nuit mouvementée dans une auberge |
 
-### Repos
-- ✅ Repos court (récupération partielle)
-- ✅ Repos long (récupération complète + sorts)
-- ✅ Gestion automatique des HP et ressources
+### 🆕 Nouveaux Scénarios (⭐⭐⭐)
+
+| Scénario | Niveau | Durée | Description |
+|----------|--------|-------|-------------|
+| ⚰️ Cryptes de Kelemvor | 3 | 2-3h | Version alternative |
+| 🎭 Le Masque Utruz | 2 | 2-3h | Version alternative |
+| 🏰 Défis à Phlan | 1 | 1-2h | Mini-missions variées |
+
+### 📋 Prototypes (⭐⭐)
+
+25 scénarios enrichis automatiquement disponibles comme prototypes.
 
 ---
 
-## 🏗️ Architecture du Projet
+## 🛠️ Outils pour Créateurs
+
+### Analyser un PDF de Scénario
+
+Pour enrichir un nouveau scénario depuis un PDF officiel :
+
+```bash
+# Analyser un seul PDF
+python analyze_pdf_deep.py Nom-du-scenario
+
+# Analyser 5 scénarios en batch
+python enrich_batch.py
+```
+
+Résultat : Fichier d'analyse détaillé dans `analysis/Nom-du-scenario_analysis.txt`
+
+### Processus d'Enrichissement
+
+Consultez le **[Guide d'Enrichissement](docs/GUIDE_ENRICHISSEMENT.md)** pour :
+- Extraire le contenu d'un PDF
+- Créer un scénario enrichi manuellement
+- Atteindre une qualité professionnelle (⭐⭐⭐⭐⭐)
+
+---
+
+## 📁 Structure du Projet
 
 ```
 DnD5e-Scenarios/
-├── README.md                          # Ce fichier
-├── README_SCENARIOS_JSON.md           # Documentation détaillée du système
-├── LICENSE                            # Licence MIT
+├── launcher.py                  # 🚀 Lanceur universel (RECOMMANDÉ)
+├── play_scenarios.py            # Menu alternatif
+├── README.md                    # Ce fichier
 │
-├── 📁 data/                           # Données des scénarios
-│   ├── scenes/                        # Scénarios JSON
-│   │   ├── chasse_gobelins.json      # Scénario 1
-│   │   ├── sunless_citadel.json      # Scénario 2
-│   │   └── tombe_rois_serpents.json  # Scénario 3
-│   └── parties/                       # Groupes pré-configurés
-│       └── scenario_parties.json
+├── *_game.py                    # Scripts de scénarios
+│   ├── masque_utruz_enrichi_game.py      # ⭐⭐⭐⭐⭐
+│   ├── cryptes_de_kelemvor_manual_game.py # ⭐⭐⭐⭐⭐
+│   ├── chasse_gobelins_refactored.py      # ⭐⭐⭐
+│   └── ...
 │
-├── 📁 src/                            # Code source
-│   ├── core/                          # Extensions du package
-│   ├── rendering/                     # Système de rendu
-│   ├── scenarios/                     # Classe de base
-│   ├── scenes/                        # Système de scènes
-│   │   ├── scene_system.py           # Classes de scènes
-│   │   └── scene_factory.py          # Loader JSON → Scènes
-│   ├── systems/                       # Systèmes de jeu
-│   └── utils/                         # Utilitaires
+├── data/
+│   └── scenes/                  # Scénarios JSON
+│       ├── masque_utruz_enrichi.json
+│       ├── cryptes_de_kelemvor_manual.json
+│       └── ...
 │
-├── 🎮 Scripts de lancement
-│   ├── play_scenario_from_json.py    # Démo système JSON
-│   ├── play_scenarios.py             # Lanceur interactif
-│   ├── chasse_gobelins_refactored.py # Exemple code Python
-│   ├── tombe_rois_serpents_game.py   # Exemple 2
-│   └── yawning_portal_game.py        # Exemple 3
+├── scenarios/                   # PDFs des scénarios officiels
+│   ├── Masque-utruz.pdf
+│   ├── Cryptes-de-Kelemvor.pdf
+│   └── ...
 │
-├── 📁 scenarios/                      # PDFs de scénarios (optionnel)
-├── 📁 savegames/                      # Sauvegardes de parties
-└── 📁 archive/                        # Documentation archivée
+├── analysis/                    # Analyses de PDFs
+│   ├── Cryptes-de-Kelemvor_analysis.txt
+│   └── ...
+│
+├── src/                         # Code source
+│   ├── scenarios/               # Système de scénarios
+│   ├── scenes/                  # Système de scènes
+│   └── utils/                   # Utilitaires (PDF reader)
+│
+├── docs/                        # Documentation
+│   ├── GUIDE_ENRICHISSEMENT.md
+│   ├── ENRICHISSEMENT_MANUEL.md
+│   ├── LISTE_SCENARIOS.md
+│   └── archive/                 # Docs obsolètes
+│
+├── savegames/                   # Sauvegardes
+└── tokens/                      # Tokens de monstres
 ```
-
----
-
-## 💡 Exemples d'Utilisation
-
-### 1. Jouer avec le système JSON
-
-```python
-from src.scenes.scene_factory import SceneFactory
-from dnd_5e_core.combat import CombatSystem
-
-# Charger un scénario
-scene_manager = SceneFactory.load_scenario_from_json_file(
-    "data/scenes/chasse_gobelins.json",
-    monster_factory=monster_factory
-)
-
-# Préparer le contexte
-game_context = {
-    'party': party,
-    'game_state': game_state,
-    'renderer': renderer,
-    'combat_system': CombatSystem(verbose=True),
-    'monster_factory': monster_factory
-}
-
-# Lancer l'aventure
-scene_manager.run(game_context)
-```
-
-### 2. Créer un scénario personnalisé
-
-Créez `data/scenes/ma_quete.json` :
-
-```json
-{
-  "scenario_id": "ma_quete",
-  "name": "La Quête du Dragon",
-  "level": 5,
-  "scenes": [
-    {
-      "id": "start",
-      "type": "narrative",
-      "title": "🐉 La Prophétie",
-      "text": "Un dragon menace le royaume...",
-      "next_scene": "village"
-    }
-  ]
-}
-```
-
-Puis lancez-le :
-
-```python
-python play_scenario_from_json.py
-# Modifiez le script pour pointer vers votre JSON
-```
-
-### 3. Intégrer dans votre code
-
-```python
-from src.scenarios.base_scenario import BaseScenario
-
-class MonScenario(BaseScenario):
-    def get_scenario_name(self):
-        return "Mon Aventure"
-    
-    def create_party(self):
-        return [
-            self.create_basic_fighter("Guerrier", level=5),
-            self.create_basic_cleric("Clerc", level=5)
-        ]
-    
-    def build_custom_scenes(self):
-        # Ajoutez vos scènes en Python
-        pass
-```
-
----
-
-## 🎲 Système de Jeu
-
-### Basé sur dnd-5e-core
-
-Le package `dnd-5e-core` fournit :
-
-- ✅ **332 monstres** avec stats officielles
-- ✅ **319 sorts** D&D 5e
-- ✅ **Système de combat** complet
-- ✅ **Calcul de Challenge Rating** (CR)
-- ✅ **Génération de personnages**
-- ✅ **Règles D&D 5e** officielles
-
-### Combats
-
-- Initiative automatique
-- Jets d'attaque avec bonus
-- Calcul des dégâts (dés multiples)
-- Actions spéciales des monstres
-- Gestion HP et conditions
-
-### Personnages
-
-- Races et classes
-- Capacités et modificateurs
-- Équipement et inventaire
-- Sorts et emplacements
-- Progression XP
 
 ---
 
 ## 📚 Documentation
 
-### Guides
+### Guides Principaux
 
-- **[README_SCENARIOS_JSON.md](README_SCENARIOS_JSON.md)** - Documentation complète du système JSON
-- **Exemples** - Consultez les fichiers dans `data/scenes/`
+- **[Guide d'Enrichissement](docs/GUIDE_ENRICHISSEMENT.md)** - Comment créer des scénarios de qualité
+- **[Liste des Scénarios](docs/LISTE_SCENARIOS.md)** - Tous les scénarios disponibles
+- **[Enrichissement Manuel](docs/ENRICHISSEMENT_MANUEL.md)** - Méthode approfondie
 
-### Package dnd-5e-core
+### Outils
 
-- **PyPI** : [pypi.org/project/dnd-5e-core](https://pypi.org/project/dnd-5e-core/)
-- **GitHub** : [github.com/codingame-team/dnd-5e-core](https://github.com/codingame-team/dnd-5e-core)
+- **`launcher.py`** - Lanceur avec interface colorée
+- **`analyze_pdf_deep.py`** - Analyser un PDF en profondeur
+- **`enrich_batch.py`** - Analyser plusieurs PDFs en batch
+
+---
+
+## 🎮 Exemples d'Utilisation
+
+### Jouer un Scénario Enrichi
+
+```bash
+# Lancer le launcher
+python launcher.py
+
+# Choisir "1" pour Le Masque Utruz
+# Le scénario démarre avec 33 scènes détaillées
+```
+
+### Créer un Nouveau Scénario
+
+```bash
+# 1. Analyser le PDF
+python analyze_pdf_deep.py Mon-Scenario
+
+# 2. Lire l'analyse
+cat analysis/Mon-Scenario_analysis.txt
+
+# 3. Créer le JSON enrichi (manuel)
+# Voir docs/GUIDE_ENRICHISSEMENT.md
+
+# 4. Créer le script Python
+# Copier un script existant et adapter
+
+# 5. Tester
+python mon_scenario_game.py
+```
+
+---
+
+## 🎯 Objectifs du Projet
+
+### Actuels
+- ✅ 2 scénarios enrichis manuellement (⭐⭐⭐⭐⭐)
+- ✅ 9 scénarios originaux (⭐⭐⭐)
+- ✅ 25 prototypes (⭐⭐)
+- ✅ Launcher universel
+- ✅ Outils d'enrichissement
+
+### Futurs
+- ⏳ Enrichir 3-5 scénarios prioritaires
+- ⏳ Interface graphique (Pygame/PyQt)
+- ⏳ Mode multijoueur
+- ⏳ Éditeur de scénarios visuel
+- ⏳ Système d'achievements
 
 ---
 
 ## 🤝 Contribution
 
-### Créer et partager des scénarios
+Les contributions sont bienvenues ! Vous pouvez :
 
-1. Créez votre scénario JSON dans `data/scenes/`
-2. Testez-le avec `play_scenario_from_json.py`
-3. Partagez-le avec la communauté (Pull Request)
-
-### Améliorer le système
-
-1. Forkez le projet
-2. Créez une branche feature (`git checkout -b feature/amazing-feature`)
-3. Commitez vos changements (`git commit -m 'Add amazing feature'`)
-4. Pushez vers la branche (`git push origin feature/amazing-feature`)
-5. Ouvrez une Pull Request
+1. **Enrichir un scénario** - Suivez le [Guide d'Enrichissement](docs/GUIDE_ENRICHISSEMENT.md)
+2. **Créer un nouveau scénario** - Utilisez les outils fournis
+3. **Améliorer le code** - Pull requests bienvenues
+4. **Signaler des bugs** - Issues GitHub
 
 ---
 
-## 🎯 Feuille de Route
+## 📜 Licence
 
-### Court terme
-- [ ] Validation de schéma JSON
-- [ ] Plus d'exemples de scénarios
-- [ ] Tests unitaires
-
-### Moyen terme
-- [ ] Éditeur visuel de scénarios
-- [ ] Générateur de scénarios aléatoires
-- [ ] Support de conditions complexes
-- [ ] Système de quêtes
-
-### Long terme
-- [ ] Interface graphique complète
-- [ ] Mode multijoueur (DM + joueurs)
-- [ ] Marketplace de scénarios
-- [ ] Intégration Roll20/Foundry VTT
+Ce projet est sous licence MIT. Les scénarios sont basés sur des PDFs officiels D&D 5e disponibles sur [aidedd.org](https://www.aidedd.org).
 
 ---
 
-## 📄 Licence
+## 🔗 Liens Utiles
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
----
-
-## 🙏 Remerciements
-
-- **D&D 5e** - Wizards of the Coast
-- **Package dnd-5e-core** - Règles D&D 5e en Python
-- **5eTools** - Base de données de monstres
+- **Package dnd-5e-core** : [PyPI](https://pypi.org/project/dnd-5e-core/) | [GitHub](https://github.com/codingame-team/dnd-5e-core)
+- **Scénarios source** : [aidedd.org](https://www.aidedd.org)
+- **Repository GitHub** : [DnD5e-Scenarios](https://github.com/codingame-team/DnD5e-Scenarios)
 
 ---
 
-## 🎉 Commencez maintenant !
+## 💬 Support
 
-```bash
-git clone https://github.com/codingame-team/DnD5e-Scenarios.git
-cd DnD5e-Scenarios
-pip install dnd-5e-core
-python play_scenarios.py
-```
-
-**Que vos dés soient toujours critiques !** 🎲✨
+Pour toute question ou problème :
+- Ouvrez une [Issue GitHub](https://github.com/codingame-team/DnD5e-Scenarios/issues)
+- Consultez la [documentation](docs/)
 
 ---
 
-**Projet** : DnD5e-Scenarios  
-**Auteur** : CodingGame Team  
-**Version** : 1.0  
-**Date** : Janvier 2026
+## 🎲 Bon Jeu !
+
+**Que vos dés roulent favorablement, aventuriers !**
+
+---
+
+*Dernière mise à jour : 11 janvier 2026*  
+*Version : 2.0*  
+*36 scénarios disponibles*
 
