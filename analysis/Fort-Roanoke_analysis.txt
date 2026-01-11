@@ -1,0 +1,1228 @@
+ANALYSE COMPLÈTE: Fort-Roanoke
+================================================================================
+
+TEXTE COMPLET:
+--------------------------------------------------------------------------------
+ 
+ 
+FORT ROANOKE 
+ 
+Aventure D&D 5 pour 4 personnages de niveau 7 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Scénario original : Tristan Lhomme 
+Adaptation : blueace 
+ 
+ 
+Version du 08/05/2020. 
+ 
+Merci de nous reporter toute faute ou erreur via 
+www.aidedd.org/site/contact/ 
+ 
+Disponible en téléchargement gratuit sur www.aidedd.org  
+OPEN GAME LICENSE Version 1.0a 
+The following text is the property of Wizards of the Coast, Inc. and is Copyright 2000 
+Wizards of the Coast, Inc ("Wizards"). All Rights Reserved. 
+1. Definitions: (a) "Contributors" means the copyright and/or trademark owners who have 
+contributed Open Game Content; (b) "Derivative Material" means copyrighted material 
+including derivative works and translations (including into other computer languages , 
+potation, modification, correction, addition, extension, upgrade, improvement, 
+compilation, abridgment or other form in which an existing work may be recast, 
+transformed or adapted; (c) "Distribute" means to reproduce, license, rent, lease, sell, 
+broadcast, publicly display, transmit or otherwise distribute; (d) "Open Game Content" 
+means the game mechanic and includes the methods, procedures, processes and routines 
+to the extent such content does not embody the Product Identity and is an enhancement 
+over the prior art and any additional content clearly identified as Open Game Content by 
+the Contributor, and means any work covered by this License, including translations and 
+derivative works under copyright law, but specifically excludes Product Identity. (e) 
+"Product Identity" means product and product line names, logos and identifying marks 
+including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic 
+elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, 
+formats, poses, concepts, themes and graphic, photographic and other visual or audio 
+representations; names and descriptions of characters, spells, enchantments, 
+personalities, teams, personas, likenesses and special abilities; places, locations, 
+environments, creatures, equipment, magical or supernatural abilities or effects, logos, 
+symbols, or graphic designs; and any other trademark or registered trademark clearly 
+identified as Product identity by the owner of the Product Identity, and which specifically 
+excludes the Open Game Content; (f) "Trademark" means the logos, names, mark, sign, 
+motto, designs that are used by a Contributor to identify itself or its products or the 
+associated products contributed to the Open Game License by the Contributor (g) "Use", 
+"Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and 
+otherwise create Derivative Material of Open Game Content. (h) "You" or "Your" means 
+the licensee in terms of this agreement. 
+2. The License: This License applies to any Open Game Content that contains a notice 
+indicating that the Open Game Content may only be Used under and in terms of this 
+License. You must affix such a notice to any Open Game Content that you Use. No terms 
+may be added to or subtracted from this License except as described by the License itself. 
+No other terms or conditions may be applied to any Open Game Content distributed using 
+this License. 
+3.Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance 
+of the terms of this License. 
+4. Grant and Consideration: In consideration for agreeing to use this License, the 
+Contributors grant You a perpetual, worldwide, royalty-free, nonexclusive license with the 
+exact terms of this License to Use, the Open Game Content. 
+5. Representation of Authority to Contribute: If You are contributing original material as 
+Open Game Content, You represent that Your Contributions are Your original creation 
+and/or You have sufficient rights to grant the rights conveyed by this License. 
+6. Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this 
+License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content 
+You are copying, modifying or distributing, and You must add the title, the copyright date, 
+and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game 
+Content you Distribute. 
+7. Use of Product Identity: You agree not to Use any Product Identity, including as an 
+indication as to compatibility, except as expressly licensed in another, independent 
+Agreement with the owner of each element of that Product Identity. You agree not to 
+indicate compatibility or co-adaptability with any Trademark or Registered Trademark in 
+conjunction with a work containing Open Game Content except as expressly licensed in 
+another, independent Agreement with the owner of such Trademark or Registered 
+Trademark. The use of any Product Identity in Open Game Content does not constitute a 
+challenge to the ownership of that Product Identity. The owner of any Product Identity 
+used in Open Game Content shall retain all rights, title and interest in and to that Product 
+Identity. 
+8. Identification: If you distribute Open Game Content You must clearly indicate which 
+portions of the work that you are distributing are Open Game Content. 
+9. Updating the License: Wizards or its designated Agents may publish updated versions of 
+this License. You may use any authorized version of this License to copy, modify and 
+distribute any Open Game Content originally distributed under any version of this License. 
+10. Copy of this License: You MUST include a copy of this License with every copy of the 
+Open Game Content You Distribute. 
+11. Use of Contributor Credits: You may not market or advertise the Open Game Content 
+using the name of any Contributor unless You have written permission from the 
+Contributor to do so. 
+12. Inability to Comply: If it is impossible for You to comply with any of the terms of this 
+License with respect to some or all of the Open Game Content due to statute, judicial 
+order, or governmental regulation then You may not Use any Open Game Material so 
+affected. 
+13. Termination: This License will terminate automatically if You fail to comply with all 
+terms herein and fail to cure such breach within 30 days of becoming aware of the breach. 
+All sublicenses shall survive the termination of this License. 
+14. Reformation: If any provision of this License is held to be unenforceable, such 
+provision shall be reformed only to the extent necessary to make it enforceable. 
+15. COPYRIGHT NOTICE 
+Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc. 
+System Reference Document 5.0 Copyright 2016, Wizards of the Coast, Inc.; Authors Mike 
+Mearls, Jeremy Crawford, Chris Perkins, Rodney Thompson, Peter Lee, James Wyatt, 
+Robert J. Schwalb, Bruce R. Cordell, Chris Sims, and Steve Townshend, based on original 
+material by E. Gary Gygax and Dave Arneson 
+END OF LICENSE 
+
+
+www.aidedd.org | fort roanoke 
+1 
+Contexte 
+ort Roanoke, situé à une quinzaine de kilomètres 
+en amont de Port Liberté, en plein cœur de la 
+vallée Sauvage, compte aux alentours de 400 
+âmes, essentiellement des familles de trappeurs. 
+Toutes les habitations de la partie basse du fort 
+sont en bois et entourées par une grande palissade 
+de quatre mètres de haut. Une maison fortifiée, 
+petit fort à l'intérieur du fort et unique construction en pierre de 
+Roanoke, a été bâtie au sommet d'une butte qui surplombe les 
+bâtisses. C'est là que vit le chef de la communauté, un certain 
+Jack Brand, un vieux rôdeur moustachu qui vient de passer la 
+cinquantaine. C'est lui qui a dirigé la défense de la communauté 
+au plus fort du conflit avec les druides, permettant à Roanoke 
+d'éviter la destruction, et lui encore qui a négocié au nom des 
+colons de la vallée Sauvage les accords avec la druide Brulla, 
+accords qui ont permis de mettre fin à une guerre qui durait déjà 
+depuis 14 mois.  
+La forêt s'étend partout autour du fort sur des dizaines de lieues, 
+et bien au-delà des montagnes du Pays des Géants au nord. 
+Personne ne sait exactement ce qu’il y a après la source de la 
+Liberté, mais toutes sortes de rumeurs circulent, dans lesquelles 
+il est question d'immenses plateaux gelés parcourus par des 
+monstres géants. Ce qui est sûr, c'est que la forêt entre Port 
+Liberté et le Pays des Géants est dangereuse. De temps en 
+temps, des groupes entiers de bûcherons ou de trappeurs 
+disparaissent, purement et simplement. 
+Au md 
+Ce scénario peut être joué à la suite de l’aventure « La nuit de 
+l’Empereur-Démon ». 
+Les provinces de Laelith 
+Les provinces de Laelith, qui servent de contexte géographique à 
+cette aventure, sont décrites en détails sur www.aidedd.org dans 
+la rubrique Univers. 
+ 
+ 
+ 
+Introduction  
+Une place comme fort Roanoke est une bénédiction pour un 
+personnage. C'est un endroit animé où les gens ne se montrent 
+pas trop curieux, et une bonne base arrière pour des expéditions 
+dans l'inconnu afin de se faire un nom ou devenir riche. Bref, 
+rien d'étonnant à ce que les personnages s'y trouvent, à la 
+recherche d'un nouveau contrat par exemple. Or justement, un 
+crieur annonce au cours de sa tournée que maître Drewin est 
+désireux d’engager un groupe de mercenaires pour un travail 
+important et bien payé. Inutile de dire que les candidats vont se 
+bousculer. 
+Drewin 
+L’homme vit dans une grande maison en bois dans la partie 
+ouest du fort. Le grand hall du rez-de-chaussée, habituellement 
+consacré aux affaires, est presque vide, à l'exception d'une 
+dizaine d'aventuriers intéressés par l'annonce. Drewin prend le 
+temps de les recevoir individuellement. Jusqu'ici, aucun n'a fait 
+l'affaire. Le tour des personnages finit par arriver. Drewin est un 
+vieux monsieur corpulent, avec de grosses moustaches. Il a l'air 
+très fatigué. Il accueille courtoisement le groupe, leur fait servir à 
+boire, et leur explique ce qu'il attend d'eux :  
+« Mon fils Arwon est parti dans la forêt il y a un environ 
+trois semaines, avec un petit groupe de 
+trois 
+mercenaires. Ils étaient censés remonter la Liberté à la 
+recherche du site d'une ancienne cité, où mon fils pensait 
+trouver un certain nombre d'antiquités, et devaient 
+revenir en fin de semaine dernière au plus tard. Mais je 
+suis toujours sans nouvelle, et je commence à réellement 
+m'inquiéter. Si cela vous agrée, j'aimerais que vous 
+partiez rapidement. Pour ce qui est de la question 
+financière, je vous propose 100 pièces d’or. S'il vous plaît, 
+évitez de marchander, je viens de passer la matinée à ça, 
+et cela ne m'amuse plus. Êtes-vous intéressés ou non ? »  
+F 
+Fort Roanoke 
+
+
+www.aidedd.org | fort roanoke 
+2 
+Les personnages devraient, en toute logique, répondre oui, et 
+demander pourquoi les autres candidats ne convenaient pas. 
+Drewin répondra succinctement qu'ils demandaient trop cher. 
+Une fois l’affaire conclue, Drewin se fera un plaisir de leur 
+fournir des mules, du matériel de camping, et une carte 
+sommaire de la portion de montagne où ils sont censés se 
+rendre. Sur le papier, cela semble simple : il suffit de remonter la 
+rivière jusqu'à sa source, puis de continuer dans la montagne 
+jusqu'à un rocher sculpté qui ressemble à un visage.  
+Renseignements 
+Avant d’accepter, il y a de fortes chances que les personnages 
+demandent un petit moment pour se renseigner sur leur 
+destination. Après tout, s'il y a eu une ville dans la forêt, elle doit 
+bien être mentionnée quelques part. Fort Roanoke a sa part de 
+vieillards qui se chauffent au soleil en ressassant les anecdotes 
+de leur jeune temps et un jet d’Intelligence (Investigation) DD 12 
+permet d’apprendre qu'il y a très, très longtemps, avant le 
+Châtiment, la région était fertile et peuplée de créatures qui 
+étaient, peut-être, humaines. Puis il y a eu la punition divine, le 
+Châtiment, qui a soulevé la terre, et tout a disparu. En quelques 
+siècles, la forêt a englouti les ruines. Les humains se sont 
+réinstallés dans la région il y a moins de 100 ans. Les gens 
+tiennent cette histoire d'un érudit venu de Laelith il y a « oh, ben 
+au moins trente ans. Ce gars est parti dans la forêt, et il n'est 
+jamais revenu. S'appelait Rak, Rach, ou quelque chose comme 
+ça ». Un jet d’Intelligence (Histoire) DD 20 permettra à un sage 
+du groupe de se rappeler qu’on parle dans les livres d’un 
+« Empire de Lumière » qui aurait précédé l'actuelle civilisation 
+humaine du royaume. 
+L’expédition 
+La première journée se passe sans incident mais ne mène les 
+personnages qu’au pied des montagnes, l’allure étant fortement 
+réduite par la quasi-inexistence de chemins ou de pistes au nord 
+du fort. Peu à peu, la forêt est devenue réellement sauvage, 
+moins lumineuse, moins amicale. Il y a de plus en plus des 
+ronces. Les arbres en fin de journée sont plus hauts, plus serrés, 
+et appartiennent à des espèces inconnues pour la plupart. Les 
+mules sont devenues nerveuses. Il commence maintenant à faire 
+froid. S'il y a des rôdeurs ou des elfes dans le groupe, expliquez-
+leur qu'ils n'ont jamais vu une forêt pareille. Elle semble 
+réellement vivante, et hostile.  
+Le deuxième jour, en début d’après-midi, l’expédition arrive au 
+pied d'une falaise haute d'une dizaine de mètres. Comment 
+grimper, et surtout comment faire grimper les mules ? Il y a une 
+chute d'eau à quelques centaines de mètres. Elle est flanquée 
+d’une sorte d'escalier naturel, mais il est peu apparent (jet de 
+Sagesse (Perception) DD 15). À partir de là, le groupe pénètre 
+vraiment dans une zone inexplorée. Toute la journée ils ont 
+grimpé en altitude. Il y a étonnamment peu de gibier dans la 
+forêt qui recouvre la montagne, et les arbres fruitiers et les baies 
+sont rares. Si les personnages comptaient sur la chasse ou la 
+cueillette pour se nourrir, ils vont devoir se rationner. En 
+revanche, il y a d'innombrables variétés de champignons, dont 
+certaines sont tout à fait comestibles. Encore faut-il les 
+différencier de leurs parents hallucinogènes ou mortels, qui sont 
+la grande majorité.  
+Dès 
+le troisième jour, les 
+personnages 
+peuvent 
+avoir 
+l’impression d'être surveillés en permanence. Le ou les espions 
+ne semblent toutefois pas être agressifs, en tout cas, ils ne font 
+rien contre le groupe. Mais cet espionnage constant devrait 
+mettre les nerfs du groupe à fleur de peau (jet de Sagesse 
+(Perception) DD 12 pour ressentir cette impression). 
+ 
+Le quatrième jour, la forêt se montre franchement agressive : de 
+grosses branches tombent régulièrement des arbres sur les 
+personnages, alors qu'il n'y a pas un souffle de vent. La nuit, les 
+mules paniquent, coupent leurs longes et repartent vers le sud. 
+Si les personnages essayent de les rattraper, ils pourront suivre 
+leurs traces pendant environ une heure... avant de trouver une 
+mare de sang et les restes à moitié dévorés des pauvres bêtes. 
+Quelque chose de gros et de féroce est passé par-là, mais n'a 
+laissé aucune trace. 
+Ne lésinez pas sur les bruits bizarres, les créatures étranges à 
+peine entraperçues, les yeux phosphorescents qui les observent 
+dans la nuit, et ainsi de suite pour leur faire peur.  
+La statue 
+Au matin du sixième jour de voyage, au terme d'une escalade 
+particulièrement éprouvante, les personnages arrivent à un 
+
+
+www.aidedd.org | fort roanoke 
+3 
+énorme roc noir à moitié couvert de végétation. Il a été 
+partiellement dégagé et l'on peut deviner les contours, très 
+érodés, d'un visage étrange, pas tout à fait humain, surmonté 
+d'une sorte de casque (jet d’Intelligence (Histoire) DD 20 pour 
+lui trouver une ressemblance avec les habitants de Mulhorande). 
+Non loin de là, un peu en contrebas, il y a une petite clairière. 
+Visiblement, l'endroit a été occupé. Il y a des sacs de couchage, 
+des débris de nourriture, les restes d'un petit feu, mais aussi des 
+traces de combat : branches brisées, feuilles piétinées et des 
+traces de sang séché depuis plusieurs jours. En revanche, il n'y a 
+ni cadavres, ni traces d'inhumation. Les personnages peuvent en 
+déduire qu'Arwon et ses compagnons ont été capturés, mais par 
+qui ? La meilleure façon de le savoir est encore de suivre la piste 
+des ravisseurs ; elle est bien visible. Curieusement, la végétation 
+ne l'a pas encore recouverte. 
+Un jet de Sagesse (Survie) DD 14 réussi permet d’estimer que 
+les traces remontent à cinq ou six jours... alors que la piste 
+donne l'impression d'avoir été faite la veille ! 
+La traque 
+Suivre la piste au nord prendra tout le reste de la journée. Les 
+personnages les plus imaginatifs auront l'impression que, 
+contrairement aux jours précédents, maintenant la forêt 
+coopère. La piste est plus nette, les branches ne tombent plus, 
+les ronces ont moins tendance à s'agripper à eux, et ainsi de 
+suite. Si par hasard ils ont encore des chevaux ou des mules, les 
+bêtes ont l'air plus calmes.  
+Au crépuscule, le groupe arrive au sommet d’un petit à-pic 
+d’une vingtaine de mètres. Les arbres sont beaucoup moins 
+denses aux alentours, et la température encore un peu 
+plus froide. En contrebas, un grand feu et des tentes. 
+Leurs occupants sont de grandes créatures à la peau 
+verte ou grise et aux traits grossiers : des orques ! 22 
+orques, visiblement très bien armés. Il y a aussi deux 
+humains qui sont manifestement prisonniers. Si les 
+personnages décident de surveiller le campement, ils 
+assisteront au souper, puis au coucher des créatures. 
+Bien entendu, elles laissent des sentinelles (4 gardes, 
+qui sont relayés toutes les 4 heures). Une attaque 
+frontale a toutefois de fortes chances de mal se passer, 
+car les orques sont sur le qui-vive et ne dorment que 
+d'un œil. Mais si le groupe en décide ainsi… 
+Contact 
+Selon 
+toute 
+probabilité, 
+les 
+personnages 
+passeront un certain temps à discuter d'une attaque 
+contre le camp orque. Mais la « forêt » les écoute, très 
+attentivement, et après un temps de réflexion, décide de les 
+contacter. Le groupe va donc se retrouver brusquement nez à 
+nez avec un groupe de 9 petites créatures qui se laissent tomber 
+des arbres. À première vue, on dirait de petits singes au pelage 
+vert (babouin), hauts d'une cinquantaine de centimètres. Ils 
+piaillent (pas trop fort tout de même, pour ne pas attirer 
+l’attention des orques), tirent les personnages par la manche, 
+font mine de s'éloigner dans une direction précise, puis 
+reviennent, et recommencent... Bref, ils veulent qu'on les suive. 
+Si les personnages les attaquent, ils fuient. 
+Si le groupe a l'intelligence de les accompagner, ils sont 
+conduits dans la vallée, à une heure de marche vers l'ouest. Là, 
+les singes verts les mènent à une petite grotte où se trouve leur 
+« ancien », étendu sur un lit de mousse. Sa fourrure est gris 
+blanche, et il est visiblement très âgé. Il est un peu télépathe, 
+juste assez pour se faire comprendre : 
+« Nous sommes les gardiens du plateau, au service des 
+druides de Brulla. Vous êtes ennemis des Peaux-Vertes ? 
+Nous aussi. Nous n'aimons pas non plus votre espèce, 
+mais elle est plus facile à effrayer, alors que les Peaux-
+Vertes, eux, sont trop bêtes pour avoir peur. Aidez-nous 
+et vous pourrez rentrer chez vous pour dire à vos anciens 
+qu’ici la forêt ne veut pas de vous ». 
+Si les personnages demandent plus d’informations au sujet des 
+orques :  
+« Il y en a beaucoup ici, et beaucoup d'autres ailleurs. Ils 
+font du mal aux arbres. Mais nous connaissons la forêt, et 
+nous pouvons éveiller les arbres. Attendons toutefois le 
+lever du jour, les orques sont plus habiles que nous de 
+nuit ». 
+L'attaque 
+Une fois que le groupe aura fini de poser ses questions, tout le 
+monde retournera au camp. À l’aube, un groupe de 4 orques part 
+en reconnaissance dans la forêt. Cela fait une cible facile ; 4 de 
+moins ; il en reste encore 18 ! Encore un jour ou deux à ce 
+rythme, et les orques commenceront à désespérer sérieusement. 
+À ce moment-là, il sera possible de lancer une attaque. Veillez à 
+ce que le combat soit spectaculaire. Nous sommes en 
+montagne, il y a plein de gros rochers, parfois 
+séparés par des crevasses larges d'un mètre ou 
+plus. Sauter de l'un à l'autre est un exercice 
+périlleux. 
+En cas de problèmes pour les personnages, 
+vous pouvez faire intervenir les singes verts. 
+Ceux-ci sont capables de lancer des sorts de 
+druides niveau 1 et 2 (ce sont en fait ces 
+derniers qui les leur transmettent), mais ils sont 
+en revanche totalement inefficaces au combat au 
+corps à corps, et peureux en plus. Ils n’attaqueront 
+donc jamais les orques de front. 
+Une fois les orques défaits, prisonniers, ou en fuite, 
+le groupe pourra libérer les captifs. Arwon 
+(éclaireur) 
+est 
+un 
+jeune 
+homme 
+qui 
+ressemble beaucoup à son père, il sera 
+donc facile à identifier. Il est vif et intelligent, 
+mais à moitié mort de faim et de fatigue. Il ne lui reste 
+qu’un seul mercenaire, Frand, qui a une jambe en moins. À 
+cause d’une mauvaise blessure, ses compagnons ont dû la lui 
+couper il y a deux jours. Les deux autres mercenaires ont été 
+tués la veille par les orques pour « rébellion ».  
+Une fouille des orques permet de récupérer en moyenne 8 po 
+sur chacun d’eux. 
+Interroger 
+les 
+prisonniers 
+orques 
+délivrera 
+quelques 
+informations aux personnages. Sinon, Arwon, qui parle l’orque, 
+les a entendu discuter pendant sa captivité, et pourra apporter 
+les mêmes renseignements :  
+- au nord, entre Bois d’Épines et Bois d’Hiver, les montagnes 
+grouillent d'orques et de gobelins. Récemment, toutes les tribus 
+se sont unies sous la bannière d'un certain Gorgloch, qui leur a 
+promis de les emmener à la conquête des terres du sud. 
+- le groupe qu’ils viennent de rencontrer n'est qu'une unité 
+d'éclaireurs. Il y en a des douzaines d'autres aux alentours. 
+
+
+www.aidedd.org | fort roanoke 
+4 
+- les orques semblent très bien renseignés sur l'état des défenses 
+de fort Roanoke, qui est l'un de leurs premiers objectifs. Ils 
+disent même qu’à leur arrivée les portes seront ouvertes. 
+S'ils ont un minimum de « conscience civique », les personnages 
+devraient rentrer le plus vite possible au fort. 
+PENDANT CE TEMPS… 
+L'armée orque commence à se regrouper. Protégées de la colère 
+des arbres par leur nombre et par les rituels de leurs chamans, des 
+colonnes de plusieurs centaines de guerriers se massent à deux 
+jours de marche vers le nord, de l’autre côté de la montagne du 
+Pays des Géants, dans une zone pratiquement dépourvue de 
+végétation, entre Bois d’Épines et Bois d’Hiver. 
+Le retour 
+La première journée se passe bien, la forêt ne gêne plus le 
+groupe. Elle se concentre sur les orques. Rejoindre la tête 
+sculptée n'est donc pas très difficile. En chemin les personnages 
+commencent à entendre des tambours, loin vers le nord. Si les 
+personnages ont deux sous de bon sens, ils devraient essayer de 
+filer vers le sud à toute vitesse. Mais s'i1s préfèrent aller jouer 
+aux espions, libre à eux ! Ils n'auront pas besoin d'un examen 
+approfondi pour se rendre compte que la menace est vraiment 
+très sérieuse, et qu’il faut absolument prévenir fort Roanoke.  
+Lorsqu’ils arrivent au rocher de la tête… la tête a disparu. À sa 
+place, il y a un énorme trou, avec un escalier de pierre noire qui 
+s'enfonce dans le sol. Qu’ils s’organisent pour aller jeter un coup 
+d'œil au sous-sol, ou qu’ils poursuivent leur chemin vers 
+Roanoke (sous les protestations d’Arwon qui, n’ayant toujours 
+pas trouvé sa cité ancienne, ne laissera pas cette piste si 
+facilement), une mauvaise surprise les attend, dans quelques 
+minutes ou au prochain bivouac.  
+30 curieuses créatures (gardes momifiés, voir encadré ci-
+dessous) vont tenter de les capturer. Ils vont les encercler et leur 
+faire comprendre de lâcher leurs armes. Ce sont des 
+humanoïdes très maigres, dont les traits ressemblent à ceux du 
+rocher de la tête. Ils portent des lances de facture bizarre. Sans 
+un mot, ils invitent alors les personnages à les suivre, après les 
+avoir désarmés. Bien entendu, ils s’engouffrent sous le rocher de 
+la tête.  
+En cas de problème, Arach n’est pas loin et n’hésitera pas à 
+lancer des sorts de sommeil (60 (15d8) pv avec un emplacement 
+de sort niveau 6, 52 (13d8) pv avec des emplacements de sorts 
+niveau 5, 44 (11d8) pv avec des emplacements de sorts de 
+niveau 4) pour parvenir à ses fins. 
+La cité des morts 
+L'escalier descend très profondément, et débouche sur un large 
+couloir bordé d'ossements. Ils marchent pendant presque une 
+heure, avant d'arriver sur une vaste corniche qui domine un 
+immense cirque rocheux, au centre duquel se dresse une petite 
+ville. Le groupe descend alors un nouvel escalier et pénètre dans 
+la cité. L'architecture, tout en angles, ne ressemble en rien à ce 
+que connaissent les personnages. Les gardes les amèneront 
+dans un grand bâtiment central, qui pourrait être un temple ou 
+un palais, et les abandonnent dans des appartements 
+somptueux, quoique légèrement poussiéreux, au dernier étage. 
+Ils vont y attendre une heure ou deux. 
+Arach 
+La porte finit par s'ouvrir. Un humain en robe noire avec une 
+grosse moustache, qui doit avoir passé la cinquantaine, entre 
+dans la pièce. D'une voix un peu hésitante, il souhaite la 
+bienvenue aux personnages. Ceux-ci ont peut-être entendu parler 
+de lui à fort Roanoke. C'est Arach, cet érudit qui a disparu dans 
+la forêt il y a plusieurs décennies. 
+
+
+www.aidedd.org | fort roanoke 
+5 
+Arach est un personnage complexe. Comme tous les savants 
+fous, il a un petit problème d'ego accentué par son limogeage 
+des Pics des Mages (voir ci-dessous). Il considère maintenant les 
+humains comme de la matière première et, s’il laissait parler ses 
+instincts profonds, il « zombifierait » les personnages car le 
+destin de fort Roanoke ne l'intéresse pas. Toutefois, après autant 
+d’années sans vraie compagnie, il est content de pouvoir 
+enfin raconter son histoire à quelqu’un, surtout s'il y a 
+un magicien dans le groupe. 
+Chassé des Pics des Mages de Laelith il y a 
+bien longtemps pour s'être intéressé de trop 
+près à la nécromancie, Arach a alors décidé 
+de se consacrer à sa seconde passion, 
+l'étude des vieilles civilisations, et en 
+particulier l’une des plus anciennes, celle de 
+Mulhorande, plutôt que de rejoindre la tour 
+de l’échec. Suivant les indications d’un 
+vieux parchemin, il est parti à l'aventure 
+dans la forêt et a fini par trouver cette 
+petite cité. Apparemment, c'était une sorte 
+de nécropole royale, pleine de momies. Il a 
+un peu tâtonné au début, mais après 
+quelques mois, il a réussi à en ressusciter 
+une, puis une autre. 30 ans plus tard, il est à 
+la tête de plusieurs centaines de ces créatures.  
+Si les personnages se montrent curieux, Arach 
+racontera en deux mots l'histoire de la chute de leur 
+civilisation dans la région des Deux lacs, qu'il a 
+reconstituée après des années de patientes recherches. 
+Venus de Mulhorande, il semble qu’ils aient été parmi les 
+premiers humains à s’installer dans la région qui n’était alors 
+habitée que par les hulvaliniens, il y a plus de 1000 ans de cela. 
+Puis vint le jour du Châtiment et tous les membres de ce peuple 
+qui vivait au bord du lac furent détruits. Seule cette nécropole 
+bâtie bien plus haut dans la montagne a survécu. Arach peut 
+ainsi parler pendant des heures de la prodigieuse expérience 
+historique qu'il a mise en place ; il a littéralement ressuscité une 
+culture disparue et l'a étudiée de près pendant des années. En 
+fait, un jet de Sagesse (Perspicacité) DD 15 permet de se rendre 
+compte qu’il est possible de le manipuler en jouant sur son 
+orgueil et sur sa curiosité intellectuelle. 
+Mais pour le moment les personnages seront sans doute plus 
+intéressés par des questions simples du genre « pourquoi nous 
+avez-vous capturés ? ». Si on lui pose directement la question, il 
+répond, avec un sourire un peu froid :  
+« Voyez-vous, j'ai sympathisé avec un groupe de chauves-
+souris vampires, et elles viennent parfois me raconter ce 
+qui se passe à l’extérieur. Il y a quelques jours, elles 
+m'ont raconté une histoire assez confuse. J'ai cru 
+comprendre qu’il y avait des créatures hostiles dans la 
+forêt. Sur mon conseil, le Peuple (c'est le nom que se 
+donnent ses ressuscités) a envoyé des patrouilles, avec 
+l'ordre de faire des prisonniers. Et vous êtes là ». 
+Les personnages vont alors sans doute protester, expliquer qu'il 
+y a erreur, parler des orques et ainsi de suite. Il réfléchira un 
+instant, sourira en hochant la tête, puis dira avant de sortir : 
+« Je comprends. Vous dites sans doute la vérité, je vais 
+envoyer de nouvelles patrouilles. Nous nous reverrons 
+sous peu ».  
+La nécropole 
+Les 
+personnages 
+se 
+rendront 
+vite 
+compte 
+qu'ils 
+sont 
+relativement libres de leurs mouvements, tant qu'ils restent dans 
+le périmètre de la cité. Toutefois, ils sont suivis partout par une 
+douzaine de guerriers momifiés, qui ont ordre de les attaquer 
+s'ils s'approchent trop de l’escalier d'accès à l'extérieur. Arach 
+n’a aucune confiance dans les êtres humains. Il est plus 
+qu'à moitié convaincu qu’ils mentent. Quant aux 
+momifiés, ils n'ont pas beaucoup de conversation. Peu 
+sont ceux qui parlent (un peu plus de 10 %, 
+principalement les scribes et les nobles). 
+O'ooxa, esclave. Selon les critères du Peuple, elle 
+a dû être belle, il y a dix mille ans. Aujourd'hui, 
+elle est comme les autres, jaune et desséchée. 
+Elle faisait partie de la suite d'un puissant noble. 
+C'est elle qui viendra faire le ménage chez les 
+personnages et leur apporter à manger. Elle est 
+lente et un peu dans le brouillard. Arach la 
+considère comme « l'un de ses spécimens les 
+moins bien réussis ». Il y a environ 75 esclaves. 
+Bahan'aal, guerrier. C'est le chef du petit groupe 
+affecté à la surveillance des personnages. Il est 
+grand, 
+massif 
+et 
+nettement 
+plus 
+éveillé 
+qu'O'ooxa. En fait, il a presque l'air vivant. Si les 
+personnages essayent de communiquer, il 
+semble écouter et comprendre. Mais il ne fait 
+rien de plus. Il y a environ 125 guerriers 
+momifiés. 
+Vala, cultivateur. Comme beaucoup de ses pareils, il n'a 
+pas été momifié, mais étranglé puis préservé magiquement. 
+Les personnages pourront voir des dizaines de ces créatures 
+labourer les champs autour de la ville. Bien entendu, ils ne font 
+rien pousser. À quoi bon ? Personne ne mange ici (Arach cultive 
+lui-même son potager). Il y a environ 50 cultivateurs. 
+Chazdhach, scribe. Un momifié en très mauvais état qui 
+espionne 
+les 
+personnages 
+sans 
+grande 
+discrétion. 
+Intellectuellement parlant, c'est l'un des mieux conservés, 
+suffisamment pour éprouver une certaine curiosité quant au 
+monde extérieur. Il parle un peu le commun (que lui a appris 
+Arach) mais ne prendra pas l'initiative du contact. Il peut 
+s'avérer très utile. Il y a environ 30 scribes ou intellectuels 
+comme lui. 
+LES MOMIFIÉS 
+La ville abrite près de trois cents de ces créatures. Les aristocrates 
+du Peuple se faisaient enterrer avec des dizaines de serviteurs, en 
+prévision d'une après-vie très semblable à celle-ci.  
+Arach a pris soin de ressusciter en priorité une majorité d'individus 
+inoffensifs, serviteurs, cultivateurs, scribes et administrateurs. Il se 
+méfie, à juste titre, des guerriers et des nobles mais, pour le citer : 
+« Comment voulez-vous avoir une reconstitution correcte s'il 
+manque l’élément essentiel ? ». Il a dû mater plusieurs tentatives 
+de révolte de la part de ses créatures, avant d'avoir le bon sens de 
+leur laisser les apparences du pouvoir et de devenir leur « fidèle 
+conseiller ». Chaque momifié se livre aux occupations qu'elle 
+exerçait de son vivant, sans état d'âme ni émotion. Ces créatures 
+donnent l'impression d'être très prévisibles, mais elles conservent 
+une certaine part de libre arbitre. Certaines sont aussi conscientes 
+que de leur vivant, et cela en fait des adversaires redoutables.  
+On parle de momifiés à cause de leur mode de conservation, mais 
+techniquement leurs stats sont basées sur celles des zombis. 
+
+
+www.aidedd.org | fort roanoke 
+6 
+Saxif Na'arvan, noble. Un des rares nobles qu'Arach a réanimé. 
+La noblesse du Peuple se composait essentiellement de 
+comploteurs fourbes et sournois, et ces caractéristiques ont fort 
+bien survécu à l'embaumement. Saxif fera convoquer les 
+personnages dans ses appartements dans la journée qui suivra 
+leur arrivée. Il les recevra sur son trône, drapé dans une 
+robe rouge sang. Il parle quelques mots de commun 
+(que lui a appris Arach), mais ne prendra pas la 
+peine de s'en servir. Il regarde les personnages 
+s'agiter sans manifester plus d'intérêt que s'ils 
+étaient une troupe de chiens savants, puis les 
+congédie d'un geste et commence à réfléchir à la 
+manière de les intégrer à ses machinations. Il y a 
+environ 10 nobles. 
+Sa Majesté le roi Wurlic. Le chef-d’œuvre 
+d'Arach : un noble parfaitement réanimé, 
+intelligent et coopératif. C'est le seul 
+télépathe de la nécropole, et donc le seul 
+qui puisse communiquer parfaitement avec 
+les personnages. Malheureusement, il porte 
+une confiance aveugle à Arach, son conseiller 
+humain, et ne recevra pas les personnages tant 
+que ce dernier ne lui aura pas donné son aval.  
+Alors que faire ? Essayer de s'évader est une mauvaise 
+idée. Leurs chances de succès sont faibles, et cela convaincra 
+Arach qu'ils sont dans le camp des envahisseurs. Communiquer 
+avec les momifiés est un passe-temps stérile. Discuter avec 
+Arach est nettement plus intéressant, mais la difficulté est de 
+mettre la main dessus. Il passe ses journées à dormir et ses nuits 
+dans une caverne à préparer sa « grande expérience ».  
+Le Peuple ne manie pas d’argent, Arach est complètement 
+désintéressé des choses matérielles et les trésors qui ont été 
+entreposés ici avec les momies sont d’une autre époque et ne 
+valent plus rien maintenant. Pas de quoi réjouir un roublard… 
+L'ambassade orque 
+Le jour suivant, une des patrouilles rentre. Elle fait son rapport à 
+Arach en présence des personnages. La présence des orques est 
+confirmée, tout comme le fait qu'ils se dirigent vers le sud. Arach 
+hésite encore à laisser partir les personnages. Après tout, rien ne 
+lui garantit qu'une fois le péril orque écarté, ils ne reviendront 
+pas ici avec une troupe d'inquisiteurs. De plus, ce sont des 
+aventuriers, et leur présence risque d'être nécessaire si les 
+orques se montrent agressifs. Il est sur le point de se laisser 
+convaincre lorsqu'un garde entre et annonce l'arrivée d'une 
+ambassade orque ! 
+Un orque chef de guerre richement vêtu se présente alors devant 
+Arach, suivis de 6 guerriers orques chargés de quatre coffres 
+remplis de présents. Ils ont été désarmés, comme les 
+personnages. Le chef de la délégation, qui se nomme Igrocsh, 
+s'agenouille devant Arach et se lance dans un discours fleuri qui 
+peut se résumer à : 
+« Ô puissant nécromant, nous t'implorons de te joindre à 
+nous dans notre guerre contre les Peaux-Roses. Si tu nous 
+aides, nous te comblerons de faveurs, tu auras des 
+milliers de cadavres à animer à ta guise, et tu siégeras au 
+conseil aux côtés de notre puissant roi Gorgloch ». 
+Arach a l'air indécis, et annonce qu'il prendra sa décision après 
+le repas du soir. Il interdit aux personnages et aux orques de 
+s'entre-tuer, et se retire. Les gardes momifiés sont sans cesse 
+présents et interdisent toute action directe.  
+Et maintenant, que faire ? Échanger des regards haineux ne les 
+mènera pas loin. Si les personnages ont compris dans quelle 
+sorte de civilisation ils sont tombés, ils peuvent essayer d'agir 
+plus subtilement. Chazdhach se fera un plaisir de les conduire à 
+l'empoisonneur officiel du palais, qui leur fournira une décoction 
+abominable à souhait. Encore faut-il empoisonner le dîner, 
+qui 
+est 
+préparé 
+par 
+un 
+groupe de 
+domestiques 
+particulièrement mal ranimés. Si l'opération réussit, les 
+ambassadeurs orques iront se coucher tôt, le trajet les 
+ayant fatigués. Ils ne se réveilleront jamais... Plus 
+subtilement, ils peuvent essayer de rencontrer le roi et 
+lui glisser à l'oreille des choses comme « Majesté, 
+votre conseiller rencontre des ambassadeurs 
+étrangers sans votre autorisation et détourne 
+les présents qui vous étaient légitimement 
+adressés ». L’ennui est que cela met Arach 
+en péril, et que les orques ne sont pas 
+particulièrement 
+choqués 
+à 
+l'idée 
+de 
+négocier avec la momie d'un roi-sorcier. 
+Le dîner 
+Il réunit Arach, les personnages et les orques, 
+dans une ambiance tendue. Tous tiennent là une 
+dernière chance de convaincre le nécromancien. 
+Les orques promettent la puissance et la gloire ; que 
+peuvent proposer les personnages ? À la fin du repas, Arach 
+annonce sa décision : la ville restera neutre, les orques sont 
+libres de circuler dans la forêt comme bon leur semble. Les 
+orques sont déçus, mais acceptent le marché et se retirent en 
+laissant leurs présents : 800 pc, 6000 pa, 1800 po, 90 pp et 8 
+pierres précieuses de 100 po. Arach n’en a que faire. 
+Dans la nuit, Arach vient trouver les personnages dans leurs 
+chambres. L'explication risque d'être orageuse mais, dans le 
+fond, ses arguments se tiennent : 
+« Que je le veuille ou non, les orques tiennent la forêt. Je 
+n'ai rien à gagner en me sacrifiant pour une humanité qui 
+m'a rejeté, mais je comprends que vous vouliez protéger 
+votre foyer. Je vais vous renvoyer chez vous le plus vite 
+possible. J'ai un moyen, mais je vais avoir besoin d'un 
+petit peu d’aide ». 
+Arach les conduit alors aux cavernes qui s’avèrent pleines de 
+caveaux et de sarcophages. Le nécromant a encore du travail. 
+Dans la plus grande, au sud-est, repose la momie d'un énorme 
+dragon.  
+« Seul, je n'ai jamais osé le ranimer. Avec votre aide, 
+j'espère y parvenir ».  
+Arach a déjà préparé tout le matériel nécessaire. Si les 
+personnages acceptent, il leur apprend le rituel, leur prélève une 
+pinte de sang chacun, allume les braseros et commence à 
+chanter dans une langue bizarre. La cérémonie dure plus d’une 
+heure, les personnages en sortiront épuisés, mais il ne se passe 
+rien. Alors qu'Arach, visiblement écœuré, se prépare à 
+l'interrompre, les vieux tissus qui entourent le dragon volent en 
+éclats et tous se retrouvent devant un grand dragon d’airain à 
+moitié décharné et déshydraté avec une faim et une soif 
+immense. Arach, pas fou, bat en retraite vers la sortie. Les 
+personnages vont devoir négocier seuls.  
+À eux donc d’expliquer à Griffeflammes (dragon d'airain jeune 
+avec seulement 55 pv et sans son Souffle de sommeil car il est 
+
+
+www.aidedd.org | fort roanoke 
+7 
+encore loin d’être au mieux de sa forme après le rituel), c'est son 
+nom, qu'il y a plus de choses à manger dehors que dans la 
+caverne et qu'il pourra se nourrir à volonté en échange d'un seul 
+petit service : les déposer en ville, à quelques heures de vol. 
+Griffeflammes étant maintenant un mort-vivant, les sorts de 
+soins magiques sont malheureusement sans effet sur lui. 
+Le vol 
+En se serrant bien, il y a assez de place sur le dos du dragon 
+pour six personnes. Il ne reste plus qu'à ouvrir les immenses 
+portes de bronze qui se trouvent au fond de la caverne et à 
+s'accrocher le mieux possible au cuir de Griffeflammes. Le 
+décollage est brutal ; les ailes du dragon sont bien plus fragiles 
+qu'autrefois. Il fait nuit, mais la lune est pleine. L'air est frais. 
+Loin en dessous d'eux la forêt défile à toute vitesse. Vue d'ici, 
+elle a presque l'air hospitalière. Au sud, droit devant eux, on 
+distingue une ligne rouge. Vu de plus près, on dirait... un 
+incendie ! Les orques ont mis le feu à la forêt ! Les flammes se 
+propagent à une vitesse surnaturelle, aidées par les chamans 
+orques. Griffeflammes fait de son mieux pour éviter de survoler 
+les zones incendiées (l'air chaud suscite des turbulences telles 
+qu'il risquerait de s'écraser).  
+À un moment donné, le dragon survole une colonne d'une 
+trentaine d'orques. Si les personnages le laissent faire, il pique 
+droit dessus. Ils ont intérêt à être bien attachés : jet de Force 
+(Athlétisme) DD 8 et en cas d’échec jet de sauvegarde de 
+Dextérité DD 15 pour ne pas tomber. Le souffle de feu du 
+dragon est impressionnant mais pas illimité : il lui faudra faire 5 
+ou 6 sur un d6 au début du prochain combat pour pouvoir de 
+nouveau souffler du feu.  
+Car en effet, rapidement les orques font décoller la chasse pour 
+contrer le dragon : une dizaine de gobelins armés d'arbalètes 
+montés sur des chauves-souris géantes. Individuellement, ces 
+créatures sont ridiculement faibles, mais en groupe elles peuvent 
+faire des dégâts et forcer le dragon à atterrir si les personnages 
+ne le défendent pas.  
+COMBAT AÉRIEN 
+Pour simplifier, gérez les combats aériens comme un combat 
+normal. Les gobelins sont trop stupides pour essayer d'attaquer le 
+ventre du dragon, et Griffeflammes n'est plus assez agile pour se 
+lancer dans des manœuvres acrobatiques. La seule différence est 
+qu'en cas de blessure, on risque de faire une chute mortelle. 
+À l'aube, au terme d'un trajet exténuant, les personnages 
+aperçoivent la palissade de fort Roanoke. Le village dort encore, 
+à l'exception des sentinelles qui, voyant arriver un dragon, 
+sonnent l'alarme et entreprennent de le cribler de flèches. Les 
+orques sont encore loin ; il vaut sans doute mieux se poser hors 
+de l'enceinte. Griffeflammes les dépose puis redécolle. Il a 
+rempli sa part du marché, et rentre « chez lui ». Impossible de le 
+convaincre de rester. 
+Retour à fort Roanoke 
+L'arrivée des personnages ne passe pas inaperçue. En fait, la 
+moitié des habitants sont à leur fenêtre et les regardent se 
+diriger vers la maison de Brand en compagnie de quelques 
+gardes. Le rôdeur les reçoit en personne. Jack Brand est un 
+homme efficace, qui prend leurs informations très au sérieux. Il 
+fait envoyer un groupe d'éclaireurs dans la forêt, pour estimer le 
+temps qui reste avant l'arrivée des orques, ordonne une 
+mobilisation générale, fait évacuer les femmes, les enfants et les 
+vieillards vers le sud, soit les 4/5ème de la population du fort. 
+Bref, il se comporte en chef de guerre compétent.  
+ 
+ 
+ 
+Cela dit, il y a un point du rapport des personnages qui l'inquiète. 
+Les orques avaient l'air de bien connaître la région, et d'être 
+certains que fort Roanoke tomberait presque sans combat. 
+Auraient-ils un espion dans la place ? Et voilà les personnages 
+promus chefs du contre-espionnage. 
+La tâche n'est pas si complexe qu'il y parait. Il suffit de raisonner 
+un peu (jet d’Intelligence (Investigation) DD 15). Pour être 
+efficace, un traître doit être dans la place depuis un bon moment, 
+et rester au fort pour ouvrir les portes aux assiégeants. Cela 
+élimine d'emblée toute la population flottante d'aventuriers, ainsi 
+que les trois quarts des civils, qui demandent à être évacués. Par 
+ailleurs, il faut qu'il soit relativement haut placé pour disposer 
+d'informations militairement exploitables. Enfin, il faut qu'il ait 
+un moyen de communiquer avec l'armée orque. Tiens, 
+justement, le palais possède un pigeonnier. Une fouille attentive 
+(jet de Sagesse (Perception) DD 15) permettra de découvrir, 
+dans un coin, cinq pigeons qui filent plein nord si on les lâche.  
+Le traître a donc accès aux oiseaux, ce qui limite le choix à 
+quatre des principaux conseillers de Jack Brand, qui ont tous 
+demandé à rester au fort, comme environ 70 autres hommes 
+(n'hésitez pas dans un premier temps à les noyer dans une foule 
+d’innocents, que ce soit le fils de Jack Brand, le capitaine des 
+gardes bourru, un clerc de Heaume qui appelle ses ouailles à 
+résister, et ainsi de suite).  
+Claudius, le prévôt. Un gros homme grisonnant qui a en charge 
+la justice du fort. C'est un ambitieux notoire qui rêve 
+d'anoblissement. Il fait d'ailleurs du zèle, dans l'espoir d'être 
+récompensé après la victoire. 
+Bors, le « connétable ». Sous ce titre pompeux se dissimule en 
+fait le chef de la petite milice de la ville. Il est jeune, distingué et 
+criblé de dettes. Il enrage de se voir assiégé. Il préférerait de 
+beaucoup charger sabre au clair en terrain découvert. La rumeur 
+prétend qu'il en veut beaucoup à Brand depuis qu'il a été 
+éconduit par sa fille. Il sera sans doute parmi les premiers morts. 
+
+
+www.aidedd.org | fort roanoke 
+8 
+Nathan, l'intendant. Un vétéran manchot et borgne. Il a guerroyé 
+dans tout le royaume et a déjà combattu les orques. Il a même 
+passé plusieurs années comme prisonnier d'une tribu d’orques. 
+Il hait passionnément ces créatures et ne manque pas une 
+occasion de le faire savoir. Et s'il mentait ? En tant qu'intendant, 
+il a toutes les clés du fort, y compris celles des portes 
+extérieures. 
+Guéta, le chroniqueur. Un petit homme timide, qui donne 
+l'impression d'avoir très envie d'être ailleurs. C'est l'un des rares 
+civils à rester dans la forteresse. Il est chargé de raconter les 
+exploits de Brand et de ses chasseurs. 
+ Démasquer l’espion 
+Il faut vraiment beaucoup d'imagination pour se représenter 
+Guéta (espion) en traître ouvrant les portes de la ville aux 
+orques. Et pourtant, c'est exactement ce qu'il va faire si les 
+personnages lui en laissent l'occasion. Ses motivations sont tout 
+à fait égoïstes : Gorgloch lui a promis beaucoup d'or. S'il se rend 
+compte que les personnages fouinent dans la maison fortifiée, il 
+fera de son mieux pour sympathiser avec eux et les aiguiller sur 
+de fausses pistes. Si cela ne suffit pas, il essayera de leur 
+arranger un ou deux « accidents », mais ce n'est pas un 
+spécialiste. S'il se sent sur le point d'être démasqué, il tentera de 
+fuir ou de se cacher en ville.  
+Il existe si peu de raisons de le suspecter que les personnages 
+risquent de se méfier de lui tout de suite. Malheureusement, il 
+est prudent, et il n'y a presque rien qui puisse l'incriminer. Son 
+scriptorium est plein de papiers divers, dont un plan du fort. Et 
+alors ? Il l'utilise pour simplifier son travail de description 
+lorsqu’il rédige sa chronique. Il a une liste complète de tous les 
+hommes d'armes de la forteresse ? Même chose. Et ces petits 
+morceaux de parchemins juste de la bonne taille pour être mis à 
+la patte d'un pigeon voyageur ? Ça risque d'être plus difficile à 
+expliquer, mais il peut toujours prétendre que le traître les a mis 
+là pour le compromettre. Et les 180 pièces d’or dans une 
+bourse mal faite, une grosse somme pour un chroniqueur ? 
+Les économies de toute une vie selon lui. En fait, le 
+démasquer n'est pas indispensable. 
+Des personnages intelligents feront condamner 
+toutes les portes, ou les surveilleront de près 
+nuit et jours afin de voir qui s’en approche. 
+Les 
+personnages 
+ont 
+48 
+heures 
+pour 
+découvrir Guéta ou le neutraliser d'une 
+manière ou d'une autre. Deux jours après leur 
+retour, les orques sortent de la forêt. Ils sont 
+moins nombreux qu’on ne pouvait le craindre : 
+300, guère plus. En effet leur chef, sachant qu'il 
+n'aurait pas à assiéger le fort, a envoyé juste 
+assez d'orques pour massacrer les hommes 
+en armes. Les autres se réservent pour attaquer 
+Port Liberté. 
+Laura 
+Les personnages n'auront toutefois pas le temps 
+de profiter du spectacle : Brand les convoque une nouvelle fois. Il 
+est en armure et n'a pas l'air d'humeur à bavarder longtemps : 
+« Mes amis, merci pour tout ce que vous avez fait. Vous 
+pouvez rester vous battre, bien sûr, mais j’ai une autre 
+tâche pour vous. Ma fille Laura a tenu à rester jusqu'ici. 
+Mais j'ai enfin réussi à la convaincre de partir. 
+ 
+J'aimerais que vous l'escortiez vers le sud. Vous passerez 
+par les souterrains, si la sortie est encore libre. Vous avez 
+un quart d'heure pour vous préparer ». 
+À leur retour, le rôdeur est en compagnie d'une jeune fille brune 
+en justaucorps de cuir qui porte un arc dans le dos. Laura 
+(éclaireuse) a l'air furieuse. Quant à son père, il est au bord de 
+l'apoplexie. Il salue les personnages, grogne quelque chose 
+comme « occupez-vous bien d'elle... bon courage », puis mène 
+personnellement la petite troupe jusqu'au sous-sol de la maison. 
+Il fait pivoter l'une des torches, ce qui ouvre tout un pan de mur, 
+et s'éloigne sans saluer sa fille. Le tunnel est une route droite et 
+pavée, sans le moindre piège. Une vraie promenade de santé... 
+s'il n'y avait pas Laura. C'est une jeune fille très têtue, qui a 
+décidé qu'elle allait se battre aux côtés de son père et qui est 
+furieuse d'être éloignée de l’action. Les personnages ont tout 
+intérêt à la surveiller de très près sinon, à la première occasion, 
+elle leur fausse compagnie et retourne au donjon.  
+Elle est intelligente, cela dit. Si elle sent que les personnages 
+regrettent de rater la bataille, elle n'hésite pas à remuer le 
+couteau dans la plaie et leur proposer d'y retourner : 
+« En nous installant près de la porte, on pourra se battre 
+tant qu’on veut, et papa ne le saura jamais ». 
+Dans ce genre de situation, tout peut arriver. Certains 
+personnages la bâillonneront et la chargeront sur leurs épaules, 
+d'autres voudront faire plaisir à une jolie fille et retourneront 
+allégrement se jeter dans la nasse qu'ils viennent de quitter.  
+À moins que Guéta ne soit encore en mesure de trahir, les 
+orques n'arriveront jamais jusqu'à eux. En revanche, s'il ouvre la 
+porte, la ville tombe. Les orques ne s'attarderont pas à piller, 
+puis ils mettront le feu et repartiront.  
+La fuite 
+Le tunnel débouche au sud-est du fort. 
+Pour peu qu'ils fassent preuve d'un 
+minimum de prudence, ils ne sont pas 
+repérés par les patrouilles orques. Le 
+trajet jusqu’à Port Liberté prendra 3 
+heures en barque, ou 6 heures à pied. Mais 
+une fois de plus, Laura est le principal 
+problème. Si elle aperçoit une patrouille 
+d'orques qui semble moins nombreuse que le 
+groupe, elle attaque. Elle est tout à fait aveugle à de 
+petits détails qui risquent de crever les yeux des 
+personnages, du genre qu’ils sont en demi-plaques et 
+elle en armure de cuir. Elle est également capable 
+d'endormir toute vigilance jusqu'à Port Liberté. Là, 
+dès qu’elle en a l’occasion, elle vole un cheval et 
+repart à fort Roanoke au triple galop. 
+Port Liberté est un bourg plus important que 
+fort Roanoke. Les personnages sont arrêtés à 
+l’entrée. S'ils expliquent leur affaire, on les conduit à Franir, le 
+bourgmestre. Celui-ci écoute leur rapport, sourit en apprenant 
+que les orques qui assiègent fort Roanoke ne sont que 300, et 
+décide de partir immédiatement à la tête de ses troupes, une 
+centaine 
+d’hommes, 
+pour 
+culbuter 
+ces 
+marauds. 
+Les 
+personnages sont libres de se joindre à lui, ou de profiter d'un 
+repos bien mérité. Laura, elle, s’arrange pour changer de 
+vêtements avec l'un des gardes et se mêle à l'armée de secours. 
+Incorrigible !  
+
+
+www.aidedd.org | fort roanoke 
+9 
+La bataille finale 
+À leur arrivée au fort, le fort est en flammes, avec un dernier 
+carré de défenseurs retranchés dans la maison fortifiée. 
+Si Guéta ne leur a pas ouvert les portes, les orques construisent 
+des échelles et décident de s'en remettre à la procédure 
+classique. Lorsque les secours arrivent, la moitié de l'armée 
+orque est en équilibre précaire sur des échelles que les 
+défenseurs se font un plaisir de faire basculer. Les hommes de 
+Franir rentrent dans les rangs orques et très vite chacun se 
+retrouve au milieu d'une masse compacte d'orques. 
+GÉRER UN COMBAT DE MASSES 
+Concentrez-vous simplement sur les actions des personnages. 
+Comptez 2d4 adversaires par personnage, par vague de un ou 
+deux, et concentrez-vous sur leur environnement immédiat. Le 
+chaos est tel qu'ils n’y voient pas à plus de vingt mètres. 
+Vous pouvez aussi obliger un personnage à voler au secours de 
+Laura qui pourrait être en mauvaise posture. Une fois débarrassée 
+de ses agresseurs, elle s'effondre, inconsciente... et son sauveur est 
+alors transformé en garde-malade pendant plusieurs tours. 
+Conclusion 
+Au bout d’un moment, les derniers orques se replient dans la 
+forêt, laissant plus d’une centaine de victimes. Du côté des 
+humains, les pertes sont minimes si Guéta n'a pas pu trahir. 
+Sinon, c'est une catastrophe. Reconnaissants, tous les habitants 
+de la vallée sauvage, de Port liberté à Fort Roanoke, se cotisent 
+alors et offrent aux personnages 850 pièces d’or en guise de 
+remerciement. À eux d’accepter ou de refuser.  
+Mais si le fort a bien été sauvé aujourd'hui, il n’en reste pas 
+moins que des centaines, voire des milliers d'orques sont 
+rassemblés à la frontière nord du royaume. Tout ce qui vient de 
+se passer n’est que la première bataille de la Grande guerre du 
+Nord. On peut alors imaginer que par la suite les personnages 
+vont se rendre à Laelith et demander au Roi-Dieu de mobiliser 
+ses troupes, ce qu’il fera, mais les autorités de la cité sainte ne 
+dédommageront pas le groupe pour autant. 
+PX 
+Pour un groupe de quatre, chaque personnage devrait gagner au 
+minimum 3100 PX à la fin de cette aventure. 
+S’ils ont démasqué Guéta et que les portes n’ont pas été 
+ouvertes aux orques, 1000 PX par personnage. Si Arwon sort 
+indemne de l’aventure, ajoutez 200 PX par personnage. Si Laura 
+sort indemne de l’aventure, ajoutez 300 PX par personnage.  
+ 
+ACCÉDER AU BESTIAIRE 
+ 
+ 
+ 
+https://www.aidedd.org/adj/scenarios/ 
+
+
+SECTIONS:
+--------------------------------------------------------------------------------
+
+### INTRODUCTION ###
+
+
+
+
+### FORT_ROANOKE ###
+www.aidedd.org | fort roanoke
+2
+Les personnages devraient, en toute logique, répondre oui, et  demander pourquoi les autres candidats ne convenaient pas.  Drewin répondra succinctement qu'ils demandaient trop cher.
+Une fois l’affaire conclue, Drewin se fera un plaisir de leur  fournir des mules, du matériel de camping, et une carte  sommaire de la portion de montagne où ils sont censés se  rendre. Sur le papier, cela semble simple : il suffit de remonter la  rivière jusqu'à sa source, puis de continuer dans la montagne  jusqu'à un rocher sculpté qui ressemble à un visage.   Renseignements
+Avant d’accepter, il y a de fortes chances que les personnages  demandent un petit moment pour se renseigner sur leur  destination. Après tout, s'il y a eu une ville dans la forêt, elle doit  bien être mentionnée quelques part. Fort Roanoke a sa part de  vieillards qui se chauffent au soleil en ressassant les anecdotes  de leur jeune temps et un jet d’Intelligence (Investigation) DD 12  permet d’apprendre qu'il y a très, très longtemps, avant le  Châtiment, la région était fertile et peuplée de créatures qui  étaient, peut-être, humaines. Puis il y a eu la punition divine, le  Châtiment, qui a soulevé la terre, et tout a disparu. En quelques  siècles, la forêt a englouti les ruines. Les humains se sont  réinstallés dans la région il y a moins de 100 ans. Les gens  tiennent cette histoire d'un érudit venu de Laelith il y a « oh, ben  au moins trente ans. Ce gars est parti dans la forêt, et il n'est  jamais revenu. S'appelait Rak, Rach, ou quelque chose comme  ça ». Un jet d’Intelligence (Histoire) DD 20 permettra à un sage  du groupe de se rappeler qu’on parle dans les livres d’un  « Empire de Lumière » qui aurait précédé l'actuelle civilisation  humaine du royaume.  L’expédition  La première journée se passe sans incident mais ne mène les  personnages qu’au pied des montagnes, l’allure étant fortement  réduite par la quasi-inexistence de chemins ou de pistes au nord  du fort. Peu à peu, la forêt est devenue réellement sauvage,  moins lumineuse, moins amicale. Il y a de plus en plus des  ronces. Les arbres en fin de journée sont plus hauts, plus serrés,  et appartiennent à des espèces inconnues pour la plupart. Les  mules sont devenues nerveuses. Il commence maintenant à faire  froid. S'il y a des rôdeurs ou des elfes dans le groupe, expliquez- leur qu'ils n'ont jamais vu une forêt pareille. Elle semble  réellement vivante, et hostile.
+Le deuxième jour, en début d’après-midi, l’expédition arrive au  pied d'une falaise haute d'une dizaine de mètres. Comment  grimper, et surtout comment faire grimper les mules ? Il y a une  chute d'eau à quelques centaines de mètres. Elle est flanquée  d’une sorte d'escalier naturel, mais il est peu apparent (jet de  Sagesse (Perception) DD 15). À partir de là, le groupe pénètre  vraiment dans une zone inexplorée. Toute la journée ils ont  grimpé en altitude. Il y a étonnamment peu de gibier dans la  forêt qui recouvre la montagne, et les arbres fruitiers et les baies  sont rares. Si les personnages comptaient sur la chasse ou la  cueillette pour se nourrir, ils vont devoir se rationner. En  revanche, il y a d'innombrables variétés de champignons, dont  certaines sont tout à fait comestibles. Encore faut-il les  différencier de leurs parents hallucinogènes ou mortels, qui sont  la grande majorité.
+Dès  le troisième jour, les  personnages  peuvent  avoir  l’impression d'être surveillés en permanence. Le ou les espions  ne semblent toutefois pas être agressifs, en tout cas, ils ne font  rien contre le groupe. Mais cet espionnage constant devrait  mettre les nerfs du groupe à fleur de peau (jet de Sagesse  (Perception) DD 12 pour ressentir cette impression).
+
+Le quatrième jour, la forêt se montre franchement agressive : de  grosses branches tombent régulièrement des arbres sur les  personnages, alors qu'il n'y a pas un souffle de vent. La nuit, les  mules paniquent, coupent leurs longes et repartent vers le sud.  Si les personnages essayent de les rattraper, ils pourront suivre  leurs traces pendant environ une heure... avant de trouver une  mare de sang et les restes à moitié dévorés des pauvres bêtes.  Quelque chose de gros et de féroce est passé par-là, mais n'a  laissé aucune trace.
+Ne lésinez pas sur les bruits bizarres, les créatures étranges à  peine entraperçues, les yeux phosphorescents qui les observent  dans la nuit, et ainsi de suite pour leur faire peur.   La statue
+Au matin du sixième jour de voyage, au terme d'une escalade  particulièrement éprouvante, les personnages arrivent à un
+www.aidedd.org | fort roanoke
+3
+énorme roc noir à moitié couvert de végétation. Il a été  partiellement dégagé et l'on peut deviner les contours, très  érodés, d'un visage étrange, pas tout à fait humain, surmonté  d'une sorte de casque (jet d’Intelligence (Histoire) DD 20 pour  lui trouver une ressemblance avec les habitants de Mulhorande).
+Non loin de là, un peu en contrebas, il y a une petite clairière.  Visiblement, l'endroit a été occupé. Il y a des sacs de couchage,  des débris de nourriture, les restes d'un petit feu, mais aussi des  traces de combat : branches brisées, feuilles piétinées et des  traces de sang séché depuis plusieurs jours. En revanche, il n'y a  ni cadavres, ni traces d'inhumation. Les personnages peuvent en  déduire qu'Arwon et ses compagnons ont été capturés, mais par  qui ? La meilleure façon de le savoir est encore de suivre la piste  des ravisseurs ; elle est bien visible. Curieusement, la végétation  ne l'a pas encore recouverte.
+Un jet de Sagesse (Survie) DD 14 réussi permet d’estimer que  les traces remontent à cinq ou six jours... alors que la piste  donne l'impression d'avoir été faite la veille !  La traque
+Suivre la piste au nord prendra tout le reste de la journée. Les  personnages les plus imaginatifs auront l'impression que,  contrairement aux jours précédents, maintenant la forêt  coopère. La piste est plus nette, les branches ne tombent plus,  les ronces ont moins tendance à s'agripper à eux, et ainsi de  suite. Si par hasard ils ont encore des chevaux ou des mules, les  bêtes ont l'air plus calmes.
+Au crépuscule, le groupe arrive au sommet d’un petit à-pic  d’une vingtaine de mètres. Les arbres sont beaucoup moins  denses aux alentours, et la température encore un peu  plus froide. En contrebas, un grand feu et des tentes.  Leurs occupants sont de grandes créatures à la peau  verte ou grise et aux traits grossiers : des orques ! 22  orques, visiblement très bien armés. Il y a aussi deux  humains qui sont manifestement prisonniers. Si les  personnages décident de surveiller le campement, ils  assisteront au souper, puis au coucher des créatures.  Bien entendu, elles laissent des sentinelles (4 gardes,  qui sont relayés toutes les 4 heures). Une attaque  frontale a toutefois de fortes chances de mal se passer,  car les orques sont sur le qui-vive et ne dorment que  d'un œil. Mais si le groupe en décide ainsi…  Contact
+Selon  toute  probabilité,  les  personnages  passeront un certain temps à discuter d'une attaque  contre le camp orque. Mais la « forêt » les écoute, très  attentivement, et après un temps de réflexion, décide de les  contacter. Le groupe va donc se retrouver brusquement nez à  nez avec un groupe de 9 petites créatures qui se laissent tomber  des arbres. À première vue, on dirait de petits singes au pelage  vert (babouin), hauts d'une cinquantaine de centimètres. Ils  piaillent (pas trop fort tout de même, pour ne pas attirer  l’attention des orques), tirent les personnages par la manche,  font mine de s'éloigner dans une direction précise, puis  reviennent, et recommencent... Bref, ils veulent qu'on les suive.  Si les personnages les attaquent, ils fuient.
+Si le groupe a l'intelligence de les accompagner, ils sont  conduits dans la vallée, à une heure de marche vers l'ouest. Là,  les singes verts les mènent à une petite grotte où se trouve leur  « ancien », étendu sur un lit de mousse. Sa fourrure est gris  blanche, et il est visiblement très âgé. Il est un peu télépathe,  juste assez pour se faire comprendre :
+« Nous sommes les gardiens du plateau, au service des  druides de Brulla. Vous êtes ennemis des Peaux-Vertes ?  Nous aussi. Nous n'aimons pas non plus votre espèce,  mais elle est plus facile à effrayer, alors que les Peaux- Vertes, eux, sont trop bêtes pour avoir peur. Aidez-nous  et vous pourrez rentrer chez vous pour dire à vos anciens  qu’ici la forêt ne veut pas de vous ».
+Si les personnages demandent plus d’informations au sujet des  orques :
+« Il y en a beaucoup ici, et beaucoup d'autres ailleurs. Ils  font du mal aux arbres. Mais nous connaissons la forêt, et  nous pouvons éveiller les arbres. Attendons toutefois le  lever du jour, les orques sont plus habiles que nous de  nuit ».
+
+
+### CONTEXTE ###
+ort Roanoke, situé à une quinzaine de kilomètres  en amont de Port Liberté, en plein cœur de la  vallée Sauvage, compte aux alentours de 400  âmes, essentiellement des familles de trappeurs.  Toutes les habitations de la partie basse du fort  sont en bois et entourées par une grande palissade  de quatre mètres de haut. Une maison fortifiée,  petit fort à l'intérieur du fort et unique construction en pierre de  Roanoke, a été bâtie au sommet d'une butte qui surplombe les  bâtisses. C'est là que vit le chef de la communauté, un certain  Jack Brand, un vieux rôdeur moustachu qui vient de passer la  cinquantaine. C'est lui qui a dirigé la défense de la communauté  au plus fort du conflit avec les druides, permettant à Roanoke  d'éviter la destruction, et lui encore qui a négocié au nom des  colons de la vallée Sauvage les accords avec la druide Brulla,  accords qui ont permis de mettre fin à une guerre qui durait déjà  depuis 14 mois.
+La forêt s'étend partout autour du fort sur des dizaines de lieues,  et bien au-delà des montagnes du Pays des Géants au nord.  Personne ne sait exactement ce qu’il y a après la source de la  Liberté, mais toutes sortes de rumeurs circulent, dans lesquelles  il est question d'immenses plateaux gelés parcourus par des  monstres géants. Ce qui est sûr, c'est que la forêt entre Port  Liberté et le Pays des Géants est dangereuse. De temps en  temps, des groupes entiers de bûcherons ou de trappeurs  disparaissent, purement et simplement.  Au md
+Ce scénario peut être joué à la suite de l’aventure « La nuit de  l’Empereur-Démon ».  Les provinces de Laelith
+Les provinces de Laelith, qui servent de contexte géographique à  cette aventure, sont décrites en détails sur www.aidedd.org dans  la rubrique Univers.
+
+
+Introduction   Une place comme fort Roanoke est une bénédiction pour un  personnage. C'est un endroit animé où les gens ne se montrent  pas trop curieux, et une bonne base arrière pour des expéditions  dans l'inconnu afin de se faire un nom ou devenir riche. Bref,  rien d'étonnant à ce que les personnages s'y trouvent, à la  recherche d'un nouveau contrat par exemple. Or justement, un  crieur annonce au cours de sa tournée que maître Drewin est  désireux d’engager un groupe de mercenaires pour un travail  important et bien payé. Inutile de dire que les candidats vont se  bousculer.  Drewin
+L’homme vit dans une grande maison en bois dans la partie  ouest du fort. Le grand hall du rez-de-chaussée, habituellement  consacré aux affaires, est presque vide, à l'exception d'une  dizaine d'aventuriers intéressés par l'annonce. Drewin prend le  temps de les recevoir individuellement. Jusqu'ici, aucun n'a fait  l'affaire. Le tour des personnages finit par arriver. Drewin est un  vieux monsieur corpulent, avec de grosses moustaches. Il a l'air  très fatigué. Il accueille courtoisement le groupe, leur fait servir à  boire, et leur explique ce qu'il attend d'eux :
+« Mon fils Arwon est parti dans la forêt il y a un environ  trois semaines, avec un petit groupe de  trois  mercenaires. Ils étaient censés remonter la Liberté à la  recherche du site d'une ancienne cité, où mon fils pensait  trouver un certain nombre d'antiquités, et devaient  revenir en fin de semaine dernière au plus tard. Mais je  suis toujours sans nouvelle, et je commence à réellement  m'inquiéter. Si cela vous agrée, j'aimerais que vous  partiez rapidement. Pour ce qui est de la question  financière, je vous propose 100 pièces d’or. S'il vous plaît,  évitez de marchander, je viens de passer la matinée à ça,  et cela ne m'amuse plus. Êtes-vous intéressés ou non ? »
+
+
+### L'ATTAQUE ###
+Une fois que le groupe aura fini de poser ses questions, tout le  monde retournera au camp. À l’aube, un groupe de 4 orques part  en reconnaissance dans la forêt. Cela fait une cible facile ; 4 de  moins ; il en reste encore 18 ! Encore un jour ou deux à ce  rythme, et les orques commenceront à désespérer sérieusement.  À ce moment-là, il sera possible de lancer une attaque. Veillez à
+ce que le combat soit spectaculaire. Nous sommes en
+montagne, il y a plein de gros rochers, parfois
+séparés par des crevasses larges d'un mètre ou
+plus. Sauter de l'un à l'autre est un exercice
+périlleux.
+En cas de problèmes pour les personnages,  vous pouvez faire intervenir les singes verts.  Ceux-ci sont capables de lancer des sorts de  druides niveau 1 et 2 (ce sont en fait ces  derniers qui les leur transmettent), mais ils sont  en revanche totalement inefficaces au combat au  corps à corps, et peureux en plus. Ils n’attaqueront  donc jamais les orques de front.
+Une fois les orques défaits, prisonniers, ou en fuite,
+le groupe pourra libérer les captifs. Arwon
+(éclaireur)  est  un  jeune  homme  qui  ressemble beaucoup à son père, il sera  donc facile à identifier. Il est vif et intelligent,  mais à moitié mort de faim et de fatigue. Il ne lui reste  qu’un seul mercenaire, Frand, qui a une jambe en moins. À  cause d’une mauvaise blessure, ses compagnons ont dû la lui  couper il y a deux jours. Les deux autres mercenaires ont été  tués la veille par les orques pour « rébellion ».
+Une fouille des orques permet de récupérer en moyenne 8 po  sur chacun d’eux.
+Interroger  les  prisonniers  orques  délivrera  quelques  informations aux personnages. Sinon, Arwon, qui parle l’orque,  les a entendu discuter pendant sa captivité, et pourra apporter  les mêmes renseignements :
+- au nord, entre Bois d’Épines et Bois d’Hiver, les montagnes  grouillent d'orques et de gobelins. Récemment, toutes les tribus  se sont unies sous la bannière d'un certain Gorgloch, qui leur a  promis de les emmener à la conquête des terres du sud.
+- le groupe qu’ils viennent de rencontrer n'est qu'une unité  d'éclaireurs. Il y en a des douzaines d'autres aux alentours.
+www.aidedd.org | fort roanoke
+4
+- les orques semblent très bien renseignés sur l'état des défenses  de fort Roanoke, qui est l'un de leurs premiers objectifs. Ils  disent même qu’à leur arrivée les portes seront ouvertes.
+S'ils ont un minimum de « conscience civique », les personnages  devraient rentrer le plus vite possible au fort.
+PENDANT CE TEMPS…
+L'armée orque commence à se regrouper. Protégées de la colère  des arbres par leur nombre et par les rituels de leurs chamans, des  colonnes de plusieurs centaines de guerriers se massent à deux  jours de marche vers le nord, de l’autre côté de la montagne du  Pays des Géants, dans une zone pratiquement dépourvue de  végétation, entre Bois d’Épines et Bois d’Hiver.
+
+
+### LE_RETOUR ###
+La première journée se passe bien, la forêt ne gêne plus le  groupe. Elle se concentre sur les orques. Rejoindre la tête  sculptée n'est donc pas très difficile. En chemin les personnages  commencent à entendre des tambours, loin vers le nord. Si les  personnages ont deux sous de bon sens, ils devraient essayer de  filer vers le sud à toute vitesse. Mais s'i1s préfèrent aller jouer  aux espions, libre à eux ! Ils n'auront pas besoin d'un examen  approfondi pour se rendre compte que la menace est vraiment  très sérieuse, et qu’il faut absolument prévenir fort Roanoke.
+Lorsqu’ils arrivent au rocher de la tête… la tête a disparu. À sa  place, il y a un énorme trou, avec un escalier de pierre noire qui  s'enfonce dans le sol. Qu’ils s’organisent pour aller jeter un coup  d'œil au sous-sol, ou qu’ils poursuivent leur chemin vers  Roanoke (sous les protestations d’Arwon qui, n’ayant toujours  pas trouvé sa cité ancienne, ne laissera pas cette piste si  facilement), une mauvaise surprise les attend, dans quelques  minutes ou au prochain bivouac.
+30 curieuses créatures (gardes momifiés, voir encadré ci- dessous) vont tenter de les capturer. Ils vont les encercler et leur  faire comprendre de lâcher leurs armes. Ce sont des  humanoïdes très maigres, dont les traits ressemblent à ceux du  rocher de la tête. Ils portent des lances de facture bizarre. Sans  un mot, ils invitent alors les personnages à les suivre, après les  avoir désarmés. Bien entendu, ils s’engouffrent sous le rocher de  la tête.
+En cas de problème, Arach n’est pas loin et n’hésitera pas à  lancer des sorts de sommeil (60 (15d8) pv avec un emplacement  de sort niveau 6, 52 (13d8) pv avec des emplacements de sorts  niveau 5, 44 (11d8) pv avec des emplacements de sorts de  niveau 4) pour parvenir à ses fins.  La cité des morts  L'escalier descend très profondément, et débouche sur un large  couloir bordé d'ossements. Ils marchent pendant presque une  heure, avant d'arriver sur une vaste corniche qui domine un  immense cirque rocheux, au centre duquel se dresse une petite  ville. Le groupe descend alors un nouvel escalier et pénètre dans  la cité. L'architecture, tout en angles, ne ressemble en rien à ce  que connaissent les personnages. Les gardes les amèneront  dans un grand bâtiment central, qui pourrait être un temple ou  un palais, et les abandonnent dans des appartements  somptueux, quoique légèrement poussiéreux, au dernier étage.  Ils vont y attendre une heure ou deux.  Arach
+La porte finit par s'ouvrir. Un humain en robe noire avec une  grosse moustache, qui doit avoir passé la cinquantaine, entre  dans la pièce. D'une voix un peu hésitante, il souhaite la  bienvenue aux personnages. Ceux-ci ont peut-être entendu parler  de lui à fort Roanoke. C'est Arach, cet érudit qui a disparu dans  la forêt il y a plusieurs décennies.
+www.aidedd.org | fort roanoke
+5
+Arach est un personnage complexe. Comme tous les savants  fous, il a un petit problème d'ego accentué par son limogeage  des Pics des Mages (voir ci-dessous). Il considère maintenant les  humains comme de la matière première et, s’il laissait parler ses  instincts profonds, il « zombifierait » les personnages car le  destin de fort Roanoke ne l'intéresse pas. Toutefois, après autant  d’années sans vraie compagnie, il est content de pouvoir  enfin raconter son histoire à quelqu’un, surtout s'il y a  un magicien dans le groupe.
+Chassé des Pics des Mages de Laelith il y a  bien longtemps pour s'être intéressé de trop  près à la nécromancie, Arach a alors décidé  de se consacrer à sa seconde passion,  l'étude des vieilles civilisations, et en  particulier l’une des plus anciennes, celle de  Mulhorande, plutôt que de rejoindre la tour  de l’échec. Suivant les indications d’un  vieux parchemin, il est parti à l'aventure  dans la forêt et a fini par trouver cette  petite cité. Apparemment, c'était une sorte  de nécropole royale, pleine de momies. Il a  un peu tâtonné au début, mais après  quelques mois, il a réussi à en ressusciter  une, puis une autre. 30 ans plus tard, il est à  la tête de plusieurs centaines de ces créatures.
+Si les personnages se montrent curieux, Arach  racontera en deux mots l'histoire de la chute de leur  civilisation dans la région des Deux lacs, qu'il a  reconstituée après des années de patientes recherches.  Venus de Mulhorande, il semble qu’ils aient été parmi les  premiers humains à s’installer dans la région qui n’était alors  habitée que par les hulvaliniens, il y a plus de 1000 ans de cela.  Puis vint le jour du Châtiment et tous les membres de ce peuple  qui vivait au bord du lac furent détruits. Seule cette nécropole  bâtie bien plus haut dans la montagne a survécu. Arach peut  ainsi parler pendant des heures de la prodigieuse expérience  historique qu'il a mise en place ; il a littéralement ressuscité une  culture disparue et l'a étudiée de près pendant des années. En  fait, un jet de Sagesse (Perspicacité) DD 15 permet de se rendre  compte qu’il est possible de le manipuler en jouant sur son  orgueil et sur sa curiosité intellectuelle.
+Mais pour le moment les personnages seront sans doute plus  intéressés par des questions simples du genre « pourquoi nous  avez-vous capturés ? ». Si on lui pose directement la question, il  répond, avec un sourire un peu froid :
+« Voyez-vous, j'ai sympathisé avec un groupe de chauves- souris vampires, et elles viennent parfois me raconter ce  qui se passe à l’extérieur. Il y a quelques jours, elles  m'ont raconté une histoire assez confuse. J'ai cru  comprendre qu’il y avait des créatures hostiles dans la  forêt. Sur mon conseil, le Peuple (c'est le nom que se  donnent ses ressuscités) a envoyé des patrouilles, avec  l'ordre de faire des prisonniers. Et vous êtes là ».
+Les personnages vont alors sans doute protester, expliquer qu'il  y a erreur, parler des orques et ainsi de suite. Il réfléchira un  instant, sourira en hochant la tête, puis dira avant de sortir :
+« Je comprends. Vous dites sans doute la vérité, je vais  envoyer de nouvelles patrouilles. Nous nous reverrons  sous peu ».
+
+
+### LA_NÉCROPOLE ###
+Les  personnages  se  rendront  vite  compte  qu'ils  sont  relativement libres de leurs mouvements, tant qu'ils restent dans  le périmètre de la cité. Toutefois, ils sont suivis partout par une  douzaine de guerriers momifiés, qui ont ordre de les attaquer  s'ils s'approchent trop de l’escalier d'accès à l'extérieur. Arach
+n’a aucune confiance dans les êtres humains. Il est plus
+qu'à moitié convaincu qu’ils mentent. Quant aux
+momifiés, ils n'ont pas beaucoup de conversation. Peu
+sont ceux qui parlent (un peu plus de 10 %,
+principalement les scribes et les nobles).
+O'ooxa, esclave. Selon les critères du Peuple, elle
+a dû être belle, il y a dix mille ans. Aujourd'hui,  elle est comme les autres, jaune et desséchée.  Elle faisait partie de la suite d'un puissant noble.  C'est elle qui viendra faire le ménage chez les  personnages et leur apporter à manger. Elle est  lente et un peu dans le brouillard. Arach la  considère comme « l'un de ses spécimens les  moins bien réussis ». Il y a environ 75 esclaves.
+Bahan'aal, guerrier. C'est le chef du petit groupe  affecté à la surveillance des personnages. Il est  grand,  massif  et  nettement  plus  éveillé  qu'O'ooxa. En fait, il a presque l'air vivant. Si les  personnages essayent de communiquer, il  semble écouter et comprendre. Mais il ne fait  rien de plus. Il y a environ 125 guerriers  momifiés.
+Vala, cultivateur. Comme beaucoup de ses pareils, il n'a  pas été momifié, mais étranglé puis préservé magiquement.  Les personnages pourront voir des dizaines de ces créatures  labourer les champs autour de la ville. Bien entendu, ils ne font  rien pousser. À quoi bon ? Personne ne mange ici (Arach cultive  lui-même son potager). Il y a environ 50 cultivateurs.
+Chazdhach, scribe. Un momifié en très mauvais état qui  espionne  les  personnages  sans  grande  discrétion.  Intellectuellement parlant, c'est l'un des mieux conservés,  suffisamment pour éprouver une certaine curiosité quant au  monde extérieur. Il parle un peu le commun (que lui a appris  Arach) mais ne prendra pas l'initiative du contact. Il peut  s'avérer très utile. Il y a environ 30 scribes ou intellectuels  comme lui.
+LES MOMIFIÉS
+La ville abrite près de trois cents de ces créatures. Les aristocrates  du Peuple se faisaient enterrer avec des dizaines de serviteurs, en  prévision d'une après-vie très semblable à celle-ci.
+Arach a pris soin de ressusciter en priorité une majorité d'individus  inoffensifs, serviteurs, cultivateurs, scribes et administrateurs. Il se  méfie, à juste titre, des guerriers et des nobles mais, pour le citer :  «  Comment voulez-vous avoir une reconstitution correcte s'il  manque l’élément essentiel ?  ». Il a dû mater plusieurs tentatives  de révolte de la part de ses créatures, avant d'avoir le bon sens de  leur laisser les apparences du pouvoir et de devenir leur «  fidèle  conseiller  ». Chaque momifié se livre aux occupations qu'elle  exerçait de son vivant, sans état d'âme ni émotion. Ces créatures  donnent l'impression d'être très prévisibles, mais elles conservent  une certaine part de libre arbitre. Certaines sont aussi conscientes  que de leur vivant, et cela en fait des adversaires redoutables.
+On parle de momifiés à cause de leur mode de conservation, mais  techniquement leurs stats sont basées sur celles des zombis.
+www.aidedd.org | fort roanoke
+6
+Saxif Na'arvan, noble. Un des rares nobles qu'Arach a réanimé.  La noblesse du Peuple se composait essentiellement de  comploteurs fourbes et sournois, et ces caractéristiques ont fort  bien survécu à l'embaumement. Saxif fera convoquer les  personnages dans ses appartements dans la journée qui suivra  leur arrivée. Il les recevra sur son trône, drapé dans une  robe rouge sang. Il parle quelques mots de commun  (que lui a appris Arach), mais ne prendra pas la  peine de s'en servir. Il regarde les personnages  s'agiter sans manifester plus d'intérêt que s'ils  étaient une troupe de chiens savants, puis les  congédie d'un geste et commence à réfléchir à la  manière de les intégrer à ses machinations. Il y a  environ 10 nobles.
+Sa Majesté le roi Wurlic. Le chef-d’œuvre  d'Arach : un noble parfaitement réanimé,  intelligent et coopératif. C'est le seul  télépathe de la nécropole, et donc le seul  qui puisse communiquer parfaitement avec  les personnages. Malheureusement, il porte  une confiance aveugle à Arach, son conseiller  humain, et ne recevra pas les personnages tant  que ce dernier ne lui aura pas donné son aval.
+Alors que faire ? Essayer de s'évader est une mauvaise  idée. Leurs chances de succès sont faibles, et cela convaincra  Arach qu'ils sont dans le camp des envahisseurs. Communiquer  avec les momifiés est un passe-temps stérile. Discuter avec  Arach est nettement plus intéressant, mais la difficulté est de  mettre la main dessus. Il passe ses journées à dormir et ses nuits  dans une caverne à préparer sa « grande expérience ».
+Le Peuple ne manie pas d’argent, Arach est complètement  désintére ssé des choses matérielles et les trésors qui ont été  entreposés ici avec les  momies sont d’une autre époque et ne  valent plus rien maintenant. Pas de quoi réjouir un roublard…  L'ambassade orque
+Le jour suivant, une des patrouilles rentre. Elle fait son rapport à  Arach en présence des personnages. La présence des orques est  confirmée, tout comme le fait qu'ils se dirigent vers le sud. Arach  hésite encore à laisser partir les personnages. Après tout, rien ne  lui garantit qu'une fois le péril orque écarté, ils ne reviendront  pas ici avec une troupe d'inquisiteurs. De plus, ce sont des  aventuriers, et leur présence risque d'être nécessaire si les  orques se montrent agressifs. Il est sur le point de se laisser  convaincre lorsqu'un garde entre et annonce l'arrivée d'une  ambassade orque !
+Un orque chef de guerre richement vêtu se présente alors devant  Arach, suivis de 6 guerriers orques chargés de quatre coffres  remplis de présents. Ils ont été désarmés, comme les  personnages. Le chef de la délégation, qui se nomme Igrocsh,  s'agenouille devant Arach et se lance dans un discours fleuri qui  peut se résumer à :
+« Ô puissant nécromant, nous t'implorons de te joindre à  nous dans notre guerre contre les Peaux-Roses. Si tu nous  aides, nous te comblerons de faveurs, tu auras des  milliers de cadavres à animer à ta guise, et tu siégeras au  conseil aux côtés de notre puissant roi Gorgloch ».
+Arach a l'air indécis, et annonce qu'il prendra sa décision après  le repas du soir. Il interdit aux personnages et aux orques de  s'entre-tuer, et se retire. Les gardes momifiés sont sans cesse  présents et interdisent toute action directe.
+Et maintenant, que faire ? Échanger des regards haineux ne les  mènera pas loin. Si les personnages ont compris dans quelle  sorte de civilisation ils sont tombés, ils peuvent essayer d'agir  plus subtilement. Chazdhach se fera un plaisir de les conduire à  l'empoisonneur officiel du palais, qui leur fournira une décoction
+abominable à souhait. Encore faut-il empoisonner le dîner,
+qui  est  préparé  par  un  groupe de  domestiques  particulièrement mal ranimés. Si l'opération réussit, les
+ambassadeurs orques iront se coucher tôt, le trajet les
+ayant fatigués. Ils ne se réveilleront jamais... Plus
+subtilement, ils peuvent essayer de rencontrer le roi et
+lui glisser à l'oreille des choses comme « Majesté,
+votre conseiller rencontre des ambassadeurs
+étrangers sans votre autorisation et détourne
+les présents qui vous étaient légitimement  adressés ». L’ennui est que cela met Arach  en péril, et que les orques ne sont pas  particulièrement  choqués  à  l'idée  de  négocier avec la momie d'un roi-sorcier.  Le dîner
+Il réunit Arach, les personnages et les orques,  dans une ambiance tendue. Tous tiennent là une  dernière chance de convaincre le nécromancien.  Les orques promettent la puissance et la gloire ; que  peuvent proposer les personnages ? À la fin du repas, Arach  annonce sa décision : la ville restera neutre, les orques sont  libres de circuler dans la forêt comme bon leur semble. Les  orques sont déçus, mais acceptent le marché et se retirent en  laissant leurs présents : 800 pc, 6000 pa, 1800 po, 90 pp et 8  pierres précieuses de 100 po. Arach n’en a que faire.
+Dans la nuit, Arach vient trouver les personnages dans leurs  chambres. L'explication risque d'être orageuse mais, dans le  fond, ses arguments se tiennent :
+« Que je le veuille ou non, les orques tiennent la forêt. Je  n'ai rien à gagner en me sacrifiant pour une humanité qui  m'a rejeté, mais je comprends que vous vouliez protéger  votre foyer. Je vais vous renvoyer chez vous le plus vite  possible. J'ai un moyen, mais je vais avoir besoin d'un  petit peu d’aide ».
+Arach les conduit alors aux cavernes qui s’avèrent pleines de  caveaux et de sarcophages. Le nécromant a encore du travail.  Dans la plus grande, au sud-est, repose la momie d'un énorme  dragon.
+« Seul, je n'ai jamais osé le ranimer. Avec votre aide,  j'espère y parvenir ».
+Arach a déjà préparé tout le matériel nécessaire. Si les  personnages acceptent, il leur apprend le rituel, leur prélève une  pinte de sang chacun, allume les braseros et commence à  chanter dans une langue bizarre. La cérémonie dure plus d’une  heure, les personnages en sortiront épuisés, mais il ne se passe  rien. Alors qu'Arach, visiblement écœuré, se prépare à  l'interrompre, les vieux tissus qui entourent le dragon volent en  éclats et tous se retrouvent devant un grand dragon d’airain à  moitié décharné et déshydraté avec une faim et une soif  immense. Arach, pas fou, bat en retraite vers la sortie. Les  personnages vont devoir négocier seuls.
+À eux donc d’expliquer à Griffeflammes (dragon d'airain jeune  avec seulement 55 pv et sans son Souffle de sommeil car il est
+www.aidedd.org | fort roanoke
+7
+encore loin d’être au mieux de sa forme après le rituel), c'est son  nom, qu'il y a plus de choses à manger dehors que dans la  caverne et qu'il pourra se nourrir à volonté en échange d'un seul  petit service : les déposer en ville, à quelques heures de vol.
+Griffeflammes étant maintenant un mort-vivant, les sorts de  soins magiques sont malheureusement sans effet sur lui.  Le vol  En se serrant bien, il y a assez de place sur le dos du dragon  pour six personnes. Il ne reste plus qu'à ouvrir les immenses  portes de bronze qui se trouvent au fond de la caverne et à  s'accrocher le mieux possible au cuir de Griffeflammes. Le  décollage est brutal ; les ailes du dragon sont bien plus fragiles  qu'autrefois. Il fait nuit, mais la lune est pleine. L'air est frais.  Loin en dessous d'eux la forêt défile à toute vitesse. Vue d'ici,  elle a presque l'air hospitalière. Au sud, droit devant eux, on  distingue une ligne rouge. Vu de plus près, on dirait... un  incendie ! Les orques ont mis le feu à la forêt ! Les flammes se  propagent à une vitesse surnaturelle, aidées par les chamans  orques. Griffeflammes fait de son mieux pour éviter de survoler  les zones incendiées (l'air chaud suscite des turbulences telles  qu'il risquerait de s'écraser).
+À un moment donné, le dragon survole une colonne d'une  trentaine d'orques. Si les personnages le laissent faire, il pique  droit dessus. Ils ont intérêt à être bien attachés : jet de Force  (Athlétisme) DD 8 et en cas d’échec jet de sauvegarde de  Dextérité DD 15 pour ne pas tomber. Le souffle de feu du  dragon est impressionnant mais pas illimité : il lui faudra faire 5  ou 6 sur un d6 au début du prochain combat pour pouvoir de  nouveau souffler du feu.
+Car en effet, rapidement les orques font décoller la chasse pour  contrer le dragon : une dizaine de gobelins armés d'arbalètes  montés sur des chauves-souris géantes. Individuellement, ces  créatures sont ridiculement faibles, mais en groupe elles peuvent  faire des dégâts et forcer le dragon à atterrir si les personnages  ne le défendent pas.
+COMBAT AÉRIEN
+Pour simplifier, gérez les combats aériens comme un combat  normal. Les gobelins sont trop stupides pour essayer d'attaquer le  ventre du dragon, et Griffeflammes n'est plus assez agile pour se  lancer dans des manœuvres acrobatiques. La seule différence est  qu'en cas de blessure, on risque de faire une chute mortelle.
+À l'aube, au terme d'un trajet exténuant, les personnages  aperçoivent la palissade de fort Roanoke. Le village dort encore,  à l'exception des sentinelles qui, voyant arriver un dragon,  sonnent l'alarme et entreprennent de le cribler de flèches. Les  orques sont encore loin ; il vaut sans doute mieux se poser hors  de l'enceinte. Griffeflammes les dépose puis redécolle. Il a  rempli sa part du marché, et rentre « chez lui ». Impossible de le  convaincre de rester.  Retour à fort Roanoke  L'arrivée des personnages ne passe pas inaperçue. En fait, la  moitié des habitants sont à leur fenêtre et les regardent se  diriger vers la maison de Brand en compagnie de quelques  gardes. Le rôdeur les reçoit en personne. Jack Brand est un  homme efficace, qui prend leurs informations très au sérieux. Il  fait envoyer un groupe d'éclaireurs dans la forêt, pour estimer le  temps qui reste avant l'arrivée des orques, ordonne une  mobilisation générale, fait évacuer les femmes, les enfants et les  vieillards vers le sud, soit les 4/5ème de la population du fort.  Bref, il se comporte en chef de guerre compétent.
+
+
+Cela dit, il y a un point du rapport des personnages qui l'inquiète.  Les orques avaient l'air de bien connaître la région, et d'être  certains que fort Roanoke tomberait presque sans combat.  Auraient-ils un espion dans la place ? Et voilà les personnages  promus chefs du contre-espionnage.
+La tâche n'est pas si complexe qu'il y parait. Il suffit de raisonner  un peu (jet d’Intelligence (Investigation) DD 15). Pour être  efficace, un traître doit être dans la place depuis un bon moment,  et rester au fort pour ouvrir les portes aux assiégeants. Cela  élimine d'emblée toute la population flottante d'aventuriers, ainsi  que les trois quarts des civils, qui demandent à être évacués. Par  ailleurs, il faut qu'il soit relativement haut placé pour disposer  d'informations militairement exploitables. Enfin, il faut qu'il ait  un moyen de communiquer avec l'armée orque. Tiens,  justement, le palais possède un pigeonnier. Une fouille attentive  (jet de Sagesse (Perception) DD 15) permettra de découvrir,  dans un coin, cinq pigeons qui filent plein nord si on les lâche.
+Le traître a donc accès aux oiseaux, ce qui limite le choix à  quatre des principaux conseillers de Jack Brand, qui ont tous  demandé à rester au fort, comme environ 70 autres hommes  (n'hésitez pas dans un premier temps à les noyer dans une foule  d’innocents, que ce soit le fils de Jack Brand, le capitaine des  gardes bourru, un clerc de Heaume qui appelle ses ouailles à  résister, et ainsi de suite).
+Claudius, le prévôt. Un gros homme grisonnant qui a en charge  la justice du fort. C'est un ambitieux notoire qui rêve  d'anoblissement. Il fait d'ailleurs du zèle, dans l'espoir d'être  récompensé après la victoire.
+Bors, le « connétable ». Sous ce titre pompeux se dissimule en  fait le chef de la petite milice de la ville. Il est jeune, distingué et  criblé de dettes. Il enrage de se voir assiégé. Il préférerait de  beaucoup charger sabre au clair en terrain découvert. La rumeur  prétend qu'il en veut beaucoup à Brand depuis qu'il a été  éconduit par sa fille. Il sera sans doute parmi les premiers morts.
+www.aidedd.org | fort roanoke
+8
+Nathan, l'intendant. Un vétéran manchot et borgne. Il a guerroyé  dans tout le royaume et a déjà combattu les orques. Il a même  passé plusieurs années comme prisonnier d'une tribu d’orques.  Il hait passionnément ces créatures et ne manque pas une  occasion de le faire savoir. Et s'il mentait ? En tant qu'intendant,  il a toutes les clés du fort, y compris celles des portes  extérieures.
+Guéta, le chroniqueur. Un petit homme timide, qui donne  l'impression d'avoir très envie d'être ailleurs. C'est l'un des rares  civils à rester dans la forteresse. Il est chargé de raconter les  exploits de Brand et de ses chasseurs.
+Démasquer l’espion
+Il faut vraiment beaucoup d'imagination pour se représenter  Guéta (espion) en traître ouvrant les portes de la ville aux  orques. Et pourtant, c'est exactement ce qu'il va faire si les  personnages lui en laissent l'occasion. Ses motivations sont tout  à fait égoïstes : Gorgloch lui a promis beaucoup d'or. S'il se rend  compte que les personnages fouinent dans la maison fortifiée, il  fera de son mieux pour sympathiser avec eux et les aiguiller sur  de fausses pistes. Si cela ne suffit pas, il essayera de leur  arranger un ou deux « accidents », mais ce n'est pas un  spécialiste. S'il se sent sur le point d'être démasqué, il tentera de  fuir ou de se cacher en ville.
+Il existe si peu de raisons de le suspecter que les personnages  risquent de se méfier de lui tout de suite. Malheureusement, il  est prudent, et il n'y a presque rien qui puisse l'incriminer. Son  scriptorium est plein de papiers divers, dont un plan du fort. Et  alors ? Il l'utilise pour simplifier son travail de description  lorsqu’il rédige sa chronique. Il a une liste complète de tous les  hommes d'armes de la forteresse ? Même chose. Et ces petits  morceaux de parchemins juste de la bonne taille pour être mis à  la patte d'un pigeon voyageur ? Ça risque d'être plus difficile à  expliquer, mais il peut toujours prétendre que le traître les a mis  là pour le compromettre. Et les 180 pièces d’or dans une  bourse mal faite, une grosse somme pour un chroniqueur ?  Les économies de toute une vie selon lui. En fait, le  démasquer n'est pas indispensable.
+Des personnages intelligents feront condamner  toutes les portes, ou les surveilleront de près  nuit et jours afin de voir qui s’en approche.
+Les  personnages  ont  48  heures  pour  découvrir Guéta ou le neutraliser d'une  manière ou d'une autre. Deux jours après leur  retour, les orques sortent de la forêt. Ils sont  moins nombreux qu’on ne pouvait le craindre :  300, guère plus. En effet leur chef, sachant qu'il  n'aurait pas à assiéger le fort, a envoyé juste  assez d'orques pour massacrer les hommes  en armes. Les autres se réservent pour attaquer  Port Liberté.  Laura
+Les personnages n'auront toutefois pas le temps  de profiter du spectacle : Brand les convoque une nouvelle fois. Il  est en armure et n'a pas l'air d'humeur à bavarder longtemps :
+« Mes amis, merci pour tout ce que vous avez fait. Vous  pouvez rester vous battre, bien sûr, mais j’ai une autre  tâche pour vous. Ma fille Laura a tenu à rester jusqu'ici.  Mais j'ai enfin réussi à la convaincre de partir.
+
+J'aimerais que vous l'escortiez vers le sud. Vous passerez  par les souterrains, si la sortie est encore libre. Vous avez  un quart d'heure pour vous préparer ».
+À leur retour, le rôdeur est en compagnie d'une jeune fille brune  en justaucorps de cuir qui porte un arc dans le dos. Laura  (éclaireuse) a l'air furieuse. Quant à son père, il est au bord de  l'apoplexie. Il salue les personnages, grogne quelque chose  comme « occupez-vous bien d'elle... bon courage », puis mène  personnellement la petite troupe jusqu'au sous-sol de la maison.  Il fait pivoter l'une des torches, ce qui ouvre tout un pan de mur,  et s'éloigne sans saluer sa fille. Le tunnel est une route droite et  pavée, sans le moindre piège. Une vraie promenade de santé...  s'il n'y avait pas Laura. C'est une jeune fille très têtue, qui a  décidé qu'elle allait se battre aux côtés de son père et qui est  furieuse d'être éloignée de l’action. Les personnages ont tout  intérêt à la surveiller de très près sinon, à la première occasion,  elle leur fausse compagnie et retourne au donjon.
+Elle est intelligente, cela dit. Si elle sent que les personnages  regrettent de rater la bataille, elle n'hésite pas à remuer le  couteau dans la plaie et leur proposer d'y retourner :
+« En nous installant près de la porte, on pourra se battre  tant qu’on veut, et papa ne le saura jamais ».
+Dans ce genre de situation, tout peut arriver. Certains  personnages la bâillonneront et la chargeront sur leurs épaules,  d'autres voudront faire plaisir à une jolie fille et retourneront  allégrement se jeter dans la nasse qu'ils viennent de quitter.
+À moins que Guéta ne soit encore en mesure de trahir, les  orques n'arriveront jamais jusqu'à eux. En revanche, s'il ouvre la  porte, la ville tombe. Les orques ne s'attarderont pas à piller,
+puis ils mettront le feu et repartiront.
+
+
+### LA_FUITE ###
+Le tunnel débouche au sud-est du fort.
+Pour peu qu'ils fassent preuve d'un
+minimum de prudence, ils ne sont pas  repérés par les patrouilles orques. Le  trajet jusqu’à Port Liberté prendra 3  heures en barque, ou 6 heures à pied. Mais  une fois de plus, Laura est le principal  problème. Si elle aperçoit une patrouille  d'orques qui semble moins nombreuse que le  groupe, elle attaque. Elle est tout à fait aveugle à de  petits détails qui risquent de crever les yeux des  personnages, du genre qu’ils sont en demi-plaques et
+elle en armure de cuir. Elle est également capable
+d'endormir toute vigilance jusqu'à Port Liberté. Là,
+dès qu’elle en a l’occasion, elle vole un cheval et
+repart à fort Roanoke au triple galop.
+Port Liberté est un bourg plus important que
+fort Roanoke. Les personnages sont arrêtés à  l’entrée. S'ils expliquent leur affaire, on les conduit à Franir, le  bourgmestre. Celui-ci écoute leur rapport, sourit en apprenant  que les orques qui assiègent fort Roanoke ne sont que 300, et  décide de partir immédiatement à la tête de ses troupes, une  centaine  d’hommes,  pour  culbuter  ces  marauds.  Les  personnages sont libres de se joindre à lui, ou de profiter d'un  repos bien mérité. Laura, elle, s’arrange pour changer de  vêtements avec l'un des gardes et se mêle à l'armée de secours.  Incorrigible !
+www.aidedd.org | fort roanoke
+9
+
+
+### LA_BATAILLE_FINALE ###
+À leur arrivée au fort, le fort est en flammes, avec un dernier  carré de défenseurs retranchés dans la maison fortifiée.
+Si Guéta ne leur a pas ouvert les portes, les orques construisent  des échelles et décident de s'en remettre à la procédure  classique. Lorsque les secours arrivent, la moitié de l'armée  orque est en équilibre précaire sur des échelles que les  défenseurs se font un plaisir de faire basculer. Les hommes de  Franir rentrent dans les rangs orques et très vite chacun se  retrouve au milieu d'une masse compacte d'orques.
+GÉRER UN COMBAT DE MASSES
+Concentrez-vous simplement sur les actions des personnages.  Comptez 2d4 adversaires par personnage, par vague de un ou  deux, et concentrez-vous sur leur environnement immédiat. Le  chaos est tel qu'ils n’y voient pas à plus de vingt mètres.
+Vous pouvez aussi obliger un personnage à voler au secours de  Laura qui pourrait être en mauvaise posture. Une fois débarrassée  de ses agresseurs, elle s'effondre, inconsciente... et son sauveur est  alors transformé en garde-malade pendant plusieurs tours.  Conclusion  Au bout d’un moment, les derniers orques se replient dans la  forêt, laissant plus d’une centaine de victimes. Du côté des  humains, les pertes sont minimes si Guéta n'a pas pu trahir.  Sinon, c'est une catastrophe. Reconnaissants, tous les habitants  de la vallée sauvage, de Port liberté à Fort Roanoke, se cotisent  alors et offrent aux personnages 850 pièces d’or en guise de  remerciement. À eux d’accepter ou de refuser.
+Mais si le fort a bien été sauvé aujourd'hui, il n’en reste pas  moins que des centaines, voire des milliers d'orques sont  rassemblés à la frontière nord du royaume. Tout ce qui vient de  se passer n’est que la première bataille de la Grande guerre du  Nord. On peut alors imaginer que par la suite les personnages  vont se rendre à Laelith et demander au Roi-Dieu de mobiliser  ses troupes, ce qu’il fera, mais les autorités de la cité sainte ne  dédommageront pas le groupe pour autant.  PX  Pour un groupe de quatre, chaque personnage devrait gagner au  minimum 3100 PX à la fin de cette aventure.
+S’ils ont démasqué Gué ta  et que les portes n’ont pas été  ouvertes aux orques, 1000 PX par personnage. Si Arwon sort  indemne de l’aventure, ajoutez 200 PX par personnage. Si Laura  sort indemne de l’aventure, ajoutez 300 PX par personnage.
+
+ACCÉDER AU BESTIAIRE
+
+https://www.aidedd.org/adj/scenarios/
+

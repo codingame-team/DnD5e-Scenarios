@@ -1,9 +1,9 @@
 {
-  "scenario": "Les Cryptes de Kelemvor",
-  "scene_id": "sanctum_access",
+  "scenario": "Les Cryptes de Kelemvor (Version Enrichie)",
+  "scene_id": "west_choice",
   "game_state": {
     "combat_victories": 0,
-    "total_xp": 900,
+    "total_xp": 1800,
     "gold": 0,
     "gold_spent": 0,
     "locations_visited": 0,
@@ -11,6 +11,6 @@
     "quests_completed": 0,
     "deaths": 0
   },
-  "timestamp": "2026-01-11T01:27:10.137520",
+  "timestamp": "2026-01-11T01:46:56.053188",
   "version": "3.1.0"
 }
