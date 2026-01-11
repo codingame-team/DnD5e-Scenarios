@@ -1,0 +1,255 @@
+{
+  "scenario_id": "cryptes_de_kelemvor_manual",
+  "name": "Les Cryptes de Kelemvor",
+  "level": 4,
+  "difficulty": "medium",
+  "duration_hours": "3-4",
+  "recommended_party_size": 4,
+  "description": "Basé sur le scénario officiel. Les morts se sont relevés aux Contrebas d'Ébène. Purifiez les cryptes sous le temple de Kelemvor, récupérez 7 sceaux brisés et rallumez les braseros sacrés.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "narrative",
+      "title": "⚰️ LES CONTREBAS D'ÉBÈNE",
+      "text": "Au cœur des marais du Feu-follet d'argent, entre la Grande route et Phandaline, se trouve un grand cimetière connu sous le nom des Contrebas d'Ébène.\n\nDe nombreuses générations de gens du cru y ont été enterrées. Les villageois de Creux-lugubre ont veillé sur ces terres pendant des années, chaque génération transmettant le flambeau à ses enfants. Sous leurs yeux attentifs, les Contrebas d'Ébène ont connu la paix.\n\nMais une nuit, cette paix fut brisée à jamais. Les morts se sont relevés en masse de leur tombe et ont attaqué le village, massacrant tous ceux qui s'y trouvaient. Les rares chanceux qui parvinrent à s'échapper racontent qu'une magie noire transformait en morts-vivants les habitants dès qu'ils perdaient la vie.\n\nLe seul rayon d'espoir qui subsiste est un temple-forteresse délabré du dieu Kelemvor, séparant le village marécageux des grands tertres du cimetière.",
+      "next_scene": "temple_arrival"
+    },
+    {
+      "id": "temple_arrival",
+      "type": "narrative",
+      "title": "🏛️ ARRIVÉE AU TEMPLE",
+      "text": "Alors que vous pénétrez par l'entrée ouest du temple en ruine de Kelemvor, vous ressentez une étrange vague de chaleur parcourir tout votre corps.\n\n(Les clercs et paladins réalisent que vous venez de passer au travers d'une barrière de protection)\n\nLe temple est petit. Des pans de son toit ainsi qu'un de ses murs se sont effondrés. Un prêtre de Kelemvor fatigué fait le guet, surveillant les tertres. Un clerc sans armure se tient au centre près d'un feu de camp.\n\nLe clerc a un regard triste et mélancolique. Lorsque ses yeux tombent sur vous, son visage s'illumine alors d'un sourire et il vous invite à le rejoindre.\n\nL'homme se présente comme étant le Guide Funeste Mefoyer.",
+      "next_scene": "quest_briefing"
+    },
+    {
+      "id": "quest_briefing",
+      "type": "narrative",
+      "title": "📜 LA QUÊTE",
+      "text": "Le Guide Funeste Mefoyer vous explique la situation:\n\n\"Ce temple de Kelemvor, notre forteresse, est notre bastion contre la liche Idris et son armée de morts-vivants. Mais il n'est pas aussi sécurisé qu'il le devrait.\"\n\n\"Des pilleurs de tombes ont percé des brèches dans les cryptes situées sous le temple et ont brisé plusieurs sceaux mystiques qui garantissaient aux défunts de reposer en paix.\"\n\n\"J'ai besoin que vous entriez dans la crypte, rallumiez les braseros sacrés qui détruiront les morts-vivants, et rapportiez les sceaux brisés afin que je les répare.\"\n\n\"Pendant ce temps, les feux des braseros empêcheront d'autres morts-vivants de rentrer dans la crypte.\"\n\nVOTRE MISSION:\n- Récupérer les 7 sceaux brisés\n- Rallumer tous les braseros sacrés\n- Purifier les cryptes\n\nRÉCOMPENSE:\n- 20 pièces d'or par personne\n- Nourriture et équipement\n- Vous pouvez garder toutes gemmes et objets magiques trouvés!",
+      "next_scene": "preparation"
+    },
+    {
+      "id": "preparation",
+      "type": "choice",
+      "title": "🛡️ PRÉPARATION",
+      "description": "Avant de descendre, que voulez-vous faire?",
+      "choices": [
+        {
+          "text": "Descendre immédiatement dans les cryptes",
+          "next_scene": "crypt_entrance",
+          "effects": {}
+        },
+        {
+          "text": "Interroger Mefoyer sur les cryptes",
+          "next_scene": "ask_details",
+          "effects": {}
+        },
+        {
+          "text": "Se reposer et prier",
+          "next_scene": "rest_pray",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "ask_details",
+      "type": "narrative",
+      "title": "ℹ️ INFORMATIONS",
+      "text": "Mefoyer vous donne plus de détails:\n\n\"Les cryptes s'étendent sous le temple. Elles sont anciennes et comportent de nombreuses salles mortuaires.\"\n\n\"Les pilleurs de tombes ont réveillé les morts. Vous rencontrerez squelettes, zombies et peut-être pire.\"\n\n\"Les braseros sacrés doivent être rallumés avec cette torche bénie.\" (Il vous donne une torche spéciale)\n\n\"Attention aux pièges! Les anciennes tombes en sont truffées.\"",
+      "next_scene": "preparation"
+    },
+    {
+      "id": "rest_pray",
+      "type": "rest",
+      "title": "🙏 REPOS ET PRIÈRE",
+      "rest_type": "short",
+      "next_scene": "preparation"
+    },
+    {
+      "id": "crypt_entrance",
+      "type": "narrative",
+      "title": "⬇️ ENTRÉE DES CRYPTES",
+      "text": "Vous descendez par un escalier de pierre dans les cryptes.\n\nL'air devient froid et humide. L'odeur de moisi et de mort emplit vos narines.\n\nVous arrivez dans une grande crypte principale...",
+      "next_scene": "salle_1_crypte_principale"
+    },
+    {
+      "id": "salle_1_crypte_principale",
+      "type": "narrative",
+      "title": "⚰️ SALLE 1: CRYPTE PRINCIPALE",
+      "text": "Cette grande salle rectangulaire est tapissée de sarcophages de pierre sur les deux murs les plus longs. Un brasero froid se trouve dans chaque coin de la pièce.\n\nUn corridor part vers l'est. En vous approchant, vous êtes attaqués!\n\nDes squelettes surgissent de derrière les sarcophages! Huit squelettes en armure, se jetant sur vous pour vous attaquer!",
+      "next_scene": "combat_skeletons_1"
+    },
+    {
+      "id": "combat_skeletons_1",
+      "type": "combat",
+      "title": "💀 COMBAT: 8 SQUELETTES",
+      "description": "Huit squelettes vous attaquent dans la crypte principale!",
+      "monsters": ["skeleton", "skeleton", "skeleton", "skeleton", "skeleton", "skeleton", "skeleton", "skeleton"],
+      "on_victory": "after_combat_1",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "after_combat_1",
+      "type": "narrative",
+      "title": "🔥 RALLUMER LES BRASEROS",
+      "text": "Les squelettes retombent en poussière.\n\nVous utilisez la torche bénie pour rallumer les quatre braseros. Des flammes sacrées s'élèvent, purifiant l'air.\n\n(1er brasero: 4/? allumés)\n\nVous trouvez aussi le 1er sceau brisé près d'un des sarcophages!",
+      "next_scene": "salle_2_intersection"
+    },
+    {
+      "id": "salle_2_intersection",
+      "type": "narrative",
+      "title": "🔀 SALLE 2: INTERSECTION",
+      "text": "Deux portes et un couloir donnent aux personnages le choix de la direction à prendre.\n\nDeux portes se trouvent devant vous:\n- Une herse en métal à l'ouest\n- Une porte en pierre sur le mur nord\n\nAu travers de la herse vous apercevez un autre couloir qui court sur six mètres avant de bifurquer vers le sud et le nord. Un levier en bronze se trouve près de la herse, sur le mur ouest.\n\nÀ l'est, vous voyez une statue du dieu Kelemvor dont les mains ouvertes laissent penser qu'elles devaient tenir quelque chose.",
+      "next_scene": "intersection_choice"
+    },
+    {
+      "id": "intersection_choice",
+      "type": "choice",
+      "title": "🗝️ CHOIX DE ROUTE",
+      "description": "Quel chemin prenez-vous?",
+      "choices": [
+        {
+          "text": "Tirer le levier et passer par la herse ouest",
+          "next_scene": "west_corridor",
+          "effects": {}
+        },
+        {
+          "text": "Tenter d'ouvrir la porte nord",
+          "next_scene": "north_door_locked",
+          "effects": {}
+        },
+        {
+          "text": "Examiner la statue de Kelemvor",
+          "next_scene": "kelemvor_statue",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "north_door_locked",
+      "type": "narrative",
+      "title": "🚪 PORTE VERROUILLÉE",
+      "text": "La porte en pierre est solidement verrouillée.\n\nAucune action ou magie ne permet de l'ouvrir pour le moment.\n\n(Cette porte s'ouvrira automatiquement plus tard avec une clé spéciale)",
+      "next_scene": "intersection_choice"
+    },
+    {
+      "id": "kelemvor_statue",
+      "type": "narrative",
+      "title": "🗿 STATUE DE KELEMVOR",
+      "text": "La statue représente Kelemvor, dieu des morts. Ses mains sont ouvertes, comme pour tenir quelque chose.\n\nUn morceau de marbre gravé se trouve à ses pieds. Les inscriptions évoquent le passage des âmes et le repos éternel.",
+      "next_scene": "intersection_choice"
+    },
+    {
+      "id": "west_corridor",
+      "type": "narrative",
+      "title": "🚪 COULOIR OUEST",
+      "text": "Vous tirez le levier. La herse grince et se lève.\n\nVous avancez dans le couloir. Après six mètres, il bifurque vers le sud et le nord.\n\nAu sud, vous apercevez une porte. Au nord, le couloir continue.",
+      "next_scene": "west_choice"
+    },
+    {
+      "id": "west_choice",
+      "type": "choice",
+      "title": "🔀 BIFURCATION",
+      "description": "Où allez-vous?",
+      "choices": [
+        {
+          "text": "Sud - vers la porte",
+          "next_scene": "salle_4_tombe_piegee",
+          "effects": {}
+        },
+        {
+          "text": "Nord - continuer le couloir",
+          "next_scene": "salle_5_necrophage",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "salle_4_tombe_piegee",
+      "type": "narrative",
+      "title": "⚠️ SALLE 4: TOMBE PIÉGÉE",
+      "text": "Cette petite chambre n'est composée que d'un seul sarcophage, plus décoré que ceux présents dans la grande crypte.\n\nUn zombi est affalé au pied du sarcophage, son crâne probablement éclaté par un objet massif.\n\nDevant, vous voyez un objet: une lance sortant de l'un des deux trous qui percent le mur, et qui devait faire partie du piège qui protégeait cette pièce.\n\n(Le piège n'est plus fonctionnel)\n\nVous trouvez le 2ème sceau brisé dans le sarcophage!",
+      "next_scene": "west_choice"
+    },
+    {
+      "id": "salle_5_necrophage",
+      "type": "narrative",
+      "title": "💎 SALLE 5: TOMBE DU NÉCROPHAGE",
+      "text": "Cette chambre est ornée de bas-reliefs sculptés le long de ses murs, représentant le symbole de Kelemvor accompagné d'inscriptions magiques.\n\nLes mêmes inscriptions recouvrent le sarcophage entreposé contre le mur du fond, plus décoré que ceux que vous avez vus dans la crypte principale.\n\nLe sarcophage est serti de grosses gemmes rouges juste en-dessous du couvercle.\n\n(Magie de protection détectable)\n\nQue faites-vous?",
+      "next_scene": "necrophage_choice"
+    },
+    {
+      "id": "necrophage_choice",
+      "type": "choice",
+      "title": "💎 LE SARCOPHAGE AUX GEMMES",
+      "description": "Comment procédez-vous?",
+      "choices": [
+        {
+          "text": "Toucher le sarcophage",
+          "next_scene": "trigger_necrophage",
+          "effects": {}
+        },
+        {
+          "text": "Prendre les gemmes sans toucher le sarcophage",
+          "next_scene": "take_gems",
+          "effects": {}
+        },
+        {
+          "text": "Quitter la salle",
+          "next_scene": "west_choice",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "take_gems",
+      "type": "narrative",
+      "title": "💎 GEMMES RÉCUPÉRÉES",
+      "text": "Vous récupérez délicatement les grosses gemmes rouges sans toucher le sarcophage.\n\n(Vous obtenez 4 gemmes d'une valeur de 50 po chacune = 200 po)\n\nVous trouvez aussi le 3ème sceau brisé!",
+      "next_scene": "west_choice"
+    },
+    {
+      "id": "trigger_necrophage",
+      "type": "narrative",
+      "title": "💥 PIÈGE DÉCLENCHÉ!",
+      "text": "Vous touchez le sarcophage...\n\nLe couvercle explose soudainement! (Jet de Dextérité DD 14 ou 1d6 dégâts contondants et jeté à terre)\n\nUn nécrophage en armure de chevalier rutilante se redresse de la sépulture et vous attaque!",
+      "next_scene": "combat_necrophage"
+    },
+    {
+      "id": "combat_necrophage",
+      "type": "combat",
+      "title": "⚔️ LE NÉCROPHAGE CHEVALIER",
+      "description": "Un nécrophage en armure de chevalier vous attaque!",
+      "monsters": ["death_priest"],
+      "on_victory": "after_necrophage",
+      "on_defeat": "game_over"
+    },
+    {
+      "id": "after_necrophage",
+      "type": "narrative",
+      "title": "🏆 VICTOIRE",
+      "text": "Le nécrophage retombe dans son sarcophage, définitivement vaincu.\n\nVous récupérez:\n- Les 4 gemmes rouges (200 po)\n- Le 3ème sceau brisé\n- L'armure de chevalier (armure de plates +1)",
+      "next_scene": "west_choice"
+    },
+    {
+      "id": "victory",
+      "type": "narrative",
+      "title": "🎉 CRYPTES PURIFIÉES!",
+      "text": "Après avoir exploré toutes les cryptes, rallumé tous les braseros et récupéré les 7 sceaux brisés, vous remontez au temple.\n\nLe Guide Funeste Mefoyer vous accueille avec soulagement:\n\n\"Vous avez réussi! Les cryptes sont purifiées! Les braseros sacrés empêcheront les morts-vivants de revenir!\"\n\nIl répare les sceaux mystiques et vous récompense:\n- 20 pièces d'or par personne (80 po)\n- Bénédiction de Kelemvor (+1 aux jets de sauvegarde contre morts-vivants)\n- Vous gardez tous les trésors trouvés!\n\nLes Contrebas d'Ébène sont un peu plus sûrs grâce à vous. La lutte contre la liche Idris peut continuer!",
+      "next_scene": null,
+      "rewards": {
+        "gold": 80,
+        "xp": 1200,
+        "items": ["Bénédiction de Kelemvor", "Tous les trésors trouvés"]
+      }
+    },
+    {
+      "id": "game_over",
+      "type": "narrative",
+      "title": "💀 DÉFAITE",
+      "text": "Vous avez été vaincus dans les cryptes...\n\nLes morts-vivants continuent de hanter les Contrebas d'Ébène.",
+      "next_scene": null
+    }
+  ]
+}
+

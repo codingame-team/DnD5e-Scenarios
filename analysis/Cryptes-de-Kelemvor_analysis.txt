@@ -1,0 +1,1110 @@
+ANALYSE COMPLÈTE: Cryptes-de-Kelemvor
+================================================================================
+
+TEXTE COMPLET:
+--------------------------------------------------------------------------------
+les CRYPTES de 
+KELEMVOR 
+ 
+Aventure D&D 5 pour 4 personnages de niveau 4 
+ 
+  
+ 
+Scénario original : Thomas Foss et Scott Fitzgerald Gray 
+Traduction : boblebuter 
+Relecture : Elmiore et blueace 
+ 
+ 
+Version du 29/04/2022. 
+ 
+ 
+Merci de nous reporter toute faute ou erreur via 
+www.aidedd.org/site/contact/ 
+ 
+Disponible en téléchargement gratuit sur www.aidedd.org  
+OPEN GAME LICENSE Version 1.0a 
+The following text is the property of Wizards of the Coast, Inc. and is Copyright 2000 
+Wizards of the Coast, Inc ("Wizards"). All Rights Reserved. 
+1. Definitions: (a) "Contributors" means the copyright and/or trademark owners who have 
+contributed Open Game Content; (b) "Derivative Material" means copyrighted material 
+including derivative works and translations (including into other computer languages , 
+potation, modification, correction, addition, extension, upgrade, improvement, 
+compilation, abridgment or other form in which an existing work may be recast, 
+transformed or adapted; (c) "Distribute" means to reproduce, license, rent, lease, sell, 
+broadcast, publicly display, transmit or otherwise distribute; (d) "Open Game Content" 
+means the game mechanic and includes the methods, procedures, processes and routines 
+to the extent such content does not embody the Product Identity and is an enhancement 
+over the prior art and any additional content clearly identified as Open Game Content by 
+the Contributor, and means any work covered by this License, including translations and 
+derivative works under copyright law, but specifically excludes Product Identity. (e) 
+"Product Identity" means product and product line names, logos and identifying marks 
+including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic 
+elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, 
+formats, poses, concepts, themes and graphic, photographic and other visual or audio 
+representations; names and descriptions of characters, spells, enchantments, 
+personalities, teams, personas, likenesses and special abilities; places, locations, 
+environments, creatures, equipment, magical or supernatural abilities or effects, logos, 
+symbols, or graphic designs; and any other trademark or registered trademark clearly 
+identified as Product identity by the owner of the Product Identity, and which specifically 
+excludes the Open Game Content; (f) "Trademark" means the logos, names, mark, sign, 
+motto, designs that are used by a Contributor to identify itself or its products or the 
+associated products contributed to the Open Game License by the Contributor (g) "Use", 
+"Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and 
+otherwise create Derivative Material of Open Game Content. (h) "You" or "Your" means 
+the licensee in terms of this agreement. 
+2. The License: This License applies to any Open Game Content that contains a notice 
+indicating that the Open Game Content may only be Used under and in terms of this 
+License. You must affix such a notice to any Open Game Content that you Use. No terms 
+may be added to or subtracted from this License except as described by the License itself. 
+No other terms or conditions may be applied to any Open Game Content distributed using 
+this License. 
+3.Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance 
+of the terms of this License. 
+4. Grant and Consideration: In consideration for agreeing to use this License, the 
+Contributors grant You a perpetual, worldwide, royalty-free, nonexclusive license with the 
+exact terms of this License to Use, the Open Game Content. 
+5. Representation of Authority to Contribute: If You are contributing original material as 
+Open Game Content, You represent that Your Contributions are Your original creation 
+and/or You have sufficient rights to grant the rights conveyed by this License. 
+6. Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this 
+License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content 
+You are copying, modifying or distributing, and You must add the title, the copyright date, 
+and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game 
+Content you Distribute. 
+7. Use of Product Identity: You agree not to Use any Product Identity, including as an 
+indication as to compatibility, except as expressly licensed in another, independent 
+Agreement with the owner of each element of that Product Identity. You agree not to 
+indicate compatibility or co-adaptability with any Trademark or Registered Trademark in 
+conjunction with a work containing Open Game Content except as expressly licensed in 
+another, independent Agreement with the owner of such Trademark or Registered 
+Trademark. The use of any Product Identity in Open Game Content does not constitute a 
+challenge to the ownership of that Product Identity. The owner of any Product Identity 
+used in Open Game Content shall retain all rights, title and interest in and to that Product 
+Identity. 
+8. Identification: If you distribute Open Game Content You must clearly indicate which 
+portions of the work that you are distributing are Open Game Content. 
+9. Updating the License: Wizards or its designated Agents may publish updated versions of 
+this License. You may use any authorized version of this License to copy, modify and 
+distribute any Open Game Content originally distributed under any version of this License. 
+10. Copy of this License: You MUST include a copy of this License with every copy of the 
+Open Game Content You Distribute. 
+11. Use of Contributor Credits: You may not market or advertise the Open Game Content 
+using the name of any Contributor unless You have written permission from the 
+Contributor to do so. 
+12. Inability to Comply: If it is impossible for You to comply with any of the terms of this 
+License with respect to some or all of the Open Game Content due to statute, judicial 
+order, or governmental regulation then You may not Use any Open Game Material so 
+affected. 
+13. Termination: This License will terminate automatically if You fail to comply with all 
+terms herein and fail to cure such breach within 30 days of becoming aware of the breach. 
+All sublicenses shall survive the termination of this License. 
+14. Reformation: If any provision of this License is held to be unenforceable, such 
+provision shall be reformed only to the extent necessary to make it enforceable. 
+15. COPYRIGHT NOTICE 
+Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc. 
+System Reference Document 5.0 Copyright 2016, Wizards of the Coast, Inc.; Authors Mike 
+Mearls, Jeremy Crawford, Chris Perkins, Rodney Thompson, Peter Lee, James Wyatt, 
+Robert J. Schwalb, Bruce R. Cordell, Chris Sims, and Steve Townshend, based on original 
+material by E. Gary Gygax and Dave Arneson 
+END OF LICENSE 
+
+
+www.aidedd.org | les cryptes de kelemvor 
+1 
+Contexte 
+u cœur des marais du Feu-follet d’argent, entre la 
+Grande route et Phandaline, se trouve un grand 
+cimetière connu sous le nom des Contrebas 
+d’ébène. De nombreuses générations de gens du 
+cru y ont été enterrés, que ce soit dans des 
+tertres, des cryptes ou des tombes. Les villageois 
+de Creux-lugubre ont veillé sur ces terres 
+pendant des années, chaque génération transmettant le 
+flambeau à ses enfants. Sous leurs yeux attentifs, les Contrebas 
+d’ébène ont connu la paix. 
+Mais une nuit, cette paix fut brisée à jamais. Que ce soit dû à une 
+erreur des veilleurs de Creux-lugubre ou à quelque puissance 
+inconnue, les morts se sont relevés en masse de leur tombe et 
+ont attaqué le village, massacrant tous ceux qui s’y trouvaient. 
+Les rares chanceux qui parvinrent à s’échapper racontent qu’une 
+magie noire transformait en morts-vivants les habitants dès 
+qu’ils perdaient la vie. 
+Le seul rayon d’espoir qui subsiste dans les Contrebas d’ébène 
+est un temple-forteresse délabré du dieu Kelemvor, littéralement 
+un mur séparant le village, à présent marécageux, des grands 
+tertres du cimetière. Ici, les prêtres de Kelemvor enterrent 
+encore les morts, s’assurant qu’ils ne puissent pas se relever. 
+Beaucoup de guides funestes, de clercs et de paladins servant le 
+dieu des morts ont perdu la vie en tentant de restaurer l’équilibre 
+aux Contrebas d’ébène. Étant de moins en moins nombreux 
+chaque jour, ils ont lancé un appel à l’aide à travers tout Faerûn. 
+Au md 
+Kelemvor, le dieu des morts, est décrit en détails sur 
+www.aidedd.org dans la rubrique Univers. 
+À la fin de l’aventure, les personnages pourront interagir avec un 
+autre groupe d’aventuriers, une compagnie connue sous le nom 
+des Pilleurs de tombeaux. 
+ 
+ 
+ 
+ 
+ 
+ 
+Accroches d’aventure 
+Les personnages sont approchés par une acolyte de Kelemvor 
+demandant de l’aide pour son temple. Un paiement comptant de 
+20 pièces d’or est offert à chacun, en plus de la nourriture et de 
+l’équipement nécessaire pour voyager jusqu’aux Contrebas 
+d’ébène, et la promesse d’être enterré là-bas si les choses 
+tournaient mal. Mais ce qui peut attirer le plus les aventuriers, 
+c’est la promesse de pouvoir conserver toutes gemmes, objets 
+magiques ou trésors découverts dans les cryptes, les morts 
+n’ayant plus besoin de telles offrandes. 
+Introduction 
+Alors que vous pénétrez par l’entrée ouest du temple en 
+ruine de Kelemvor, vous ressentez une étrange vague de 
+chaleur parcourir tout votre corps. 
+Tout clerc ou paladin du groupe se rend compte que les 
+personnages viennent de passer au travers d’une sorte de 
+barrière de protection. 
+Le temple est petit, et des pans de son toit ainsi qu’un de 
+ses murs se sont effondrés. Un prêtre de Kelemvor 
+fatigué fait le guet, surveillant les tertres qui se trouvent 
+de l’autre côté, tandis qu’un clerc sans armure se tient au 
+centre de la zone près d’un feu de camp. Le clerc a un 
+regard triste et mélancolique. Lorsque ses yeux tombent 
+sur vous, son visage s’illumine alors d’un sourire et il vous 
+invite à le rejoindre. 
+L’homme se présente comme étant le guide funeste 
+Âmefoyer, celui qui a envoyé l’appel à l’aide. N’étant pas 
+des plus loquaces, il va droit au but. 
+A
+ Les cryptes de Kelemvor 
+
+
+www.aidedd.org | les cryptes de kelemvor 
+2 
+ 
+« Ce temple de Kelemvor, notre forteresse, est notre 
+bastion contre la liche Idris et son armée de morts-
+vivants. Mais il n’est pas aussi sécurisé qu’il le devrait. 
+Des pilleurs de tombes ont percé des brèches dans les 
+cryptes situées sous le temple et ont brisé plusieurs 
+sceaux mystiques qui garantissaient aux défunts de 
+reposer en paix. » 
+« J’ai besoin que vous entriez dans la crypte, rallumiez les 
+braséros sacrés qui détruiront les morts-vivants, et 
+rapportiez les sceaux brisés afin que je les répare. 
+Pendant ce temps, les feux des braséros empêcheront 
+d’autres morts-vivants de rentrer dans la crypte. » 
+En acceptant la quête du guide funeste Âmefoyer, les 
+personnages aideront à purifier les cryptes qui se trouvent sous 
+le sanctuaire de Kelemvor. Leur but est donc de récupérer les 7 
+sceaux brisés et de rallumer tous les braséros qui se trouvent 
+dans ces cryptes. 
+Les cryptes de Kelemvor 
+Les cryptes de Kelemvor s’étendent sur trois niveaux, divisés en 
+différentes salles et couloirs. Tous les niveaux sont reliés entre 
+eux par des escaliers, et les salles de chaque niveau sont 
+séparées par des herses ou des portes en pierre.  
+Les objets les plus importants des cryptes sont les statues de 
+Kelemvor, qui portaient autrefois des sceaux magiques mais qui 
+sont actuellement brisés, les braséros de l’équilibre, et de 
+nombreux sarcophages. 
+Sceaux brisés. Chaque sceau brisé que les personnages doivent 
+récupérer est un morceau de marbre gravé du symbole de 
+Kelemvor qui pèse à peu près 2 kg. Tous les sceaux étaient 
+autrefois portés par des statues de Kelemvor disséminées dans 
+les cryptes. 
+Portes et herses. Les salles des cryptes sont séparées soit par 
+des herses en fer, soit par des portes en pierre. Les herses 
+permettent aux personnages de voir ce qui se trouve de l’autre 
+côté. La plupart des portes et herses s’ouvrent par magie en 
+utilisant les leviers qui se trouvent sur le mur près de la « face 
+extérieure de la porte », c’est-à-dire le côté de la porte le plus 
+proche de l’entrée du donjon. Cette architecture a été pensée 
+pour permettre de fermer certaines salles de la crypte depuis 
+l’extérieur si besoin est. 
+Lever ou abaisser un levier nécessite d’utiliser une action. Une 
+fois ouverte, une porte ou une herse le reste jusqu’à ce que le 
+levier soit à nouveau manipulé, ou jusqu’à ce que la porte se 
+referme automatiquement par mesure de sécurité. Si les 
+personnages sont inquiets du fait que quelqu’un referme la porte 
+derrière eux, elle peut être bloquée ouverte en coinçant un piton 
+ou un objet similaire entre elle et le mur adjacent. Sauf 
+indication contraire, une porte qui a été fermée peut être 
+enfoncée en réussissant un jet de Force DD 25, ou peut être 
+ouverte en utilisant le sort déblocage, ou une magie similaire. 
+Toutes les herses de la crypte craquent et grincent fortement 
+lorsqu’elles se lèvent. Les portes en pierre s’ouvrent en raclant 
+bruyamment le sol. 
+Plafond. Sauf indication contraire, les couloirs et les chambres 
+de la crypte font 3 mètres de haut. 
+Lumière. La plupart des salles du premier niveau sont éclairées 
+par des torches magiques affectées par le sort flamme éternelle. 
+Dans les autres salles, en particulier celles des deux niveaux 
+inférieurs, aucune source de lumière n’est présente, à l’exception 
+de celle que les aventuriers emportent avec eux. 
+Sarcophages. De nombreux sarcophages en pierre sont installés 
+dans les cryptes. Sauf indication contraire, ils sont tous fermés. 
+Un sarcophage peut être ouvert en réussissant un jet de Force 
+DD 20, mais ils ne renferment que des os craquelés. 
+1. Antichambre 
+Les personnages pénètrent dans les cryptes. 
+Une foulée de marches mène 1,80 mètre plus bas vers 
+une porte en bois où un prêtre de Kelemvor attend. Il 
+déverrouille la porte et fait signe d’approcher, portant 
+une petite lanterne à bougie, une lourde pierre à silex, et 
+un bâton en acier de la taille d’une grosse dague. « Seule 
+l’étincelle formée par le choc de cette pierre et de ce 
+bâton peut allumer les braséros de l’équilibre » dit-il 
+doctement. 
+« Puissent 
+Kelemvor 
+et 
+Séluné 
+vous 
+protéger. » 
+La porte se referme bruyamment derrière vous alors que 
+le dernier de votre groupe en passe le pas, et le son de la 
+serrure qu’on verrouille depuis l’autre côté résonne. Vous 
+vous tenez dans un petit couloir. Au sud, une grosse 
+herse en métal rouillé est abaissée, laissant voir de l’autre 
+côté un sombre corridor. Vers le nord, le couloir s’ouvre 
+sur une petite salle. 
+À l’est de cette salle, un feu de camp éteint suggère que l’endroit 
+servait autrefois de poste de garde. Près du tas de cendres se 
+trouve un sac à dos en toile contenant les trésors laissés derrière 
+lui par le prêtre qui montait autrefois la garde ici : une potion de 
+guérison qui sent l’eau-de-vie. 
+Une large porte en pierre sans poignée se trouve sur le 
+mur nord, un grand levier en bronze se trouvant sur le 
+mur à côté d’elle. Lorsque le levier est tiré, un inquiétant 
+bruit de raclement retentit. La poussière tourbillonne 
+tandis que l’épaisse porte en pierre glisse vers le haut, 
+révélant la salle de l’autre côté. Une torche magique fixée 
+à l’angle du couloir devant vous éclaire la voie. 
+2. Intersection 
+Deux portes et un couloir donnent aux personnages le choix de 
+la direction à prendre. 
+Deux portes se trouvent devant vous : une herse en 
+métal à l’ouest et une porte en pierre sur le mur nord. Au 
+travers de la herse vous apercevez un autre couloir qui 
+court sur six mètres avant de bifurquer vers le sud et le 
+nord. Un levier en bronze se trouve près de la herse, sur 
+le mur ouest. 
+ 
+
+
+www.aidedd.org | les cryptes de kelemvor 
+3 
+ 
+Tirer le levier lève la herse grinçante, mais aucun signe de 
+mécanisme similaire n’est visible pour la porte en pierre. Aucune 
+action ou magie ne permet aux personnages de l’ouvrir, et tout 
+jet de caractéristique effectué pour l’inspecter ou l’ouvrir est un 
+échec 
+(cette porte s’ouvre 
+automatiquement 
+dès 
+qu’un 
+personnage tourne la clé spéciale dans la salle 8). 
+À l’est, dans le passage qui donne vers la salle 3, se trouve une 
+statue du dieu Kelemvor dont les mains ouvertes laissent penser 
+qu’elles devaient tenir quelque chose. Un morceau de marbre 
+gravé se trouve aux pieds de la statue. Une petite alcôve en face 
+de la statue est remplie d’une pile d’os humanoïdes, restes des 
+squelettes morts-vivants tués par les Pilleurs de tombeaux 
+lorsqu’ils sont passés par là. 
+Le morceau de marbre gravé aux pieds de la statue est le 
+premier sceau brisé de la crypte (1/7). 
+3. Crypte principale 
+Cette grande chambre funéraire a son plafond orné de 
+voûtes soutenues par des piliers hauts de 3 mètres. Trois 
+sarcophages décorés se trouvent contre le mur du fond, 
+et le couvercle de l’un d’eux est retiré.  
+ 
+Deux torches fixées sur les murs latéraux éclairent la salle 
+d’une lumière magique, révélant des portes ouvertes au 
+nord et au sud. 
+Au centre de la salle, un haut et large braséro de la taille 
+d’un homme est décoré de bas-reliefs représentant le 
+symbole de Kelemvor. Un cadavre mutilé est étalé de 
+tout son long juste devant. Du bois est entreposé dans le 
+braséro, prêt à s’enflammer, suggérant que le cadavre 
+pourrait être un acolyte ayant tenté de l’allumer. Un 
+parchemin se trouve sur le sol près de la dépouille. 
+En réussissant un jet de Sagesse (Perception) DD 13, un 
+personnage remarque des silhouettes accroupies attendant dans 
+l’ombre entre les sarcophages. 
+Une fois qu’un des personnages a dépassé les piliers les plus 
+proches de la porte d’entrée, 11 zombis sortent des ombres et 
+attaquent. 
+Les joueurs devraient instinctivement se rendre compte que ce 
+groupe d’ennemis peut potentiellement les déborder et devraient 
+
+
+www.aidedd.org | les cryptes de kelemvor 
+4 
+se rappeler de se concentrer sur l’allumage du braséro qui les 
+aidera à vaincre les morts-vivants. 
+Les zombis ne sont pas suffisamment intelligents pour 
+reconnaître le potentiel destructeur du braséro, ils tentent de se 
+battre même si la lumière sacrée les détruit. 
+Portes 
+Les portes en pierre, déjà ouvertes, mènent aux salles 4 et 5. 
+Chaque porte possède un levier à proximité qui peut être 
+actionné pour l’ouvrir ou la fermer. 
+Trésor 
+Les personnages peuvent récupérer un parchemin de prière de 
+guérison sur le cadavre de l’acolyte. De plus, en fouillant sa 
+dépouille, ils trouvent une pierre de silex et un bâtonnet en acier, 
+ce qui permettra d’allumer un braséro. 
+LES BRASÉROS SACRÉS DE L’ÉQUILIBRE 
+Un personnage à proximité d’un braséro, équipé d’une pierre à 
+silex et d’un bâtonnet spécial, peut utiliser son action pour tenter 
+de l’allumer. Le braséro s’enflamme s’il réussit un jet de Dextérité 
+DD 12. 
+Lorsqu’un braséro magique est allumé, ses flammes brûlent et 
+émettent une lumière bleutée qui illumine une zone de 7,50 
+mètres de rayon. Lors des trois premiers rounds après que le 
+braséro ait été allumé, tout mort-vivant qui débute son tour dans 
+la zone éclairée subit 16 (3d10) dégâts radiants, ce qui représente 
+une menace significative pour de telles créatures. 
+4. Tombe piégée 
+Dans cette pièce, les plaques de pression (marquées par des 
+triangles sur la carte) et le piège ne sont plus en état de 
+fonctionner et ne représentent plus une menace, mais ils 
+devraient rendre nerveux les personnages alors qu’ils explorent 
+les cryptes. Il n’y a rien de valeur dans cette salle.  
+Cette petite chambre n’est composée que d’un seul 
+sarcophage, plus décoré que ceux présents dans la 
+grande crypte. Un zombi est affalé au pied du 
+sarcophage, son crâne probablement éclaté par un objet 
+massif. Devant, vous voyez un objet, une lance sortant de 
+l’un des deux trous qui percent le mur, et qui devait faire 
+partie du piège qui protégeait cette pièce. 
+5. Tombe du nécrophage 
+Cette chambre est ornée de bas-reliefs sculptés le long de 
+ses murs, représentant le symbole de Kelemvor 
+accompagné 
+d’inscriptions 
+magiques. 
+Les 
+mêmes 
+inscriptions recouvrent le sarcophage entreposé contre le 
+mur du fond, plus décoré que ceux que vous avez vus 
+dans la crypte principale. Le sarcophage est serti de 
+grosses gemmes rouges juste en-dessous du couvercle. 
+Un sort de détection de la magie, ou une magie similaire, révèle 
+la présence de sorts de protection dans toute la chambre 
+funéraire. 
+Si un personnage touche le sarcophage, son couvercle explose 
+soudainement. Tout personnage qui se trouve à 1,50 mètre ou 
+moins du sarcophage doit réussir un jet de sauvegarde de 
+Dextérité DD 14 sous peine de subir 3 (1d6) dégâts contondants 
+et d’être jeté à terre alors que le couvercle retombe, en 
+morceaux, sur le sol. 
+Lorsque le couvercle du sarcophage jaillit, un nécrophage en 
+armure de chevalier rutilante se redresse de la sépulture et 
+attaque les personnages. Au même moment, la magie de 
+protection de la pièce s’active et remplit la zone d’une lueur 
+rougeâtre palpitante et inquiétante. Elle provoque la fermeture 
+de la porte à moins qu’un piton y ait été inséré pour la maintenir 
+ouverte. 
+Le nécrophage, affaibli par les sorts de protection de la salle, a 
+un désavantage à ses jets d’attaque. 
+Protections 
+Les protections magiques sont un atout pour les personnages, 
+mais leur lumière palpitante peut les déranger. Toute créature 
+qui débute son tour dans la pièce doit réussir un jet de 
+sauvegarde d’Intelligence DD 10 sous peine de subir un 
+désavantage aux jets d’attaque jusqu’au début de son prochain 
+tour. 
+S’occuper de la porte 
+Un personnage se tenant dans l’encadrement de la porte lorsque 
+celle-ci retombe doit décider de quel côté il se jette. Le 
+personnage doit également réussir un jet de sauvegarde de 
+Dextérité DD 12 sous peine de subir 5 (1d10) dégâts 
+contondants et d’être jeté à terre. 
+Un personnage se trouvant dans la salle 3 lorsque la porte tombe 
+peut tirer le levier pour l’ouvrir et rejoindre le combat. Si tous les 
+personnages se trouvent dans la salle 5, la porte peut être 
+ouverte en la forçant (voir « les cryptes de Kelemvor » plus haut). 
+Un jet d’Intelligence (Investigation) DD 13 effectué tout en 
+examinant le mécanisme de la porte permet de remarquer un 
+petit loquet dissimulé qui ouvre la porte de l’intérieur. Du fait des 
+flash de lumière, ce jet ne peut pas être effectué pendant le 
+combat. 
+Trésor 
+Le sarcophage est décoré de quatre grosses gemmes en onyx 
+d’une valeur de 10 po chacune et qui peuvent être retirées 
+facilement. 
+6. Double porte 
+Deux portes en pierre séparées par un levier trônent au 
+niveau de l’entrée de cette salle. Un sarcophage se 
+trouve dans une alcôve au nord et une statue de 
+Kelemvor au sud tient un sceau brisé entre ses mains. 
+Rien n’empêche les personnages de s’emparer facilement du 
+sceau (2/7), à moins d’ouvrir les portes en premier.  
+Abaisser le levier ouvre les deux portes simultanément, dévoilant 
+l’entrée de la salle 7 ainsi que celle d’une petite chambre 
+mortuaire remplie de toiles d’araignées dont les occupants ne 
+tolèrent pas d’être dérangés. 
+La chambre mortuaire est le nid de 3 araignées-loups géantes 
+(18 pv chacune) qui attaquent toutes en même temps. 
+Si une araignée voit ses points de vie tomber à 5 ou moins, elle 
+s’enfuit dans le fond de la chambre mortuaire et disparaît en 
+s’engouffrant dans d’étroits tunnels qui percent le plafond et 
+mènent aux territoires de chasse des créatures de la surface. 
+
+
+www.aidedd.org | les cryptes de kelemvor 
+5 
+Trésor 
+Une fouille parmi les toiles d’araignées permet de découvrir une 
+bourse contenant 15 po, ainsi qu’une épée courte au pommeau 
+en argent, rangée dans son fourreau ouvragé de motifs en argent 
+également, probablement de facture drow, et d’une valeur de 20 
+po. 
+7. Crypte annexe 
+Une statue de Kelemvor avec un sceau brisé à ses pieds 
+se tient contre le mur est, tandis qu’un braséro se trouve 
+le long du mur ouest. Une bannière en lambeaux portant 
+le symbole de Kelemvor est suspendue au mur au-dessus 
+du braséro. 
+Quatre sarcophages en pierre décorés sont installés aux 
+quatre coins de la salle et dans une alcôve à proximité de 
+l’entrée. Le sarcophage dans le coin le plus éloigné de 
+l’entrée semble être brisé. 
+Un jet de Sagesse (Perception) DD 15 permet de détecter un 
+mouvement dans le sarcophage brisé. 
+Lorsqu’un des personnages se déplace suffisamment pour 
+atteindre le milieu de la salle, un zombi enragé (zombi ogre de 
+taille M et avec une CA de 9) surgit du sarcophage brisé, hurlant 
+de colère et courant vers les personnages. 
+Ce sceau est le troisième (3/7). 
+Trésor 
+Le sarcophage brisé contient trois parchemins porteurs de 
+textes religieux en lambeaux qui peuvent être vendus pour un 
+total de 10 po à un temple et un collier en argent arborant un 
+symbole de Torm d’une valeur de 50 po. 
+8. Chapelle 
+Les personnages qui observent cette salle en deux parties sont 
+rapidement interrompus par les gardiens squelettes de la 
+chapelle qui les attaquent. 
+Le corridor s’ouvre sur une grande chambre mortuaire 
+ressemblant à une chapelle. Son plafond en croisée 
+d’ogives s’élève à neuf mètres de hauteur, des torches 
+magiques en éclairent la partie nord. Le coin sud-ouest de 
+la salle abrite sept sarcophages ordinaires et des cercueils 
+en bois sont entreposés entre eux. La plupart, pourris et 
+brisés, sont ouverts. Contre un large pilier s’appuie une 
+statue de Kelemvor dont un sceau brisé git à ses pieds. 
+Des os sont éparpillés un peu partout, mais ce qui attire 
+pour l’instant toute votre attention, ce sont les squelettes 
+qui surgissent de l’arrière du gros pilier central, se jetant 
+sur vous pour vous attaquer. 
+Les 8 squelettes de cette première partie de la salle attaquent 
+toutes les créatures qu’ils voient et cherchent à empêcher les 
+personnages de récupérer le sceau brisé (4/7) ou d’avancer plus 
+loin dans la pièce. 
+Poursuivre l’exploration 
+Alors que les personnages s’avancent plus profondément dans la 
+salle, dévoilez-leur les détails du reste de la chapelle. En fonction 
+d’où les personnages se dirigent, vous ne devriez lire ou 
+paraphraser que certaines parties du texte suivant. 
+De grandes alcôves juste avant l’estrade abritent chacune 
+un sarcophage en pierre éclairé par la lumière d’une 
+torche magique. L’alcôve ouest est occupée par six 
+zombis attroupés autour de quelque chose sur le sol. 
+Visiblement ils ne semblent pas encore avoir remarqué 
+votre présence. 
+Se tenant entre deux piliers, une autre statue tient un 
+sceau brisé entre ses mains. Une estrade profonde de 
+trois mètres s’élève au nord, à 1,80 mètre de hauteur, 
+une torche magique l’éclairant, ainsi que les marches qui 
+permettent d’y accéder. Un braséro se trouve au centre 
+de l’estrade décorée d’un bas-relief représentant un 
+ensemble de balances de Kelemvor. Curieusement, les 
+balances penchent vers le plateau gauche, alors que le 
+symbole de Kelemvor représente généralement les deux 
+plateaux au même niveau. Une grosse clé en bronze est 
+enfoncée dans le mur sous le bas-relief. 
+Avec de la viande fraîche devant eux, les 6 zombis ignorent 
+l’affrontement entre le groupe et les squelettes, n’attaquant que 
+si un personnage s’approche à 3 mètres ou moins de la statue la 
+plus au nord ou s’ils sont attaqués. 
+Ce sceau est le cinquième (5/7). 
+Escaliers piégés 
+En haut des marches de l’escalier, une plaque de pression 
+dissimulée (voir la case indiquée sur la carte) déclenche le 
+mécanisme du piège. Toute créature qui marche sur ce piège 
+provoque le tir d’une pluie de pointes métalliques depuis le sol et 
+doit effectuer un jet de sauvegarde de Dextérité DD 14. En cas 
+d’échec, la créature subit 9 (2d8) dégâts perforants, ou la moitié 
+de ces dégâts en cas de réussite. 
+Un personnage qui inspecte les escaliers et l’estrade remarque 
+le piège en réussissant un jet de Sagesse (Perception) DD 13 et 
+peut facilement le contourner. Un personnage qui monte les 
+escaliers sans les inspecter peut remarquer le piège si sa 
+Perception passive est supérieure ou égale à 18. Un personnage 
+qui monte les escaliers rapidement n’a aucune chance de 
+remarquer le piège. 
+Un visiteur malchanceux 
+Le cadavre dont se repaissent les zombis porte une armure et 
+une tunique de clerc, mais a été tellement mutilé qu’il est 
+impossible de le reconnaître. Les personnages pourront 
+apprendre plus tard qu’il faisait partie des Pilleurs de tombeaux ;  
+c’est le dernier membre du groupe à être descendu dans cette 
+salle et il est mort lorsque sa corde d’escalade s’est rompue. 
+Tout personnage qui fouille l’extrémité nord de la pièce 
+remarque une pile de dalles brisées et de pierres sur le sol ainsi 
+que 9 mètres de corde dont une des extrémités est effilochée. Un 
+trou dans le plafond au-dessus du monticule connecte la crypte à 
+un tunnel creusé menant à la surface, un court morceau de 
+corde effilochée en dépassant légèrement juste au niveau d’une 
+saillie rocheuse tranchante. 
+Si le cadavre du clerc est retourné, les personnages trouvent une 
+bourse contenant une fiole de soins brisée, mais son arme et son 
+
+
+www.aidedd.org | les cryptes de kelemvor 
+6 
+sac à dos, rapidement récupérés par les Pilleurs de tombeaux 
+lorsqu’ils se sont enfuis de la zone, sont introuvables. 
+La clef 
+La grosse clef en bronze est rentrée par magie dans la serrure 
+située sous le bas-relief représentant le symbole de Kelemvor. 
+Elle ne peut pas en être retirée. Lorsqu’un personnage tourne la 
+clef, les balances du bas-relief se redressent par magie et les 
+personnages peuvent entendre le bruit sourd d’une porte en 
+pierre qui racle les murs en s’ouvrant, provenant de l’entrée des 
+Cryptes de Kelemvor (c’est le moyen par lequel les personnages 
+peuvent atteindre la salle 9 et les niveaux inférieurs). 
+Retourner la clef dans l’autre sens fait basculer une fois de plus 
+les plateaux de la balance et ferme la porte en 9. Au bout d’une 
+heure, la clef tourne d’elle-même par magie, remettant les 
+balances dans la position dans laquelle les personnages les ont 
+trouvés, et refermant automatiquement la porte en 9. 
+Les Pilleurs de tombeaux connaissaient le mécanisme de la clef 
+avant même d’entrer dans la chapelle par le plafond. Ils ont 
+rapidement tourné la clef, puis ont fui la zone pour ne pas avoir à 
+affronter les morts-vivants qui s’y trouvaient. 
+9. Escaliers dans les ténèbres 
+Lorsque les aventuriers retournent à l’intersection en 2 après 
+avoir tourné la clef de l’estrade en 8, ils peuvent constater que la 
+porte en pierre auparavant fermée est à présent ouverte. 
+ 
+De l’autre côté de la porte se trouve une petite salle 
+contenant un levier à proximité d’une autre porte en 
+pierre, déjà ouverte. Derrière cette porte, une volée de 
+marches descend vers les profondeurs. 
+Un personnage réussissant un jet de Sagesse (Perception) DD 
+12 remarque que la seconde porte a été bloquée en position 
+ouverte par un piton en fer. La porte menant en 2 était 
+également coincée avec un piton, mais celui-ci se brisa lorsque la 
+porte se referma par magie. Un jet de Sagesse (Perception) DD 
+13 réussi permet de découvrir un petit loquet dissimulé qui 
+permet d’ouvrir la porte en 9 depuis l’intérieur. 
+10. Hall protégé 
+Cette salle n’est pourvue que d’une paire de colonnes en 
+pierre. Un sombre couloir se dirige vers le nord jusqu’à 
+une intersection en T. 
+Un jet de Sagesse (Perception) DD 11 réussi permet de 
+remarquer des carreaux d’arbalète brisés à proximité de la 
+
+
+www.aidedd.org | les cryptes de kelemvor 
+7 
+colonne au sud-est et contre le mur sud de cette première salle. 
+Cela devrait donner aux joueurs un indice concernant le piège 
+décrit ci-dessous. 
+Piège à arbalète 
+Le couloir qui se dirige vers le nord est doté d’une série de 
+plaques de pression sur le sol, dans toute la zone comprise entre 
+les quatre triangles sur la carte. Les plaques sont faites d’acier 
+dissimulées par la poussière accumulée avec les années, et 
+peuvent être repérées en réussissant un jet de Sagesse 
+(Perception) DD 15. Les personnages qui ne remarquent pas le 
+piège marcheront sur une plaque de pression et déclencheront le 
+tir de quatre arbalètes dissimulées dans le mur nord du couloir, 
+les carreaux sortant du mur par de petits orifices. Tout 
+personnage qui se trouve dans le couloir ou dans la moitié est de 
+la première salle sont ciblés par les quatre attaques réparties 
+aléatoirement entre tous les personnages de la zone (+4 au 
+toucher, 5 (10) dégâts perforants). 
+Les carreaux volent sur toute la longueur du couloir et frappent 
+la colonne au sud-est ainsi que le mur sud s’ils ne touchent 
+personne. Si les personnages évitent les plaques de pression et 
+parviennent sain et sauf à l’intersection en T, ils peuvent 
+facilement voir les trous alignés sur le mur par lesquels les 
+carreaux sont tirés. 
+Aller plus loin 
+À l’est de l’embranchement se trouve la section effondrée d’un 
+couloir qui ne peut pas être dégagé. À l’ouest, derrière une herse 
+déjà ouverte, des escaliers sont visibles. Une fouille révèle 
+rapidement qu’un piton métallique est planté le long de la 
+glissière de la herse, l’empêchant de se refermer. 
+11. Escaliers faiblement éclairés 
+Une volée de marches en pierre descend vers le nord,  
+tourne vers l’ouest, puis tourne de nouveau vers le nord. 
+Une faible lueur dansante venant d’en bas éclaire très 
+légèrement les marches. 
+Le vestibule en bas des escaliers est pourvu d’une statue portant 
+un sceau brisé (6/7) à proximité d’une porte en pierre ouverte. Il 
+est facile de remarquer que la porte est coincée en position 
+ouverte par un piton en fer. 
+Un personnage qui inspecte le bas des escaliers et réussit un jet 
+de Sagesse (Perception) DD 11 peut entendre des voix venant de 
+l’autre côté de l’ouverture et qui semblent chercher à se 
+convaincre les unes les autres de quelque chose. Mais la 
+distance est encore trop grande pour comprendre les détails de 
+la conversation. 
+12. Chambre mortuaire protégée 
+Depuis le bas des escaliers en 11, les personnages sont capables 
+de voir quelques détails de cette pièce.  
+Le sol de cette chambre mortuaire rectangulaire s’est 
+effondré juste devant la porte et laisse entrevoir une 
+fosse de 6 mètres de côté et 4,50 mètres de profondeur 
+garnie de pieux. Les étroits rebords de chaque côté du 
+trou semblent toutefois être suffisamment solides pour 
+vous permettre de contourner la fosse. 
+ 
+Près du centre de cette salle de six mètres de hauteur se 
+trouve un braséro de l’équilibre éteint. Un sarcophage 
+fermé est installé contre le mur est. 
+Il faut réussir un jet de Dextérité DD 10 pour parvenir à longer la 
+bordure qui fait le tour de la fosse. En cas d’échec au jet, un 
+personnage tombe dans la fosse et doit effectuer un jet de 
+sauvegarde de Dextérité DD 12. En cas de réussite, le 
+personnage parvient à tomber entre les pieux et ne subit que 3 
+(1d6) dégâts tranchants en s’y frottant. En cas d’échec, le 
+personnage tombe sur les pieux et subit 10 (3d6) dégâts 
+perforants. Si un personnage tombe dans la fosse, les Pilleurs de 
+tombeaux, de l’autre côté de la pièce (voir ci-dessous), les 
+entendent et viennent voir ce qui se passe.  
+Les Pilleurs de tombeaux 
+Une fois que les personnages ont dépassé la porte et peuvent 
+voir l’ensemble de la salle, ajoutez les détails suivants. 
+De l’autre côté de la pièce, une gigantesque porte en 
+pierre est fermée. Dans une lumière ténue, deux 
+silhouettes circulent entre la porte et son levier, l’une 
+d’elles portant une énorme épée. Leur discussion à voix 
+basse porte dans toute la pièce. 
+En réussissant un jet de Sagesse (Perception) DD 12 il est 
+possible d’entendre les détails de la discussion entre les 
+aventuriers connus sous le nom de Pilleurs de tombeaux. Si 
+aucun des personnages ne peut comprendre la conversation, 
+paraphrasez l’action qui suit. 
+La silhouette avec l’énorme épée semble bouillir 
+d’impatience alors qu’il grogne : « Tu comptes y passer 
+toute la journée ? Ou est-ce que je vais devoir la défoncer 
+pour pouvoir l’ouvrir ? » 
+La silhouette la plus proche de la porte lui répond à voix 
+basse : « Je suis un mage, pas un voleur. De puissantes 
+protections et une impressionnante magie condamnent 
+cette porte. » 
+« Alors à toi de jouer ! » dit le guerrier à quelqu’un que 
+vous ne voyez pas. 
+« Je te l’ai déjà dit, c’est un sceau magique ! » dit une 
+troisième voix. « C’est pas de mon ressort… attends… 
+qu’est-ce que c’est ? » 
+Soudain, une archère avec une flèche encochée sur la 
+corde de son arc apparait.  
+« On a de la compagnie ! »  
+Que ce soit en remarquant la lumière des torches des 
+personnages ou en entendant le son de leurs déplacements, le 
+roublard des Pilleurs de tombeaux devrait en effet remarquer la 
+présence des personnages alors qu’ils s’approchent. 
+
+
+www.aidedd.org | les cryptes de kelemvor 
+8 
+Amis ou ennemis ? 
+Cette rencontre peut se dérouler de bien des manières : les 
+personnages tentent de s’allier aux Pilleurs de tombeaux, ils 
+tentent de les punir pour avoir profané les cryptes, ou ils les 
+considèrent comme une menace directe et tentent de les tuer sur 
+le champ. 
+Si les personnages tentent de conclure un marché avec eux, ils 
+peuvent y parvenir en réussissant un jet de Charisme 
+(Persuasion) 
+DD 
+14. 
+Les 
+Pilleurs 
+de 
+tombeaux 
+sont 
+opportunistes mais honnêtes, et ils seront ravis de travailler avec 
+les personnages pour atteindre la salle suivante en échange d’un 
+partage équitable des richesses qui s’y trouvent. 
+Si les personnages décident d’affronter les Pilleurs de 
+tombeaux, s’ils échouent à leur tentative de persuasion, ou s’ils 
+tentent de les intimider, les trois aventuriers deviennent une 
+menace sérieuse. 
+LES PILLEURS DE TOMBEAUX 
+Si les personnages décident de s’en prendre aux Pilleurs de 
+tombeaux, ils vont avoir affaire à de sérieux adversaires : 
+Samulkin Lanceloin est un magicien tieffelin (illusionniste ; il n’a 
+plus de sorts de niveau 4 et possède 28 pv). C’est le chef du groupe 
+et il fanfaronne lorsqu’il veut cacher qu’il est dépassé par les 
+évènements. 
+Gromlik Trois-Dents est un guerrier en armure lourde (chevalier ; 
+35 pv) qui manie une épée et un bouclier. Nombreux sont ceux qui 
+pensent que c’est un nain, mais jamais personne n’a osé le lui 
+demander. 
+Cailyassa Forgeaurore est une demi-elfe roublarde (éclaireur) 
+maniant un arc court et dotée d’une patience toute aussi courte.  
+Le quatrième et dernier membre du groupe était un clerc, mais il 
+est mort lors d’une chute au tout début de leur exploration et les 
+personnages ont surement déjà trouvé son corps en 8. 
+Vous pouvez faire en sorte que les Pilleurs de tombeaux soient 
+terriblement cupides et prêts à détrousser les personnages 
+lorsqu’ils ne s’y attendent pas, ou les interpréter de telle sorte 
+qu’ils soient pragmatiques et souhaitent travailler de concert avec 
+les personnages pour terminer leur exploration du donjon. 
+En plus de leur équipement standard, de leurs armes et de leurs 
+armures, ils possèdent en tout 3 potions de soins, des pièces et des 
+gemmes pour une valeur totale de 145 po, et un parchemin de 
+fracassement. 
+La porte protégée 
+Abaisser le levier de la porte en pierre de cette salle n’a aucun 
+effet tant que la puissante protection magique mise en place 
+pour condamner la porte n’a pas été retirée. Un sort de détection 
+de la magie ou tout autre effet similaire, ou un jet d’Intelligence 
+(Arcanes) DD 15, révèlent que deux protections magiques 
+différentes protègent la porte. Elle peut être enfoncée en 
+réussissant un jet de Force DD 30, ou ses protections peuvent 
+être levées en utilisant deux sorts de déblocage. 
+Un personnage qui étudie la porte et réussit un jet d’Intelligence 
+(Investigation) DD 13 ressent que sa magie s’étend dans toute la 
+pièce. Lorsque le braséro est éclairé, un flash lumineux sur la 
+porte indique que les protections ont été levées. Abaisser le 
+levier ouvre alors la porte. 
+13. Crypte finale 
+Une chambre mortuaire basse de plafond abrite une 
+statue de Kelemvor dans son coin nord-est. Un large 
+coffre est entreposé devant elle et un sceau brisé git à ses 
+pieds. Un seul sarcophage délicatement décoré se trouve 
+du côté ouest. Un livre poussiéreux ouvert est posé sur 
+l’un des quatre autels qui l’encadrent. 
+Un cadavre est étendu devant le sarcophage, dont 
+chaque pan est gravé de crânes et de représentations 
+arcaniques que vous n’avez pas aperçues dans les 
+précédentes cryptes. 
+En réussissant un jet d’Intelligence (Arcanes ou Histoire) DD 13, 
+un personnage comprend que les inscriptions que portent le 
+sarcophage proviennent du Thay. Un personnage avec un 
+historique en lien avec le Thay le sait automatiquement. 
+Le livre sur l’autel est un livre de prière poussiéreux laissé ici par 
+les Kelemvorites et il peut être vendu 10 po dans un temple. Le 
+cadavre est celui d’un acolyte tué ici lorsque le défunt du 
+sarcophage est précédemment revenu à la non-vie. 
+Ce sceau est le dernier (7/7). 
+Le mort-vivant vengeur 
+Un magicien décédé depuis bien longtemps a été ramené d’entre 
+les morts sous la forme d’un crânefeu et s’est réveillé de sa 
+léthargie mort-vivante lorsque la porte de sa crypte a été ouverte. 
+Cherchant à retrouver sa liberté, il commence par donner des 
+coups dans le couvercle de son cercueil. Si les personnages 
+enlèvent le couvercle du cercueil, le crânefeu attaque 
+immédiatement. S’ils ne le font pas, il lance le sort éclair qu’il a 
+préparé (au lieu de boule de feu) pour faire exploser le 
+sarcophage, puis attaque. Toute créature se trouvant dans un 
+rayon de 3 mètres autour du sarcophage doit réussir un jet de 
+sauvegarde de Dextérité DD 12 sous peine d’être touchée par 
+des morceaux de pierre du cercueil et subir 10 (3d6) dégâts 
+contondants. 
+Si les Pilleurs de tombeaux accompagnent les personnages dans 
+cette zone, ils se joignent au combat. Le crânefeu possède 80 
+points de vie et peut utiliser son rayon de feu quatre fois en 
+utilisant l’action Attaques multiples. Déterminez aléatoirement 
+la cible de chacune de ses attaques entre les PJ et les PNJ.  
+Si les personnages parviennent à berner le crânefeu et à 
+l’amener dans la lumière sacrée du braséro de la salle 12, il ne 
+subit les dégâts du braséro qu’une seule fois avant de se replier 
+et d’attaquer à distance. 
+Porte de derrière 
+Les personnages (ainsi que les Pilleurs de tombeaux survivants) 
+peuvent utiliser la porte à l’est pour quitter la crypte. Cependant, 
+la porte ne possède pas de levier, ce qui signifie qu’elle doit être 
+ouverte par la force ou en utilisant la magie. 
+Les escaliers grimpent sur 18 mètres avant de se terminer 
+devant une porte condamnée débouchant dans un mausolée à 
+proximité du temple de Kelemvor (Âmefoyer et ses subordonnés 
+ne sont pas au courant de l’existence de cette seconde entrée 
+éloignée de la crypte, et sont reconnaissants envers les 
+personnages de la leur avoir indiquée, afin qu’ils puissent la 
+sceller). 
+
+
+www.aidedd.org | les cryptes de kelemvor 
+9 
+Trésor 
+Le sarcophage contient des robes moisies. Le coffre renferme 
+des prières et des offrandes destinées à Kelemvor et n’ont pour 
+la plupart aucune valeur, mais on y trouve tout de même des 
+pièces et des gemmes d’une valeur totale de 400 po, ainsi qu’une 
+potion d'invulnérabilité. 
+Conclusion 
+Si les Pilleurs de tombeaux ressortent à l’air libre, ils tentent de 
+disparaître promptement, ne voulant pas avoir à expliquer les 
+raisons de leur présence dans les cryptes aux Kelemvorites. 
+Si les personnages les ont capturés, ils peuvent les livrer à 
+Âmefoyer en même temps que les sceaux brisés. Celui-ci donne 
+alors aux personnages la récompense promise et les remercie 
+chaleureusement. 
+Le guide funeste Âmefoyer amplis de joie vous félicite à 
+votre retour : « Par la balance de l’équilibre, vous êtes de 
+retour ! Et avec les sceaux brisés ! Toutes mes 
+félicitations ! » 
+Il fait alors signe à deux jeunes prêtres de prendre les 
+sceaux, puis serre chaleureusement vos mains, les 
+secouant énergiquement : « Merci mes amis. Vos efforts 
+ont sauvé bon nombre d’entre nous aujourd’hui. Nous 
+allons réparer et remettre en place les sceaux avant que 
+d’autres morts-vivants ne s’échappent et ne ravagent à 
+nouveau notre contrée. Nous ne sommes rien d’autre 
+que d’humbles prêtres. Mais s’il vous plait, acceptez ce 
+gage de notre gratitude. » 
+Puis il vous tend à chacun une bourse contenant 20 po. 
+« Que vos voyages soient sans danger, et puisse 
+Kelemvor toujours maintenir votre voie sur le difficile 
+chemin de l’équilibre. » 
+ 
+PX 
+Pour un groupe de quatre, chaque personnage devrait gagner au 
+minimum 1350 PX à la fin de cette aventure. 
+Ajouter également 50 PX par personnage pour chaque sceau 
+récupéré. 
+ 
+ACCÉDER AU BESTIAIRE 
+ 
+ 
+ 
+https://www.aidedd.org/adj/scenarios/ 
+ 
+ 
+
+
+SECTIONS:
+--------------------------------------------------------------------------------
+
+### KELEMVOR ###
+Aventure D&D 5 pour 4 personnages de niveau 4
+
+
+
+Scénario original  : Thomas Foss et Scott Fitzgerald Gray
+Traduction  :  boblebuter
+Relecture  : Elmiore et blueace
+
+
+Version du 29/04/2022.
+
+
+Merci de nous reporter toute faute ou erreur via  www.aidedd.org/site/contact/
+
+Disponible en téléchargement gratuit sur www.aidedd.org
+OPEN GAME LICENSE Version 1.0a  The following text is the property of Wizards of the Coast, Inc. and is Copyright 2000  Wizards of the Coast, Inc ("Wizards"). All Rights Reserved.  1. Definitions: (a) "Contributors" means the copyright and/or trademark owners who have  contributed Open Game Content; (b) "Derivative Material" means copyrighted material  including derivative works and translations (including into other computer languages ,  potation, modification, correction, addition, extension, upgrade, improvement,  compilation, abridgment or other form in which an existing work may be recast,  transformed or adapted; (c) "Distribute" means to reproduce, license, rent, lease, sell,  broadcast, publicly display, transmit or otherwise distribute; (d) "Open Game Content"  means the game mechanic and includes the methods, procedures, processes and routines  to the extent such content does not embody the Product Identity and is an enhancement  over the prior art and any additional content clearly identified as Open Game Content by  the Contributor, and means any work covered by this License, including translations and  derivative works under copyright law, but specifically excludes Product Identity. (e)  "Product Identity" means product and product line names, logos and identifying marks  including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic  elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses,  formats, poses, concepts, themes and graphic, photographic and other visual or audio  representations; names and descriptions of characters, spells, enchantments,  personalities, teams, personas, likenesses and special abilities; places, locations,  environments, creatures, equipment, magical or supernatural abilities or effects, logos,  symbols, or graphic designs; and any other trademark or registered trademark clearly  identified as Product identity by the owner of the Product Identity, and which specifically  excludes the Open Game Content; (f) "Trademark" means the logos, names, mark, sign,  motto, designs that are used by a Contributor to identify itself or its products or the  associated products contributed to the Open Game License by the Contributor (g) "Use",  "Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and  otherwise create Derivative Material of Open Game Content. (h) "You" or "Your" means  the licensee in terms of this agreement.  2. The License: This License applies to any Open Game Content that contains a notice  indicating that the Open Game Content may only be Used under and in terms of this  License. You must affix such a notice to any Open Game Content that you Use. No terms  may be added to or subtracted from this License except as described by the License itself.  No other terms or conditions may be applied to any Open Game Content distributed using  this License.  3.Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance  of the terms of this License.  4. Grant and Consideration: In consideration for agreeing to use this License, the  Contributors grant You a perpetual, worldwide, royalty-free, nonexclusive license with the  exact terms of this License to Use, the Open Game Content.  5. Representation of Authority to Contribute: If You are contributing original material as  Open Game Content, You represent that Your Contributions are Your original creation  and/or You have sufficient rights to grant the rights conveyed by this License.  6. Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this  License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content  You are copying, modifying or distributing, and You must add the title, the copyright date,  and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game  Content you Distribute.  7. Use of Product Identity: You agree not to Use any Product Identity, including as an  indication as to compatibility, except as expressly licensed in another, independent  Agreement with the owner of each element of that Product Identity. You agree not to  indicate compatibility or co-adaptability with any Trademark or Registered Trademark in  conjunction with a work containing Open Game Content except as expressly licensed in  another, independent Agreement with the owner of such Trademark or Registered  Trademark. The use of any Product Identity in Open Game Content does not constitute a  challenge to the ownership of that Product Identity. The owner of any Product Identity  used in Open Game Content shall retain all rights, title and interest in and to that Product  Identity.  8. Identification: If you distribute Open Game Content You must clearly indicate which  portions of the work that you are distributing are Open Game Content.  9. Updating the License: Wizards or its designated Agents may publish updated versions of  this License. You may use any authorized version of this License to copy, modify and  distribute any Open Game Content originally distributed under any version of this License.  10. Copy of this License: You MUST include a copy of this License with every copy of the  Open Game Content You Distribute.  11. Use of Contributor Credits: You may not market or advertise the Open Game Content  using the name of any Contributor unless You have written permission from the  Contributor to do so.  12. Inability to Comply: If it is impossible for You to comply with any of the terms of this  License with respect to some or all of the Open Game Content due to statute, judicial  order, or governmental regulation then You may not Use any Open Game Material so  affected.  13. Termination: This License will terminate automatically if You fail to comply with all  terms herein and fail to cure such breach within 30 days of becoming aware of the breach.  All sublicenses shall survive the termination of this License.  14. Reformation: If any provision of this License is held to be unenforceable, such  provision shall be reformed only to the extent necessary to make it enforceable.  15. COPYRIGHT NOTICE  Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc.  System Reference Document 5.0 Copyright 2016, Wizards of the Coast, Inc.; Authors Mike  Mearls, Jeremy Crawford, Chris Perkins, Rodney Thompson, Peter Lee, James Wyatt,  Robert J. Schwalb, Bruce R. Cordell, Chris Sims, and Steve Townshend, based on original  material by E. Gary Gygax and Dave Arneson  END OF LICENSE
+www.aidedd.org | les cryptes de kelemvor
+1
+
+
+### CONTEXTE ###
+u cœur des marais du Feu-follet d’argent, entre la  Grande route et Phandaline, se trouve un grand  cimetière connu sous le nom des Contrebas  d’ébène. De nombreuses générations de gens du  cru y ont été enterrés, que ce soit dans des  tertres, des cryptes ou des tombes. Les villageois  de Creux-lugubre ont veillé sur ces terres  pendant des années, chaque génération transmettant le  flambeau à ses enfants. Sous leurs yeux attentifs, les Contrebas  d’ébène ont connu la paix.
+Mais une nuit, cette paix fut brisée à jamais. Que ce soit dû à une  erreur des veilleurs de Creux-lugubre ou à quelque puissance  inconnue, les morts se sont relevés en masse de leur tombe et  ont attaqué le village, massacrant tous ceux qui s’y trouvaient.  Les rares chanceux qui parvinrent à s’échapper racontent qu’une  magie noire transformait en morts-vivants les habitants dès  qu’ils perdaient la vie.
+Le seul rayon d’espoir qui subsiste dans les Contrebas d’ébène  est un temple-forteresse délabré du dieu Kelemvor, littéralement  un mur séparant le village, à présent marécageux, des grands  tertres du cimetière. Ici, les prêtres de Kelemvor enterrent  encore les morts, s’assurant qu’ils ne puissent pas se relever.  Beaucoup de guides funestes, de clercs et de paladins servant le  dieu des morts ont perdu la vie en tentant de restaurer l’équilibre  aux Contrebas d’ébène. Étant de moins en moins nombreux  chaque jour, ils ont lancé un appel à l’aide à travers tout Faerûn.  Au md
+Kelemvor, le dieu des morts, est décrit en détails sur  www.aidedd.org dans la rubrique Univers.
+À la fin de l’aventure, les personnages pourront interagir avec un  autre groupe d’aventuriers, une compagnie connue sous le nom  des Pilleurs de tombeaux.
+
+
+
+
+
+Accroches d’aventure
+Les personnages sont approchés par une acolyte de Kelemvor  demandant de l’aide pour son temple. Un paiement comptant de  20 piè ces d’or  est offert à chacun, en plus de la nourriture et de  l’équipement nécessaire pour voyager jusqu’aux Contrebas  d’ébène, et la promesse d’être enterré là-bas si les choses  tournaient mal. Mais ce qui peut attirer le plus les aventuriers,  c’est la promesse de pouvoir conserver toutes gemmes, objets  magiques ou trésors découverts dans les cryptes, les morts  n’ayant plus besoin de telles offrandes.  Introduction
+Alors que vous pénétrez par l’entrée ouest du temple en  ruine de Kelemvor, vous ressentez une étrange vague de  chaleur parcourir tout votre corps.
+Tout clerc ou paladin du groupe se rend compte que les  personnages viennent de passer au travers d’une sorte de  barrière de protection.
+Le temple est petit, et des pans de son toit ainsi qu’un de  ses murs se sont effondrés. Un prêtre de Kelemvor  fatigué fait le guet, surveillant les tertres qui se trouvent  de l’autre côté, tandis qu’un clerc sans armure se tient au  centre de la zone près d’un feu de camp. Le clerc a un  regard triste et mélancolique. Lorsque ses yeux tombent  sur vous, son visage s’illumine alors d’un sourire et il vous  invite à le rejoindre.
+L’homme se présente comme étant le guide funeste  Âmefoyer, celui qui a envoyé l’appel à l’aide. N’étant pas  des plus loquaces, il va droit au but.
+
+
+### LES_CRYPTES_DE_KELEMVOR ###
+www.aidedd.org | les cryptes de kelemvor
+2
+
+« Ce temple de Kelemvor, notre forteresse, est notre  bastion contre la liche Idris et son armée de morts- vivants. Mais il n’est pas aussi sécurisé qu’il le devrait.  Des pilleurs de tombes ont percé des brèches dans les  cryptes situées sous le temple et ont brisé plusieurs  sceaux mystiques qui garantissaient aux défunts de  reposer en paix. »
+« J’ai besoin que vous entriez dans la crypte, rallumiez les  braséros sacrés qui détruiront les morts-vivants, et  rapportiez les sceaux brisés afin que je les répare.  Pendant ce temps, les feux des braséros empêcheront  d’autres morts-vivants de rentrer dans la crypte. »
+En acceptant la quête du guide funeste Âmefoyer, les  personnages aideront à purifier les cryptes qui se trouvent sous  le sanctuaire de Kelemvor. Leur but est donc de récupérer les 7  sceaux brisés et de rallumer tous les braséros qui se trouvent  dans ces cryptes.  Les cryptes de Kelemvor  Les cryptes de Kelemvor s’étendent sur trois niveaux, divisés en  différentes salles et couloirs. Tous les niveaux sont reliés entre  eux par des escaliers, et les salles de chaque niveau sont  séparées par des herses ou des portes en pierre.
+Les objets les plus importants des cryptes sont les statues de  Kelemvor, qui portaient autrefois des sceaux magiques mais qui  sont actuellement brisés, les braséros de l’équilibre, et de  nombreux sarcophages.
+Sceaux brisés. Chaque sceau brisé que les personnages doivent  récupérer est un morceau de marbre gravé du symbole de  Kelemvor qui pèse à peu près 2 kg. Tous les sceaux étaient  autrefois portés par des statues de Kelemvor disséminées dans  les cryptes.
+Portes et herses. Les salles des cryptes sont séparées soit par  des herses en fer, soit par des portes en pierre. Les herses  permettent aux personnages de voir ce qui se trouve de l’autre  côté. La plupart des portes et herses s’ouvrent par magie en  utilisant les leviers qui se trouvent sur le mur près de la « face  extérieure de la porte », c’est-à-dire le côté de la porte le plus  proche de l’entrée du donjon. Cette architecture a été pensée  pour permettre de fermer certaines salles de la crypte depuis  l’extérieur si besoin est.
+Lever ou abaisser un levier nécessite d’utiliser une action. Une  fois ouverte, une porte ou une herse le reste jusqu’à ce que le  levier soit à nouveau manipulé, ou jusqu’à ce que la porte se  referme automatiquement par mesure de sécurité. Si les  personnages sont inquiets du fait que quelqu’un referme la porte  derrière eux, elle peut être bloquée ouverte en coinçant un piton  ou un objet similaire entre elle et le mur adjacent. Sauf  indication contraire, une porte qui a été fermée peut être  enfoncée en réussissant un jet de Force DD 25, ou peut être  ouverte en utilisant le sort déblocage, ou une magie similaire.
+Toutes les herses de la crypte craquent et grincent fortement  lorsqu’elles se lèvent. Les portes en pierre s’ouvrent en raclant  bruyamment le sol.
+Plafond. Sauf indication contraire, les couloirs et les chambres  de la crypte font 3 mètres de haut.
+Lumière. La plupart des salles du premier niveau sont éclairées  par des torches magiques affectées par le sort flamme éternelle.  Dans les autres salles, en particulier celles des deux niveaux  inférieurs, aucune source de lumière n’est présente, à l’exception  de celle que les aventuriers emportent avec eux.
+Sarcophages. De nombreux sarcophages en pierre sont installés  dans les cryptes. Sauf indication contraire, ils sont tous fermés.  Un sarcophage peut être ouvert en réussissant un jet de Force  DD 20, mais ils ne renferment que des os craquelés.  1. Antichambre
+Les personnages pénètrent dans les cryptes.
+Une foulée de marches mène 1,80 mètre plus bas vers  une porte en bois où un prêtre de Kelemvor attend. Il  déverrouille la porte et fait signe d’approcher, portant  une petite lanterne à bougie, une lourde pierre à silex, et  un bâton en acier de la taille d’une grosse dague. « Seule  l’étincelle formée par le choc de cette pierre et de ce  bâton peut allumer les braséros de l’équilibre » dit-il  doctement.  « Puissent  Kelemvor  et  Séluné  vous  protéger. »
+La porte se referme bruyamment derrière vous alors que  le dernier de votre groupe en passe le pas, et le son de la  serrure qu’on verrouille depuis l’autre côté résonne. Vous  vous tenez dans un petit couloir. Au sud, une grosse  herse en métal rouillé est abaissée, laissant voir de l’autre  côté un sombre corridor. Vers le nord, le couloir s’ouvre  sur une petite salle.
+À l’est de cette salle, un feu de camp éteint suggère que l’endroit  servait autrefois de poste de garde. Près du tas de cendres se  trouve un sac à dos en toile contenant les trésors laissés derrière  lui par le prêtre qui montait autrefois la garde ici : une potion de  guérison qui sent l’eau-de-vie.
+Une large porte en pierre sans poignée se trouve sur le  mur nord, un grand levier en bronze se trouvant sur le  mur à côté d’elle. Lorsque le levier est tiré, un inquiétant  bruit de raclement retentit. La poussière tourbillonne  tandis que l’épaisse porte en pierre glisse vers le haut,  révélant la salle de l’autre côté. Une torche magique fixée  à l’angle du couloir devant vous éclaire la voie.
+
+
+### 2._INTERSECTION ###
+Deux portes et un couloir donnent aux personnages le choix de  la direction à prendre.
+Deux portes se trouvent devant vous : une herse en  métal à l’ouest et une porte en pierre sur le mur nord. Au  travers de la herse vous apercevez un autre couloir qui  court sur six mètres avant de bifurquer vers le sud et le  nord. Un levier en bronze se trouve près de la herse, sur  le mur ouest.
+
+www.aidedd.org | les cryptes de kelemvor
+3
+Tirer le levier lève la herse grinçante, mais aucun signe de  mécanisme similaire n’est visible pour la porte en pierre. Aucune  action ou magie ne permet aux personnages de l’ouvrir, et tout  jet de caractéristique effectué pour l’inspecter ou l’ouvrir est un  échec  (cette porte s’ouvre  automatiquement  dès  qu’un  personnage tourne la clé spéciale dans la salle 8).
+À l’est, dans le passage qui donne vers la salle 3, se trouve une  statue du dieu Kelemvor dont les mains ouvertes laissent penser  qu’elles devaient tenir quelque chose. Un morceau de marbre  gravé se trouve aux pieds de la statue. Une petite alcôve en face  de la statue est remplie d’une pile d’os humanoïdes, restes des  squelettes morts-vivants tués par les Pilleurs de tombeaux  lorsqu’ils sont passés par là.
+Le morceau de marbre gravé aux pieds de la statue est le  premier sceau brisé de la crypte (1/7).  3. Crypte principale
+Cette grande chambre funéraire a son plafond orné de  voûtes soutenues par des piliers hauts de 3 mètres. Trois  sarcophages décorés se trouvent contre le mur du fond,  et le couvercle de l’un d’eux est retiré.
+
+Deux torches fixées sur les murs latéraux éclairent la salle  d’une lumière magique, révélant des portes ouvertes au  nord et au sud.
+Au centre de la salle, un haut et large braséro de la taille  d’un homme est décoré de bas-reliefs représentant le  symbole de Kelemvor. Un cadavre mutilé est étalé de  tout son long juste devant. Du bois est entreposé dans le  braséro, prêt à s’enflammer, suggérant que le cadavre  pourrait être un acolyte ayant tenté de l’allumer. Un  parchemin se trouve sur le sol près de la dépouille.
+En réussissant un jet de Sagesse (Perception) DD 13, un  personnage remarque des silhouettes accroupies attendant dans  l’ombre entre les sarcophages.
+Une fois qu’un des personnages a dépassé les piliers les plus  proches de la porte d’entrée, 11 zombis sortent des ombres et  attaquent.
+Les joueurs devraient instinctivement se rendre compte que ce  groupe d’ennemis peut potentiellement les déborder et devraient
+www.aidedd.org | les cryptes de kelemvor
+4
+se rappeler de se concentrer sur l’allumage du braséro qui les  aidera à vaincre les morts-vivants.
+Les zombis ne sont pas suffisamment intelligents pour  reconnaître le potentiel destructeur du braséro, ils tentent de se  battre même si la lumière sacrée les détruit.
+Portes  Les portes en pierre, déjà ouvertes, mènent aux salles 4 et 5.  Chaque porte possède un levier à proximité qui peut être  actionné pour l’ouvrir ou la fermer.
+Trésor  Les personnages peuvent récupérer un parchemin de prière de  guérison sur le cadavre de l’acolyte. De plus, en fouillant sa  dépouille, ils trouvent une pierre de silex et un bâtonnet en acier,  ce qui permettra d’allumer un braséro.
+LES BRASÉROS SACRÉS DE L’ÉQUILIBRE
+Un personnage à proximité d’un braséro, équipé d’une pierre à  silex et d’un bâtonnet spécial, peut utiliser son action pour tenter  de l’allumer. Le braséro s’enflamme s’il réussit un jet de Dextérité  DD 12.
+Lorsqu’un braséro magique est allumé, ses flammes brûlent et  émettent une lumière bleutée qui illumine une zone de 7,50  mètres de rayon. Lors des trois premiers rounds après que le  braséro ait été allumé, tout mort-vivant qui débute son tour dans  la zone éclairée subit 16 (3d10) dégâts radiants, ce qui représente  une menace significative pour de telles créatures.
+
+
+### 4._TOMBE_PIÉGÉE ###
+Dans cette pièce, les plaques de pression (marquées par des  triangles sur la carte) et le piège ne sont plus en état de  fonctionner et ne représentent plus une menace, mais ils  devraient rendre nerveux les personnages alors qu’ils explorent  les cryptes. Il n’y a rien de valeur dans cette salle.
+Cette petite chambre n’est composée que d’un seul  sarcophage, plus décoré que ceux présents dans la  grande crypte. Un zombi est affalé au pied du  sarcophage, son crâne probablement éclaté par un objet  massif. Devant, vous voyez un objet, une lance sortant de  l’un des deux trous qui percent le mur, et qui devait faire  partie du piège qui protégeait cette pièce.
+
+
+### 5._TOMBE_DU_NÉCROPHAGE ###
+Cette chambre est ornée de bas-reliefs sculptés le long de  ses murs, représentant le symbole de Kelemvor  accompagné  d’inscriptions  magiques.  Les  mêmes  inscriptions recouvrent le sarcophage entreposé contre le  mur du fond, plus décoré que ceux que vous avez vus  dans la crypte principale. Le sarcophage est serti de  grosses gemmes rouges juste en-dessous du couvercle.
+Un sort de détection de la magie, ou une magie similaire, révèle  la présence de sorts de protection dans toute la chambre  funéraire.
+Si un personnage touche le sarcophage, son couvercle explose  soudainement. Tout personnage qui se trouve à 1,50 mètre ou
+moins du sarcophage doit réussir un jet de sauvegarde de  Dextérité DD 14 sous peine de subir 3 (1d6) dégâts contondants  et d’être jeté à terre alors que le couvercle retombe, en  morceaux, sur le sol.
+Lorsque le couvercle du sarcophage jaillit, un nécrophage en  armure de chevalier rutilante se redresse de la sépulture et  attaque les personnages. Au même moment, la magie de  protection de la pièce s’active et remplit la zone d’une lueur  rougeâtre palpitante et inquiétante. Elle provoque la fermeture  de la porte à moins qu’un piton y ait été inséré pour la maintenir  ouverte.
+Le nécrophage, affaibli par les sorts de protection de la salle, a  un désavantage à ses jets d’attaque.
+Protections  Les protections magiques sont un atout pour les personnages,  mais leur lumière palpitante peut les déranger. Toute créature  qui débute son tour dans la pièce doit réussir un jet de  sauvegarde d’Intelligence DD 10 sous peine de subir un  désavantage aux jets d’attaque jusqu’au début de son prochain  tour.
+S’occuper de la porte  Un personnage se tenant dans l’encadrement de la porte lorsque  celle-ci retombe doit décider de quel côté il se jette. Le  personnage doit également réussir un jet de sauvegarde de  Dextérité DD 12 sous peine de subir 5 (1d10) dégâts  contondants et d’être jeté à terre.
+Un personnage se trouvant dans la salle 3 lorsque la porte tombe  peut tirer le levier pour l’ouvrir et rejoindre le combat. Si tous les  personnages se trouvent dans la salle 5, la porte peut être  ouverte en la forçant (voir « les cryptes de Kelemvor » plus haut).
+Un jet d’Intelligence (Investigation) DD 13 effectué tout en  examinant le mécanisme de la porte permet de remarquer un  petit loquet dissimulé qui ouvre la porte de l’intérieur. Du fait des  flash de lumière, ce jet ne peut pas être effectué pendant le  combat.
+Trésor  Le sarcophage est décoré de quatre grosses gemmes en onyx  d’une valeur de 10 po chacune et qui peuvent être retirées  facilement.  6. Double porte
+Deux portes en pierre séparées par un levier trônent au  niveau de l’entrée de cette salle. Un sarcophage se  trouve dans une alcôve au nord et une statue de  Kelemvor au sud tient un sceau brisé entre ses mains.
+Rien n’empêche les personnages de s’emparer facilement du  sceau (2/7), à moins d’ouvrir les portes en premier.
+Abaisser le levier ouvre les deux portes simultanément, dévoilant  l’entrée de la salle 7 ainsi que celle d’une petite chambre  mortuaire remplie de toiles d’araignées dont les occupants ne  tolèrent pas d’être dérangés.
+La chambre mortuaire est le nid de 3 araignées-loups géantes  (18 pv chacune) qui attaquent toutes en même temps.
+Si une araignée voit ses points de vie tomber à 5 ou moins, elle  s’enfuit dans le fond de la chambre mortuaire et disparaît en  s’engouffrant dans d’étroits tunnels qui percent le plafond et  mènent aux territoires de chasse des créatures de la surface.
+www.aidedd.org | les cryptes de kelemvor
+5
+Trésor  Une fouille parmi les toiles d’araignées permet de découvrir une  bourse contenant 15 po, ainsi qu’une épée courte au pommeau  en argent, rangée dans son fourreau ouvragé de motifs en argent  également, probablement de facture drow, et d’une valeur de 20  po.  7. Crypte annexe
+Une statue de Kelemvor avec un sceau brisé à ses pieds  se tient contre le mur est, tandis qu’un braséro se trouve  le long du mur ouest. Une bannière en lambeaux portant  le symbole de Kelemvor est suspendue au mur au-dessus  du braséro.
+Quatre sarcophages en pierre décorés sont installés aux  quatre coins de la salle et dans une alcôve à proximité de  l’entrée. Le sarcophage dans le coin le plus éloigné de  l’entrée semble être brisé.
+Un jet de Sagesse (Perception) DD 15 permet de détecter un  mouvement dans le sarcophage brisé.
+Lorsqu’un des personnages se déplace suffisamment pour  atteindre le milieu de la salle, un zombi enragé (zombi ogre de  taille M et avec une CA de 9) surgit du sarcophage brisé, hurlant  de colère et courant vers les personnages.
+Ce sceau est le troisième (3/7).
+Trésor  Le sarcophage brisé contient trois parchemins porteurs de  textes religieux en lambeaux qui peuvent être vendus pour un  total de 10 po à un temple et un collier en argent arborant un  symbole de Torm d’une valeur de 50 po.  8. Chapelle
+Les personnages qui observent cette salle en deux parties sont  rapidement interrompus par les gardiens squelettes de la  chapelle qui les attaquent.
+Le corridor s’ouvre sur une grande chambre mortuaire  ressemblant à une chapelle. Son plafond en croisée  d’ogives s’élève à neuf mètres de hauteur, des torches  magiques en éclairent la partie nord. Le coin sud-ouest de  la salle abrite sept sarcophages ordinaires et des cercueils  en bois sont entreposés entre eux. La plupart, pourris et  brisés, sont ouverts. Contre un large pilier s’appuie une  statue de Kelemvor dont un sceau brisé git à ses pieds.  Des os sont éparpillés un peu partout, mais ce qui attire  pour l’instant toute votre attention, ce sont les squelettes  qui surgissent de l’arrière du gros pilier central, se jetant  sur vous pour vous attaquer.
+Les 8 squelettes de cette première partie de la salle attaquent  toutes les créatures qu’ils voient et cherchent à empêcher les  personnages de récupérer le sceau brisé (4/7) ou d’avancer plus  loin dans la pièce.
+Poursuivre l’exploration  Alors que les personnages s’avancent plus profondément dans la  salle, dévoilez-leur les détails du reste de la chapelle. En fonction
+d’où les personnages se dirigent, vous ne devriez lire ou  paraphraser que certaines parties du texte suivant.
+De grandes alcôves juste avant l’estrade abritent chacune  un sarcophage en pierre éclairé par la lumière d’une  torche magique. L’alcôve ouest est occupée par six  zombis attroupés autour de quelque chose sur le sol.  Visiblement ils ne semblent pas encore avoir remarqué  votre présence.
+Se tenant entre deux piliers, une autre statue tient un  sceau brisé entre ses mains. Une estrade profonde de  trois mètres s’élève au nord, à 1,80 mètre de hauteur,  une torche magique l’éclairant, ainsi que les marches qui  permettent d’y accéder. Un braséro se trouve au centre  de l’estrade décorée d’un bas-relief représentant un  ensemble de balances de Kelemvor. Curieusement, les  balances penchent vers le plateau gauche, alors que le  symbole de Kelemvor représente généralement les deux  plateaux au même niveau. Une grosse clé en bronze est  enfoncée dans le mur sous le bas-relief.
+Avec de la viande fraîche devant eux, les 6 zombis ignorent  l’affrontement entre le groupe et les squelettes, n’attaquant que  si un personnage s’approche à 3 mètres ou moins de la statue la  plus au nord ou s’ils sont attaqués.
+Ce sceau est le cinquième (5/7).
+Escaliers piégés  En haut des marches de l’escalier, une plaque de pression  dissimulée (voir la case indiquée sur la carte) déclenche le  mécanisme du piège. Toute créature qui marche sur ce piège  provoque le tir d’une pluie de pointes métalliques depuis le sol et  doit effectuer un jet de sauvegarde de Dextérité DD 14. En cas  d’échec, la créature subit 9 (2d8) dégâts perforants, ou la moitié  de ces dégâts en cas de réussite.
+Un personnage qui inspecte les escaliers et l’estrade remarque  le piège en réussissant un jet de Sagesse (Perception) DD 13 et  peut facilement le contourner. Un personnage qui monte les  escaliers sans les inspecter peut remarquer le piège si sa  Perception passive est supérieure ou égale à 18. Un personnage  qui monte les escaliers rapidement n’a aucune chance de  remarquer le piège.
+Un visiteur malchanceux  Le cadavre dont se repaissent les zombis porte une armure et  une tunique de clerc, mais a été tellement mutilé qu’il est  impossible de le reconnaître. Les personnages pourront  apprendre plus tard qu’il faisait partie des Pilleurs de tombeaux ;   c’est le dernier membre du groupe à être descendu dans cette  salle et il est mort lorsque sa corde d’escalade s’est rompue.
+Tout personnage qui fouille l’extrémité nord de la pièce  remarque une pile de dalles brisées et de pierres sur le sol ainsi  que 9 mètres de corde dont une des extrémités est effilochée. Un  trou dans le plafond au-dessus du monticule connecte la crypte à  un tunnel creusé menant à la surface, un court morceau de  corde effilochée en dépassant légèrement juste au niveau d’une  saillie rocheuse tranchante.
+Si le cadavre du clerc est retourné, les personnages trouvent une  bourse contenant une fiole de soins brisée, mais son arme et son
+www.aidedd.org | les cryptes de kelemvor
+6
+sac à dos, rapidement récupérés par les Pilleurs de tombeaux  lorsqu’ils se sont enfuis de la zone, sont introuvables.
+La clef  La grosse clef en bronze est rentrée par magie dans la serrure  située sous le bas-relief représentant le symbole de Kelemvor.  Elle ne peut pas en être retirée. Lorsqu’un personnage tourne la  clef, les balances du bas-relief se redressent par magie et les  personnages peuvent entendre le bruit sourd d’une porte en  pierre qui racle les murs en s’ouvrant, provenant de l’entrée des  Cryptes de Kelemvor (c’est le moyen par lequel les personnages  peuvent atteindre la salle 9 et les niveaux inférieurs).
+Retourner la clef dans l’autre sens fait basculer une fois de plus  les plateaux de la balance et ferme la porte en 9. Au bout d’une  heure, la clef tourne d’elle-même par magie, remettant les  balances dans la position dans laquelle les personnages les ont  trouvés, et refermant automatiquement la porte en 9.
+Les Pilleurs de tombeaux connaissaient le mécanisme de la clef  avant même d’entrer dans la chapelle par le plafond. Ils ont  rapidement tourné la clef, puis ont fui la zone pour ne pas avoir à  affronter les morts-vivants qui s’y trouvaient.  9. Escaliers dans les ténèbres
+Lorsque les aventuriers retournent à l’intersection en 2 après  avoir tourné la clef de l’estrade en 8, ils peuvent constater que la
+porte en pierre auparavant fermée est à présent ouverte.
+
+De l’autre côté de la porte se trouve une petite salle  contenant un levier à proximité d’une autre porte en  pierre, déjà ouverte. Derrière cette porte, une volée de  marches descend vers les profondeurs.
+Un personnage réussissant un jet de Sagesse (Perception) DD  12 remarque que la seconde porte a été bloquée en position  ouverte par un piton en fer. La porte menant en 2 était  également coincée avec un piton, mais celui-ci se brisa lorsque la  porte se referma par magie. Un jet de Sagesse (Perception) DD  13 réussi permet de découvrir un petit loquet dissimulé qui  permet d’ouvrir la porte en 9 depuis l’intérieur.  10. Hall protégé
+Cette salle n’est pourvue que d’une paire de colonnes en  pierre. Un sombre couloir se dirige vers le nord jusqu’à  une intersection en T.
+Un jet de Sagesse (Perception) DD 11 réussi permet de  remarquer des carreaux d’arbalète brisés à proximité de la
+www.aidedd.org | les cryptes de kelemvor
+7
+colonne au sud-est et contre le mur sud de cette première salle.  Cela devrait donner aux joueurs un indice concernant le piège  décrit ci-dessous.
+Piège à arbalète  Le couloir qui se dirige vers le nord est doté d’une série de  plaques de pression sur le sol, dans toute la zone comprise entre  les quatre triangles sur la carte. Les plaques sont faites d’acier  dissimulées par la poussière accumulée avec les années, et  peuvent être repérées en réussissant un jet de Sagesse  (Perception) DD 15. Les personnages qui ne remarquent pas le  piège marcheront sur une plaque de pression et déclencheront le  tir de quatre arbalètes dissimulées dans le mur nord du couloir,  les carreaux sortant du mur par de petits orifices. Tout  personnage qui se trouve dans le couloir ou dans la moitié est de  la première salle sont ciblés par les quatre attaques réparties  aléatoirement entre tous les personnages de la zone (+4 au  toucher, 5 (10) dégâts perforants).
+Les carreaux volent sur toute la longueur du couloir et frappent  la colonne au sud-est ainsi que le mur sud s’ils ne touchent  personne. Si les personnages évitent les plaques de pression et  parviennent sain et sauf à l’intersection en T, ils peuvent  facilement voir les trous alignés sur le mur par lesquels les  carreaux sont tirés.
+Aller plus loin  À l’est de l’embranchement se trouve la section effondrée d’un  couloir qui ne peut pas être dégagé. À l’ouest, derrière une herse  déjà ouverte, des escaliers sont visibles. Une fouille révèle  rapidement qu’un piton métallique est planté le long de la  glissière de la herse, l’empêchant de se refermer.  11. Escaliers faiblement éclairés
+Une volée de marches en pierre descend vers le nord,   tourne vers l’ouest, puis tourne de nouveau vers le nord.  Une faible lueur dansante venant d’en bas éclaire très  légèrement les marches.
+Le vestibule en bas des escaliers est pourvu d’une statue portant  un sceau brisé (6/7) à proximité d’une porte en pierre ouverte. Il  est facile de remarquer que la porte est coincée en position  ouverte par un piton en fer.
+Un personnage qui inspecte le bas des escaliers et réussit un jet  de Sagesse (Perception) DD 11 peut entendre des voix venant de  l’autre côté de l’ouverture et qui semblent chercher à se  convaincre les unes les autres de quelque chose. Mais la  distance est encore trop grande pour comprendre les détails de  la conversation.  12. Chambre mortuaire protégée
+Depuis le bas des escaliers en 11, les personnages sont capables  de voir quelques détails de cette pièce.
+Le sol de cette chambre mortuaire rectangulaire s’est  effondré juste devant la porte et laisse entrevoir une  fosse de 6 mètres de côté et 4,50 mètres de profondeur  garnie de pieux. Les étroits rebords de chaque côté du  trou semblent toutefois être suffisamment solides pour  vous permettre de contourner la fosse.
+
+Près du centre de cette salle de six mètres de hauteur se  trouve un braséro de l’équilibre éteint. Un sarcophage  fermé est installé contre le mur est.
+Il faut réussir un jet de Dextérité DD 10 pour parvenir à longer la  bordure qui fait le tour de la fosse. En cas d’échec au jet, un  personnage tombe dans la fosse et doit effectuer un jet de  sauvegarde de Dextérité DD 12. En cas de réussite, le  personnage parvient à tomber entre les pieux et ne subit que 3  (1d6) dégâts tranchants en s’y frottant. En cas d’échec, le  personnage tombe sur les pieux et subit 10 (3d6) dégâts  perforants. Si un personnage tombe dans la fosse, les Pilleurs de  tombeaux, de l’autre côté de la pièce (voir ci-dessous), les  entendent et viennent voir ce qui se passe.
+Les Pilleurs de tombeaux  Une fois que les personnages ont dépassé la porte et peuvent  voir l’ensemble de la salle, ajoutez les détails suivants.
+De l’autre côté de la pièce, une gigantesque porte en  pierre est fermée. Dans une lumière ténue, deux  silhouettes circulent entre la porte et son levier, l’une  d’elles portant une énorme épée. Leur discussion à voix  basse porte dans toute la pièce.
+En réussissant un jet de Sagesse (Perception) DD 12 il est  possible d’entendre les détails de la discussion entre les  aventuriers connus sous le nom de Pilleurs de tombeaux. Si  aucun des personnages ne peut comprendre la conversation,  paraphrasez l’action qui suit.
+La silhouette avec l’énorme épée semble bouillir  d’impatience alors qu’il grogne :  «  Tu comptes y passer  toute la journée ? Ou est-ce que je vais devoir la défoncer  pour pouvoir l’ouvrir ?  »
+La silhouette la plus proche de la porte lui répond à voix  basse :  «  Je suis un mage, pas un voleur. De puissantes  protections et une impressionnante magie condamnent  cette porte.  »
+«  Alors à toi de jouer !  »  dit le guerrier à quelqu’un que  vous ne voyez pas.
+«  Je te l’ai déjà dit, c’est un sceau magique !  »  dit une  troisième voix.  «  C’est pas de mon ressort… attends…  qu’est-ce que c’est ?  »
+Soudain, une archère avec une flèche encochée sur la  corde de son arc apparait.
+«  On a de la compagnie !  »
+Que ce soit en remarquant la lumière des torches des  personnages ou en entendant le son de leurs déplacements, le  roublard des Pilleurs de tombeaux devrait en effet remarquer la  présence des personnages alors qu’ils s’approchent.
+www.aidedd.org | les cryptes de kelemvor
+8
+Amis ou ennemis   ?  Cette rencontre peut se dérouler de bien des manières : les  personnages tentent de s’allier aux Pilleurs de tombeaux, ils  tentent de les punir pour avoir profané les cryptes, ou ils les  considèrent comme une menace directe et tentent de les tuer sur  le champ.
+Si les personnages tentent de conclure un marché avec eux, ils  peuvent y parvenir en réussissant un jet de Charisme  (Persuasion)  DD  14.  Les  Pilleurs  de  tombeaux  sont  opportunistes mais honnêtes, et ils seront ravis de travailler avec  les personnages pour atteindre la salle suivante en échange d’un  partage équitable des richesses qui s’y trouvent.
+Si les personnages décident d’affronter les Pilleurs de  tombeaux, s’ils échouent à leur tentative de persuasion, ou s’ils  tentent de les intimider, les trois aventuriers deviennent une  menace sérieuse.
+LES PILLEURS DE TOMBEAUX
+Si les personnages décident de s’en prendre aux Pilleurs de  tombeaux, ils vont avoir affaire à de sérieux adversaires :
+Samulkin Lanceloin est un magicien tieffelin ( illusionniste  ; il n’a  plus de sorts de niveau 4 et possède 28 pv). C’est le chef du groupe  et il fanfaronne lorsqu’il veut cacher qu’il est dépassé par les  évènements.
+Gromlik Trois-Dents est un guerrier en armure lourde ( chevalier  ;  35 pv) qui manie une épée et un bouclier. Nombreux sont ceux qui  pensent que c’est un nain, mais jamais personne n’a osé le lui  demander.
+Cailyassa Forgeaurore est une demi-elfe roublarde ( éclaireur )  maniant un arc court et dotée d’une patience toute aussi courte.
+Le quatrième et dernier membre du groupe était un clerc, mais il  est mort lors d’une chute au tout début de leur exploration et les  personnages ont surement déjà trouvé son corps en 8.
+Vous pouvez faire en sorte que les Pilleurs de tombeaux soient  terriblement cupides et prêts à détrousser les personnages  lorsqu’ils ne s’y attendent pas, ou les interpréter de telle sorte  qu’ils soient pragmatiques et souhaitent travailler de concert avec  les personnages pour terminer leur exploration du donjon.
+En plus de leur équipement standard, de leurs armes et de leurs  armures, ils possèdent en tout 3  potions de soins , des pièces et des  gemmes pour une valeur totale de 145 po, et un  parchemin de  fracassement .
+La porte protégée  Abaisser le levier de la porte en pierre de cette salle n’a aucun  effet tant que la puissante protection magique mise en place  pour condamner la porte n’a pas été retirée. Un sort de détection  de la magie ou tout autre effet similaire, ou un jet d’Intelligence  (Arcanes) DD 15, révèlent que deux protections magiques  différentes protègent la porte. Elle peut être enfoncée en  réussissant un jet de Force DD 30, ou ses protections peuvent  être levées en utilisant deux sorts de déblocage.
+Un personnage qui étudie la porte et réussit un jet d’Intelligence  (Investigation) DD 13 ressent que sa magie s’étend dans toute la  pièce. Lorsque le braséro est éclairé, un flash lumineux sur la  porte indique que les protections ont été levées. Abaisser le  levier ouvre alors la porte.
+
+
+### 13._CRYPTE_FINALE ###
+Une chambre mortuaire basse de plafond abrite une  statue de Kelemvor dans son coin nord-est. Un large  coffre est entreposé devant elle et un sceau brisé git à ses  pieds. Un seul sarcophage délicatement décoré se trouve  du côté ouest. Un livre poussiéreux ouvert est posé sur  l’un des quatre autels qui l’encadrent.
+Un cadavre est étendu devant le sarcophage, dont  chaque pan est gravé de crânes et de représentations  arcaniques que vous n’avez pas aperçues dans les  précédentes cryptes.
+En réussissant un jet d’Intelligence (Arcanes ou Histoire) DD 13,  un personnage comprend que les inscriptions que portent le  sarcophage proviennent du Thay. Un personnage avec un  historique en lien avec le Thay le sait automatiquement.
+Le livre sur l’autel est un livre de prière poussiéreux laissé ici par  les Kelemvorites et il peut être vendu 10 po dans un temple. Le  cadavre est celui d’un acolyte tué ici lorsque le défunt du  sarcophage est précédemment revenu à la non-vie.
+Ce sceau est le dernier (7/7).
+Le mort-vivant vengeur  Un magicien décédé depuis bien longtemps a été ramené d’entre  les morts sous la forme d’un crânefeu et s’est réveillé de sa  léthargie mort-vivante lorsque la porte de sa crypte a été ouverte.  Cherchant à retrouver sa liberté, il commence par donner des  coups dans le couvercle de son cercueil. Si les personnages  enlèvent le couvercle du cercueil, le crânefeu attaque  immédiatement. S’ils ne le font pas, il lance le sort éclair qu’il a  préparé (au lieu de boule de feu) pour faire exploser le  sarcophage, puis attaque. Toute créature se trouvant dans un  rayon de 3 mètres autour du sarcophage doit réussir un jet de  sauvegarde de Dextérité DD 12 sous peine d’être touchée par  des morceaux de pierre du cercueil et subir 10 (3d6) dégâts  contondants.
+Si les Pilleurs de tombeaux accompagnent les personnages dans  cette zone, ils se joignent au combat. Le crânefeu possède 80  points de vie et peut utiliser son rayon de feu quatre fois en  utilisant l’action Attaques multiples. Déterminez aléatoirement  la cible de chacune de ses attaques entre les PJ et les PNJ.
+Si les personnages parviennent à berner le crânefeu et à  l’amener dans la lumière sacrée du braséro de la salle 12, il ne  subit les dégâts du braséro qu’une seule fois avant de se replier  et d’attaquer à distance.
+Porte de derrière  Les personnages (ainsi que les Pilleurs de tombeaux survivants)  peuvent utiliser la porte à l’est pour quitter la crypte. Cependant,  la porte ne possède pas de levier, ce qui signifie qu’elle doit être  ouverte par la force ou en utilisant la magie.
+Les escaliers grimpent sur 18 mètres avant de se terminer  devant une porte condamnée débouchant dans un mausolée à  proximité du temple de Kelemvor (Âmefoyer et ses subordonnés  ne sont pas au courant de l’existence de cette seconde entrée  éloignée de la crypte, et sont reconnaissants envers les  personnages de la leur avoir indiquée, afin qu’ils puissent la  sceller).
+www.aidedd.org | les cryptes de kelemvor
+9
+Trésor  Le sarcophage contient des robes moisies. Le coffre renferme  des prières et des offrandes destinées à Kelemvor et n’ont pour  la plupart aucune valeur, mais on y trouve tout de même des  pièces et des gemmes d’une valeur totale de 400 po, ainsi qu’une  potion d'invulnérabilité.  Conclusion  Si les Pilleurs de tombeaux ressortent à l’air libre, ils tentent de  disparaître promptement, ne voulant pas avoir à expliquer les  raisons de leur présence dans les cryptes aux Kelemvorites.
+Si les personnages les ont capturés, ils peuvent les livrer à  Âmefoyer en même temps que les sceaux brisés. Celui-ci donne  alors aux personnages la récompense promise et les remercie  chaleureusement.
+Le guide funeste Âmefoyer amplis de joie vous félicite à  votre retour : « Par la balance de l’équilibre, vous êtes de  retour ! Et avec les sceaux brisés ! Toutes mes  félicitations ! »
+Il fait alors signe à deux jeunes prêtres de prendre les  sceaux, puis serre chaleureusement vos mains, les  secouant énergiquement : « Merci mes amis. Vos efforts  ont sauvé bon nombre d’entre nous aujourd’hui. Nous  allons réparer et remettre en place les sceaux avant que  d’autres morts-vivants ne s’échappent et ne ravagent à  nouveau notre contrée. Nous ne sommes rien d’autre  que d’humbles prêtres. Mais s’il vous plait, acceptez ce  gage de notre gratitude. »
+Puis il vous tend à chacun une bourse contenant 20 po.
+« Que vos voyages soient sans danger, et puisse  Kelemvor toujours maintenir votre voie sur le difficile  chemin de l’équilibre. »
+
+PX  Pour un groupe de quatre, chaque personnage devrait gagner au  minimum 1350 PX à la fin de cette aventure.
+Ajouter également 50 PX par personnage pour chaque sceau  récupéré.
+
+ACCÉDER AU BESTIAIRE
+
+https://www.aidedd.org/adj/scenarios/
+
+
