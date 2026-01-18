@@ -417,6 +417,7 @@
     ]
   },
   "shadow": {
+    "index": "shadow",
     "name": "Shadow",
     "size": "Medium",
     "type": "undead",
@@ -514,6 +515,147 @@
       {
         "name": "Dark Devotion",
         "desc": "The priest has advantage on saving throws against being charmed or frightened"
+      }
+    ]
+  },
+  "magmin": {
+    "index": "magmin",
+    "name": "Magmin",
+    "size": "Small",
+    "type": "elemental",
+    "alignment": "chaotic neutral",
+    "armor_class": 14,
+    "hit_points": 9,
+    "hit_dice": "2d6+2",
+    "abilities": {
+      "str": 7,
+      "dex": 15,
+      "con": 12,
+      "int": 8,
+      "wis": 11,
+      "cha": 10
+    },
+    "speed": {"walk": "30 ft"},
+    "challenge_rating": 0.5,
+    "xp": 100,
+    "damage_immunities": ["fire"],
+    "actions": [
+      {
+        "name": "Touch",
+        "type": "melee",
+        "attack_bonus": 4,
+        "damage_dice": "2d6",
+        "damage_bonus": 0,
+        "damage_type": "fire",
+        "range": "5 ft",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d6) fire damage."
+      }
+    ],
+    "special_abilities": [
+      {
+        "name": "Death Burst",
+        "desc": "When the magmin dies, it explodes in a burst of fire. Each creature within 10 feet must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save."
+      },
+      {
+        "name": "Ignited Illumination",
+        "desc": "As a bonus action, the magmin can set itself ablaze or extinguish its flames. While ablaze, the magmin sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
+      }
+    ]
+  },
+  "animated-armor": {
+    "index": "animated-armor",
+    "name": "Animated Armor",
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": 18,
+    "hit_points": 33,
+    "hit_dice": "6d8+6",
+    "abilities": {
+      "str": 14,
+      "dex": 11,
+      "con": 13,
+      "int": 1,
+      "wis": 3,
+      "cha": 1
+    },
+    "speed": {"walk": "25 ft"},
+    "challenge_rating": 1,
+    "xp": 200,
+    "damage_immunities": ["poison", "psychic"],
+    "condition_immunities": ["blinded", "charmed", "deafened", "exhaustion", "frightened", "paralyzed", "petrified", "poisoned"],
+    "actions": [
+      {
+        "name": "Slam",
+        "type": "melee",
+        "attack_bonus": 4,
+        "damage_dice": "1d6",
+        "damage_bonus": 2,
+        "damage_type": "bludgeoning",
+        "range": "5 ft",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6+2) bludgeoning damage."
+      }
+    ],
+    "special_abilities": [
+      {
+        "name": "Antimagic Susceptibility",
+        "desc": "The armor is incapacitated while in the area of an antimagic field."
+      },
+      {
+        "name": "False Appearance",
+        "desc": "While the armor remains motionless, it is indistinguishable from a normal suit of armor."
+      }
+    ]
+  },
+  "mage": {
+    "index": "mage",
+    "name": "Mage",
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": 12,
+    "hit_points": 40,
+    "hit_dice": "9d8",
+    "abilities": {
+      "str": 9,
+      "dex": 14,
+      "con": 11,
+      "int": 17,
+      "wis": 12,
+      "cha": 11
+    },
+    "speed": {"walk": "30 ft"},
+    "challenge_rating": 6,
+    "xp": 2300,
+    "actions": [
+      {
+        "name": "Dagger",
+        "type": "melee",
+        "attack_bonus": 5,
+        "damage_dice": "1d4",
+        "damage_bonus": 2,
+        "damage_type": "piercing",
+        "range": "5 ft",
+        "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4+2) piercing damage."
+      }
+    ],
+    "spellcasting": {
+      "ability": "int",
+      "dc": 14,
+      "attack_bonus": 6,
+      "spells": {
+        "0": ["fire_bolt", "light", "mage_hand", "prestidigitation"],
+        "1": ["detect_magic", "mage_armor", "magic_missile", "shield", "4/day"],
+        "2": ["misty_step", "suggestion", "3/day"],
+        "3": ["counterspell", "fireball", "fly", "3/day"],
+        "4": ["greater_invisibility", "ice_storm", "2/day"],
+        "5": ["cone_of_cold", "1/day"]
+      }
+    },
+    "special_abilities": [
+      {
+        "name": "Spellcasting",
+        "desc": "The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks)."
       }
     ]
   }

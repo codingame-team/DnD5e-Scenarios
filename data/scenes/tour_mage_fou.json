@@ -1,0 +1,293 @@
+{
+  "scenario_id": "tour_mage_fou",
+  "name": "La Tour du Mage Fou",
+  "level": 3,
+  "difficulty": "medium",
+  "duration_hours": "3-4",
+  "recommended_party_size": 4,
+  "description": "Un mage puissant est devenu fou et menace la région depuis sa tour. Ce scénario met l'accent sur le spellcasting et les affrontements magiques.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "narrative",
+      "title": "🗼 LA TOUR MYSTÉRIEUSE",
+      "text": "La Tour d'Azurite se dresse au sommet de la Colline des Vents.\n\nAutrefois, le sage Maître Aldaran y étudiait les arcanes en paix. Mais depuis quelques semaines, d'étranges phénomènes se produisent:\n- Des éclairs magiques jaillissent de la tour\n- Les animaux fuient la région\n- Des créatures élémentaires errent dans les environs\n\nLe Conseil des Mages vous envoie enquêter. Aldaran répond-il encore?\n\nVous approchez de la tour, sentant la magie crépiter dans l'air...",
+      "next_scene": "tower_entrance"
+    },
+    {
+      "id": "tower_entrance",
+      "type": "narrative",
+      "title": "🚪 ENTRÉE DE LA TOUR",
+      "text": "La porte de la tour est entrouverte. Des symboles magiques clignotent faiblement sur le chambranle.\n\nDes traces de combat récent: scories de feu, givre au sol, impacts d'éclair...\n\nUn gémissement à l'intérieur! Quelqu'un a besoin d'aide!",
+      "next_scene": "apprentice_rescue"
+    },
+    {
+      "id": "apprentice_rescue",
+      "type": "narrative",
+      "title": "🧙 L'APPRENTI BLESSÉ",
+      "text": "Vous trouvez un jeune homme en robe de mage, gravement blessé.\n\n\"Je... je suis Théorin... apprenti du Maître...\"\n\nIl tousse, du sang coule de sa bouche.\n\n\"Le Maître... il a trouvé un artefact maudit... Le Cristal de la Folie... Il ne me reconnaît plus... Il a invoqué des élémentaires... Fuyez!\"\n\nIl perd connaissance. Vous devez le soigner!",
+      "next_scene": "heal_apprentice"
+    },
+    {
+      "id": "heal_apprentice",
+      "type": "choice",
+      "title": "💚 SOIGNER L'APPRENTI",
+      "description": "Théorin est mourant! Que faire?",
+      "choices": [
+        {
+          "text": "Lancer un sort de soin (si lanceur de sorts)",
+          "next_scene": "spell_heal",
+          "effects": {}
+        },
+        {
+          "text": "Utiliser une potion de soin",
+          "next_scene": "potion_heal",
+          "effects": {}
+        },
+        {
+          "text": "Le laisser et continuer",
+          "next_scene": "ground_floor",
+          "effects": {"apprentice_dead": true}
+        }
+      ]
+    },
+    {
+      "id": "spell_heal",
+      "type": "narrative",
+      "title": "✨ MAGIE CURATIVE",
+      "text": "Votre clerc ou druide pose les mains sur Théorin et murmure une incantation.\n\nUne lumière dorée émane de ses paumes. Les blessures se referment!\n\nThéorin ouvre les yeux: \"Merci... Je vais... rester ici... Soyez prudents... Le Maître est au sommet... Détruisez le Cristal!\"\n\n(+100 XP, Théorin sauvé)",
+      "next_scene": "ground_floor"
+    },
+    {
+      "id": "potion_heal",
+      "type": "narrative",
+      "title": "🧪 POTION DE SOIN",
+      "text": "Vous donnez une potion de soin à Théorin. Il la boit goulûment.\n\nSes couleurs reviennent: \"Merci... Je vais rester ici me reposer... Attention au Maître... et au Cristal de la Folie!\"\n\n(-1 Potion de Soin, Théorin sauvé)",
+      "next_scene": "ground_floor"
+    },
+    {
+      "id": "ground_floor",
+      "type": "narrative",
+      "title": "🏛️ REZ-DE-CHAUSSÉE",
+      "text": "La salle principale de la tour est en désordre.\n\nLivres brûlés, étagères renversées, symboles magiques griffonnés sur les murs...\n\nUn escalier en spirale monte vers les étages supérieurs.\n\nSoudain, un craquement! Trois élémentaires de feu se matérialisent!\n\n\"INTRUS! BRÛLER!\" grognent-ils en approchant!",
+      "next_scene": "fire_elementals_fight"
+    },
+    {
+      "id": "fire_elementals_fight",
+      "type": "combat",
+      "title": "🔥 ÉLÉMENTAIRES DE FEU",
+      "description": "Trois petits élémentaires de feu vous attaquent! Utilisez vos sorts et attaques!",
+      "monsters": ["magmin", "magmin", "magmin"],
+      "on_victory": "after_elementals",
+      "on_defeat": "game_over",
+      "combat_tips": "Les élémentaires sont résistants au feu mais vulnérables au froid. Utilisez des sorts d'eau ou de glace si possible!"
+    },
+    {
+      "id": "after_elementals",
+      "type": "narrative",
+      "title": "✅ ÉLÉMENTAIRES VAINCUS",
+      "text": "Les élémentaires se dispersent en fumée!\n\nVous trouvez un parchemin de sort au sol: **Boule de Feu**! Un lanceur de sorts peut l'apprendre.\n\n(+200 XP, Parchemin de Boule de Feu)",
+      "next_scene": "second_floor"
+    },
+    {
+      "id": "second_floor",
+      "type": "narrative",
+      "title": "📚 BIBLIOTHÈQUE",
+      "text": "Le deuxième étage est une vaste bibliothèque.\n\nDes centaines de grimoires anciens tapissent les murs. Certains flottent dans les airs!\n\nAu centre, un golem d'arcane monte la garde. Ses yeux s'illuminent à votre arrivée.\n\n\"ACCÈS... INTERDIT... ÉLIMINATION... AUTORISÉE!\"",
+      "next_scene": "golem_choice"
+    },
+    {
+      "id": "golem_choice",
+      "type": "choice",
+      "title": "🤖 LE GOLEM D'ARCANE",
+      "description": "Le golem vous bloque le passage! Que faire?",
+      "choices": [
+        {
+          "text": "Combattre le golem",
+          "next_scene": "golem_fight",
+          "effects": {}
+        },
+        {
+          "text": "Tenter de le désactiver (test d'Arcanes)",
+          "next_scene": "disable_golem",
+          "effects": {}
+        },
+        {
+          "text": "Chercher un autre passage",
+          "next_scene": "secret_passage",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "golem_fight",
+      "type": "combat",
+      "title": "🤖 GOLEM D'ARCANE",
+      "description": "Le golem attaque! Il est immunisé à la magie de bas niveau!",
+      "monsters": ["animated-armor"],
+      "on_victory": "golem_defeated",
+      "on_defeat": "game_over",
+      "combat_tips": "Le golem résiste aux sorts de niveau 1-2. Utilisez des armes ou des sorts puissants!"
+    },
+    {
+      "id": "disable_golem",
+      "type": "narrative",
+      "title": "🔧 DÉSACTIVATION",
+      "text": "Votre mage examine le golem attentivement.\n\nIl repère une rune de contrôle sur son dos! Un geste magique précis...\n\n**CLIC!** Le golem s'immobilise et s'éteint!\n\n\"Bien joué!\" murmure votre mage.\n\n(+300 XP, Golem désactivé sans combat)",
+      "next_scene": "library_search"
+    },
+    {
+      "id": "golem_defeated",
+      "type": "narrative",
+      "title": "✅ GOLEM DÉTRUIT",
+      "text": "Le golem s'effondre en morceaux!\n\nVous récupérez son noyau magique: un cristal d'énergie pure!\n\n(+250 XP, Noyau Magique récupéré)",
+      "next_scene": "library_search"
+    },
+    {
+      "id": "secret_passage",
+      "type": "narrative",
+      "title": "🕵️ PASSAGE SECRET",
+      "text": "Vous fouillez la bibliothèque...\n\nDerrière une étagère, vous trouvez un passage secret! Il contourne le golem.\n\nVous progressez discrètement...",
+      "next_scene": "library_search"
+    },
+    {
+      "id": "library_search",
+      "type": "narrative",
+      "title": "📖 RECHERCHES",
+      "text": "Vous fouillez la bibliothèque.\n\nDans un grimoire, vous trouvez une note d'Aldaran:\n\n\"Le Cristal de la Folie amplifie la magie... mais corrompt l'esprit! Pour le détruire, il faut utiliser un sort de **Dissipation de la Magie** de niveau 5 minimum... ou le briser avec une arme enchantée +3...\"\n\nVous trouvez aussi un parchemin de **Dissipation de la Magie**!\n\n(+100 XP, Parchemin de Dissipation)",
+      "next_scene": "rest_choice"
+    },
+    {
+      "id": "rest_choice",
+      "type": "choice",
+      "title": "💤 REPOS?",
+      "description": "Vous êtes épuisés. Voulez-vous vous reposer avant d'affronter le mage?",
+      "choices": [
+        {
+          "text": "Repos court (récupérer HP et quelques sorts)",
+          "next_scene": "short_rest",
+          "effects": {}
+        },
+        {
+          "text": "Continuer immédiatement",
+          "next_scene": "third_floor",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "short_rest",
+      "type": "rest",
+      "title": "💤 REPOS COURT",
+      "rest_type": "short",
+      "next_scene": "third_floor"
+    },
+    {
+      "id": "third_floor",
+      "type": "narrative",
+      "title": "🌟 LABORATOIRE MAGIQUE",
+      "text": "Le troisième étage est un laboratoire alchimique.\n\nFioles bouillonnantes, cercles d'invocation, cristaux lumineux...\n\nDes fantômes spectraux flottent dans la pièce - les victimes du Cristal!\n\nIls vous voient et hurlent: \"REJOIGNEZ-NOUS! REJOIGNEZ LA FOLIE!\"",
+      "next_scene": "ghost_fight"
+    },
+    {
+      "id": "ghost_fight",
+      "type": "combat",
+      "title": "👻 SPECTRES FOUS",
+      "description": "Trois spectres vous attaquent! Seule la magie peut les blesser!",
+      "monsters": ["shadow", "shadow", "shadow"],
+      "on_victory": "ghosts_defeated",
+      "on_defeat": "game_over",
+      "combat_tips": "Les spectres sont résistants aux armes normales. Utilisez des sorts ou des armes magiques!"
+    },
+    {
+      "id": "ghosts_defeated",
+      "type": "narrative",
+      "title": "✅ SPECTRES VAINCUS",
+      "text": "Les spectres se dissipent dans un dernier gémissement.\n\n\"Merci... libérés...\" murmurent-ils avant de disparaître.\n\nVous trouvez une **Baguette de Projectiles Magiques** (3 charges) et deux potions de soin!\n\n(+300 XP, Baguette et Potions)",
+      "next_scene": "top_floor"
+    },
+    {
+      "id": "top_floor",
+      "type": "narrative",
+      "title": "🏰 SOMMET DE LA TOUR",
+      "text": "Vous montez au dernier étage.\n\nLa salle est illuminée d'une lumière pulsante. Au centre, le **Cristal de la Folie** flotte dans les airs, irradiant une énergie maléfique.\n\nDevant le cristal, le Maître Aldaran vous fait face. Son regard est vide, ses mains crépitent de magie noire.\n\n\"Ah... des visiteurs... REJOIGNEZ MON POUVOIR! OU PÉRISSEZ!\"\n\nIl lève ses mains, prêt à lancer un sort dévastateur!",
+      "next_scene": "final_battle"
+    },
+    {
+      "id": "final_battle",
+      "type": "combat",
+      "title": "🧙‍♂️ LE MAGE FOU",
+      "description": "Aldaran, corrompu par le Cristal, vous attaque avec toute sa puissance magique!",
+      "monsters": ["mage"],
+      "on_victory": "aldaran_defeated",
+      "on_defeat": "game_over",
+      "combat_tips": "Aldaran est un lanceur de sorts puissant! Interrompez ses sorts, utilisez Contre-Sort si possible, et protégez-vous des sorts de zone!"
+    },
+    {
+      "id": "aldaran_defeated",
+      "type": "narrative",
+      "title": "💔 LE MAGE TOMBE",
+      "text": "Aldaran s'effondre, gravement blessé mais vivant.\n\nLa corruption du Cristal s'estompe de son regard: \"Que... qu'ai-je fait? Le Cristal... détruisez-le... vite!\"\n\nLe Cristal de la Folie pulse dangereusement, accumulant de l'énergie!\n\nVous devez agir maintenant!",
+      "next_scene": "destroy_crystal"
+    },
+    {
+      "id": "destroy_crystal",
+      "type": "choice",
+      "title": "💎 DÉTRUIRE LE CRISTAL",
+      "description": "Comment détruire le Cristal de la Folie?",
+      "choices": [
+        {
+          "text": "Utiliser le parchemin de Dissipation de la Magie",
+          "next_scene": "dispel_crystal",
+          "effects": {}
+        },
+        {
+          "text": "Le frapper avec une arme magique",
+          "next_scene": "smash_crystal",
+          "effects": {}
+        },
+        {
+          "text": "Tenter de le contenir avec un cercle magique",
+          "next_scene": "contain_crystal",
+          "effects": {}
+        }
+      ]
+    },
+    {
+      "id": "dispel_crystal",
+      "type": "narrative",
+      "title": "✨ DISSIPATION",
+      "text": "Votre mage déroule le parchemin et prononce les mots de pouvoir!\n\nUne vague d'énergie antimagique frappe le Cristal. Il vibre, craque...\n\n**BOUM!** Le Cristal explose en mille éclats inoffensifs!\n\nL'énergie maléfique se dissipe. La tour retrouve le calme.\n\nAldaran reprend ses esprits: \"Merci... vous m'avez sauvé... et sauvé la région!\"\n\n(Solution optimale! +500 XP)",
+      "next_scene": "victory"
+    },
+    {
+      "id": "smash_crystal",
+      "type": "narrative",
+      "title": "💥 DESTRUCTION BRUTALE",
+      "text": "Votre guerrier frappe le Cristal de toutes ses forces!\n\n**CRAC!** Le Cristal se brise... mais libère une onde de choc magique!\n\nTous les personnages subissent 2d6 dégâts de force!\n\nMais le Cristal est détruit. Aldaran reprend ses esprits.\n\n(Solution risquée! +300 XP, -2d6 HP pour tous)",
+      "next_scene": "victory"
+    },
+    {
+      "id": "contain_crystal",
+      "type": "narrative",
+      "title": "🔮 CONFINEMENT",
+      "text": "Vous tracez un cercle magique autour du Cristal.\n\nIl pulse violemment, mais le cercle le contient!\n\nAldaran, affaibli, se lève: \"Le cercle ne tiendra pas éternellement... mais il nous donne le temps de trouver une solution permanente.\"\n\nVous l'emportez au Conseil des Mages pour destruction sécurisée.\n\n(Solution sage! +400 XP)",
+      "next_scene": "victory"
+    },
+    {
+      "id": "victory",
+      "type": "narrative",
+      "title": "🎉 VICTOIRE!",
+      "text": "La menace est écartée!\n\nAldaran est sauvé et vous remercie chaleureusement: \"Je vous dois tout. Prenez ceci.\"\n\nIl vous donne:\n- **Bâton de Mage** (+1 aux jets d'attaque de sorts)\n- **Grimoire d'Aldaran** (contient 3 sorts de niveau 3)\n- **1000 pièces d'or**\n- **Cristaux magiques** (5x)\n\nLe Conseil des Mages vous déclare Héros de la Magie!\n\n✨ AVENTURE TERMINÉE ✨",
+      "next_scene": null
+    },
+    {
+      "id": "game_over",
+      "type": "narrative",
+      "title": "💀 DÉFAITE",
+      "text": "Vous avez été vaincus par la magie corrompue...\n\nLa tour continue de menacer la région.\n\nD'autres aventuriers devront tenter leur chance.",
+      "next_scene": null
+    }
+  ]
+}
+

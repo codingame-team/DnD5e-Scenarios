@@ -119,16 +119,25 @@ class BaseScenario(ABC):
                             desc=f"{damage_type_name} damage"
                         )
 
+                        # Parser la portée (range)
+                        range_str = action_data.get('range', '5 ft')
+                        if '/' in range_str:
+                            # Format: "80/320 ft"
+                            normal_range = int(range_str.split('/')[0].replace(' ft', '').replace('ft', '').strip())
+                        else:
+                            # Format: "5 ft" ou "5"
+                            normal_range = int(range_str.replace(' ft', '').replace('ft', '').strip())
+
                         action = Action(
                             name=action_data['name'],
                             desc=action_data.get('desc', ''),
-                            type=ActionType.MELEE if not action_data.get('range') else ActionType.RANGED,
+                            type=ActionType.MELEE if normal_range <= 10 else ActionType.RANGED,
                             attack_bonus=action_data['attack_bonus'],
                             damages=[Damage(
                                 type=damage_type,
                                 dd=DamageDice(action_data.get('damage_dice', '1d6'))
                             )],
-                            normal_range=5 if not action_data.get('range') else int(action_data['range'].split('/')[0])
+                            normal_range=normal_range
                         )
                         actions.append(action)
 
@@ -738,63 +747,59 @@ class BaseScenario(ABC):
         potions = []
 
         try:
-            # 🆕 Utiliser directement dnd_5e_core.data
             from dnd_5e_core.data import (
+                set_data_directory,
                 list_weapons, list_armors, list_equipment,
                 load_weapon, load_armor, load_equipment
             )
             from dnd_5e_core.equipment import HealingPotion, PotionRarity
+            from pathlib import Path
 
-            # Charger armes - dnd_5e_core.data retourne des dicts, pas des objets
+            # Configurer le répertoire de données du package dnd_5e_core
+            import dnd_5e_core
+            package_path = Path(dnd_5e_core.__file__).parent
+
+            # Chercher le répertoire data dans plusieurs emplacements possibles
+            possible_data_dirs = [
+                package_path.parent / "data",  # Si installé en mode dev (pip install -e)
+                Path("/Users/display/PycharmProjects/dnd-5e-core/data"),  # Chemin absolu (fallback)
+            ]
+
+            data_dir_found = None
+            for data_dir in possible_data_dirs:
+                if data_dir.exists() and (data_dir / "weapons").exists():
+                    data_dir_found = data_dir
+                    break
+
+            if data_dir_found:
+                set_data_directory(str(data_dir_found))
+
+            # Charger armes
             for name in list_weapons()[:20]:
                 try:
-                    weapon_data = load_weapon(name)
-                    if weapon_data and isinstance(weapon_data, dict):
-                        # Créer un objet simple pour compatibilité
-                        class SimpleWeapon:
-                            def __init__(self, data):
-                                self.name = data.get('name', 'Unknown')
-                                self.index = data.get('index', name)
-                                self.cost = data.get('cost', {}).get('quantity', 0)
-                                self.damage = data.get('damage', {})
-                                self.weight = data.get('weight', 0)
-
-                        weapons.append(SimpleWeapon(weapon_data))
-                except:
-                    pass
+                    weapon = load_weapon(name)
+                    if weapon:
+                        weapons.append(weapon)
+                except Exception:
+                    continue
 
             # Charger armures
             for name in list_armors()[:15]:
                 try:
-                    armor_data = load_armor(name)
-                    if armor_data and isinstance(armor_data, dict):
-                        class SimpleArmor:
-                            def __init__(self, data):
-                                self.name = data.get('name', 'Unknown')
-                                self.index = data.get('index', name)
-                                self.cost = data.get('cost', {}).get('quantity', 0)
-                                self.armor_class = data.get('armor_class', {}).get('base', 10)
-                                self.weight = data.get('weight', 0)
-
-                        armors.append(SimpleArmor(armor_data))
-                except:
-                    pass
+                    armor = load_armor(name)
+                    if armor:
+                        armors.append(armor)
+                except Exception:
+                    continue
 
             # Charger équipements
             for name in list_equipment()[:20]:
                 try:
-                    equip_data = load_equipment(name)
-                    if equip_data and isinstance(equip_data, dict):
-                        class SimpleEquipment:
-                            def __init__(self, data):
-                                self.name = data.get('name', 'Unknown')
-                                self.index = data.get('index', name)
-                                self.cost = data.get('cost', {}).get('quantity', 0)
-                                self.weight = data.get('weight', 0)
-
-                        equipments.append(SimpleEquipment(equip_data))
-                except:
-                    pass
+                    equip = load_equipment(name)
+                    if equip:
+                        equipments.append(equip)
+                except Exception:
+                    continue
 
             # Créer quelques potions de base
             potions = [
@@ -818,8 +823,7 @@ class BaseScenario(ABC):
 
             if weapons or armors or equipments:
                 print(f"  ✅ Chargés depuis dnd_5e_core.data")
-            else:
-                print(f"  ℹ️  Aucune donnée disponible (normal)")
+                print(f"  Armes: {len(weapons)}, Armures: {len(armors)}, Équipements: {len(equipments)}, Potions: {len(potions)}")
 
 
         except Exception as e:

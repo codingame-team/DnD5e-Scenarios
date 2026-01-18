@@ -44,27 +44,30 @@ def main():
     print_scenario(2, "⚰️", "Les Cryptes de Kelemvor", 4, "3-4h", 5)
     print(f"     {Colors.GREEN}Temple profané, 7 sceaux, braseros sacrés, nécrophage{Colors.END}")
     print()
+    print_scenario(3, "🗼", "La Tour du Mage Fou", 3, "3-4h", 5)
+    print(f"     {Colors.GREEN}Mage corrompu, élémentaires, golem, cristal de folie{Colors.END}")
+    print()
 
     print(f"\n{Colors.YELLOW}📚 SCÉNARIOS ORIGINAUX (Qualité ⭐⭐⭐){Colors.END}")
     print()
-    print_scenario(3, "🏰", "La Chasse aux Gobelins", 3, "1-2h", 3)
-    print_scenario(4, "🏛️", "The Sunless Citadel", 1, "2-3h", 3)
-    print_scenario(5, "🔺", "La Tombe des Rois Serpents", 2, "2h", 3)
-    print_scenario(6, "👁️", "L'Oeil de Gruumsh", 3, "2-3h", 3)
-    print_scenario(7, "💀", "La Secte du Crâne", 4, "2-3h", 3)
-    print_scenario(8, "💎", "Le Collier de Zark", 2, "1-2h", 3)
-    print_scenario(9, "🍺", "L'Auberge du Sanglier Gris", 1, "1-2h", 3)
+    print_scenario(4, "🏰", "La Chasse aux Gobelins", 3, "1-2h", 3)
+    print_scenario(5, "🏛️", "The Sunless Citadel", 1, "2-3h", 3)
+    print_scenario(6, "🔺", "La Tombe des Rois Serpents", 2, "2h", 3)
+    print_scenario(7, "👁️", "L'Oeil de Gruumsh", 3, "2-3h", 3)
+    print_scenario(8, "💀", "La Secte du Crâne", 4, "2-3h", 3)
+    print_scenario(9, "💎", "Le Collier de Zark", 2, "1-2h", 3)
+    print_scenario(10, "🍺", "L'Auberge du Sanglier Gris", 1, "1-2h", 3)
     print()
 
     print(f"\n{Colors.YELLOW}🚀 SCÉNARIOS CRÉÉS (Qualité ⭐⭐⭐){Colors.END}")
     print()
-    print_scenario(10, "⚰️", "Cryptes de Kelemvor (nouveau)", 3, "2-3h", 3)
-    print_scenario(11, "🎭", "Le Masque Utruz (nouveau)", 2, "2-3h", 3)
-    print_scenario(12, "🏰", "Défis à Phlan (nouveau)", 1, "1-2h", 3)
+    print_scenario(11, "⚰️", "Cryptes de Kelemvor (nouveau)", 3, "2-3h", 3)
+    print_scenario(12, "🎭", "Le Masque Utruz (nouveau)", 2, "2-3h", 3)
+    print_scenario(13, "🏰", "Défis à Phlan (nouveau)", 1, "1-2h", 3)
     print()
 
     print(f"{Colors.RED}📋 SCÉNARIOS PROTOTYPES (Qualité ⭐⭐){Colors.END}")
-    print(f"     13-37. 25 scénarios enrichis automatiquement (prototypes)")
+    print(f"     14-37. 24 scénarios enrichis automatiquement (prototypes)")
     print()
 
     print("=" * 80)
@@ -94,76 +97,83 @@ def main():
                 break
 
             elif choice_num == 3:
+                print(f"\n{Colors.GREEN}🗼 Lancement de La Tour du Mage Fou...{Colors.END}")
+                from tour_mage_fou_game import TourMageFouScenario
+                scenario = TourMageFouScenario()
+                scenario.play()
+                break
+
+            elif choice_num == 4:
                 print(f"\n{Colors.GREEN}🏰 Lancement de La Chasse aux Gobelins...{Colors.END}")
                 from chasse_gobelins_refactored import ChasseGobelinsScenario
                 scenario = ChasseGobelinsScenario()
                 scenario.play()
                 break
 
-            elif choice_num == 4:
+            elif choice_num == 5:
                 print(f"\n{Colors.GREEN}🏛️ Lancement de The Sunless Citadel...{Colors.END}")
                 from yawning_portal_game import SunlessCitadelScenario
                 scenario = SunlessCitadelScenario()
                 scenario.play()
                 break
 
-            elif choice_num == 5:
+            elif choice_num == 6:
                 print(f"\n{Colors.GREEN}🔺 Lancement de La Tombe des Rois Serpents...{Colors.END}")
                 from tombe_rois_serpents_game import TombeRoisSerpentsScenario
                 scenario = TombeRoisSerpentsScenario()
                 scenario.play()
                 break
 
-            elif choice_num == 6:
+            elif choice_num == 7:
                 print(f"\n{Colors.GREEN}👁️ Lancement de L'Oeil de Gruumsh...{Colors.END}")
                 from oeil_gruumsh_game import OeilDeGruumshScenario
                 scenario = OeilDeGruumshScenario()
                 scenario.play()
                 break
 
-            elif choice_num == 7:
+            elif choice_num == 8:
                 print(f"\n{Colors.GREEN}💀 Lancement de La Secte du Crâne...{Colors.END}")
                 from secte_du_crane_game import SecteDuCraneScenario
                 scenario = SecteDuCraneScenario()
                 scenario.play()
                 break
 
-            elif choice_num == 8:
+            elif choice_num == 9:
                 print(f"\n{Colors.GREEN}💎 Lancement du Collier de Zark...{Colors.END}")
                 from collier_de_zark_game import CollierDeZarkScenario
                 scenario = CollierDeZarkScenario()
                 scenario.play()
                 break
 
-            elif choice_num == 9:
+            elif choice_num == 10:
                 print(f"\n{Colors.GREEN}🍺 Lancement de L'Auberge du Sanglier Gris...{Colors.END}")
                 from auberge_sanglier_gris_game import AubergeSanglierGrisScenario
                 scenario = AubergeSanglierGrisScenario()
                 scenario.play()
                 break
 
-            elif choice_num == 10:
+            elif choice_num == 11:
                 print(f"\n{Colors.GREEN}⚰️ Lancement de Cryptes de Kelemvor...{Colors.END}")
                 from cryptes_de_kelemvor_game import CryptesDeKelemvorScenario
                 scenario = CryptesDeKelemvorScenario()
                 scenario.play()
                 break
 
-            elif choice_num == 11:
+            elif choice_num == 12:
                 print(f"\n{Colors.GREEN}🎭 Lancement du Masque Utruz...{Colors.END}")
                 from masque_utruz_game import MasqueUtruzScenario
                 scenario = MasqueUtruzScenario()
                 scenario.play()
                 break
 
-            elif choice_num == 12:
+            elif choice_num == 13:
                 print(f"\n{Colors.GREEN}🏰 Lancement de Défis à Phlan...{Colors.END}")
                 from defis_a_phlan_game import DefisAPlanScenario
                 scenario = DefisAPlanScenario()
                 scenario.play()
                 break
 
-            elif 13 <= choice_num <= 37:
+            elif 14 <= choice_num <= 37:
                 print(f"\n{Colors.YELLOW}⚠️  Scénarios prototypes (enrichissement automatique){Colors.END}")
                 print(f"Ces scénarios sont des prototypes et nécessitent un enrichissement manuel.")
                 print(f"Utilisez plutôt les scénarios enrichis manuellement (1-2) pour une meilleure expérience.")
