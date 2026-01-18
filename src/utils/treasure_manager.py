@@ -3,6 +3,7 @@ Système de gestion des trésors pour les scénarios DnD 5e
 Permet de générer et distribuer des trésors au groupe
 """
 from typing import List, Dict, Optional, Tuple
+from dataclasses import dataclass
 from random import choice, randint
 from dnd_5e_core.entities import Character
 from dnd_5e_core.data import load_weapon, load_armor
