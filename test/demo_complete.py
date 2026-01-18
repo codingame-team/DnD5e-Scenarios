@@ -6,6 +6,7 @@ Démonstration complète et automatique de toutes les fonctionnalités:
 - Système de conditions
 - Menu de gestion de personnage
 """
+from dnd_5e_core import AbilityType
 from dnd_5e_core.data.loaders import simple_character_generator
 from dnd_5e_core.data import load_monster
 from dnd_5e_core.combat import CombatSystem, create_restrained_condition, create_poisoned_condition
@@ -127,7 +128,7 @@ def demo_full_integration():
 
         # Appliquer condition au fighter
         print(f"\n🕸️ L'araignée entoile {fighter.name}!")
-        restrained = create_restrained_condition(creature=spider, save_dc=11)
+        restrained = create_restrained_condition(creature=spider, dc_value=11, dc_type=AbilityType.STR)
         restrained.apply_to_character(fighter)
 
         print(f"   🔴 {fighter.name} est RETENU!")

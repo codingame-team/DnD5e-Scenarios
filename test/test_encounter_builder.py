@@ -1,6 +1,7 @@
 """
 Test du système de rencontre D&D 5e avec un groupe d'aventuriers (4-6 personnages)
 Utilise encounter_builder.py pour générer des rencontres équilibrées
+AMÉLIORÉ: Gestion des conditions appliquées par les monstres et adaptation des actions
 """
 from dnd_5e_core import load_monster
 from dnd_5e_core.data.loaders import simple_character_generator
@@ -14,6 +15,129 @@ from dnd_5e_core.mechanics.encounter_builder import (
 )
 from dnd_5e_core.mechanics.gold_rewards import get_encounter_gold
 from random import randint, choice
+
+
+# =============================================================================
+# FONCTIONS HELPER POUR LA GESTION DES CONDITIONS
+# =============================================================================
+
+def display_conditions(creature):
+    """Affiche les conditions actives d'une créature"""
+    if hasattr(creature, 'conditions') and creature.conditions:
+        conditions_str = ", ".join([c.name for c in creature.conditions])
+        return f"🔴 [{conditions_str}]"
+    return ""
+
+
+def check_condition_effects(character):
+    """
+    Vérifie les effets des conditions sur un personnage
+
+    Returns:
+        dict avec les informations sur les limitations
+    """
+    effects = {
+        'can_move': True,
+        'has_disadvantage': False,
+        'is_incapacitated': False,
+        'attacks_have_advantage': False,  # Les attaques contre ce personnage
+        'speed_zero': False,
+        'auto_fail_saves': [],  # Types de jets de sauvegarde automatiquement ratés
+        'conditions_list': []
+    }
+
+    if not hasattr(character, 'conditions') or not character.conditions:
+        return effects
+
+    for condition in character.conditions:
+        condition_name = condition.name.lower()
+        effects['conditions_list'].append(condition.name)
+
+        if condition_name == 'restrained':
+            effects['speed_zero'] = True
+            effects['has_disadvantage'] = True
+            effects['attacks_have_advantage'] = True
+
+        elif condition_name == 'grappled':
+            effects['speed_zero'] = True
+
+        elif condition_name == 'paralyzed':
+            effects['is_incapacitated'] = True
+            effects['auto_fail_saves'] = ['str', 'dex']
+            effects['attacks_have_advantage'] = True
+
+        elif condition_name == 'stunned':
+            effects['is_incapacitated'] = True
+            effects['auto_fail_saves'] = ['str', 'dex']
+            effects['attacks_have_advantage'] = True
+
+        elif condition_name == 'incapacitated':
+            effects['is_incapacitated'] = True
+
+        elif condition_name == 'poisoned':
+            effects['has_disadvantage'] = True
+
+        elif condition_name == 'frightened':
+            effects['has_disadvantage'] = True
+
+        elif condition_name == 'blinded':
+            effects['has_disadvantage'] = True
+            effects['attacks_have_advantage'] = True
+
+        elif condition_name == 'prone':
+            effects['has_disadvantage'] = True
+            effects['attacks_have_advantage'] = True
+
+    return effects
+
+
+def attempt_escape_conditions(character, verbose=True):
+    """
+    Tente d'échapper aux conditions actives
+
+    Returns:
+        list: Liste des conditions dont le personnage s'est libéré
+    """
+    escaped = []
+
+    if not hasattr(character, 'conditions') or not character.conditions:
+        return escaped
+
+    for condition in character.conditions[:]:  # Copie pour modification
+        if condition.dc_type and condition.dc_value:
+            if verbose:
+                print(f"   🎲 {character.name} tente de se libérer de {condition.name} (DC {condition.dc_value} {condition.dc_type.value})...")
+
+            if condition.attempt_save(character):
+                if verbose:
+                    print(f"      ✅ Réussi! {character.name} se libère de {condition.name}")
+                escaped.append(condition.name)
+            else:
+                if verbose:
+                    print(f"      ❌ Échoué! {character.name} reste {condition.name}")
+
+    return escaped
+
+
+def display_character_status(character, show_conditions=True):
+    """Affiche le statut complet d'un personnage"""
+    hp_percent = (character.hit_points / character.max_hit_points) * 100 if character.max_hit_points > 0 else 0
+
+    status_icon = "❤️" if hp_percent > 75 else "💛" if hp_percent > 50 else "🧡" if hp_percent > 25 else "💔"
+
+    status = f"{status_icon} {character.name}: {character.hit_points}/{character.max_hit_points} HP"
+
+    if show_conditions:
+        cond_str = display_conditions(character)
+        if cond_str:
+            status += f" {cond_str}"
+
+    return status
+
+
+# =============================================================================
+# DÉBUT DU SCRIPT PRINCIPAL
+# =============================================================================
 
 print("="*80)
 print("🎲 TEST DU SYSTÈME DE RENCONTRE D&D 5E")
@@ -220,10 +344,31 @@ max_rounds = 20
 
 while alive_chars and alive_monsters and round_num <= max_rounds:
     print(f"\n{'='*80}")
-    print(f"ROUND {round_num}")
+    print(f"🎲 ROUND {round_num}")
     print(f"{'='*80}")
 
+    # Afficher le statut au début du round
+    print(f"\n📊 Statut du groupe:")
+    for char in alive_chars:
+        print(f"   {display_character_status(char)}")
+
+    print(f"\n👹 Statut des ennemis:")
+    enemy_summary = {}
+    for monster in alive_monsters:
+        name = monster.name
+        if name not in enemy_summary:
+            enemy_summary[name] = {'count': 0, 'total_hp': 0, 'max_hp': 0}
+        enemy_summary[name]['count'] += 1
+        enemy_summary[name]['total_hp'] += monster.hit_points
+        enemy_summary[name]['max_hp'] += monster.max_hit_points if hasattr(monster, 'max_hit_points') else monster.hit_points
+
+    for name, stats in enemy_summary.items():
+        print(f"   • {stats['count']}x {name}: {stats['total_hp']}/{stats['max_hp']} HP total")
+
     # Tours des personnages
+    print(f"\n⚔️ PHASE DES AVENTURIERS")
+    print("-" * 80)
+
     for char in alive_chars[:]:
         if not alive_monsters:
             break
@@ -232,6 +377,45 @@ while alive_chars and alive_monsters and round_num <= max_rounds:
                 alive_chars.remove(char)
             continue
 
+        print(f"\n🎯 Tour de {char.name}")
+
+        # Vérifier les conditions
+        effects = check_condition_effects(char)
+
+        if effects['conditions_list']:
+            print(f"   🔴 Conditions actives: {', '.join(effects['conditions_list'])}")
+
+        # Si incapacité, pas d'action
+        if effects['is_incapacitated']:
+            print(f"   ⚠️  {char.name} est incapable d'agir (Incapacitated/Paralyzed/Stunned)")
+
+            # Tenter de se libérer
+            escaped = attempt_escape_conditions(char, verbose=True)
+            if escaped:
+                # Recalculer les effets
+                effects = check_condition_effects(char)
+                if not effects['is_incapacitated']:
+                    print(f"   ✅ {char.name} peut maintenant agir!")
+                else:
+                    continue
+            else:
+                continue
+
+        # Tenter de se libérer des conditions au début du tour
+        if effects['conditions_list']:
+            escaped = attempt_escape_conditions(char, verbose=True)
+            if escaped:
+                # Recalculer les effets après libération
+                effects = check_condition_effects(char)
+
+        # Action normale avec effets de conditions
+        if effects['has_disadvantage']:
+            print(f"   ⚠️  Désavantage aux attaques (conditions actives)")
+
+        if effects['speed_zero']:
+            print(f"   ⚠️  Vitesse = 0, ne peut pas se déplacer")
+
+        # Effectuer l'action de combat
         combat.character_turn(
             character=char,
             alive_chars=alive_chars,
@@ -240,6 +424,9 @@ while alive_chars and alive_monsters and round_num <= max_rounds:
         )
 
     # Tours des monstres
+    print(f"\n👹 PHASE DES MONSTRES")
+    print("-" * 80)
+
     for monster in alive_monsters[:]:
         if not alive_chars:
             break
@@ -247,6 +434,18 @@ while alive_chars and alive_monsters and round_num <= max_rounds:
             if monster in alive_monsters:
                 alive_monsters.remove(monster)
             continue
+
+        print(f"\n🐉 Tour de {monster.name}")
+
+        # Vérifier les conditions des personnages pour cibler intelligemment
+        # Préférer attaquer les personnages avec des conditions (advantage)
+        targets_with_advantage = [
+            c for c in alive_chars
+            if check_condition_effects(c)['attacks_have_advantage']
+        ]
+
+        if targets_with_advantage:
+            print(f"   🎯 Cibles avec advantage détectées: {', '.join([c.name for c in targets_with_advantage])}")
 
         combat.monster_turn(
             monster=monster,
@@ -256,7 +455,20 @@ while alive_chars and alive_monsters and round_num <= max_rounds:
             round_num=round_num
         )
 
+        # Afficher les conditions appliquées
+        for char in alive_chars:
+            if hasattr(char, 'conditions') and char.conditions:
+                # Vérifier si de nouvelles conditions ont été ajoutées
+                cond_str = display_conditions(char)
+                if cond_str and "applied this turn" not in str(char):
+                    print(f"      {cond_str} appliquées à {char.name}")
+
     round_num += 1
+
+    # Pause visuelle entre les rounds
+    if round_num <= max_rounds and alive_chars and alive_monsters:
+        input(f"\n⏸️  Appuyez sur ENTRÉE pour continuer au Round {round_num}...")
+
 
 # =============================================================================
 # RÉSULTATS
