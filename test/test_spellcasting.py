@@ -170,11 +170,13 @@ if alive_chars:
     print(f"✅ VICTORY!")
     print(f"\n{wizard.name}'s Status:")
     print(f"   HP: {wizard.hit_points}/{wizard.max_hit_points}")
-    if hasattr(wizard, 'sc'):
+    if hasattr(wizard, 'sc') and wizard.sc is not None:
         print(f"   Spell Slots Before: [4, 3, 2, 0, 0]")
         print(f"   Spell Slots After:  {wizard.sc.spell_slots[1:6]}")
         slots_used = (4 - wizard.sc.spell_slots[1]) + (3 - wizard.sc.spell_slots[2]) + (2 - wizard.sc.spell_slots[3])
         print(f"   ✨ Total Spells Cast: {slots_used}")
+    else:
+        print(f"   ⚠️ Spellcasting information not available")
 else:
     print(f"❌ DEFEAT!")
 
