@@ -370,6 +370,10 @@ class BaseScenario(ABC):
         weapons, armors, equipments, potions = self._load_equipment()
         print(f"  Armes: {len(weapons)}, Armures: {len(armors)}, Équipements: {len(equipments)}, Potions: {len(potions)}")
 
+        # 3.6 🆕 Créer magic items comme trésors potentiels
+        print(f"\n✨ Préparation des trésors magiques...")
+        magic_items = self._create_magic_items_treasure()
+
         # 4. Préparer le contexte de jeu
         game_context = {
             'party': self.party,
@@ -383,6 +387,7 @@ class BaseScenario(ABC):
             'armors': armors,          # 🆕
             'equipments': equipments,  # 🆕
             'potions': potions,        # 🆕
+            'magic_items': magic_items,  # 🆕 NEW: Magic items treasures
             'scenario': self           # 🆕 Pour permettre la sauvegarde depuis les scènes
         }
 
@@ -831,3 +836,45 @@ class BaseScenario(ABC):
             print(f"  ℹ️  Combat fonctionnera avec équipements par défaut")
 
         return weapons, armors, equipments, potions
+
+    def _create_magic_items_treasure(self):
+        """
+        Créer des magic items comme trésors pour le scénario
+
+        Returns:
+            list: Liste de magic items
+        """
+        magic_items = []
+
+        try:
+            from dnd_5e_core.equipment import (
+                create_ring_of_protection,
+                create_cloak_of_protection,
+                create_wand_of_magic_missiles,
+                create_staff_of_healing,
+                create_bracers_of_defense,
+                HealingPotion,
+                PotionRarity
+            )
+
+            # Potions communes (3-5 par scénario)
+            for _ in range(3):
+                magic_items.append(HealingPotion(
+                    name="Potion of Healing",
+                    rarity=PotionRarity.COMMON,
+                    description="Restores 2d4+2 hit points"
+                ))
+
+            # 1-2 magic items rares selon la difficulté du scénario
+            # Les scénarios peuvent overrider cette méthode pour personnaliser
+            magic_items.append(create_ring_of_protection())
+
+            print(f"  ✨ Magic Items créés: {len(magic_items)}")
+            for item in magic_items:
+                print(f"     - {item.name} ({item.rarity.value})")
+
+        except Exception as e:
+            print(f"  ⚠️  Erreur création magic items: {e}")
+
+        return magic_items
+

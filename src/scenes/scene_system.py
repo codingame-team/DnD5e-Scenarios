@@ -223,7 +223,14 @@ class CombatScene(BaseScene):
         # Afficher info combat
         print(f"\n⚔️  Votre groupe:")
         for char in alive_chars:
-            print(f"  - {char.name}: {char.hit_points}/{char.max_hit_points} HP")
+            status = f"  - {char.name}: {char.hit_points}/{char.max_hit_points} HP"
+
+            # 🆕 Afficher conditions si présentes
+            if hasattr(char, 'conditions') and char.conditions:
+                conditions_names = [c.name if hasattr(c, 'name') else str(c) for c in char.conditions]
+                status += f" ⚠️ [{', '.join(conditions_names)}]"
+
+            print(status)
 
         print(f"\n👹 Ennemis:")
         for monster in alive_monsters:
@@ -459,6 +466,86 @@ class MerchantScene(BaseScene):
             else:
                 shopping = False
 
+        self.on_exit(game_context)
+        return SceneResult.CONTINUE
+
+
+class TreasureScene(BaseScene):
+    """
+    Scène de découverte de trésor
+    Peut contenir de l'or, des items normaux et des magic items
+    """
+
+    def __init__(self, scene_id: str, title: str,
+                 gold: int = 0,
+                 items: list = None,
+                 magic_items_count: int = 0,
+                 description: str = None,
+                 next_scene_id: str = None):
+        super().__init__(scene_id, title)
+        self.gold = gold
+        self.items = items or []
+        self.magic_items_count = magic_items_count
+        self.description = description or "Vous découvrez un trésor!"
+        self.next_scene_id = next_scene_id
+
+    def execute(self, game_context: Dict) -> SceneResult:
+        self.on_enter(game_context)
+
+        party = game_context['party']
+        renderer = game_context['renderer']
+
+        # Afficher description
+        renderer.print_slow(self.description)
+
+        # Distribuer l'or
+        if self.gold > 0:
+            gold_per_char = self.gold // len(party)
+            print(f"\n💰 Vous trouvez {self.gold} pièces d'or!")
+            print(f"   Chaque membre reçoit {gold_per_char} po")
+
+            for char in party:
+                if hasattr(char, 'gold'):
+                    char.gold += gold_per_char
+
+        # Distribuer items normaux
+        if self.items:
+            print(f"\n📦 Items trouvés:")
+            for i, item_name in enumerate(self.items):
+                recipient = party[i % len(party)]
+                print(f"   - {item_name} → {recipient.name}")
+                # Ajouter à l'inventaire si la structure le permet
+                if hasattr(recipient, 'inventory_items'):
+                    # TODO: Créer l'objet depuis son nom
+                    pass
+
+        # Distribuer magic items
+        if self.magic_items_count > 0 and 'magic_items' in game_context:
+            available_magic_items = game_context['magic_items']
+
+            if available_magic_items:
+                print(f"\n✨ Magic Items trouvés:")
+
+                # Distribuer les premiers magic items disponibles
+                distributed = 0
+                for idx in range(min(self.magic_items_count, len(available_magic_items))):
+                    magic_item = available_magic_items[idx]
+                    recipient = party[distributed % len(party)]
+
+                    print(f"   🌟 {magic_item.name} ({magic_item.rarity.value}) → {recipient.name}")
+
+                    # Ajouter au Character
+                    if not hasattr(recipient, 'inventory'):
+                        recipient.inventory = []
+                    if not hasattr(recipient, 'inventory_items'):
+                        recipient.inventory_items = []
+
+                    recipient.inventory_items.append(magic_item)
+                    distributed += 1
+
+                print(f"\n   {distributed} magic item(s) distribué(s)")
+
+        renderer.wait_for_input()
         self.on_exit(game_context)
         return SceneResult.CONTINUE
 

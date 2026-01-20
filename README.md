@@ -4,6 +4,7 @@ Collection de scénarios D&D 5e enrichis et prêts à jouer, basés sur les règ
 
 ![D&D 5e](https://img.shields.io/badge/D&D-5e-red)
 ![Python](https://img.shields.io/badge/Python-3.12+-blue)
+![dnd-5e-core](https://img.shields.io/badge/dnd--5e--core-0.4.0-green)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
@@ -15,7 +16,15 @@ Ce projet propose une **collection de 36 scénarios D&D 5e en français**, dont 
 - **9 scénarios originaux** (⭐⭐⭐) - Créés avec soin
 - **25 scénarios prototypes** (⭐⭐) - Enrichis automatiquement
 
-Les scénarios utilisent le système de jeu du package **[dnd-5e-core](https://pypi.org/project/dnd-5e-core/)** pour gérer les règles D&D 5e.
+Les scénarios utilisent le système de jeu du package **[dnd-5e-core v0.4.0](https://pypi.org/project/dnd-5e-core/)** pour gérer les règles D&D 5e.
+
+### 🆕 Nouvelles Fonctionnalités (v0.4.0)
+
+- ✨ **ClassAbilities & RacialTraits** - Appliqués automatiquement aux personnages
+- ⚡ **Conditions System** - Poisoned, Restrained, Paralyzed, etc. (affichage en combat)
+- 🎁 **Magic Items** - 10+ items magiques prédéfinis (Ring of Protection, Wand of Magic Missiles, etc.)
+- 🎭 **Multiclassing** - Support complet du multiclassing
+- 🎒 **Inventaire Amélioré** - Trésors et magic items intégrés aux inventaires
 
 ---
 
