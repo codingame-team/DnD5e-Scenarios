@@ -1,0 +1,9 @@
+# Dependencies for DnD 5e Scenarios
+# Core D&D package
+dnd-5e-core>=0.1.0
+
+# PDF Reading
+PyMuPDF>=1.26.0
+
+# Optional: ncurses interface (if needed)
+# windows-curses>=2.3.0  # For Windows only
