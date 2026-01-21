@@ -23,7 +23,7 @@ class SaveGameManager:
         return self.save_dir / "current"
 
     def save_game(self, scenario_name: str, party: List, game_state: Dict,
-                  scene_id: str, slot_name: str = "autosave") -> bool:
+                  scene_id: str, slot_name: str = "autosave", silent: bool = False) -> bool:
         """
         Sauvegarder une partie
 
@@ -33,6 +33,7 @@ class SaveGameManager:
             game_state: État du jeu
             scene_id: ID de la scène actuelle
             slot_name: Nom du slot de sauvegarde
+            silent: Si True, ne pas afficher de message
 
         Returns:
             True si succès
@@ -56,11 +57,13 @@ class SaveGameManager:
             with open(party_file, 'wb') as f:
                 pickle.dump(party, f)
 
-            print(f"✅ Partie sauvegardée: {slot_name}")
+            if not silent:
+                print(f"✅ Partie sauvegardée: {slot_name}")
             return True
 
         except Exception as e:
-            print(f"❌ Erreur sauvegarde: {e}")
+            if not silent:
+                print(f"❌ Erreur sauvegarde: {e}")
             return False
 
     def load_game(self, slot_name: str = "autosave") -> Optional[Dict]:

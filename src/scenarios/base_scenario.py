@@ -17,6 +17,7 @@ from ..scenes.scene_system import SceneManager
 from ..rendering.renderer import create_renderer, Renderer
 from ..systems.spellcasting_v2 import SpellcastingManager
 from ..systems.merchant import MerchantSystem
+from ..config import GameSettings
 
 
 class BaseScenario(ABC):
@@ -37,9 +38,15 @@ class BaseScenario(ABC):
 
         # Systèmes de jeu
         self.renderer = create_renderer(use_ncurses)
-        # 🔧 Utiliser EnhancedCombatSystem pour calculer correctement les dommages
-        from ..systems.enhanced_combat import EnhancedCombatSystem
-        self.combat_system = EnhancedCombatSystem(verbose=True)
+        
+        # 🔧 Choisir le système de combat selon la config
+        combat_system_type = GameSettings.get_combat_system()
+        if combat_system_type == 'enhanced':
+            from ..systems.enhanced_combat import EnhancedCombatSystem
+            self.combat_system = EnhancedCombatSystem(verbose=True)
+        else:
+            # Utiliser dnd_5e_core par défaut
+            self.combat_system = CombatSystem(verbose=True)
         self.spellcasting = SpellcastingManager()
         self.merchant_system = MerchantSystem()
         self.scene_manager = SceneManager()
@@ -313,6 +320,14 @@ class BaseScenario(ABC):
         self.renderer.print_header("⚔️ CRÉATION DU GROUPE")
 
         self.party = self.create_party()
+        
+        # Initialiser inventaires avec slots vides (20 slots par défaut)
+        for char in self.party:
+            if not char.inventory:
+                char.inventory = []
+            # Ajouter slots vides pour permettre le loot
+            while len(char.inventory) < 20:
+                char.inventory.append(None)
 
         print(f"\n👥 Groupe créé ({len(self.party)} membres):")
         for char in self.party:
@@ -320,6 +335,18 @@ class BaseScenario(ABC):
             print(f"  - {char.name} ({class_name} niveau {char.level})")
             print(f"    HP: {char.hit_points}/{char.max_hit_points}, "
                   f"CA: {char.armor_class}")
+            
+            # Afficher sorts si lanceur de sorts
+            if hasattr(char, 'sc') and char.sc and hasattr(char.sc, 'spells') and char.sc.spells:
+                spell_names = ', '.join([s.name for s in char.sc.spells[:3]])
+                more = f" (+{len(char.sc.spells)-3} autres)" if len(char.sc.spells) > 3 else ""
+                print(f"    📜 Sorts: {spell_names}{more}")
+        
+        # 🆕 Équiper le groupe avec équipement de base
+        self._equip_party_with_starter_gear()
+        
+        # 🆕 Initialiser les sorts pour les lanceurs de sorts
+        self._init_spellcasters()
 
         self.renderer.wait_for_input()
 
@@ -357,7 +384,7 @@ class BaseScenario(ABC):
         self.renderer.wait_for_input()
 
         # 1. Charger le PDF
-        self.load_scenario_from_pdf()
+        # self.load_scenario_from_pdf()
 
         # 2. Créer le groupe
         self.setup_party()
@@ -427,6 +454,35 @@ class BaseScenario(ABC):
                 print(f"   {status} {char.name}: {char.hit_points}/{char.max_hit_points} HP ({hp_percent}%)")
             else:
                 print(f"   ❌ {char.name}: KO")
+
+        # Inventaires finaux
+        print("\n📦 INVENTAIRES FINAUX:")
+        for char in self.party:
+            print(f"\n👤 {char.name}:")
+            print(f"   💰 Or: {char.gold} po")
+            
+            # Sorts
+            if hasattr(char, 'sc') and char.sc and hasattr(char.sc, 'spells') and char.sc.spells:
+                print(f"   📜 Sorts ({len(char.sc.spells)}):")
+                for spell in char.sc.spells:
+                    print(f"      - {spell.name} (niveau {spell.level})")
+            
+            # Inventaire
+            if hasattr(char, 'inventory') and char.inventory:
+                equipped = [item for item in char.inventory if item and hasattr(item, 'equipped') and item.equipped]
+                other = [item for item in char.inventory if item and not (hasattr(item, 'equipped') and item.equipped)]
+                
+                if equipped:
+                    print(f"   ⚔️  Équipé:")
+                    for item in equipped:
+                        print(f"      - {item.name}")
+                
+                if other:
+                    print(f"   🎒 Inventaire ({len(other)} objets):")
+                    for item in other:
+                        print(f"      - {item.name}")
+            else:
+                print(f"   📦 Inventaire vide")
 
         # Score final
         score = self._calculate_score()
@@ -561,14 +617,23 @@ class BaseScenario(ABC):
 
     # 🆕 NOUVELLES MÉTHODES
 
-    def save_game(self, slot_name: str = "autosave") -> bool:
+    def save_game(self, slot_name: str = "autosave", silent: bool = False) -> bool:
         """Sauvegarder la partie en cours"""
+        # Auto-save si activé
+        if slot_name == "autosave" and not GameSettings.is_auto_save_enabled():
+            return False
+        
+        # Mode silencieux pour les sauvegardes automatiques
+        if slot_name == "autosave":
+            silent = True
+        
         return self.save_manager.save_game(
             scenario_name=self.get_scenario_name(),
             party=self.party,
             game_state=self.game_state,
             scene_id=self.scene_manager.current_scene_id,
-            slot_name=slot_name
+            slot_name=slot_name,
+            silent=silent
         )
 
     def load_game(self, slot_name: str = "autosave") -> bool:
@@ -862,7 +927,10 @@ class BaseScenario(ABC):
                 magic_items.append(HealingPotion(
                     name="Potion of Healing",
                     rarity=PotionRarity.COMMON,
-                    description="Restores 2d4+2 hit points"
+                    hit_dice="2d4",
+                    bonus=2,
+                    min_cost=50,
+                    max_cost=50
                 ))
 
             # 1-2 magic items rares selon la difficulté du scénario
@@ -878,3 +946,114 @@ class BaseScenario(ABC):
 
         return magic_items
 
+    def _equip_party_with_starter_gear(self):
+        """
+        Équiper le groupe avec un équipement de base
+        Armes et armures selon la classe (comme main_ncurses.py)
+        """
+        from dnd_5e_core.data import load_weapon, load_armor
+        
+        print(f"\n🎽 Équipement de départ...")
+        
+        for char in self.party:
+            class_name = char.class_type.index if char.class_type else 'fighter'
+            
+            # Armes selon la classe
+            weapon = None
+            if class_name in ['fighter', 'paladin', 'barbarian', 'ranger']:
+                weapon = load_weapon('longsword')
+                weapon_name = "Longsword (1d8)"
+            elif class_name in ['rogue', 'monk']:
+                weapon = load_weapon('shortsword')
+                weapon_name = "Shortsword (1d6)"
+            elif class_name in ['cleric', 'druid']:
+                weapon = load_weapon('mace')
+                weapon_name = "Mace (1d6)"
+            else:  # wizard, sorcerer, warlock, bard
+                weapon = load_weapon('dagger')
+                weapon_name = "Dagger (1d4)"
+            
+            if weapon:
+                char.inventory.append(weapon)
+                char.equip(weapon)
+                print(f"  ⚔️  {char.name}: {weapon_name}")
+            
+            # Armures selon la classe
+            armor = None
+            if class_name in ['fighter', 'paladin']:
+                armor = load_armor('chain-mail')
+                armor_name = "Chain Mail (CA 16)"
+            elif class_name in ['cleric', 'barbarian', 'ranger']:
+                armor = load_armor('scale-mail')
+                armor_name = "Scale Mail (CA 14+DEX)"
+            elif class_name in ['rogue', 'bard', 'warlock']:
+                armor = load_armor('leather-armor')
+                armor_name = "Leather Armor (CA 11+DEX)"
+            else:
+                armor_name = None
+            
+            if armor:
+                char.inventory.append(armor)
+                char.equip(armor)
+                print(f"  🛡️  {char.name}: {armor_name}")
+
+    def _init_spellcasters(self):
+        """
+        Initialiser les sorts pour les personnages lanceurs de sorts
+        """
+        from dnd_5e_core.data import load_spell
+        
+        print(f"\n✨ Initialisation des sorts...")
+        
+        # Sorts par classe
+        spells_by_class = {
+            'cleric': ['cure-wounds', 'bless', 'guiding-bolt', 'sacred-flame', 'light'],
+            'wizard': ['magic-missile', 'shield', 'mage-armor', 'fire-bolt', 'ray-of-frost'],
+            'druid': ['cure-wounds', 'entangle', 'goodberry', 'produce-flame', 'shillelagh'],
+            'warlock': ['eldritch-blast', 'hex', 'armor-of-agathys', 'hellish-rebuke'],
+            'sorcerer': ['magic-missile', 'shield', 'chromatic-orb', 'fire-bolt', 'ray-of-frost'],
+            'bard': ['cure-wounds', 'healing-word', 'thunderwave', 'vicious-mockery'],
+            'paladin': ['cure-wounds', 'bless', 'divine-favor', 'shield-of-faith']
+        }
+        
+        for char in self.party:
+            if not char.class_type:
+                print(f"  ⚠️  {char.name}: pas de classe")
+                continue
+            
+            class_name = char.class_type.index
+            can_cast = getattr(char.class_type, 'can_cast', False)
+            has_sc = hasattr(char, 'sc') and char.sc
+            
+            print(f"  🔍 {char.name}: class={class_name}, can_cast={can_cast}, has_sc={has_sc}")
+            
+            if not can_cast or class_name not in spells_by_class:
+                continue
+            
+            # Initialiser sc si nécessaire
+            if not has_sc:
+                from ..core.adapters import CharacterExtensions
+                CharacterExtensions.init_spell_slots(char)
+                print(f"  ✅ {char.name}: sc initialisé")
+            
+            # Charger et ajouter les sorts
+            spell_names = spells_by_class[class_name]
+            spells_added = []
+            
+            print(f"  📜 Chargement de {len(spell_names)} sorts pour {char.name}...")
+            
+            for spell_name in spell_names:
+                try:
+                    spell = load_spell(spell_name)
+                    if spell:
+                        if not hasattr(char, 'sc') or not char.sc:
+                            continue
+                        char.sc.spells.append(spell)
+                        spells_added.append(spell.name)
+                        print(f"    ✅ {spell.name}")
+                except Exception as e:
+                    print(f"    ⚠️  Erreur {spell_name}: {e}")
+                    continue
+            
+            if spells_added:
+                print(f"  ✅ {char.name}: {len(spells_added)} sorts chargés")

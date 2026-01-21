@@ -6,6 +6,7 @@ Permet de changer facilement le mode d'affichage (console, ncurses, etc.)
 from abc import ABC, abstractmethod
 from typing import List
 import time
+import os
 
 
 class Renderer(ABC):
@@ -51,10 +52,18 @@ class ConsoleRenderer(Renderer):
 
     def print_slow(self, text: str, delay: float = 0.02):
         """Effet machine à écrire"""
-        for char in text:
-            print(char, end='', flush=True)
-            time.sleep(delay)
-        print()
+        # Lire la vitesse depuis la config
+        from ..config import GameSettings
+        delay = GameSettings.get_text_speed()
+        
+        if delay == 0:
+            # Mode instantané
+            print(text)
+        else:
+            for char in text:
+                print(char, end='', flush=True)
+                time.sleep(delay)
+            print()
 
     def wait_for_input(self, prompt: str = "\n[Appuyez sur ENTRÉE pour continuer]"):
         """Pause"""

@@ -5,6 +5,7 @@ Permet de choisir et lancer facilement n'importe quel scénario
 """
 
 import sys
+import os
 from pathlib import Path
 
 # Couleurs pour le terminal
@@ -33,8 +34,102 @@ def print_scenario(num, emoji, name, level, duration, quality):
     print(f"     Niveau {level} | {duration} | {quality_stars}")
 
 
+class GameConfig:
+    """Configuration globale du jeu"""
+    def __init__(self):
+        self.text_speed = 'instant'  # 'slow', 'normal', 'fast', 'instant'
+        self.auto_save = True
+        self.combat_system = 'dnd_5e_core'  # 'dnd_5e_core' ou 'enhanced'
+    
+    def apply_to_env(self):
+        """Appliquer la config aux variables d'environnement"""
+        os.environ['DND_TEXT_SPEED'] = self.text_speed
+        os.environ['DND_AUTO_SAVE'] = 'true' if self.auto_save else 'false'
+        os.environ['DND_COMBAT_SYSTEM'] = self.combat_system
+
+
+def show_settings_menu(config):
+    """Afficher le menu de paramètres"""
+    while True:
+        print_header("⚙️ PARAMÈTRES")
+        
+        # Vitesse de texte
+        speed_display = {
+            'slow': '🐢 Lent',
+            'normal': '🚶 Normal',
+            'fast': '🏃 Rapide',
+            'instant': '⚡ Instantané'
+        }[config.text_speed]
+        
+        # Sauvegardes
+        save_display = '✅ Automatiques' if config.auto_save else '🎮 Interactives'
+        
+        # Système de combat
+        combat_display = {
+            'dnd_5e_core': '📦 dnd-5e-core (Recommandé)',
+            'enhanced': '⚔️ Enhanced Combat (Legacy)'
+        }[config.combat_system]
+        
+        print(f"1. Vitesse de texte: {Colors.BOLD}{speed_display}{Colors.END}")
+        print(f"2. Sauvegardes: {Colors.BOLD}{save_display}{Colors.END}")
+        print(f"3. Système de combat: {Colors.BOLD}{combat_display}{Colors.END}")
+        print(f"\n0. {Colors.GREEN}Retour au menu principal{Colors.END}")
+        
+        choice = input(f"\n{Colors.BOLD}Choisir un paramètre (0-3): {Colors.END}").strip()
+        
+        if choice == '0':
+            break
+        elif choice == '1':
+            print(f"\n{Colors.CYAN}Vitesse de texte:{Colors.END}")
+            print("1. 🐢 Lent (immersif)")
+            print("2. 🚶 Normal (équilibré)")
+            print("3. 🏃 Rapide")
+            print("4. ⚡ Instantané (pas d'attente)")
+            speed_choice = input("Choix: ").strip()
+            speed_map = {'1': 'slow', '2': 'normal', '3': 'fast', '4': 'instant'}
+            if speed_choice in speed_map:
+                config.text_speed = speed_map[speed_choice]
+                print(f"{Colors.GREEN}✅ Vitesse changée{Colors.END}")
+        
+        elif choice == '2':
+            config.auto_save = not config.auto_save
+            mode = 'automatiques' if config.auto_save else 'interactives'
+            print(f"{Colors.GREEN}✅ Sauvegardes {mode}{Colors.END}")
+        
+        elif choice == '3':
+            print(f"\n{Colors.CYAN}Système de combat:{Colors.END}")
+            print("1. 📦 dnd-5e-core (Recommandé, complet)")
+            print("2. ⚔️ Enhanced Combat (Legacy, simple)")
+            combat_choice = input("Choix: ").strip()
+            if combat_choice == '1':
+                config.combat_system = 'dnd_5e_core'
+                print(f"{Colors.GREEN}✅ Système dnd-5e-core activé{Colors.END}")
+            elif combat_choice == '2':
+                config.combat_system = 'enhanced'
+                print(f"{Colors.GREEN}✅ Système Enhanced Combat activé{Colors.END}")
+        
+        input("\nAppuyez sur ENTER pour continuer...")
+
+
 def main():
+    # Initialiser la configuration
+    config = GameConfig()
+    config.apply_to_env()  # Appliquer immédiatement
+    
     print_header("🎲 LAUNCHER DE SCÉNARIOS D&D 5e 🎲")
+    
+    # Afficher les paramètres actifs
+    speed_display = {
+        'slow': '🐢 Lent',
+        'normal': '🚶 Normal',
+        'fast': '🏃 Rapide',
+        'instant': '⚡ Instantané'
+    }[config.text_speed]
+    save_display = '✅ Auto' if config.auto_save else '🎮 Manuel'
+    combat_display = '📦 Core' if config.combat_system == 'dnd_5e_core' else '⚔️ Legacy'
+    
+    print(f"{Colors.CYAN}Paramètres: {speed_display} | {save_display} | {combat_display}{Colors.END}")
+    print()
 
     print(f"{Colors.YELLOW}📖 SCÉNARIOS ENRICHIS MANUELLEMENT (Qualité ⭐⭐⭐⭐⭐){Colors.END}")
     print()
@@ -71,17 +166,29 @@ def main():
     print()
 
     print("=" * 80)
+    print(f"\n{Colors.BOLD}s.{Colors.END} ⚙️  Paramètres | {Colors.BOLD}q.{Colors.END} Quitter")
 
     while True:
         try:
-            choice = input(f"\n{Colors.BOLD}Choisissez un scénario (1-37) ou 'q' pour quitter: {Colors.END}").strip()
+            choice = input(f"\n{Colors.BOLD}Choisissez un scénario (1-37), 's' pour paramètres ou 'q' pour quitter: {Colors.END}").strip()
 
             if choice.lower() == 'q':
                 print(f"\n{Colors.GREEN}À bientôt aventurier! 🎲{Colors.END}\n")
                 sys.exit(0)
+            
+            if choice.lower() == 's':
+                show_settings_menu(config)
+                config.apply_to_env()  # Réappliquer après changement
+                # Afficher confirmation
+                print(f"\n{Colors.GREEN}✅ Paramètres appliqués{Colors.END}")
+                input("Appuyez sur ENTER pour continuer...")
+                continue
 
             choice_num = int(choice)
 
+            # Appliquer la configuration
+            config.apply_to_env()
+            
             if choice_num == 1:
                 print(f"\n{Colors.GREEN}🎭 Lancement du Masque Utruz (Version Enrichie)...{Colors.END}")
                 from masque_utruz_enrichi_game import MasqueUtruzEnrichiScenario

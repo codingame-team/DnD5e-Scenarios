@@ -49,8 +49,10 @@ source .venv/bin/activate  # Linux/Mac
 ### 3. Installer les Dépendances
 
 ```bash
-pip install dnd-5e-core
+pip install dnd-5e-core>=0.4.0
 ```
+
+**Note:** Ce projet requiert `dnd-5e-core` version **0.4.0 ou supérieure** pour bénéficier de toutes les fonctionnalités (ClassAbilities, RacialTraits, Conditions, Magic Items, Multiclassing).
 
 ---
 
@@ -70,6 +72,13 @@ Vous verrez un menu avec :
 - 📋 Scénarios prototypes (qualité ⭐⭐)
 
 Entrez le numéro du scénario ou 'q' pour quitter.
+
+**⚙️ Paramètres** : Tapez **`s`** pour accéder aux paramètres :
+- 🎬 **Vitesse de texte** : Lent, Normal, Rapide, Instantané
+- 💾 **Sauvegardes** : Automatiques ou Interactives
+- ⚔️ **Système de combat** : dnd-5e-core (complet) ou Enhanced (simple)
+
+Voir [docs/CONFIGURATION.md](docs/CONFIGURATION.md) pour plus de détails.
 
 ### Méthode 2: Lancement Direct
 
@@ -135,6 +144,48 @@ python play_scenarios.py
 ### 📋 Prototypes (⭐⭐)
 
 25 scénarios enrichis automatiquement disponibles comme prototypes.
+
+---
+
+## 🎭 Génération de Personnages
+
+Le projet inclut des scripts pour générer rapidement des personnages prêts à l'emploi pour vos scénarios, en utilisant `simple_character_generator` du package `dnd-5e-core`.
+
+### Créer un Groupe d'Aventuriers
+
+```bash
+# Créer le groupe classique (Aragorn, Gandalf, Bilbo, Gimli) niveau 5
+python scripts/create_party.py --classic --level 5
+
+# Créer un groupe aléatoire de 6 personnages niveau 3
+python scripts/create_party.py --level 3 --size 6 --out data/my_party.json
+```
+
+### Créer un Personnage Individuel
+
+```bash
+# Créer Gandalf le magicien niveau 10
+python scripts/create_character.py --name Gandalf --class wizard --race elf --level 10
+
+# Créer un guerrier aléatoire niveau 5
+python scripts/create_character.py --class fighter --level 5
+```
+
+### Exemple d'Utilisation
+
+```bash
+# Voir un exemple complet d'utilisation des personnages
+python scripts/example_usage.py
+```
+
+Les personnages générés incluent :
+- ⚔️ **Capacités de classe** automatiques (Extra Attack, Sneak Attack, Rage, etc.)
+- 🧝 **Traits raciaux** (Darkvision, Fey Ancestry, Lucky, etc.)
+- ✨ **Sorts** pour les lanceurs (sélection aléatoire appropriée au niveau)
+- 📊 **Caractéristiques** générées (méthode 4d6 drop lowest)
+- 💾 **Export JSON** pour réutilisation
+
+📖 **Documentation complète:** Voir [scripts/README.md](scripts/README.md)
 
 ---
 

@@ -78,18 +78,25 @@ class NarrativeScene(BaseScene):
         renderer = game_context['renderer']
         renderer.print_slow(self.text, self.delay)
 
-        # 🆕 Proposer de sauvegarder après avoir lu le texte
-        save_choice = input("\n💾 Sauvegarder la partie? (o/n): ").strip().lower()
-        if save_choice in ['o', 'oui', 'y', 'yes']:
+        # 🆕 Proposer de sauvegarder seulement si mode interactif
+        from ..config import GameSettings
+        if not GameSettings.is_auto_save_enabled():
+            save_choice = input("\n💾 Sauvegarder la partie? (o/n): ").strip().lower()
+            if save_choice in ['o', 'oui', 'y', 'yes']:
+                scenario = game_context.get('scenario')
+                if scenario:
+                    slot_name = input("Nom de la sauvegarde (ou ENTER pour autosave): ").strip()
+                    if not slot_name:
+                        slot_name = "autosave"
+                    if scenario.save_game(slot_name):
+                        print(f"✅ Partie sauvegardée: {slot_name}")
+                    else:
+                        print("❌ Erreur lors de la sauvegarde")
+        else:
+            # Mode auto-save: sauvegarder silencieusement (pas de message)
             scenario = game_context.get('scenario')
             if scenario:
-                slot_name = input("Nom de la sauvegarde (ou ENTER pour autosave): ").strip()
-                if not slot_name:
-                    slot_name = "autosave"
-                if scenario.save_game(slot_name):
-                    print(f"✅ Partie sauvegardée: {slot_name}")
-                else:
-                    print("❌ Erreur lors de la sauvegarde")
+                scenario.save_game("autosave")  # Pas de message affiché
 
         renderer.wait_for_input()
 
@@ -138,14 +145,19 @@ class ChoiceScene(BaseScene):
             print("Aucun choix disponible!")
             return SceneResult.FAILURE
 
-        # 🆕 Ajouter option de sauvegarde
-        available_choices.append("💾 Sauvegarder la partie")
+        # 🆕 Ajouter option de sauvegarde seulement si mode interactif
+        from ..config import GameSettings
+        if not GameSettings.is_auto_save_enabled():
+            available_choices.append("💾 Sauvegarder la partie")
+            save_option_added = True
+        else:
+            save_option_added = False
 
         # Obtenir choix joueur
         choice_idx = renderer.get_choice(available_choices)
 
-        # 🆕 Gérer la sauvegarde
-        if choice_idx == len(available_choices) - 1:
+        # 🆕 Gérer la sauvegarde si l'option était présente
+        if save_option_added and choice_idx == len(available_choices) - 1:
             scenario = game_context.get('scenario')
             if scenario:
                 slot_name = input("\nNom de la sauvegarde (ou ENTER pour autosave): ").strip()
@@ -215,6 +227,9 @@ class CombatScene(BaseScene):
         if not combat_system:
             print("❌ Système de combat non disponible!")
             return SceneResult.FAILURE
+        
+        # DEBUG: Afficher quel système est utilisé
+        print(f"\n🔧 DEBUG: Système de combat = {type(combat_system).__name__}")
 
         party = game_context['party']
         alive_chars = [c for c in party if c.hit_points > 0]
@@ -229,6 +244,12 @@ class CombatScene(BaseScene):
             if hasattr(char, 'conditions') and char.conditions:
                 conditions_names = [c.name if hasattr(c, 'name') else str(c) for c in char.conditions]
                 status += f" ⚠️ [{', '.join(conditions_names)}]"
+            
+            # Afficher arme équipée
+            if hasattr(char, 'inventory') and char.inventory:
+                equipped_weapons = [item for item in char.inventory if hasattr(item, 'equipped') and item.equipped and hasattr(item, 'damage')]
+                if equipped_weapons:
+                    status += f" ⚔️ {equipped_weapons[0].name}"
 
             print(status)
 
@@ -256,7 +277,7 @@ class CombatScene(BaseScene):
                         alive_chars.remove(char)
                     continue
 
-                # Appeler character_turn avec TOUS les paramètres
+                # Appeler character_turn (même signature pour dnd_5e_core et enhanced)
                 combat_system.character_turn(
                     character=char,
                     alive_chars=alive_chars,
@@ -277,7 +298,7 @@ class CombatScene(BaseScene):
                         alive_monsters.remove(monster)
                     continue
 
-                # Limiter attaque à la ligne de front (comme dans advanced_combat)
+                # Limiter attaque à la ligne de front
                 char_indices = {party.index(c): c for c in alive_chars if c in party}
                 melee_chars = [c for idx, c in char_indices.items() if idx < 3]
                 ranged_chars = [c for idx, c in char_indices.items() if idx >= 3]
@@ -526,21 +547,17 @@ class TreasureScene(BaseScene):
             if available_magic_items:
                 print(f"\n✨ Magic Items trouvés:")
 
-                # Distribuer les premiers magic items disponibles
+                import random
+                # Distribuer aléatoirement
                 distributed = 0
                 for idx in range(min(self.magic_items_count, len(available_magic_items))):
                     magic_item = available_magic_items[idx]
-                    recipient = party[distributed % len(party)]
+                    recipient = random.choice(party)
 
                     print(f"   🌟 {magic_item.name} ({magic_item.rarity.value}) → {recipient.name}")
 
-                    # Ajouter au Character
-                    if not hasattr(recipient, 'inventory'):
-                        recipient.inventory = []
-                    if not hasattr(recipient, 'inventory_items'):
-                        recipient.inventory_items = []
-
-                    recipient.inventory_items.append(magic_item)
+                    # Ajouter à l'inventaire dnd_5e_core
+                    recipient.inventory.append(magic_item)
                     distributed += 1
 
                 print(f"\n   {distributed} magic item(s) distribué(s)")
