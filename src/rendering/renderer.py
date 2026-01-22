@@ -67,7 +67,11 @@ class ConsoleRenderer(Renderer):
 
     def wait_for_input(self, prompt: str = "\n[Appuyez sur ENTRÉE pour continuer]"):
         """Pause"""
-        input(prompt)
+        try:
+            input(prompt)
+        except EOFError:
+            # En environnement non-interactif (tests/CI), ignorer la pause
+            return
 
     def get_choice(self, options: List[str]) -> int:
         """Choix utilisateur"""
@@ -103,4 +107,3 @@ def create_renderer(use_ncurses: bool = False) -> Renderer:
     """
     # NCurses désactivé pour l'instant (nécessite configuration spéciale)
     return ConsoleRenderer()
-

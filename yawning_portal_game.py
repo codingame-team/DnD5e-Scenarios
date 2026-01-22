@@ -95,3 +95,7 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+# Alias pour compatibilité avec launcher.py
+SunlessCitadelScenario = YawningPortalScenario
+

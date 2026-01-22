@@ -39,14 +39,8 @@ class BaseScenario(ABC):
         # Systèmes de jeu
         self.renderer = create_renderer(use_ncurses)
         
-        # 🔧 Choisir le système de combat selon la config
-        combat_system_type = GameSettings.get_combat_system()
-        if combat_system_type == 'enhanced':
-            from ..systems.enhanced_combat import EnhancedCombatSystem
-            self.combat_system = EnhancedCombatSystem(verbose=True)
-        else:
-            # Utiliser dnd_5e_core par défaut
-            self.combat_system = CombatSystem(verbose=True)
+        # Utiliser le CombatSystem de dnd-5e-core (ne pas réinventer la roue)
+        self.combat_system = CombatSystem(verbose=True)
         self.spellcasting = SpellcastingManager()
         self.merchant_system = MerchantSystem()
         self.scene_manager = SceneManager()
@@ -319,8 +313,71 @@ class BaseScenario(ABC):
         """Configurer le groupe de personnages"""
         self.renderer.print_header("⚔️ CRÉATION DU GROUPE")
 
-        self.party = self.create_party()
-        
+        # Si un fichier de groupe pré-généré existe pour ce scénario, proposer de le charger
+        try:
+            from pathlib import Path
+            scenario_name = self.get_scenario_name()
+
+            # Fonction helper pour normaliser un nom
+            def normalize_name(name):
+                """Convertir en minuscules avec underscores"""
+                import re
+                # Enlever les articles au début
+                name = re.sub(r'^(Le|La|Les|L\')\s+', '', name, flags=re.IGNORECASE)
+                # Remplacer espaces et tirets par underscores
+                name = name.replace(' ', '_').replace('-', '_').replace("'", '')
+                # Enlever parenthèses et leur contenu
+                name = re.sub(r'\([^)]*\)', '', name)
+                # Nettoyer underscores multiples
+                name = re.sub(r'_+', '_', name).strip('_')
+                # Minuscules
+                return name.lower()
+
+            # Essayer plusieurs patterns de noms de fichiers
+            possible_files = [
+                Path('data/parties') / f"{scenario_name}_party.json",
+                Path('data/parties') / f"{normalize_name(scenario_name)}_party.json",
+                # Essayer sans articles
+                Path('data/parties') / f"{scenario_name.replace('Le ', '').replace('La ', '').replace('Les ', '').strip()}_party.json",
+                # Essayer version simplifiée
+                Path('data/parties') / f"{scenario_name.split('(')[0].strip()}_party.json",
+            ]
+
+            # Chercher le premier fichier qui existe
+            scenario_party_file = None
+            for file_path in possible_files:
+                if file_path.exists():
+                    scenario_party_file = file_path
+                    break
+
+            # Si toujours pas trouvé, chercher par correspondance partielle
+            if not scenario_party_file:
+                normalized_search = normalize_name(scenario_name)
+                parties_dir = Path('data/parties')
+                if parties_dir.exists():
+                    for json_file in parties_dir.glob('*_party.json'):
+                        if normalized_search in json_file.stem.lower():
+                            scenario_party_file = json_file
+                            break
+
+            # Charger automatiquement si le fichier existe
+            if scenario_party_file:
+                print(f"📦 Fichier de groupe trouvé: {scenario_party_file.name}")
+                loaded = self.load_party_from_json(str(scenario_party_file))
+                if loaded:
+                    print(f"✅ Groupe chargé depuis JSON")
+                else:
+                    print(f"⚠️ Échec du chargement, création par défaut")
+                    self.party = self.create_party()
+            else:
+                print(f"📝 Aucun fichier de groupe trouvé pour '{scenario_name}'")
+                print(f"   (recherché: {normalize_name(scenario_name)}_party.json)")
+                self.party = self.create_party()
+        except Exception as e:
+            # En cas d'erreur, fallback à la création classique
+            print(f"⚠️ Erreur lors du chargement: {e}")
+            self.party = self.create_party()
+
         # Initialiser inventaires avec slots vides (20 slots par défaut)
         for char in self.party:
             if not char.inventory:
@@ -345,7 +402,8 @@ class BaseScenario(ABC):
         # 🆕 Équiper le groupe avec équipement de base
         self._equip_party_with_starter_gear()
         
-        # 🆕 Initialiser les sorts pour les lanceurs de sorts
+        # Note: simple_character_generator charge déjà les sorts automatiquement
+        # mais on peut ajouter des sorts spécifiques si nécessaire
         self._init_spellcasters()
 
         self.renderer.wait_for_input()
@@ -779,281 +837,564 @@ class BaseScenario(ABC):
                         print("✅ Partie chargée!")
                         self._resume_game()
                         return True
-        except:
+        except Exception:
             pass
 
         return False
 
     def _resume_game(self):
         """Reprendre une partie chargée"""
-        # Reconstruire les scènes
-        self.build_scenes()
+        # À implémenter si nécessaire
+        pass
 
-        # Préparer contexte
-        game_context = {
-            'party': self.party,
-            'game_state': self.game_state,
-            'renderer': self.renderer,
-            'combat_system': self.combat_system,
-            'spellcasting': self.spellcasting,
-            'merchant_system': self.merchant_system,
-            'scenario_data': self.scenario_data
+    def load_party_from_json(self, json_path: str) -> bool:
+        """
+        Charge un groupe d'aventuriers depuis un fichier JSON.
+
+        Compatible avec les fichiers générés par scripts/generate_scenario_characters.py
+        Utilise simple_character_generator comme template puis applique les valeurs JSON.
+
+        Args:
+            json_path: Chemin vers le fichier JSON du groupe
+
+        Returns:
+            True si le chargement a réussi, False sinon
+        """
+        try:
+            import json
+            from pathlib import Path
+            from dnd_5e_core.data.loaders import simple_character_generator
+        except Exception as e:
+            print(f"⚠️  Erreur d'import: {e}")
+            return False
+
+        # Vérifier existence du fichier
+        json_file = Path(json_path)
+        if not json_file.exists():
+            print(f"⚠️  Fichier introuvable: {json_path}")
+            return False
+
+        # Charger le JSON
+        try:
+            with json_file.open('r', encoding='utf-8') as f:
+                party_data = json.load(f)
+        except Exception as e:
+            print(f"⚠️  Erreur lecture JSON: {e}")
+            return False
+
+        if not isinstance(party_data, list):
+            print("⚠️  Format JSON invalide (attendu: liste de personnages)")
+            return False
+
+        # Reconstruire chaque personnage
+        loaded_party = []
+        for char_data in party_data:
+            char = self._character_from_dict(char_data)
+            if char:
+                loaded_party.append(char)
+            else:
+                print(f"⚠️  Échec chargement: {char_data.get('name', 'Unknown')}")
+
+        if not loaded_party:
+            print("⚠️  Aucun personnage chargé")
+            return False
+
+        self.party = loaded_party
+        print(f"✅ {len(loaded_party)} personnages chargés depuis JSON")
+        return True
+
+    def _character_from_dict(self, data: dict):
+        """
+        Reconstruit un Character depuis un dictionnaire JSON.
+
+        Utilise simple_character_generator comme base puis applique les attributs.
+        Cette approche garantit que tous les objets internes (Race, ClassType, etc.)
+        sont correctement initialisés.
+
+        Args:
+            data: Dictionnaire de données du personnage
+
+        Returns:
+            Instance de Character ou None en cas d'erreur
+        """
+        try:
+            from dnd_5e_core.data.loaders import simple_character_generator
+            from dnd_5e_core.data import load_spell
+        except Exception:
+            load_spell = None
+
+        # Extraire les données de base
+        name = data.get('name', 'Unknown')
+        level = int(data.get('level', 1))
+        race_name = data.get('race', 'human')
+        class_name = data.get('class', 'fighter')
+
+        # Normaliser les noms (race/class en minuscules)
+        race_name = race_name.lower() if isinstance(race_name, str) else 'human'
+        class_name = class_name.lower() if isinstance(class_name, str) else 'fighter'
+
+        # Créer le personnage template via simple_character_generator
+        try:
+            char = simple_character_generator(
+                level=level,
+                race_name=race_name,
+                class_name=class_name,
+                name=name
+            )
+        except Exception as e:
+            print(f"⚠️  Erreur création template {name}: {e}")
+            return None
+
+        # Appliquer les valeurs spécifiques du JSON
+        try:
+            # Caractéristiques
+            if 'abilities' in data:
+                abilities = data['abilities']
+                char.abilities.str = int(abilities.get('str', char.abilities.str))
+                char.abilities.dex = int(abilities.get('dex', char.abilities.dex))
+                char.abilities.con = int(abilities.get('con', char.abilities.con))
+                char.abilities.int = int(abilities.get('int', char.abilities.int))
+                char.abilities.wis = int(abilities.get('wis', char.abilities.wis))
+                char.abilities.cha = int(abilities.get('cha', char.abilities.cha))
+
+            if 'ability_modifiers' in data and hasattr(char, 'ability_modifiers'):
+                mods = data['ability_modifiers']
+                char.ability_modifiers.str = int(mods.get('str', char.ability_modifiers.str))
+                char.ability_modifiers.dex = int(mods.get('dex', char.ability_modifiers.dex))
+                char.ability_modifiers.con = int(mods.get('con', char.ability_modifiers.con))
+                char.ability_modifiers.int = int(mods.get('int', char.ability_modifiers.int))
+                char.ability_modifiers.wis = int(mods.get('wis', char.ability_modifiers.wis))
+                char.ability_modifiers.cha = int(mods.get('cha', char.ability_modifiers.cha))
+
+            # Points de vie
+            if 'hit_points' in data:
+                char.hit_points = int(data['hit_points'])
+            if 'max_hit_points' in data:
+                char.max_hit_points = int(data['max_hit_points'])
+
+            # Or
+            if 'gold' in data:
+                char.gold = int(data.get('gold', 0))
+
+            # Sorts (spellcasting)
+            if 'spellcasting' in data and hasattr(char, 'sc') and char.sc:
+                sc_data = data['spellcasting']
+                spell_list = sc_data.get('spell_list', [])
+
+                # Charger les sorts réels si possible
+                if spell_list and load_spell:
+                    char.sc.spells = []  # Réinitialiser
+                    for spell_name in spell_list:
+                        try:
+                            # Normaliser le nom pour l'API
+                            spell_idx = spell_name.lower().replace(' ', '-').replace("'", '')
+                            spell = load_spell(spell_idx)
+                            if spell:
+                                char.sc.spells.append(spell)
+                        except Exception:
+                            # Fallback: créer un placeholder simple
+                            class SpellPlaceholder:
+                                def __init__(self, name):
+                                    self.name = name
+                                    self.level = 0
+                            char.sc.spells.append(SpellPlaceholder(spell_name))
+
+            # Capacités spéciales de classe
+            if 'extra_attacks' in data and hasattr(char, 'multi_attack_bonus'):
+                char.multi_attack_bonus = int(data['extra_attacks'])
+            if 'sneak_attack' in data and hasattr(char, 'sneak_attack_dice'):
+                sneak = data['sneak_attack']
+                if 'd' in str(sneak):
+                    char.sneak_attack_dice = int(str(sneak).split('d')[0])
+            if 'rage_uses' in data and hasattr(char, 'rage_uses_left'):
+                char.rage_uses_left = int(data['rage_uses'])
+            if 'ki_points' in data and hasattr(char, 'ki_points'):
+                char.ki_points = int(data['ki_points'])
+            if 'lay_on_hands' in data and hasattr(char, 'lay_on_hands_pool'):
+                char.lay_on_hands_pool = int(data['lay_on_hands'])
+
+        except Exception as e:
+            print(f"⚠️  Erreur application attributs pour {name}: {e}")
+
+        return char
+
+    def _equip_party_with_starter_gear(self):
+        """Équiper le groupe avec équipement de départ."""
+        try:
+            from dnd_5e_core.data import load_weapon, load_armor
+            from dnd_5e_core.combat import Action, ActionType, Damage
+            from dnd_5e_core.mechanics import DamageDice
+        except Exception as e:
+            print(f"⚠️  Import équipement impossible: {e}")
+            return
+
+        try:
+            from ..core.adapters import CharacterExtensions
+        except Exception:
+            try:
+                from src.core.adapters import CharacterExtensions
+            except Exception:
+                CharacterExtensions = None
+
+        print("\n🎽 Équipement de départ...")
+
+        weapon_map = {
+            'fighter': 'longsword', 'paladin': 'longsword', 'barbarian': 'longsword',
+            'ranger': 'longsword', 'rogue': 'shortsword', 'monk': 'shortsword',
+            'cleric': 'mace', 'druid': 'mace', 'wizard': 'dagger'
+        }
+        armor_map = {
+            'fighter': 'chain-mail', 'paladin': 'chain-mail',
+            'cleric': 'scale-mail', 'barbarian': 'scale-mail', 'ranger': 'scale-mail',
+            'rogue': 'leather-armor', 'bard': 'leather-armor', 'warlock': 'leather-armor'
         }
 
-        # Reprendre à la scène sauvegardée
-        print(f"\n🎬 Reprise à: {self.scene_manager.current_scene_id}")
-        self.renderer.wait_for_input()
+        for char in self.party:
+            if not hasattr(char, 'inventory') or char.inventory is None:
+                char.inventory = [None] * 20
+            if CharacterExtensions:
+                try:
+                    CharacterExtensions.add_inventory_management(char)
+                except Exception:
+                    pass
 
-        self.scene_manager.run(game_context, start_scene_id=self.scene_manager.current_scene_id)
+            class_idx = 'fighter'
+            if hasattr(char, 'class_type') and getattr(char.class_type, 'index', None):
+                class_idx = char.class_type.index
+            elif hasattr(char, 'class_type') and getattr(char.class_type, 'name', None):
+                class_idx = char.class_type.name.lower()
 
-        # Stats finales
-        self.show_final_stats()
+            # Arme
+            weapon_idx = weapon_map.get(class_idx, 'dagger')
+            try:
+                weapon_obj = load_weapon(weapon_idx)
+                if weapon_obj:
+                    # ✅ IMPORTANT: Marquer comme équipé AVANT d'ajouter à l'inventaire
+                    weapon_obj.equipped = True
+
+                    # Ajouter à l'inventaire
+                    added = False
+                    for i in range(len(char.inventory)):
+                        if char.inventory[i] is None:
+                            char.inventory[i] = weapon_obj
+                            added = True
+                            break
+
+                    if added:
+                        # Créer une action d'attaque basée sur l'arme
+                        self._create_weapon_action(char, weapon_obj)
+                        print(f"  ⚔️  {char.name}: {weapon_idx}")
+            except Exception as e:
+                # Debug
+                print(f"  ⚠️  Erreur équipement arme {weapon_idx}: {e}")
+
+            # Armure
+            armor_idx = armor_map.get(class_idx)
+            if armor_idx:
+                try:
+                    armor_obj = load_armor(armor_idx)
+                    if armor_obj:
+                        # ✅ IMPORTANT: Marquer comme équipé AVANT d'ajouter à l'inventaire
+                        armor_obj.equipped = True
+
+                        # Ajouter à l'inventaire
+                        added = False
+                        for i in range(len(char.inventory)):
+                            if char.inventory[i] is None:
+                                char.inventory[i] = armor_obj
+                                added = True
+                                break
+
+                        if added:
+                            # Appliquer le bonus de CA
+                            if hasattr(armor_obj, 'armor_class') and hasattr(armor_obj.armor_class, 'base'):
+                                char.armor_class = armor_obj.armor_class.base
+                                # Ajouter bonus de DEX si armure légère/moyenne
+                                if hasattr(armor_obj.armor_class, 'dex_bonus') and armor_obj.armor_class.dex_bonus:
+                                    dex_mod = (char.abilities.dex - 10) // 2
+                                    if hasattr(armor_obj.armor_class, 'max_bonus') and armor_obj.armor_class.max_bonus:
+                                        dex_mod = min(dex_mod, armor_obj.armor_class.max_bonus)
+                                    char.armor_class += dex_mod
+                            print(f"  🛡️  {char.name}: {armor_idx} (CA: {char.armor_class})")
+                except Exception as e:
+                    # Debug
+                    print(f"  ⚠️  Erreur équipement armure {armor_idx}: {e}")
+
+        print("\n✅ Équipement appliqué")
+
+    def _create_weapon_action(self, char, weapon):
+        """Créer une action d'attaque pour une arme équipée."""
+        try:
+            from dnd_5e_core.combat import Action, ActionType, Damage
+            from dnd_5e_core.mechanics import DamageDice
+
+            # Calculer le bonus d'attaque
+            # Utiliser FOR pour armes de mêlée, DEX pour armes à distance
+            is_melee = True
+            if hasattr(weapon, 'weapon_range') and weapon.weapon_range != 'Melee':
+                is_melee = False
+            elif hasattr(weapon, 'range') and hasattr(weapon.range, 'normal'):
+                is_melee = weapon.range.normal <= 5
+
+            # Bonus = modificateur de caractéristique + bonus de maîtrise
+            if is_melee:
+                ability_mod = (char.abilities.str - 10) // 2
+            else:
+                ability_mod = (char.abilities.dex - 10) // 2
+
+            prof_bonus = 2 + ((char.level - 1) // 4)
+            attack_bonus = ability_mod + prof_bonus
+
+            # Créer l'action
+            if not hasattr(char, 'actions') or char.actions is None:
+                char.actions = []
+
+            # Extraire les dégâts de l'arme
+            damage_dice = "1d6"  # Par défaut
+            damage_type = None
+
+            if hasattr(weapon, 'damage') and weapon.damage:
+                if hasattr(weapon.damage, 'damage_dice'):
+                    damage_dice = weapon.damage.damage_dice
+                if hasattr(weapon.damage, 'damage_type'):
+                    damage_type = weapon.damage.damage_type
+
+            # Créer l'action d'attaque
+            action = Action(
+                name=weapon.name,
+                desc=f"Attaque avec {weapon.name}",
+                type=ActionType.MELEE if is_melee else ActionType.RANGED,
+                attack_bonus=attack_bonus,
+                damages=[Damage(
+                    type=damage_type if damage_type else weapon.damage.damage_type if hasattr(weapon, 'damage') else None,
+                    dd=DamageDice(damage_dice)
+                )],
+                normal_range=5 if is_melee else (weapon.range.normal if hasattr(weapon, 'range') else 20)
+            )
+
+            # Ajouter l'action au personnage
+            char.actions.append(action)
+
+        except Exception as e:
+            # Si la création d'action échoue, ce n'est pas grave
+            # Le personnage utilisera les attaques par défaut
+            pass
+
+    def _init_spellcasters(self):
+        """
+        Initialiser les sorts pour les lanceurs.
+
+        NOTE: simple_character_generator de dnd-5e-core charge déjà automatiquement
+        les sorts pour les personnages créés. Cette méthode n'est utile QUE pour
+        les personnages chargés depuis JSON qui n'ont pas de sorts.
+        """
+        # Vérifier si les personnages ont déjà des sorts chargés par simple_character_generator
+        chars_needing_spells = []
+        for char in self.party:
+            if not hasattr(char, 'class_type') or not char.class_type:
+                continue
+            can_cast = getattr(char.class_type, 'can_cast', False)
+            if not can_cast:
+                continue
+
+            # Vérifier si le personnage a déjà des sorts
+            has_spells = (hasattr(char, 'sc') and char.sc and
+                         hasattr(char.sc, 'learned_spells') and char.sc.learned_spells)
+
+            if not has_spells:
+                chars_needing_spells.append(char)
+
+        if not chars_needing_spells:
+            print('\n✨ Sorts déjà chargés par simple_character_generator')
+            return
+
+        # Charger des sorts de base uniquement pour les personnages qui n'en ont pas
+        print(f'\n✨ Chargement de sorts de base pour {len(chars_needing_spells)} personnage(s)')
+
+        try:
+            from dnd_5e_core.data import load_spell
+        except Exception:
+            print("⚠️  Impossible de charger load_spell, sorts non initialisés")
+            return
+
+        spells_by_class = {
+            'cleric': ['cure-wounds', 'bless', 'sacred-flame'],
+            'wizard': ['magic-missile', 'fire-bolt'],
+            'druid': ['cure-wounds', 'produce-flame'],
+            'warlock': ['eldritch-blast'],
+            'sorcerer': ['magic-missile', 'fire-bolt'],
+            'bard': ['cure-wounds', 'vicious-mockery'],
+            'paladin': ['cure-wounds', 'bless']
+        }
+
+        for char in chars_needing_spells:
+            class_idx = getattr(char.class_type, 'index', None) or getattr(char.class_type, 'name', '').lower()
+
+            if class_idx not in spells_by_class:
+                continue
+
+            # S'assurer que char.sc existe
+            if not hasattr(char, 'sc') or char.sc is None:
+                from dnd_5e_core.spells.spellcaster import SpellCaster
+                char.sc = SpellCaster(
+                    level=char.level,
+                    spell_slots=[0] * 10,
+                    learned_spells=[],
+                    dc_type='wis',
+                    dc_value=10,
+                    ability_modifier=0
+                )
+
+            # Charger quelques sorts de base
+            if not hasattr(char.sc, 'learned_spells'):
+                char.sc.learned_spells = []
+
+            spell_names = spells_by_class[class_idx]
+            for sname in spell_names:
+                try:
+                    sp = load_spell(sname)
+                    if sp and sp not in char.sc.learned_spells:
+                        char.sc.learned_spells.append(sp)
+                except Exception:
+                    pass
 
     def _load_equipment(self):
-        """Charger armes, armures, équipements et potions depuis dnd_5e_core"""
+        """
+        Charge les équipements depuis dnd-5e-core pour utilisation dans les scénarios.
+
+        Returns:
+            Tuple (weapons, armors, equipments, potions) - Listes d'équipements
+        """
         weapons = []
         armors = []
         equipments = []
         potions = []
 
         try:
-            from dnd_5e_core.data import (
-                set_data_directory,
-                list_weapons, list_armors, list_equipment,
-                load_weapon, load_armor, load_equipment
-            )
-            from dnd_5e_core.equipment import HealingPotion, PotionRarity
-            from pathlib import Path
-
-            # Configurer le répertoire de données du package dnd_5e_core
-            import dnd_5e_core
-            package_path = Path(dnd_5e_core.__file__).parent
-
-            # Chercher le répertoire data dans plusieurs emplacements possibles
-            possible_data_dirs = [
-                package_path.parent / "data",  # Si installé en mode dev (pip install -e)
-                Path("/Users/display/PycharmProjects/dnd-5e-core/data"),  # Chemin absolu (fallback)
-            ]
-
-            data_dir_found = None
-            for data_dir in possible_data_dirs:
-                if data_dir.exists() and (data_dir / "weapons").exists():
-                    data_dir_found = data_dir
-                    break
-
-            if data_dir_found:
-                set_data_directory(str(data_dir_found))
-
-            # Charger armes
-            for name in list_weapons()[:20]:
-                try:
-                    weapon = load_weapon(name)
-                    if weapon:
-                        weapons.append(weapon)
-                except Exception:
-                    continue
-
-            # Charger armures
-            for name in list_armors()[:15]:
-                try:
-                    armor = load_armor(name)
-                    if armor:
-                        armors.append(armor)
-                except Exception:
-                    continue
-
-            # Charger équipements
-            for name in list_equipment()[:20]:
-                try:
-                    equip = load_equipment(name)
-                    if equip:
-                        equipments.append(equip)
-                except Exception:
-                    continue
-
-            # Créer quelques potions de base
-            potions = [
-                HealingPotion(
-                    name="Potion of Healing",
-                    rarity=PotionRarity.COMMON,
-                    hit_dice="2d4",
-                    bonus=2,
-                    min_cost=50,
-                    max_cost=50
-                ),
-                HealingPotion(
-                    name="Potion of Greater Healing",
-                    rarity=PotionRarity.UNCOMMON,
-                    hit_dice="4d4",
-                    bonus=4,
-                    min_cost=150,
-                    max_cost=150
-                ),
-            ]
-
-            if weapons or armors or equipments:
-                print(f"  ✅ Chargés depuis dnd_5e_core.data")
-                print(f"  Armes: {len(weapons)}, Armures: {len(armors)}, Équipements: {len(equipments)}, Potions: {len(potions)}")
-
-
+            from dnd_5e_core.data import load_weapon, load_armor
         except Exception as e:
-            print(f"  ⚠️  Erreur chargement: {e}")
-            print(f"  ℹ️  Combat fonctionnera avec équipements par défaut")
+            print(f"⚠️  Impossible de charger les loaders d'équipement: {e}")
+            return weapons, armors, equipments, potions
+
+        # Charger quelques armes de base
+        weapon_list = ['longsword', 'shortsword', 'dagger', 'mace', 'battleaxe',
+                       'greatsword', 'rapier', 'shortbow', 'longbow', 'crossbow-light']
+        for weapon_id in weapon_list:
+            try:
+                weapon = load_weapon(weapon_id)
+                if weapon:
+                    weapons.append(weapon)
+            except Exception:
+                pass
+
+        # Charger quelques armures de base
+        armor_list = ['leather-armor', 'chain-mail', 'scale-mail', 'plate-armor',
+                     'hide-armor', 'studded-leather-armor', 'breastplate']
+        for armor_id in armor_list:
+            try:
+                armor = load_armor(armor_id)
+                if armor:
+                    armors.append(armor)
+            except Exception:
+                pass
+
+        # Créer équipements simples (puisque load_equipment n'existe pas)
+        try:
+            from dnd_5e_core.equipment import Equipment
+            equipments = [
+                Equipment(index='rope', name='Corde (15m)', equipment_category={'index': 'adventuring-gear'},
+                         cost={'quantity': 1, 'unit': 'gp'}, weight=10, desc=['Corde en chanvre robuste']),
+                Equipment(index='torch', name='Torche', equipment_category={'index': 'adventuring-gear'},
+                         cost={'quantity': 1, 'unit': 'cp'}, weight=1, desc=['Torche pour éclairer']),
+                Equipment(index='backpack', name='Sac à dos', equipment_category={'index': 'adventuring-gear'},
+                         cost={'quantity': 2, 'unit': 'gp'}, weight=5, desc=['Sac à dos en cuir']),
+            ]
+        except Exception:
+            # Si Equipment n'est pas disponible, créer des objets simples
+            class SimpleEquipment:
+                def __init__(self, name, desc, weight=1):
+                    self.name = name
+                    self.desc = desc
+                    self.weight = weight
+
+            equipments = [
+                SimpleEquipment('Corde (15m)', 'Corde en chanvre robuste', 10),
+                SimpleEquipment('Torche', 'Torche pour éclairer', 1),
+                SimpleEquipment('Sac à dos', 'Sac à dos en cuir', 5),
+                SimpleEquipment('Gourde', 'Gourde en cuir', 2),
+                SimpleEquipment('Rations (1 jour)', 'Nourriture pour une journée', 2),
+            ]
+
+        # Créer des potions simples
+        try:
+            from ..core.adapters import Potion
+            potions = [
+                Potion("Potion de Soins", "Restaure 2d4+2 HP", 50, "healing", "2d4+2"),
+                Potion("Potion de Soins Supérieure", "Restaure 4d4+4 HP", 150, "healing", "4d4+4"),
+                Potion("Antidote", "Soigne l'empoisonnement", 50, "cure", "0"),
+            ]
+        except Exception:
+            # Fallback si Potion n'est pas disponible
+            class SimplePotion:
+                def __init__(self, name, desc, value, effect_type, effect_value):
+                    self.name = name
+                    self.desc = desc
+                    self.value = value
+                    self.effect_type = effect_type
+                    self.effect_value = effect_value
+
+            potions = [
+                SimplePotion("Potion de Soins", "Restaure 2d4+2 HP", 50, "healing", "2d4+2"),
+                SimplePotion("Potion de Soins Supérieure", "Restaure 4d4+4 HP", 150, "healing", "4d4+4"),
+            ]
 
         return weapons, armors, equipments, potions
 
     def _create_magic_items_treasure(self):
         """
-        Créer des magic items comme trésors pour le scénario
+        Crée une liste d'objets magiques utilisables comme trésors.
 
         Returns:
-            list: Liste de magic items
+            List - Liste d'objets magiques
         """
         magic_items = []
 
         try:
-            from dnd_5e_core.equipment import (
-                create_ring_of_protection,
-                create_cloak_of_protection,
-                create_wand_of_magic_missiles,
-                create_staff_of_healing,
-                create_bracers_of_defense,
-                HealingPotion,
-                PotionRarity
-            )
+            from dnd_5e_core.data import load_magic_item
+        except Exception:
+            load_magic_item = None
 
-            # Potions communes (3-5 par scénario)
-            for _ in range(3):
-                magic_items.append(HealingPotion(
-                    name="Potion of Healing",
-                    rarity=PotionRarity.COMMON,
-                    hit_dice="2d4",
-                    bonus=2,
-                    min_cost=50,
-                    max_cost=50
-                ))
+        if not load_magic_item:
+            # Créer des objets magiques simples si le loader n'est pas disponible
+            class SimpleMagicItem:
+                def __init__(self, name, desc, rarity, value):
+                    self.name = name
+                    self.desc = desc
+                    self.rarity = rarity
+                    self.value = value
 
-            # 1-2 magic items rares selon la difficulté du scénario
-            # Les scénarios peuvent overrider cette méthode pour personnaliser
-            magic_items.append(create_ring_of_protection())
-
-            print(f"  ✨ Magic Items créés: {len(magic_items)}")
-            for item in magic_items:
-                print(f"     - {item.name} ({item.rarity.value})")
-
-        except Exception as e:
-            print(f"  ⚠️  Erreur création magic items: {e}")
+            magic_items = [
+                SimpleMagicItem("Anneau de Protection", "+1 CA et jets de sauvegarde", "Rare", 1000),
+                SimpleMagicItem("Potion de Soins Supérieure", "4d4+4 HP", "Rare", 150),
+                SimpleMagicItem("Amulette de Santé", "Constitution devient 19", "Rare", 2000),
+                SimpleMagicItem("Bottes Ailées", "Vitesse de vol 4h/jour", "Rare", 1500),
+                SimpleMagicItem("Cape de Protection", "+1 CA et jets de sauvegarde", "Rare", 1000),
+            ]
+        else:
+            # Charger depuis dnd-5e-core si disponible
+            magic_item_ids = [
+                'ring-of-protection',
+                'cloak-of-protection',
+                'boots-of-speed',
+                'amulet-of-health'
+            ]
+            for item_id in magic_item_ids:
+                try:
+                    item = load_magic_item(item_id)
+                    if item:
+                        magic_items.append(item)
+                except Exception:
+                    pass
 
         return magic_items
 
-    def _equip_party_with_starter_gear(self):
-        """
-        Équiper le groupe avec un équipement de base
-        Armes et armures selon la classe (comme main_ncurses.py)
-        """
-        from dnd_5e_core.data import load_weapon, load_armor
-        
-        print(f"\n🎽 Équipement de départ...")
-        
-        for char in self.party:
-            class_name = char.class_type.index if char.class_type else 'fighter'
-            
-            # Armes selon la classe
-            weapon = None
-            if class_name in ['fighter', 'paladin', 'barbarian', 'ranger']:
-                weapon = load_weapon('longsword')
-                weapon_name = "Longsword (1d8)"
-            elif class_name in ['rogue', 'monk']:
-                weapon = load_weapon('shortsword')
-                weapon_name = "Shortsword (1d6)"
-            elif class_name in ['cleric', 'druid']:
-                weapon = load_weapon('mace')
-                weapon_name = "Mace (1d6)"
-            else:  # wizard, sorcerer, warlock, bard
-                weapon = load_weapon('dagger')
-                weapon_name = "Dagger (1d4)"
-            
-            if weapon:
-                char.inventory.append(weapon)
-                char.equip(weapon)
-                print(f"  ⚔️  {char.name}: {weapon_name}")
-            
-            # Armures selon la classe
-            armor = None
-            if class_name in ['fighter', 'paladin']:
-                armor = load_armor('chain-mail')
-                armor_name = "Chain Mail (CA 16)"
-            elif class_name in ['cleric', 'barbarian', 'ranger']:
-                armor = load_armor('scale-mail')
-                armor_name = "Scale Mail (CA 14+DEX)"
-            elif class_name in ['rogue', 'bard', 'warlock']:
-                armor = load_armor('leather-armor')
-                armor_name = "Leather Armor (CA 11+DEX)"
-            else:
-                armor_name = None
-            
-            if armor:
-                char.inventory.append(armor)
-                char.equip(armor)
-                print(f"  🛡️  {char.name}: {armor_name}")
-
-    def _init_spellcasters(self):
-        """
-        Initialiser les sorts pour les personnages lanceurs de sorts
-        """
-        from dnd_5e_core.data import load_spell
-        
-        print(f"\n✨ Initialisation des sorts...")
-        
-        # Sorts par classe
-        spells_by_class = {
-            'cleric': ['cure-wounds', 'bless', 'guiding-bolt', 'sacred-flame', 'light'],
-            'wizard': ['magic-missile', 'shield', 'mage-armor', 'fire-bolt', 'ray-of-frost'],
-            'druid': ['cure-wounds', 'entangle', 'goodberry', 'produce-flame', 'shillelagh'],
-            'warlock': ['eldritch-blast', 'hex', 'armor-of-agathys', 'hellish-rebuke'],
-            'sorcerer': ['magic-missile', 'shield', 'chromatic-orb', 'fire-bolt', 'ray-of-frost'],
-            'bard': ['cure-wounds', 'healing-word', 'thunderwave', 'vicious-mockery'],
-            'paladin': ['cure-wounds', 'bless', 'divine-favor', 'shield-of-faith']
-        }
-        
-        for char in self.party:
-            if not char.class_type:
-                print(f"  ⚠️  {char.name}: pas de classe")
-                continue
-            
-            class_name = char.class_type.index
-            can_cast = getattr(char.class_type, 'can_cast', False)
-            has_sc = hasattr(char, 'sc') and char.sc
-            
-            print(f"  🔍 {char.name}: class={class_name}, can_cast={can_cast}, has_sc={has_sc}")
-            
-            if not can_cast or class_name not in spells_by_class:
-                continue
-            
-            # Initialiser sc si nécessaire
-            if not has_sc:
-                from ..core.adapters import CharacterExtensions
-                CharacterExtensions.init_spell_slots(char)
-                print(f"  ✅ {char.name}: sc initialisé")
-            
-            # Charger et ajouter les sorts
-            spell_names = spells_by_class[class_name]
-            spells_added = []
-            
-            print(f"  📜 Chargement de {len(spell_names)} sorts pour {char.name}...")
-            
-            for spell_name in spell_names:
-                try:
-                    spell = load_spell(spell_name)
-                    if spell:
-                        if not hasattr(char, 'sc') or not char.sc:
-                            continue
-                        char.sc.spells.append(spell)
-                        spells_added.append(spell.name)
-                        print(f"    ✅ {spell.name}")
-                except Exception as e:
-                    print(f"    ⚠️  Erreur {spell_name}: {e}")
-                    continue
-            
-            if spells_added:
-                print(f"  ✅ {char.name}: {len(spells_added)} sorts chargés")
